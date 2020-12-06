@@ -1,5 +1,10 @@
 theme: minima
 title : Chad Baldwin
+
+author:
+  name: Chad Baldwin
+#  email:
+
 minima:
   social_links:
     twitter: chad_baldwin
