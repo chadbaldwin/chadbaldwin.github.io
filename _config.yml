@@ -1,2 +1,8 @@
 theme: minima
 title : Chad Baldwin
+minima:
+  social_links:
+    twitter: chad_baldwin
+    github: chadbaldwin
+    stackoverflow: "3474677"
+    linkedin: chadbaldwin
