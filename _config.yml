@@ -1,6 +1,8 @@
 theme: minima
-title: Chad Baldwin
-description: My first blog
+title: Chads Blog
+
+description: >
+  My first blog. Probably no one else will ever read it, but oh well.
 
 author:
   name: Chad Baldwin
@@ -12,3 +14,9 @@ minima:
     github: chadbaldwin
     stackoverflow: "3474677"
     linkedin: chadbaldwin
+
+show_excerpts: false
+
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
