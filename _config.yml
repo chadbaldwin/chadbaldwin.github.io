@@ -12,5 +12,5 @@ github_username: chadbaldwin
 linkedin_username: chadbaldwin
 
 titles_from_headings:
-  enabled:     true
-  strip_title: false
+  enabled: true
+  strip_title: true
