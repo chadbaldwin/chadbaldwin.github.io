@@ -14,3 +14,7 @@ linkedin_username: chadbaldwin
 titles_from_headings:
   enabled: true
   strip_title: true
+
+header_pages:
+  - resume.md
+  - feed.xml
