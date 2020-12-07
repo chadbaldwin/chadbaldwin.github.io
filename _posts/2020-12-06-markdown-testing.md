@@ -1,6 +1,4 @@
----
-title: "Markdown testing for code blocks"
----
+# Markdown testing for code blocks
 
 Testing markdown rendering for code snippets.
 
