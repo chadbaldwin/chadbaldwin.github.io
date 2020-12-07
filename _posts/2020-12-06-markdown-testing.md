@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Markdown testing for code blocks"
+title: "Markdown testing for code blocks"
 ---
 
 Testing markdown rendering for code snippets.
@@ -12,7 +12,7 @@ FROM sys.objects o
 WHERE o.[name] = 'foobar'
     AND o.[type] = 'P'
 ORDER BY o.[object_id]
-{% end highlight %}
+{% endhighlight %}
 
 This is a standard fenced markdown code block
 ```sql
