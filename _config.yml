@@ -1,22 +1,12 @@
 theme: minima
+
 title: Chads Blog
+author: Chad Baldwin
+email: blog@chadbaldwin.net
 
 description: >
   My first blog. Probably no one else will ever read it, but oh well.
 
-author:
-  name: Chad Baldwin
-  email: blog@chadbaldwin.net
-
-minima:
-  social_links:
-    twitter: chad_baldwin
-    github: chadbaldwin
-    stackoverflow: "3474677"
-    linkedin: chadbaldwin
-
-show_excerpts: false
-
-plugins:
-  - jekyll-feed
-  - jekyll-seo-tag
+twitter_username: chad_baldwin
+github_username: chadbaldwin
+linkedin_username: chadbaldwin
