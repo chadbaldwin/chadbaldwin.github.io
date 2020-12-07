@@ -10,3 +10,7 @@ description: >
 twitter_username: chad_baldwin
 github_username: chadbaldwin
 linkedin_username: chadbaldwin
+
+titles_from_headings:
+  enabled:     true
+  strip_title: false
