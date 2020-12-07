@@ -1,5 +1,7 @@
 ---
 layout: home
-title: Welcome to my blog
+title: Home
 ---
+# Welcome to my blog
+
 Hello! This is my blog
