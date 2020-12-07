@@ -25,5 +25,5 @@ SELECT *
 FROM AutoAlert.dbo.Dealer d
 WHERE d.[Enabled] = 1
     AND d.DealerCode = 'FMDEMO'</pre>
-<script src="../js/src-min-noconflict/ace.js"></script>
+<script src="/js/src-min-noconflict/ace.js"></script>
 <script>ace.edit("editor", {theme: "ace/theme/TextMate", mode: "ace/mode/sql", maxLines: 20});</script>
