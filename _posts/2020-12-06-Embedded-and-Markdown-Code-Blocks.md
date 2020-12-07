@@ -30,4 +30,4 @@ WHERE o.[name] = 'foobar'
     AND o.[type] = 'P'
 ORDER BY o.[object_id]</pre>
 <script src="/js/src-min-noconflict/ace.js"></script>
-<script>ace.edit("editor", {mode: "ace/mode/sqlserver", theme: "ace/theme/TextMate", maxLines: 20, readOnly: true});</script>
+<script>ace.edit("editor", {mode: "ace/mode/sqlserver", theme: "ace/theme/sqlserver", maxLines: 20, readOnly: true});</script>
