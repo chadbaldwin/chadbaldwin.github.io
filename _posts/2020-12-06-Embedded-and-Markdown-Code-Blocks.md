@@ -19,7 +19,7 @@ ORDER BY o.[object_id]
 ```
 
 This is a code block using the embedded ace editor:
-<style>.ace_editor { border: 1px solid lightgray; width: 60%; }</style>
+<style>.ace_editor { border: 1px solid lightgray; }</style>
 <pre id="editor">
 SELECT *
 FROM AutoAlert.dbo.Dealer d
