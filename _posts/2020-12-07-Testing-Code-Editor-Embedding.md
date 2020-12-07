@@ -23,6 +23,7 @@ Embedding ace editor locally:
   var editor = ace.edit("editor", {
     theme: "ace/theme/TextMate",
     mode: "ace/mode/javascript",
+    readOnly: true,
     maxLines: 20
   });
 </script>
