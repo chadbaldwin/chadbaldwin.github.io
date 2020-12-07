@@ -21,5 +21,5 @@ Embedding ace editor locally:
 </pre>
 
 <script src="/js/src-min-noconflict/ace.js" type="text/javascript" charset="utf-8"></script>
-<script>var editor = ace.edit("editor"); editor.setTheme("ace/theme/monokai"); editor.session.setMode("ace/mode/javascript");</script>
+<script>var editor = ace.edit("editor"); editor.setTheme("ace/theme/TextMate"); editor.session.setMode("ace/mode/javascript");</script>
 <script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
