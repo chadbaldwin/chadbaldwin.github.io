@@ -18,6 +18,12 @@ Embedding ace editor locally:
   }</div>
 </pre>
 
-<script src="/js/src-min-noconflict/ace.js" type="text/javascript" charset="utf-8"></script>
-<script>var editor = ace.edit("editor"); editor.setTheme("ace/theme/TextMate"); editor.session.setMode("ace/mode/javascript");</script>
+<script src="/js/src-min-noconflict/ace.js"></script>
+<script>
+  var editor = ace.edit("editor", {
+    theme: "ace/theme/TextMate",
+    mode: "ace/mode/javascript",
+    maxLines: 20
+  });
+</script>
 <script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
