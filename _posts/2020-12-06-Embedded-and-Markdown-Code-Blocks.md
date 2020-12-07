@@ -22,8 +22,9 @@ This is a code block using the embedded ace editor:
 <style>.ace_editor { border: 1px solid lightgray; }</style>
 <pre id="editor">
 SELECT *
-FROM AutoAlert.dbo.Dealer d
-WHERE d.[Enabled] = 1
-    AND d.DealerCode = 'FMDEMO'</pre>
+FROM sys.objects o
+WHERE o.[name] = 'foobar'
+    AND o.[type] = 'P'
+ORDER BY o.[object_id]</pre>
 <script src="/js/src-min-noconflict/ace.js"></script>
 <script>ace.edit("editor", {mode: "ace/mode/sql", theme: "ace/theme/TextMate", maxLines: 20, readOnly: true});</script>
