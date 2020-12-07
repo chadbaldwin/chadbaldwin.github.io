@@ -11,12 +11,10 @@ Embedding ace editor locally:
       top: 0; right: 0; bottom: 0; left: 0;
   }
 </style>
-<pre id="ace_editor" style="height: 224px;" class="ace_editor ace-tm">
-  <div id="editor">function foo(items) {
-      var x = "All this is syntax highlighted";
-      return x;
-  }</div>
-</pre>
+<pre id="editor">function foo(items) {
+    var x = "All this is syntax highlighted";
+    return x;
+}</pre>
 
 <script src="/js/src-min-noconflict/ace.js" type="text/javascript" charset="utf-8"></script>
 <script>var editor = ace.edit("editor"); editor.setTheme("ace/theme/TextMate"); editor.session.setMode("ace/mode/javascript");</script>
