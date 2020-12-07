@@ -6,7 +6,7 @@ title: "Markdown testing for code blocks"
 Testing markdown rendering for code snippets.
 
 This is a jekyll codeblock for sql:
-{% highlight sql linenos %}
+{% highlight sql linedivs %}
 SELECT *
 FROM sys.objects o
 WHERE o.[name] = 'foobar'
