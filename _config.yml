@@ -10,8 +10,3 @@ description: >
 twitter_username: chad_baldwin
 github_username: chadbaldwin
 linkedin_username: chadbaldwin
-
-markdown: kramdown
-kramdown:
-  syntax_highlighter: rouge
-highlighter: rouge
