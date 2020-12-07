@@ -14,3 +14,4 @@ linkedin_username: chadbaldwin
 markdown: kramdown
 kramdown:
   enable_coderay: true
+  use_coderay: true
