@@ -1,4 +1,5 @@
 ---
 layout: home
+title: Welcome to my blog
 ---
-## This is my welcome page
+Hello! This is my blog
