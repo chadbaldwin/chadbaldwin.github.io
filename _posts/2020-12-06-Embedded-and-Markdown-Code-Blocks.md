@@ -6,8 +6,8 @@ Jekyll/Liquid highlight block, for sql:
 SELECT *, OBJECT_NAME(o.[object_id])
 FROM sys.objects o
 WHERE o.[name] = 'foobar'
-    AND o.[type] = 'P'
-ORDER BY o.[object_id]
+	AND o.[type] = 'P'
+ORDER BY o.[object_id];
 {% endhighlight %}
 
 Markdown fenced code block, for sql:
@@ -16,15 +16,14 @@ Markdown fenced code block, for sql:
 SELECT *, OBJECT_NAME(o.[object_id])
 FROM sys.objects o
 WHERE o.[name] = 'foobar'
-    AND o.[type] = 'P'
-ORDER BY o.[object_id]
+	AND o.[type] = 'P'
+ORDER BY o.[object_id];
 ```
 
 Ace editor code block, for sqlserver:
 
 <pre id="editor">
-SELECT	*
-	, OBJECT_NAME(o.[object_id])
+SELECT *, OBJECT_NAME(o.[object_id])
 FROM sys.objects o
 WHERE o.[name] = 'foobar'
 	AND o.[type] = 'P'
