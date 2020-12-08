@@ -6,8 +6,6 @@ Trying to decide which code blocks would be best for posting blogs.
 
 ---
 
-&nbsp;
-
 ### **Jekyll/Liquid highlight block, for sql**
 
 &nbsp;
@@ -36,8 +34,6 @@ Cons:
 
 ### **Markdown fenced code block, for sql**
 
-&nbsp;
-
 ```sql
 SELECT *, OBJECT_NAME(o.[object_id])
 FROM sys.objects o
@@ -61,8 +57,6 @@ Cons:
 &nbsp;
 
 ### **Ace editor code block, for sqlserver**
-
-&nbsp;
 
 * [Homepage](https://ace.c9.io)
 * [GitHub (source)](https://github.com/ajaxorg/ace)
@@ -97,13 +91,14 @@ Cons:
 
 ### **GitHub gist embedded using jekyll-gist plugin**
 
-&nbsp;
-
 {% gist 27617f7cc342351dc0baf03398b52c21 %}
 
 Pros:
 
-* I like the idea of having code blocks isolated. People can leave comments on them via gist. They can submit edit suggestions.
+* Keeping code blocks isolated from the post could make script re-use in other blog posts easier.
+  * For example, if I have a SQL script for checking table sizes, and I later decide to edit it slightly; I can edit the gist and it will update all blog posts which also embed that script
+* People can leave comments on them via gist. They can submit edit suggestions.
+* Editing a gist does not require re-deploying the website
 
 Cons:
 
@@ -111,6 +106,7 @@ Cons:
 * Not portable if using the jekyll-gist option
 * Code is not stored in post file, making migrations to other platforms difficult
 * Embedded code block is not user friendly. Highlighting is misleading.
+* Code and blog post change tracking is separate
 
 <style>.ace_editor { border: 1px solid lightgray; }</style>
 <script src="/js/src-min-noconflict/ace.js"></script>
