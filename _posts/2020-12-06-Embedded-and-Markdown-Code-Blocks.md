@@ -6,7 +6,11 @@ Trying to decide which code blocks would be best for posting blogs.
 
 ---
 
+&nbsp;
+
 ### **Jekyll/Liquid highlight block, for sql**
+
+&nbsp;
 
 {% highlight sql %}
 SELECT *, OBJECT_NAME(o.[object_id])
@@ -18,8 +22,8 @@ ORDER BY o.[object_id];
 
 Pros:
 
-* Integrated with Jekyll, ability to add extensions/plugins to the markdown highlighter
-* Ability to use custom themes
+* Integrated with Jekyll, ability to add extensions/plugins to the markdown highlighter add new features, like improving line numbers
+* Ability to use custom themes (lookup "rouge themes")
 
 Cons:
 
@@ -28,7 +32,11 @@ Cons:
 
 ---
 
+&nbsp;
+
 ### **Markdown fenced code block, for sql**
+
+&nbsp;
 
 ```sql
 SELECT *, OBJECT_NAME(o.[object_id])
@@ -50,7 +58,11 @@ Cons:
 
 ---
 
+&nbsp;
+
 ### **Ace editor code block, for sqlserver**
+
+&nbsp;
 
 * [Homepage](https://ace.c9.io)
 * [GitHub (source)](https://github.com/ajaxorg/ace)
@@ -81,7 +93,11 @@ Cons:
 
 ---
 
+&nbsp;
+
 ### **GitHub gist embedded using jekyll-gist plugin**
+
+&nbsp;
 
 {% gist 27617f7cc342351dc0baf03398b52c21 %}
 
