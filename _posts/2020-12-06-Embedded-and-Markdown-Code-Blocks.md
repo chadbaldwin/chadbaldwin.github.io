@@ -39,3 +39,7 @@ This is an external editor embedded from codepen.io:
   <span>See the Pen <a href="https://codepen.io/chadbaldwin/pen/JjKQbMw">JjKQbMw</a> by Chad (<a href="https://codepen.io/chadbaldwin">@chadbaldwin</a>) on <a href="https://codepen.io">CodePen</a>.</span>
 </p>
 <script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
+
+This is a gist embedded using jekyll-gist plugin:
+
+{% gist 27617f7cc342351dc0baf03398b52c21 %}
