@@ -5,7 +5,7 @@ Trying to decide which code blocks would be best for posting blogs.
 
 ---
 
-Jekyll/Liquid highlight block, for sql:
+## Jekyll/Liquid highlight block, for sql
 
 Pros:
 
@@ -26,7 +26,7 @@ ORDER BY o.[object_id];
 
 ---
 
-Markdown fenced code block, for sql:
+## Markdown fenced code block, for sql
 
 Pros:
 
@@ -47,7 +47,7 @@ ORDER BY o.[object_id];
 
 ---
 
-Ace editor code block, for sqlserver:
+## Ace editor code block, for sqlserver
 
 Pros:
 
@@ -72,7 +72,7 @@ ORDER BY o.[object_id];</pre>
 
 ---
 
-GitHub gist embedded using jekyll-gist plugin:
+## GitHub gist embedded using jekyll-gist plugin
 
 Pros:
 
