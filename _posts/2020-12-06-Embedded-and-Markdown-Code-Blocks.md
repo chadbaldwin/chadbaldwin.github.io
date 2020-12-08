@@ -135,7 +135,7 @@ ORDER BY o.[object_id];</pre>
 
 ### GitHub gist
 
-**Using jekyll-gist plugin:**
+#### Using jekyll-gist plugin
 
 **Source:**
 
@@ -149,7 +149,7 @@ ORDER BY o.[object_id];</pre>
 
 {% gist 27617f7cc342351dc0baf03398b52c21 %}
 
-**Using embed script from gist:**
+#### Using embed script from gist
 
 **Source:**
 
