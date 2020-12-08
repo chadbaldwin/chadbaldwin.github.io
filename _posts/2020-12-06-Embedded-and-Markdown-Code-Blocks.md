@@ -10,6 +10,20 @@ Trying to decide which code blocks would be best for posting blogs.
 
 ### Jekyll/Liquid highlight block, for sql
 
+**Source:**
+
+```
+{% highlight sql %}
+SELECT *, OBJECT_NAME(o.[object_id])
+FROM sys.objects o
+WHERE o.[name] = 'foobar'
+	AND o.[type] = 'P'
+ORDER BY o.[object_id];
+{% endhighlight %}
+```
+
+**Produces:**
+
 {% highlight sql %}
 SELECT *, OBJECT_NAME(o.[object_id])
 FROM sys.objects o
@@ -32,6 +46,20 @@ ORDER BY o.[object_id];
 &nbsp;
 
 ### Markdown fenced code block, for sql
+
+**Source:**
+
+````markdown
+```sql
+SELECT *, OBJECT_NAME(o.[object_id])
+FROM sys.objects o
+WHERE o.[name] = 'foobar'
+	AND o.[type] = 'P'
+ORDER BY o.[object_id];
+```
+````
+
+**Produces:**
 
 ```sql
 SELECT *, OBJECT_NAME(o.[object_id])
@@ -63,6 +91,22 @@ ORDER BY o.[object_id];
 * [Demo](https://ace.c9.io/build/kitchen-sink.html)
 * [Bookmarklet](https://ace.c9.io/build/demo/bookmarklet/index.html) - Allows you to set a bookmark which lets you convert any html pre tag into an ace editor
 
+**Source:**
+
+```html
+<style>.ace_editor { border: 1px solid lightgray; }</style>
+<pre id="editor">
+SELECT *, OBJECT_NAME(o.[object_id])
+FROM sys.objects o
+WHERE o.[name] = 'foobar'
+	AND o.[type] = 'P'
+ORDER BY o.[object_id];</pre>
+<script src="/js/src-min-noconflict/ace.js"></script>
+<script>ace.edit("editor", {mode: "ace/mode/sqlserver", theme: "ace/theme/sqlserver", maxLines: 20, readOnly: true});</script>
+```
+
+**Produces:**
+
 <pre id="editor">
 SELECT *, OBJECT_NAME(o.[object_id])
 FROM sys.objects o
@@ -89,11 +133,26 @@ ORDER BY o.[object_id];</pre>
 
 ### GitHub gist
 
-Using jekyll-gist plugin:
+**Using jekyll-gist plugin:**
+
+**Source:**
+```
+{% gist 27617f7cc342351dc0baf03398b52c21 %}
+```
+
+**Produces:**
 
 {% gist 27617f7cc342351dc0baf03398b52c21 %}
 
-Using embed script from gist:
+**Using embed script from gist:**
+
+**Source:**
+
+```html
+<script src="https://gist.github.com/27617f7cc342351dc0baf03398b52c21.js"></script>
+```
+
+**Produces:**
 
 <script src="https://gist.github.com/27617f7cc342351dc0baf03398b52c21.js"></script>
 
@@ -105,7 +164,7 @@ Using embed script from gist:
   * People can leave comments if they have suggestions, or find bugs
   * Scripts can be downloaded, starred, subscribed to and embedded by others
 * Editing a gist does not require re-deploying the website
-* Portable IF, the markdown renderer supports script tags
+* Portable IF the markdown renderer supports script tags
 * Can be customized with css, see [this blog post](https://codersblock.com/blog/customizing-github-gists/)
 
 **Cons:**
