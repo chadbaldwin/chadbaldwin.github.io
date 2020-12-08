@@ -1,20 +1,12 @@
-
-# Testing markdown rendering for code snippets
+---
+title: Code snippets in blog posts
+---
 
 Trying to decide which code blocks would be best for posting blogs.
 
 ---
 
-## Jekyll/Liquid highlight block, for sql
-
-Pros:
-
-* Integrated with Jekyll, ability to add extensions/plugins to the markdown highlighter
-
-Cons:
-
-* Liquid tags in markdown file
-* Source file isn't portable to other markdown platforms
+### **Jekyll/Liquid highlight block, for sql**
 
 {% highlight sql %}
 SELECT *, OBJECT_NAME(o.[object_id])
@@ -24,18 +16,19 @@ WHERE o.[name] = 'foobar'
 ORDER BY o.[object_id];
 {% endhighlight %}
 
----
-
-## Markdown fenced code block, for sql
-
 Pros:
 
-* Native Markdown
-* Portable to other markdown platforms
+* Integrated with Jekyll, ability to add extensions/plugins to the markdown highlighter
+* Ability to use custom themes
 
 Cons:
 
-* Limited customization
+* Liquid tags in markdown file
+* Source file isn't portable to other markdown platforms
+
+---
+
+### **Markdown fenced code block, for sql**
 
 ```sql
 SELECT *, OBJECT_NAME(o.[object_id])
@@ -45,9 +38,32 @@ WHERE o.[name] = 'foobar'
 ORDER BY o.[object_id];
 ```
 
+Pros:
+
+* Native Markdown, portable to other markdown platforms (assuming they can handle the language hint)
+* Based on how the markdown is rendered it looks like it may be possible to use custom styles
+
+Cons:
+
+* Limited customization
+* May not highlight in preferred color scheme, but will probably be "good enough"
+
 ---
 
-## Ace editor code block, for sqlserver
+### **Ace editor code block, for sqlserver**
+
+* [Homepage](https://ace.c9.io)
+* [GitHub (source)](https://github.com/ajaxorg/ace)
+* [GitHub (builds)](https://github.com/ajaxorg/ace-builds)
+* [Demo](https://ace.c9.io/build/kitchen-sink.html)
+* [Bookmarklet](https://ace.c9.io/build/demo/bookmarklet/index.html) - Allows you to set a bookmark which lets you convert any html pre tag into an ace editor
+
+<pre id="editor">
+SELECT *, OBJECT_NAME(o.[object_id])
+FROM sys.objects o
+WHERE o.[name] = 'foobar'
+	AND o.[type] = 'P'
+ORDER BY o.[object_id];</pre>
 
 Pros:
 
@@ -63,16 +79,11 @@ Cons:
 * Need to host javascript library locally and maintain updates
 * Requires more setup to make workable long term (adding scripts/css to jekyll layout)
 
-<pre id="editor">
-SELECT *, OBJECT_NAME(o.[object_id])
-FROM sys.objects o
-WHERE o.[name] = 'foobar'
-	AND o.[type] = 'P'
-ORDER BY o.[object_id];</pre>
-
 ---
 
-## GitHub gist embedded using jekyll-gist plugin
+### **GitHub gist embedded using jekyll-gist plugin**
+
+{% gist 27617f7cc342351dc0baf03398b52c21 %}
 
 Pros:
 
@@ -84,8 +95,6 @@ Cons:
 * Not portable if using the jekyll-gist option
 * Code is not stored in post file, making migrations to other platforms difficult
 * Embedded code block is not user friendly. Highlighting is misleading.
-
-{% gist 27617f7cc342351dc0baf03398b52c21 %}
 
 <style>.ace_editor { border: 1px solid lightgray; }</style>
 <script src="/js/src-min-noconflict/ace.js"></script>
