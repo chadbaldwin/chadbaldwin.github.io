@@ -4,6 +4,8 @@ title: Code snippets in blog posts
 
 Trying to decide which code blocks would be best for posting blogs.
 
+&nbsp;
+
 ---
 
 ### **Jekyll/Liquid highlight block, for sql**
