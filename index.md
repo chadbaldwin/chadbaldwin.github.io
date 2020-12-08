@@ -1,4 +1,7 @@
-# Welcome to my blog
+---
+layout: home
+title: null
+---
 
 Hi! Glad to see you found my site.
 
