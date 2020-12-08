@@ -128,6 +128,7 @@ ORDER BY o.[object_id];</pre>
 
 * Requires using html pre/div tags, which isn't markdown, but isn't as bad as liquid tags as most markdown renderers will still respect pre tags. You would lose syntax highlighting, but maintain a code block.
 * Need to host javascript library locally and maintain updates
+* Library could become outdated/unmaintained/deprecated over time, and potentially lead to errors due to unsupported legacy code
 * Requires more setup to make workable long term (adding scripts/css to jekyll layout)
 
 ---
