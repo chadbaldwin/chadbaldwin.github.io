@@ -51,7 +51,7 @@ ORDER BY o.[object_id];
 
 **Source:**
 
-````markdown
+````
 ```sql
 SELECT *, OBJECT_NAME(o.[object_id])
 FROM sys.objects o
