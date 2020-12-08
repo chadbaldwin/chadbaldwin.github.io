@@ -102,16 +102,17 @@ Using embed script from gist:
 * Keeping code blocks isolated from the post could make script re-use in other blog posts easier.
   * For example, if I have a SQL script for checking table sizes, and I later decide to edit it slightly; I can edit the gist and it will update all blog posts which also embed that script
 * Standard Gist features
-  * People can leave comments, like submitting edit suggestions
-  * Scripts can be downloaded, stared, subscribed to and embedded by others
+  * People can leave comments if they have suggestions, or find bugs
+  * Scripts can be downloaded, starred, subscribed to and embedded by others
 * Editing a gist does not require re-deploying the website
 * Portable IF, the markdown renderer supports script tags
+* Can be customized with css, see [this blog post](https://codersblock.com/blog/customizing-github-gists/)
 
 **Cons:**
 
 * Not portable IF target system can not utilize the gist script embedding
 * Not portable IF using the jekyll-gist option
-* Code is not stored in post file, making migrations to other platforms difficult
+* Code is not stored in post file, making migrations to other platforms difficult if script tags are not supported
 * Embedded code block is not user friendly. Highlighting is misleading.
 * Code and blog post change tracking is separate
 
