@@ -22,3 +22,5 @@ header_pages:
 
 plugins:
   - jekyll-feed
+
+google_analytics: UA-185058308-1
