@@ -24,3 +24,9 @@ plugins:
   - jekyll-feed
 
 google_analytics: UA-185058308-1
+
+defaults:
+  - scope:
+      type: "posts"
+    values:
+      author: "Chad Baldwin"
