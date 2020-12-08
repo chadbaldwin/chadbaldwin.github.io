@@ -20,12 +20,12 @@ WHERE o.[name] = 'foobar'
 ORDER BY o.[object_id];
 {% endhighlight %}
 
-Pros:
+**Pros:**
 
 * Integrated with Jekyll, ability to add extensions/plugins to the markdown highlighter add new features, like improving line numbers
 * Ability to use custom themes (lookup "rouge themes")
 
-Cons:
+**Cons:**
 
 * Liquid tags in markdown file
 * Source file isn't portable to other markdown platforms
@@ -44,12 +44,12 @@ WHERE o.[name] = 'foobar'
 ORDER BY o.[object_id];
 ```
 
-Pros:
+**Pros:**
 
 * Native Markdown, portable to other markdown platforms (assuming they can handle the language hint)
 * Based on how the markdown is rendered it looks like it may be possible to use custom styles
 
-Cons:
+**Cons:**
 
 * Limited customization
 * May not highlight in preferred color scheme, but will probably be "good enough"
@@ -73,7 +73,7 @@ WHERE o.[name] = 'foobar'
 	AND o.[type] = 'P'
 ORDER BY o.[object_id];</pre>
 
-Pros:
+**Pros:**
 
 * Full customization
 * T-SQL specific highlighting
@@ -81,7 +81,7 @@ Pros:
 * Easily customizable lexers/highlighters
 * Can create custom lexers for less popular languages (nagios, cloudwatch insights, etc)
 
-Cons:
+**Cons:**
 
 * Requires using html pre/div tags, which isn't markdown, but isn't as bad as liquid tags as most markdown renderers will still respect pre tags. You would lose syntax highlighting, but maintain a code block.
 * Need to host javascript library locally and maintain updates
@@ -95,14 +95,14 @@ Cons:
 
 {% gist 27617f7cc342351dc0baf03398b52c21 %}
 
-Pros:
+**Pros:**
 
 * Keeping code blocks isolated from the post could make script re-use in other blog posts easier.
   * For example, if I have a SQL script for checking table sizes, and I later decide to edit it slightly; I can edit the gist and it will update all blog posts which also embed that script
 * People can leave comments on them via gist. They can submit edit suggestions.
 * Editing a gist does not require re-deploying the website
 
-Cons:
+**Cons:**
 
 * Not portable, unless target system can utilize the gist script embedding
 * Not portable if using the jekyll-gist option
