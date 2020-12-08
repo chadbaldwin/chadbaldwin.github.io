@@ -8,9 +8,9 @@ Trying to decide which code blocks would be best for posting blogs.
 
 ---
 
-### **Jekyll/Liquid highlight block, for sql**
-
 &nbsp;
+
+### **Jekyll/Liquid highlight block, for sql**
 
 {% highlight sql %}
 SELECT *, OBJECT_NAME(o.[object_id])
