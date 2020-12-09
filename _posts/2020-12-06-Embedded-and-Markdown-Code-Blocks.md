@@ -13,7 +13,7 @@ Trying to decide which code blocks would be best for posting blogs.
 **Source:**
 
 {% raw %}
-```
+```liquid
 {% highlight sql %}
 SELECT *, OBJECT_NAME(o.[object_id])
 FROM sys.objects o
@@ -141,7 +141,7 @@ ORDER BY o.[object_id];</pre>
 **Source:**
 
 {% raw %}
-```
+```liquid
 {% gist 27617f7cc342351dc0baf03398b52c21 %}
 ```
 {% endraw %}
