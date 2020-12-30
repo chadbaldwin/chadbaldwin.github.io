@@ -4,7 +4,7 @@ title: Only update rows that changed? Try using EXISTS and EXCEPT
 
 This is one of my favorite SQL tricks.
 
-Maybe you're building an ETL process, like loading a file, or maybe you need to pull data out of a table to work on it, and then push those changes back into the original table. How would you write that update?
+Maybe you're building an ETL process, like loading a file, or need to compare two tables? How would you write that update?
 
 One of the daunting parts of writing updates, especially with a large number of columns, is figuring out which records actually changed, and only updating those records.
 
