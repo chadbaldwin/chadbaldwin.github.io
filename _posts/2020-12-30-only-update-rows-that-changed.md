@@ -19,14 +19,14 @@ One method is to compare each column in the `WHERE` clause separating each compa
 ```sql
 UPDATE c
     SET c.FirstName   = u.FirstName,
-        c.MiddleName  = u.MiddleName,
         c.LastName    = u.LastName,
+        c.MiddleName  = u.MiddleName,
         c.DateOfBirth = u.DateOfBirth
 FROM #Customer c
     JOIN #Updates u ON u.CustomerID = c.CustomerID
 WHERE c.FirstName    <> u.FirstName
-    OR c.MiddleName  <> u.MiddleName
     OR c.LastName    <> u.LastName
+    OR c.MiddleName  <> u.MiddleName
     OR c.DateOfBirth <> u.DateOfBirth;
 ```
 
@@ -37,15 +37,19 @@ You could do something like this...
 ```sql
 UPDATE c
     SET c.FirstName   = u.FirstName,
-        c.MiddleName  = u.MiddleName,
         c.LastName    = u.LastName,
+        c.MiddleName  = u.MiddleName,
         c.DateOfBirth = u.DateOfBirth
 FROM #Customer c
     JOIN #Updates u ON u.CustomerID = c.CustomerID
-WHERE c.FirstName    <> u.FirstName
-    OR CASE WHEN c.MiddleName  = u.MiddleName  THEN 1 ELSE 0 END = 0
-    OR c.LastName    <> u.LastName
-    OR CASE WHEN c.DateOfBirth = u.DateOfBirth THEN 1 ELSE 0 END = 0;
+WHERE c.FirstName <> u.FirstName
+    OR c.LastName <> u.LastName
+    OR CASE WHEN c.MiddleName = u.MiddleName                     THEN 0
+            WHEN c.MiddleName  IS NULL AND u.MiddleName  IS NULL THEN 0
+            ELSE 1 END = 1
+    OR CASE WHEN c.DateOfBirth = u.DateOfBirth                   THEN 0
+            WHEN c.DateOfBirth IS NULL AND u.DateOfBirth IS NULL THEN 0
+            ELSE 1 END = 1;
 ```
 
 This works...but it is hard to read, and now you need to keep track of which columns are nullable and which ones aren't. What happens when `LastName` is changed to allow `NULL`? The update is no longer correct, and needs to be fixed.
