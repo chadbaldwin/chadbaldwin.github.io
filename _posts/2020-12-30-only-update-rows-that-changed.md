@@ -18,9 +18,9 @@ One method is to compare each column in the `WHERE` clause separating each compa
 
 ```sql
 UPDATE c
-    SET c.FirstName = u.FirstName,
-        c.MiddleName = u.MiddleName,
-        c.LastName = u.LastName,
+    SET c.FirstName   = u.FirstName,
+        c.MiddleName  = u.MiddleName,
+        c.LastName    = u.LastName,
         c.DateOfBirth = u.DateOfBirth
 FROM #Customer c
     JOIN #Updates u ON u.CustomerID = c.CustomerID
@@ -36,9 +36,9 @@ You could do something like this...
 
 ```sql
 UPDATE c
-    SET c.FirstName = u.FirstName,
-        c.MiddleName = u.MiddleName,
-        c.LastName = u.LastName,
+    SET c.FirstName   = u.FirstName,
+        c.MiddleName  = u.MiddleName,
+        c.LastName    = u.LastName,
         c.DateOfBirth = u.DateOfBirth
 FROM #Customer c
     JOIN #Updates u ON u.CustomerID = c.CustomerID
