@@ -12,6 +12,17 @@ twitter_username: chad_baldwin
 github_username: chadbaldwin
 linkedin_username: chadbaldwin
 
+# for SEO plugin
+twitter:
+  username: chad_baldwin
+  card: summary
+social:
+  name: Chad Baldwin
+  links:
+    - https://twitter.com/chad_baldwin
+    - https://www.linkedin.com/in/chadbaldwin
+    - https://github.com/chadbaldwin
+
 titles_from_headings:
   enabled: true
   strip_title: true
