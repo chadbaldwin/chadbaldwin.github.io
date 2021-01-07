@@ -20,8 +20,6 @@ But, using `CROSS APPLY`, you can sort of achieve this.
 
 ## Sample data:
 
-&nbsp;
-
 ```sql
 IF OBJECT_ID('tempdb..#Contact','U') IS NOT NULL DROP TABLE #Contact; --SELECT * FROM #Contact
 CREATE TABLE #Contact (
