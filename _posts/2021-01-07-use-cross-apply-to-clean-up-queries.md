@@ -133,7 +133,7 @@ WHERE c.AreaCode IS NOT NULL;
 
 This really isn't too bad. We only had to write the `REPLACE` logic once, and re-use it multiple times. The down side here, is we really only wanted to work with one column in the `#Contact` table; But we still had to pass every column through to each CTE.
 
-What if next month, a new field is added to the table, and you need to pass through? Now you have to add it to the top CTE and route it all the way through. This would be even worse if the #Contact table had 20+ columns. That would get real ugly.
+What if next month, a new field is added to the table? Now you have to add it to the top CTE and route it all the way through. This would be even worse if `#Contact` had 20+ columns. That would get real ugly.
 
 ---
 
