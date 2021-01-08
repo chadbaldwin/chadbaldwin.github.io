@@ -19,7 +19,7 @@ Of course, there's always more than one way to bake a cake.
 
 One method is to compare each column in the `WHERE` clause separating each comparison with an `OR`...
 
-```sql
+```tsql
 UPDATE c
     SET c.FirstName   = u.FirstName,
         c.LastName    = u.LastName,
@@ -37,7 +37,7 @@ This works fine, as long as every column isn't nullable. But what if `MiddleName
 
 You could do something like this...
 
-```sql
+```tsql
 UPDATE c
     SET c.FirstName   = u.FirstName,
         c.LastName    = u.LastName,
@@ -69,7 +69,7 @@ The `EXCEPT` set operator compares two sets of records, and returns all of the r
 
 The most basic examples would be:
 
-```sql
+```tsql
 -- Returns nothing
 SELECT 1, NULL
 EXCEPT
@@ -96,7 +96,7 @@ The other thing to note is that the `EXCEPT` operator treats the comparison of `
 
 ## Let's set up some sample data:
 
-```sql
+```tsql
 IF OBJECT_ID('tempdb..#Customer','U') IS NOT NULL DROP TABLE #Customer; --SELECT * FROM #Customer
 CREATE TABLE #Customer (
     CustomerID  int         NOT NULL PRIMARY KEY,
@@ -123,7 +123,7 @@ Here we've got some sample data...We have a customer table, where we store the c
 
 Now lets create a new table where we can make modifications to the data for us to sync back to the original `#Customer` table:
 
-```sql
+```tsql
 IF OBJECT_ID('tempdb..#Updates','U') IS NOT NULL DROP TABLE #Updates; --SELECT * FROM #Updates
 SELECT c.CustomerID, c.FirstName, c.MiddleName, c.LastName, c.DateOfBirth
 INTO #Updates
@@ -147,7 +147,7 @@ Now we have a copy of the `#Customer` table named `#Updates`, and we've made a f
 
 Let's use `EXISTS` and `EXCEPT` to find all records which changed...
 
-```sql
+```tsql
 SELECT *
 FROM #Customer c
     JOIN #Updates u ON u.CustomerID = c.CustomerID
@@ -164,7 +164,7 @@ To go from that to an update or a merge statement, is fairly simple...
 
 ### Update:
 
-```sql
+```tsql
 UPDATE c
     SET c.FirstName   = u.FirstName,
         c.MiddleName  = u.MiddleName,
@@ -181,7 +181,7 @@ WHERE EXISTS (
 
 ### Merge:
 
-```sql
+```tsql
 MERGE INTO #Customer c
 USING #Updates u ON u.CustomerID = c.CustomerID
 WHEN MATCHED AND EXISTS (

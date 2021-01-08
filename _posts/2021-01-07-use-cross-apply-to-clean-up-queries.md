@@ -23,7 +23,7 @@ But, using `CROSS APPLY`, you can sort of achieve this.
 
 ## Sample data:
 
-```sql
+```tsql
 IF OBJECT_ID('tempdb..#Contact','U') IS NOT NULL DROP TABLE #Contact; --SELECT * FROM #Contact
 CREATE TABLE #Contact (
     ContactID   int             NOT NULL IDENTITY(1,1) PRIMARY KEY,
@@ -65,7 +65,7 @@ You can probably imagine how ugly this is going to get...but think about how you
 
 ## The conventional way:
 
-```sql
+```tsql
 SELECT c.ContactID, c.FullName, c.DateOfBirth, c.City, c.[State]
     , AreaCode =  
         CASE
@@ -92,7 +92,7 @@ Lets make this even worse...Only return rows that have an area code :)
 
 Now you need to copy paste it again...
 
-```sql
+```tsql
 WHERE LEN(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(c.PhoneNumber,'(',''),')',''),'.',''),'/',''),'-',''),' ','')) = 10
 ```
 
@@ -104,7 +104,7 @@ WHERE LEN(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(c.PhoneNumber,'(',''),
 
 CTE's are a great tool, allowing you to re-use a table expression multiple times. But they're not great about allowing you to re-use a column expression.
 
-```sql
+```tsql
 WITH cte_1 AS (
     SELECT c.ContactID, c.FullName, c.DateOfBirth, c.City, c.[State]
         , CleanPhone = REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(c.PhoneNumber,'(',''),')',''),'.',''),'/',''),'-',''),' ','')
@@ -144,7 +144,7 @@ What if next month, a new field is added to the table? Now you have to add it to
 
 Just a quick refresher...`CROSS APPLY` takes whatever expressions you put into it, and runs it for every row in the outside query. Generally, they are used for more complex tasks, like "find the most recent order for every customer". But in this case, we're simply returning a single record that contains the changes we made to a column.
 
-```sql
+```tsql
 SELECT c.ContactID, c.FullName, c.DateOfBirth, c.City, c.[State]
     , p.AreaCode, p.PhoneNumber
 FROM #Contact c
