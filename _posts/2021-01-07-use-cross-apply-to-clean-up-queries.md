@@ -1,5 +1,8 @@
 ---
+layout: post
 title: Clean up your queries and simplify logic with CROSS APPLY
+date: 2021-01-07 08:02:44 -0800
+tag: T-SQL
 ---
 
 ### For you impatient readers, you can click here: [tl;dr](#using-cross-apply)

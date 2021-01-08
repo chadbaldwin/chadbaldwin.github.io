@@ -1,5 +1,8 @@
 ---
+layout: post
 title: Only update rows that changed? Try using EXISTS and EXCEPT
+date: 2020-12-30 11:12:30 -0800
+tag: T-SQL
 ---
 
 This is one of my favorite SQL tricks.
