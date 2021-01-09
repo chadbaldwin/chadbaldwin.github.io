@@ -9,7 +9,19 @@
     {%- include google-analytics.html -%}
   {%- endif -%}
 
+  <!-- highlight.js-tsql support -->
   <script type="text/javascript" src="/js/highlightjs-tsql/tsql.min.js"></script>
   <link rel="stylesheet" href="/js/highlightjs-tsql/ssms.min.css" />
   <script type="text/javascript"> hljs.initHighlightingOnLoad(); </script>
+
+  <!-- dark theme using DarkReader -->
+  <script src="//unpkg.com/darkreader@4.9.26/darkreader.js"></script>
+  <script type="text/javascript">
+	// Enable when system color scheme is dark.
+	DarkReader.auto({
+		brightness: 100,
+		contrast: 90,
+		sepia: 10
+	});
+  </script>
 </head>
