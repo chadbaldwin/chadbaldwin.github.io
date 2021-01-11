@@ -1,8 +1,4 @@
 ---
 title: My Resume
+layout: resume
 ---
-Test page for hosting resume
-
-* Something
-* Something else
-* More things

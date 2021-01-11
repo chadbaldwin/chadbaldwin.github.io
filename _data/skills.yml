@@ -1,0 +1,42 @@
+- skill: SQL Database and Query tuning
+  description: >
+    I have several years of experience in
+    database design,
+    query tuning,
+    index tuning,
+    stored procedure development,
+    troubleshooting locking and blocking issues
+
+- skill: Languages
+  description: >
+    SQL/T-SQL,
+    Powershell,
+    Batch,
+    Shell,
+    C#,
+    CSS,
+    HTML,
+    Liquid,
+    Dot (graphviz),
+    Data serialization (JSON, YAML, XML)
+#    Docker,
+#    Docker Compose,
+
+- skill: Tools & Technologies
+  description: >
+    SQL Server Management Studio (SSMS),
+    SQL Server Reporting Services (SSRS),
+    git,
+    SVN,
+    Elasticsearch,
+    RabbitMQ,
+    Docker,
+    Visual Studio,
+    VS Code,
+    Red Gate SQL Prompt,
+    Red Gate SQL Compare,
+    DBATools,
+    Upsource,
+    Jira,
+    Confluence,
+    Jitbit
