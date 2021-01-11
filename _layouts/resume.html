@@ -61,8 +61,8 @@ layout: default
     </h3>
     <br>
     {% for position in job.positions %}
-      {% assign jobstartdays = position.startdate | date: "%Y-%m-01" | date: "%s" | divided_by: 86400 %}
-      {% assign jobendedays = position.enddate | default: 'now' | date: "%Y-%m-01" | date: "%s" | divided_by: 86400 %}
+      {% assign jobstartdays = position.startdate | date: "%s" | divided_by: 86400 %}
+      {% assign jobendedays = position.enddate | default: 'now' | date: "%s" | divided_by: 86400 %}
       {% assign jobdiffdays = jobendedays | minus: jobstartdays %}
     <h4 class="resume-item-details" itemprop="description" style="display: inline-block; margin-bottom: 0px;">{{ position.title }}</h4>
     <span>
