@@ -13,11 +13,10 @@ By some miracle, back in Dec 2020, I got myself to start reading books, for the 
 
 In order to force myself to continue this habit, I'm making this a public page on my blog. With a full year calendar to indicate the days I've read. Kinda like the ["Every Day Calendar" by Simone Giertz](https://www.simonegiertz.com/every-day-calendar)...but I can't afford one, and this site is free.
 
-I'll also be including a bit of a log of books I've read, and maybe even a quick review on each one.
-
 ## Current book:
 
 * [*What Every BODY is Saying* by Joe Navarro](https://amzn.to/3oQtvVh)
+  * Body Language...how to read it. I originally read this book back in high school; It ended up being a huge impact on my life. It's helped me perform better in interviews by reading their body language, and also making sure I project the right body language to them. I highly recommend this book. On top of learning how to read body language, the book is chock-full of insane stories from an FBI interrogator and how he used body language.
 
 ## Previous books:
 
@@ -29,6 +28,7 @@ I'll also be including a bit of a log of books I've read, and maybe even a quick
 ## Todo List:
 
 * [*T-SQL Querying* by Itzik Ben-Gan, Adam Machanic, Dejan Sarka, Kevin Farlee](https://amzn.to/39BLMzk)
+  * From what I can tell, it's basically an extended version of T-SQL Fundamentals, which was already an incredible book. Can't wait to get to this one.
 * [*T-SQL Window Functions: For data analysis and beyond* by Itzik Ben-Gan](https://amzn.to/3sxF7yv)
   * I read the first edition of this book, but since then, it is 100 pages longer, and has an extra chapter, so would be good to re-read this to fill the gaps from the previous edition
 * [*Algorithms to Live By: The Computer Science of Human Decisions* by Brian Christian, Tom Griffiths](https://amzn.to/3ijrSgk)
