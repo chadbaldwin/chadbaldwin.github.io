@@ -31,6 +31,7 @@ titles_from_headings:
 header_pages:
   - resume.md
   - archive.md
+  - books.md
 #  - feed.xml # most people know to look for /feed on a blog to find the feed. Hiding it for now
 
 plugins:
