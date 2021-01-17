@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Only update rows that changed? Try using EXISTS and EXCEPT
+description: Don't waste your time building giant statements checking for NULL, just use EXISTS and EXCEPT
 date: 2020-12-30 11:12:30 -0800
 tags: T-SQL
 ---
