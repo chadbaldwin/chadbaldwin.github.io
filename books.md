@@ -23,7 +23,7 @@ In order to force myself to continue this habit, I'm making this a public page o
 
 * [*Microsoft SQL Server 2012 T-SQL Fundamentals* by Itzik Ben-Gan](https://amzn.to/3svr2BU)
   * I can't believe I had this goldmine sitting on my bookshelf for nearly 8 years. I wish I had read this when I bought it. This is an incredible book...not only is it great for those looking to learn T-SQL, but even as a database developer with nearly a decade of experience...I learned a TON from this book, and I may even need to read it again, though I'm hoping a new edition will be coming out since the latest edition (3rd) was released in 2016.
-* [*Microsoft SQL Server 2012 High-Performance T-SQL Using Window Functions by Itzik Ben-Gan*](https://amzn.to/3inZ2vd)
+* [*Microsoft SQL Server 2012 High-Performance T-SQL Using Window Functions* by Itzik Ben-Gan](https://amzn.to/3inZ2vd)
   * This one is also a goldmine for those who are a little more advanced. There's a ton of great information in here...but don't expect to understand it all on  your first read. Even if you *think* you know windowing functions well...once you read this,  you'll realize you were very **very** wrong.
 
 ## Todo List:
