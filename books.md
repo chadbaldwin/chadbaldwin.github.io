@@ -1,6 +1,7 @@
 ---
 layout: page
 title: Books
+description: Book reviews and recommendations, reading goal tracker
 ---
 
 <style>
