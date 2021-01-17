@@ -4,21 +4,16 @@
   positions:
   - title: Database Developer
     startdate: 2015-10-01
-    summary: >
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Fringilla ut morbi tincidunt augue interdum velit. Urna condimentum mattis pellentesque id nibh tortor id.
-    projects:
-      - Project line item 1
-      - Project line item 2
-      - Project line item 3
   - title: Senior IT Support Analyst
     startdate: 2012-06-01
     enddate: 2015-10-01
     summary: >
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Fringilla ut morbi tincidunt augue interdum velit. Urna condimentum mattis pellentesque id nibh tortor id.
+      Responsible for quickly triaging and troubleshooting issues in client data.
+      Worked directly with clients over the phone to assist fixing data delivery issues.
+      Built systems and tools to automate detection of bad data quality and reduce the work needed to fix.
     projects:
-      - Project line item 1
-      - Project line item 2
-      - Project line item 3
+      - Worked heavily with SSRS to build advanced graphical reports
+      - Establishing a reporting data warehouse to ensure consistent metrics across all reports
 
 - company: Albert A. Webb Associates
   logo: /img/companylogos/aawa.png

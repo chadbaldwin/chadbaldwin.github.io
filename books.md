@@ -16,7 +16,7 @@ In order to force myself to continue this habit, I'm making this a public page o
 ## Current book:
 
 * [*What Every BODY is Saying* by Joe Navarro](https://amzn.to/3oQtvVh)
-  * Body Language...how to read it. I originally read this book back in high school; It ended up being a huge impact on my life. It's helped me perform better in interviews by reading their body language, and also making sure I project the right body language to them. I highly recommend this book. On top of learning how to read body language, the book is chock-full of insane stories from an FBI interrogator and how he used body language.
+  * Body Language...how to read it. I originally read this book back in high school; It ended up being a huge impact on my life. It's helped me perform better in interviews by reading their body language, and also making sure I project the right body language to them. I highly recommend this book. On top of learning how to read body language, the book is chock-full of insane stories from a former FBI counterintelligence officer and their experiences using these skills.
 
 ## Previous books:
 
@@ -72,7 +72,7 @@ If I didn't read that day, I'll try to list a 1 word reason as to why I skipped 
 |  14  | Class |      |      |      |      |      |      |      |      |      |      |      |
 |  15  | Study |      |      |      |      |      |      |      |      |      |      |      |
 |  16  | Blog  |      |      |      |      |      |      |      |      |      |      |      |
-|  17  |       |      |      |      |      |      |      |      |      |      |      |      |
+|  17  | Study |      |      |      |      |      |      |      |      |      |      |      |
 |  18  |       |      |      |      |      |      |      |      |      |      |      |      |
 |  19  |       |      |      |      |      |      |      |      |      |      |      |      |
 |  20  |       |      |      |      |      |      |      |      |      |      |      |      |
@@ -87,4 +87,3 @@ If I didn't read that day, I'll try to list a 1 word reason as to why I skipped 
 |  29  |       |      |      |      |      |      |      |      |      |      |      |      |
 |  30  |       |      |      |      |      |      |      |      |      |      |      |      |
 |  31  |       |      |      |      |      |      |      |      |      |      |      |      |
-

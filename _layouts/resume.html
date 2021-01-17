@@ -71,7 +71,7 @@ layout: default
       &mdash;
       {{ position.enddate | date: "%b, %Y" | default: "Present" }}
       &bull;
-      {{ jobdiffdays | divided_by: 365.25 | floor }} yrs {{ jobdiffdays | modulo: 365.25 | divided_by: 30.4375 | round | plus: 1 }} mos
+      {{ jobdiffdays | divided_by: 365.25 | floor }} yrs {{ jobdiffdays | modulo: 365.25 | divided_by: 30.4375 | round  }} mos
     </span>
     <p class="resume-item-copy">
       {{ position.summary }}
