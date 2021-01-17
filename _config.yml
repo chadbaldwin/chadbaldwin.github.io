@@ -45,6 +45,7 @@ gravatar_hash: 2136e716a089f4a3794f4007328c7bfb
 
 defaults:
   - scope:
+      path: ""
       type: "posts"
     values:
       author: "Chad Baldwin"
