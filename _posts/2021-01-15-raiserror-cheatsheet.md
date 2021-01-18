@@ -164,7 +164,7 @@ Column descriptions:
 
 ### *Flush output buffer using WITH NOWAIT*
 
-This is one of my favorite uses for `RAISERROR`. If you're running a lengthy stored procedure, you may want some indicator of where its at. The output gets sent to a buffer and then occasionally that buffer gets flushed. If you're using `PRINT 'some message'` that won't immediately show up in the messages tab. So what can you do?
+This is one of my favorite uses for `RAISERROR`. If you're running a lengthy stored procedure, you may want some indicator of where it's at. The output gets sent to a buffer and then occasionally that buffer gets flushed. If you're using `PRINT 'some message'` that won't immediately show up in the messages tab. So what can you do?
 
 Use `WITH NOWAIT`! That will force the output buffer to get flushed. This even includes result sets, those get buffered too. Here's a quick demo:
 
@@ -211,7 +211,9 @@ When you run this, you'll notice something...the first 3 result sets are returne
 
 Because of this, the majority of stored procedures that I write include many `RAISERROR('...',0,1) WITH NOWAIT;` commands in them in order to better monitor the progress of the stored procedure. Of course you can also use other tools to check on this progress, but I think it's good practice to include progress messages like this in your code. This way the progress is also recorded in job execution history.
 
-One last tip for utilizing this behavior is within WHILE loops. This is certainly an "it depends" item...you don't want to output a message for something that loops a million times. But if you are building something like batched deletes, then I find it useful to include a `WITH NOWAIT` in the loop so that you can see the progress much easier. I've added something as simple as `RAISERROR('.',0,1) WITH NOWAIT;` just to get a basic feel for how quick it's moving. Obviously you can get more creative with this by adding a loop counter, etc.
+One last tip for utilizing this behavior is within `WHILE` loops. This is certainly an "it depends" item...you don't want to output a message for something that loops a million times, but if you are building something like batched deletes, then I find it useful to include a `WITH NOWAIT` in the loop. This allows you to see the progress much easier. I've added something as simple as `RAISERROR('.',0,1) WITH NOWAIT;` at the end of a `WHILE` loop just to get a basic feel for how quick it's moving. Obviously you can get more creative with this by adding a loop counter, etc.
+
+In the case of a loop that has lots of iterations and you don't want to flood the messages tab (or slow down your loop) by printing a message for every iteration. There's times I've built a loop counter and then used something like `IF (@counter % 2000 = 0)...` to only output messages at certain checkpoints.
 
 ---
 
