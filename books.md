@@ -54,6 +54,7 @@ If I didn't read that day, I'll try to list a 1 word reason as to why I skipped 
 * "Blog" - chose to work on or write a blog instead of reading
 * "Class" - attended an online training class
 * "Study" - chose to study for some sort of certification exam
+* "Exam" - took a certification exam, so the day was spent prepping
 
 | ###  |  Jan  | Feb  | Mar  | Apr  | May  | Jun  | Jul  | Aug  | Sep  | Oct  | Nov  | Dec  |
 | :--: | :---: | :--: | :--: | :--: | :--: | :--: | :--: | :--: | :--: | :--: | :--: | :--: |
@@ -74,7 +75,7 @@ If I didn't read that day, I'll try to list a 1 word reason as to why I skipped 
 |  15  | Study |      |      |      |      |      |      |      |      |      |      |      |
 |  16  | Blog  |      |      |      |      |      |      |      |      |      |      |      |
 |  17  | Study |      |      |      |      |      |      |      |      |      |      |      |
-|  18  |       |      |      |      |      |      |      |      |      |      |      |      |
+|  18  | Exam  |      |      |      |      |      |      |      |      |      |      |      |
 |  19  |       |      |      |      |      |      |      |      |      |      |      |      |
 |  20  |       |      |      |      |      |      |      |      |      |      |      |      |
 |  21  |       |      |      |      |      |      |      |      |      |      |      |      |
