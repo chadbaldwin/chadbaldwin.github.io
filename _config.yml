@@ -36,6 +36,7 @@ header_pages:
 
 plugins:
   - jekyll-feed
+  - jekyll-sitemap
 #  - jekyll-remote-theme
 #  - jekyll-include-cache
 
