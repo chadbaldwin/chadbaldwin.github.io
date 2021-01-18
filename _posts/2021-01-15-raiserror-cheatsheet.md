@@ -62,7 +62,7 @@ RAISERROR('%s - Did more things',0,1,@currenttime) WITH NOWAIT;
 
 I like to use this rather than `PRINT 'Your message here'` for a number of reasons...
 
-1. `PRINT` messages are buffered and only get flushed to the output occasionally, but `RAISERROR...WITH NOWAIT` gets flushed to output immediately, hence `NOWAIT`. 
+1. `PRINT` messages are buffered and only get flushed to the output occasionally, but `RAISERROR...WITH NOWAIT` gets flushed to output immediately, hence `NOWAIT` (I'll demo this below).
 2. `PRINT` messages can sometimes be returned out of order. I've especially found this when calling a stored procedure via linked server (though note below, severity levels 17-25 will also return messages out of executed order).
 3. You can control the level of severity that is returned
 4. `RAISERROR` allows for templating, like swapping in values.
@@ -162,6 +162,61 @@ Column descriptions:
 
 ## Lets do a couple demos:
 
+### *Flush output buffer using WITH NOWAIT*
+
+This is one of my favorite uses for `RAISERROR`. If you're running a lengthy stored procedure, you may want some indicator of where its at. The output gets sent to a buffer and then occasionally that buffer gets flushed. If you're using `PRINT 'some message'` that won't immediately show up in the messages tab. So what can you do?
+
+Use `WITH NOWAIT`! That will force the output buffer to get flushed. This even includes result sets, those get buffered too. Here's a quick demo:
+
+```tsql
+DECLARE @table table (SomeCol int);
+INSERT INTO @table (SomeCol) VALUES (1)
+
+SELECT SomeCol FROM @table;
+PRINT 'Print does not get immediately flushed to output';
+SELECT SomeCol FROM @table;
+RAISERROR('Raiserror also does not get immediately flushed to output',0,1);
+SELECT SomeCol FROM @table;
+SELECT SomeCol FROM @table;
+
+-- No output will show up until this delay completes
+WAITFOR DELAY '00:00:15';
+```
+
+When you run this, you'll notice that no result sets or messages appear until the delay completes, then it all gets flushed to output.
+
+Here's how you can use `WITH NOWAIT` to help with this, check out this demo:
+
+```tsql
+DECLARE @table table (SomeCol int);
+INSERT INTO @table (SomeCol) VALUES (1)
+
+SELECT SomeCol FROM @table;
+PRINT 'Print does not get immediately flushed to output';
+SELECT SomeCol FROM @table;
+RAISERROR('Raiserror also does not get immediately flushed to output',0,1);
+SELECT SomeCol FROM @table;
+RAISERROR('Output will get flushed up to this point',0,1) WITH NOWAIT;
+-- All output up to this point will get flushed due to the NOWAIT
+
+SELECT SomeCol FROM @table;
+RAISERROR('This will not get flushed to output until delay completes',0,1);
+PRINT 'This wont get flushed to output either'
+
+-- The remaining output will not get flushed to output until this delay completes
+WAITFOR DELAY '00:00:10';
+```
+
+When you run this, you'll notice something...the first 3 result sets are returned, and the messages only display up to the `NO WAIT`. Once the delay completes, the remaining messages and result sets will be flushed to output.
+
+Because of this, the majority of stored procedures that I write include many `RAISERROR('...',0,1) WITH NOWAIT;` commands in them in order to better monitor the progress of the stored procedure. Of course you can also use other tools to check on this progress, but I think it's good practice to include progress messages like this in your code. This way the progress is also recorded in job execution history.
+
+One last tip for utilizing this behavior is within WHILE loops. This is certainly an "it depends" item...you don't want to output a message for something that loops a million times. But if you are building something like batched deletes, then I find it useful to include a `WITH NOWAIT` in the loop so that you can see the progress much easier. I've added something as simple as `RAISERROR('.',0,1) WITH NOWAIT;` just to get a basic feel for how quick it's moving. Obviously you can get more creative with this by adding a loop counter, etc.
+
+---
+
+&nbsp;
+
 ### *Prevents output*
 
 Run this script...At first, it will "look" like the script stopped running as soon as it hit the error...but guess what...it didn't, the whole thing ran, but everything after the error message was not output, both to the results tab AND the messages tab.
@@ -241,6 +296,8 @@ DBCC OPENTRAN;
 ```
 
 ![asdf](/img/raiserror/20210115_103526.png)
+
+And (assuming your server does not have any other open transactions) now you can see the transaction was not left open.
 
 ---
 
