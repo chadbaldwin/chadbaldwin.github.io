@@ -18,7 +18,7 @@ In order to force myself to continue this habit, I'm making this a public page o
 
 I generally try to only read one book at a time, but sometimes there are exceptions. Right now I'm reading two books because I'm trying to cram for my upcoming 70-762 exam. But once I finish taking that exam, I'll be switching back to reading one book at a time.
 
-* [Exam Ref 70-762 Developing SQL Databases](https://amzn.to/35Re73h)
+* [*Exam Ref 70-762 Developing SQL Databases* by Louis Davidson](https://amzn.to/35Re73h)
   * Currently preparing to take my 70-762 exam on Jan 29th. I just bought this book, and hoping to plow through it in 10 days 😭 I doubt I'll make it through cover to cover...but, I should be able to cover the sections I'm not familiar with. 🤞
 
 * [*What Every BODY is Saying* by Joe Navarro](https://amzn.to/3oQtvVh)
