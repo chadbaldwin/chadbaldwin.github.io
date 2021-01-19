@@ -76,7 +76,7 @@ If I didn't read that day, I'll try to list a 1 word reason as to why I skipped 
 |  16  | Blog  |      |      |      |      |      |      |      |      |      |      |      |
 |  17  | Study |      |      |      |      |      |      |      |      |      |      |      |
 |  18  | Exam  |      |      |      |      |      |      |      |      |      |      |      |
-|  19  |       |      |      |      |      |      |      |      |      |      |      |      |
+|  19  |   X   |      |      |      |      |      |      |      |      |      |      |      |
 |  20  |       |      |      |      |      |      |      |      |      |      |      |      |
 |  21  |       |      |      |      |      |      |      |      |      |      |      |      |
 |  22  |       |      |      |      |      |      |      |      |      |      |      |      |
