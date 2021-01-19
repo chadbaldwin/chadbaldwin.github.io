@@ -14,7 +14,12 @@ By some miracle, back in Dec 2020, I got myself to start reading books, for the 
 
 In order to force myself to continue this habit, I'm making this a public page on my blog. With a full year calendar to indicate the days I've read. Kinda like the ["Every Day Calendar" by Simone Giertz](https://www.simonegiertz.com/every-day-calendar)...but I can't afford one, and this site is free.
 
-## Current book:
+## Current book(s):
+
+I generally try to only read one book at a time, but sometimes there are exceptions. Right now I'm reading two books because I'm trying to cram for my upcoming 70-762 exam. But once I finish taking that exam, I'll be switching back to reading one book at a time.
+
+* [Exam Ref 70-762 Developing SQL Databases](https://amzn.to/35Re73h)
+  * Currently preparing to take my 70-762 exam on Jan 29th. I just bought this book, and hoping to plow through it in 10 days 😭 I doubt I'll make it through cover to cover...but, I should be able to cover the sections I'm not familiar with. 🤞
 
 * [*What Every BODY is Saying* by Joe Navarro](https://amzn.to/3oQtvVh)
   * Body Language...how to read it. I originally read this book back in high school; It ended up being a huge impact on my life. It's helped me perform better in interviews by reading their body language, and also making sure I project the right body language to them. I highly recommend this book. On top of learning how to read body language, the book is chock-full of insane stories from a former FBI counterintelligence officer and their experiences using these skills.
