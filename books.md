@@ -19,7 +19,9 @@ In order to force myself to continue this habit, I'm making this a public page o
 * [*What Every BODY is Saying* by Joe Navarro](https://amzn.to/3oQtvVh)
   * Body Language...how to read it. I originally read this book back in high school; It ended up being a huge impact on my life. It's helped me perform better in interviews by reading their body language, and also making sure I project the right body language to them. I highly recommend this book. On top of learning how to read body language, the book is chock-full of insane stories from a former FBI counterintelligence officer and their experiences using these skills.
 
-## Previous books:
+## Recently finished books:
+
+**January**:
 
 * [*Microsoft SQL Server 2012 T-SQL Fundamentals* by Itzik Ben-Gan](https://amzn.to/3svr2BU)
   * I can't believe I had this goldmine sitting on my bookshelf for nearly 8 years. I wish I had read this when I bought it. This is an incredible book...not only is it great for those looking to learn T-SQL, but even as a database developer with nearly a decade of experience...I learned a TON from this book, and I may even need to read it again, though I'm hoping a new edition will be coming out since the latest edition (3rd) was released in 2016.
