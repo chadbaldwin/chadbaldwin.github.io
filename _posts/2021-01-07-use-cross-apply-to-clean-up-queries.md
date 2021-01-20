@@ -11,9 +11,9 @@ comment_issue_id: 5
 
 [DRY...Don't Repeat Yourself.](https://en.wikipedia.org/wiki/Don%27t_repeat_yourself)
 
-There are multiple ways to re-use code in SQL, such as subqueries and CTE's; But I'd like to show you another way utilizing `CROSS APPLY`.
+There are multiple ways to re-use code in SQL, such as [subqueries](https://docs.microsoft.com/en-us/sql/relational-databases/performance/subqueries) and [CTE's](https://docs.microsoft.com/en-us/sql/t-sql/queries/with-common-table-expression-transact-sql); But I'd like to show you another way utilizing `CROSS APPLY`.
 
-Subqueries and CTE's are great, but they're not exactly easy to daisy chain. What if you wanted to declare some kind of "inline variable" that you can assign a forumula to, and then reference multiple times?
+Subqueries and CTE's are great, but they're not exactly easy to daisy chain. What if you wanted to declare some kind of "inline variable" that you can assign a formula to, and then reference multiple times?
 
 A lot of people who are new to SQL think that you can write something in the `SELECT` clause, assign an alias, and then re-use that alias throughout the query. They soon realize that will throw an error. This is because aliases assigned in the `SELECT` clause are only accessible in the `ORDER BY`.
 

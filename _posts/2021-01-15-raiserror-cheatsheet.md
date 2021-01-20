@@ -23,7 +23,7 @@ comment_issue_id: 6
 </style>
 
 
-> Note: It is suggested in the documentation to use `THROW` when you can. However, there are times when you want more control over the severity level that is used. `THROW` is hardcoded to use severity level 16.
+> Note: It is suggested in the documentation to use [`THROW`](https://docs.microsoft.com/en-us/sql/t-sql/language-elements/throw-transact-sql) when you can. However, there are times when you want more control over the severity level that is used. `THROW` is hardcoded to use severity level 16.
 
 This was originally intended to only be a simple table, but then I decided to include demos and screenshots. So prepare yourself for a fairly boring blog post.
 
@@ -62,7 +62,7 @@ RAISERROR('%s - Did more things',0,1,@currenttime) WITH NOWAIT;
 
 I like to use this rather than `PRINT 'Your message here'` for a number of reasons...
 
-1. `PRINT` messages are buffered and only get flushed to the output occasionally, but `RAISERROR...WITH NOWAIT` gets flushed to output immediately, hence `NOWAIT` (I'll demo this below).
+1. `PRINT` messages are buffered and only get flushed to the output occasionally, but `RAISERROR...WITH NOWAIT` gets flushed to output immediately, hence `NOWAIT` ([I'll demo this below](#flush-output-buffer-using-with-nowait)).
 2. `PRINT` messages can sometimes be returned out of order. I've especially found this when calling a stored procedure via linked server (though note below, severity levels 17-25 will also return messages out of executed order).
 3. You can control the level of severity that is returned
 4. `RAISERROR` allows for templating, like swapping in values.
@@ -73,15 +73,15 @@ Column descriptions:
 * **Fails Job Step** - If an error with this severity level is thrown, in a batch which was executed by a job, either directly, or in a stored procedure, the job step will report it failed. It's important to note, that despite reporting it failed...that does not necessarily mean the code stopped running where the error happened.
 * **Transfers to CATCH Block** - If the error occurs while within a `TRY` block, control will be passed to the `CATCH` block
 
-| From |  To  | Prevents output | Stops Execution / Kills Connection | Fails Job Step | Transfers to CATCH Block | WITH  |
-| :--: | :--: | :-------------: | :--------------------------------: | :------------: | :----------------------: | :---: |
-|  0   |  1   |                 |                                    |                |                          | [Any] |
-|  2   |  9   |                 |                                    |      Yes       |                          | [Any] |
-|  10  |      |                 |                                    |                |                          | [Any] |
-|  11  |  16  |                 |                                    |      Yes       |           Yes            | [Any] |
-|  17  |  18  |       Yes       |                                    |      Yes       |           Yes            | [Any] |
-|  19  |      |       Yes       |                                    |      Yes       |           Yes            |  LOG  |
-|  20  |  25  |       Yes       |                Yes                 |      Yes       |                          |  LOG  |
+| From |  To  | [Prevents output](#prevents-output) | [Stops Execution / Kills Connection](#stops-execution--kills-connection) | [Fails Job Step](#fails-job-step) | [Transfers to CATCH Block](#transfers-to-catch-block) | WITH  |
+| :--: | :--: | :---------------------------------: | :----------------------------------------------------------: | :-------------------------------: | :---------------------------------------------------: | :---: |
+|  0   |  1   |                                     |                                                              |                                   |                                                       | [Any] |
+|  2   |  9   |                                     |                                                              |                Yes                |                                                       | [Any] |
+|  10  |      |                                     |                                                              |                                   |                                                       | [Any] |
+|  11  |  16  |                                     |                                                              |                Yes                |                          Yes                          | [Any] |
+|  17  |  18  |                 Yes                 |                                                              |                Yes                |                          Yes                          | [Any] |
+|  19  |      |                 Yes                 |                                                              |                Yes                |                          Yes                          |  LOG  |
+|  20  |  25  |                 Yes                 |                             Yes                              |                Yes                |                                                       |  LOG  |
 
 <table style="table-layout:fixed">
     <colgroup>
