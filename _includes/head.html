@@ -12,8 +12,15 @@
   <!-- highlight.js support -->
   <link rel="stylesheet" href="/js/highlightjs/styles/github.css">
   <link rel="stylesheet" href="/js/highlightjs/styles/ssms.css" />
+
   <script type="text/javascript" src="/js/highlightjs/highlight.min.js"></script>
+
+  <script type="text/javascript" src="/js/highlightjs/languages/plaintext.min.js"></script>
+  <script type="text/javascript" src="/js/highlightjs/languages/powershell.min.js"></script>
+  <script type="text/javascript" src="/js/highlightjs/languages/tsql.min.js"></script>
+
   <script type="text/javascript"> hljs.initHighlightingOnLoad(); </script>
+  <!-- end highlight.js support -->
 
   {%- if jekyll.environment == 'production' -%}
   <!-- dark theme using DarkReader -->
@@ -21,7 +28,8 @@
   <script type="text/javascript">DarkReader.auto( {brightness: 100, contrast: 90, sepia: 10} );</script>
   {%- endif -%}
 
-  <!-- mathjax support -->
+  <!-- mathjax support
   <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
   <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  -->
 </head>
