@@ -3,11 +3,8 @@ title: Code snippets in blog posts
 ---
 
 Trying to decide which code blocks would be best for posting blogs.
-&nbsp;
 
 ---
-&nbsp;
-
 ### Jekyll/Liquid highlight block, for sql
 
 **Source:**
@@ -45,14 +42,12 @@ ORDER BY o.[object_id];
 * Source file isn't portable to other markdown platforms
 
 ---
-&nbsp;
-
 ### Markdown fenced code block, for sql
 
 **Source:**
 
 ````
-```sql
+​```sql
 SELECT *, OBJECT_NAME(o.[object_id])
 FROM sys.objects o
 WHERE o.[name] = 'foobar'
@@ -63,7 +58,7 @@ ORDER BY o.[object_id];
 
 **Produces:**
 
-```sql
+​```sql
 SELECT *, OBJECT_NAME(o.[object_id])
 FROM sys.objects o
 WHERE o.[name] = 'foobar'
@@ -83,8 +78,6 @@ ORDER BY o.[object_id];
   * This could potentially be fixed using a custom style
 
 ---
-&nbsp;
-
 ### Ace editor code block, for sqlserver
 
 * [Homepage](https://ace.c9.io)
@@ -132,8 +125,6 @@ ORDER BY o.[object_id];</pre>
 * Requires more setup to make workable long term (adding scripts/css to jekyll layout)
 
 ---
-&nbsp;
-
 ### GitHub gist
 
 #### Using jekyll-gist plugin

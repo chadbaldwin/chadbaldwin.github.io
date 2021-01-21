@@ -17,8 +17,6 @@ Of course, there's always more than one way to bake a cake.
 
 ---
 
-&nbsp;
-
 One method is to compare each column in the `WHERE` clause separating each comparison with an `OR`...
 
 ```tsql
@@ -63,8 +61,6 @@ This is where my favorite trick comes in; Using the `EXISTS` operator and the `E
 
 ---
 
-&nbsp;
-
 ## The Basics - How does EXCEPT work?
 
 The `EXCEPT` set operator compares two sets of records, and returns all of the records from the first set that don't have a matching record in the second set.
@@ -93,8 +89,6 @@ The first example returns nothing because the two sets match, but the following 
 The other thing to note is that the `EXCEPT` operator treats the comparison of `NULL` values as equal. Unlike standard comparison operators. It's this difference that helps us use it to find changed rows.
 
 ---
-
-&nbsp;
 
 ## Let's set up some sample data:
 
@@ -144,8 +138,6 @@ VALUES (11, 'Chad', NULL, 'Baldwin', '1990-01-12');
 Now we have a copy of the `#Customer` table named `#Updates`, and we've made a few changes to the data.
 
 ---
-
-&nbsp;
 
 Let's use `EXISTS` and `EXCEPT` to find all records which changed...
 
@@ -203,8 +195,6 @@ THEN
 ```
 
 ---
-
-&nbsp;
 
 ## What about performance?
 

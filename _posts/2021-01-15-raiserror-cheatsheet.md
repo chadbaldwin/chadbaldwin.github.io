@@ -9,7 +9,7 @@ comment_issue_id: 6
 
 <style>
     pre {
-    overflow-x: auto;
+    	overflow-x: auto;
     }
     .note-wrapper {
         text-align: left;
@@ -21,7 +21,6 @@ comment_issue_id: 6
         margin-bottom: 10px
     }
 </style>
-
 
 > Note: It is suggested in the documentation to use [`THROW`](https://docs.microsoft.com/en-us/sql/t-sql/language-elements/throw-transact-sql) when you can. However, there are times when you want more control over the severity level that is used. `THROW` is hardcoded to use severity level 16.
 
@@ -158,8 +157,6 @@ Column descriptions:
 
 ---
 
-&nbsp;
-
 ## Lets do a couple demos:
 
 ### *Flush output buffer using WITH NOWAIT*
@@ -217,8 +214,6 @@ In the case of a loop that has lots of iterations and you don't want to flood th
 
 ---
 
-&nbsp;
-
 ### *Prevents output*
 
 Run this script...At first, it will "look" like the script stopped running as soon as it hit the error...but guess what...it didn't, the whole thing ran, but everything after the error message was not output, both to the results tab AND the messages tab.
@@ -238,9 +233,9 @@ SELECT val = 'Insert into temp table after error' INTO #tmp;
 RAISERROR('Another error message',0,1) WITH NOWAIT;
 ```
 
-![asdf](/img/raiserror/20210115_102440.png)
+![](/img/raiserror/20210115_102440.png)
 
-![asdf](/img/raiserror/20210115_102428.png)
+![](/img/raiserror/20210115_102428.png)
 
 Now run this:
 
@@ -248,13 +243,11 @@ Now run this:
 SELECT * FROM #tmp;
 ```
 
-![asdf](/img/raiserror/20210115_102608.png)
+![](/img/raiserror/20210115_102608.png)
 
 Wait what!? But...If `SELECT 'After the error'` never ran...then how did the temp table get populated?? Yup...Don't let this one screw you up, thinking it stopped where it threw.
 
 ---
-
-&nbsp;
 
 ### *Stops Execution / Kills Connection*
 
@@ -281,7 +274,7 @@ BEGIN TRAN;
 COMMIT;
 ```
 
-![asdf](/img/raiserror/20210115_103156.png)
+![](/img/raiserror/20210115_103156.png)
 
 You can see in the output "5 rows affected". But what happened with the transaction?
 
@@ -289,7 +282,7 @@ You can see in the output "5 rows affected". But what happened with the transact
 SELECT * FROM dbo.RE_Test_Kill
 ```
 
-![asdf](/img/raiserror/20210115_103402.png)
+![](/img/raiserror/20210115_103402.png)
 
 So everything is still there, that must mean the transaction was rolled back.
 
@@ -297,13 +290,11 @@ So everything is still there, that must mean the transaction was rolled back.
 DBCC OPENTRAN;
 ```
 
-![asdf](/img/raiserror/20210115_103526.png)
+![](/img/raiserror/20210115_103526.png)
 
 And (assuming your server does not have any other open transactions) now you can see the transaction was not left open.
 
 ---
-
-&nbsp;
 
 ### *Fails Job Step*
 
@@ -332,7 +323,7 @@ EXEC msdb.dbo.sp_add_jobstep @job_id = @jobId, @step_name = N're25', @command = 
 EXEC msdb.dbo.sp_add_jobserver @job_id = @jobId, @server_name = N'(local)';
 ```
 
-![asdf](/img/raiserror/20210115_105923.png)
+![](/img/raiserror/20210115_105923.png)
 
 As you can see, severity levels 0, 1 and 10 are the only ones that did not fail the job step. It's also worth noting that severity level 10 actually reports to the job as severity level 0.
 
@@ -345,8 +336,6 @@ EXEC msdb.dbo.sp_delete_job @job_id = @jobId;
 ```
 
 ---
-
-&nbsp;
 
 ### *Transfers to CATCH Block*
 
@@ -370,7 +359,7 @@ BEGIN CATCH;
 END CATCH;
 ```
 
-![asdf](/img/raiserror/20210115_110536.png)
+![](/img/raiserror/20210115_110536.png)
 
 As expected, the code in the `CATCH` block was never run.
 
@@ -389,7 +378,7 @@ BEGIN TRY RAISERROR('Raiserror severity 19', 19, 1) WITH LOG    END TRY BEGIN CA
 SELECT * FROM #caughterrors c ORDER BY c.SeverityLevel
 ```
 
-![asdf](/img/raiserror/20210115_111128.png) ![asdf](/img/raiserror/20210115_111238.png)
+![](/img/raiserror/20210115_111128.png) ![](/img/raiserror/20210115_111238.png)
 
 No messages were logged because they were all caught and inserted into the temp table instead.
 
@@ -409,8 +398,6 @@ These examples are only here for completeness. They won't get caught by the `CAT
 
 ---
 
-&nbsp;
-
 ### *Bonus demo: messages returned out of order*
 
 If you notice, in the second table, for severity levels 17-19, I note that the messages are returned out of order. I'll show you want I mean here:
@@ -428,6 +415,6 @@ RAISERROR('Raiserror severity  3',  3, 1);
 
 But if you run it, you'll see that's not the case.
 
-![asdf](/img/raiserror/20210115_111756.png)
+![](/img/raiserror/20210115_111756.png)
 
 Despite severity levels 17, 18 and 19 being first in execution, their output gets deferred to last.

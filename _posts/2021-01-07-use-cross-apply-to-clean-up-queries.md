@@ -21,8 +21,6 @@ But, using `CROSS APPLY`, you can sort of achieve this.
 
 ---
 
-&nbsp;
-
 ## Sample data:
 
 ```tsql
@@ -46,8 +44,6 @@ VALUES ('Tyler Durden'  , '1973-03-06', 'Wilmington' , 'DE', '(210) 658-5511')
 
 ---
 
-&nbsp;
-
 
 ## The Challenge...
 
@@ -62,8 +58,6 @@ You can probably imagine how ugly this is going to get...but think about how you
 **Tip**: Note that not ALL phone numbers contain an area code...
 
 ---
-
-&nbsp;
 
 ## The conventional way:
 
@@ -99,8 +93,6 @@ WHERE LEN(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(c.PhoneNumber,'(',''),
 ```
 
 ---
-
-&nbsp;
 
 ## Using CTE's
 
@@ -139,8 +131,6 @@ This really isn't too bad. We only had to write the `REPLACE` logic once, and re
 What if next month, a new field is added to the table? Now you have to add it to the top CTE and route it all the way through. This would be even worse if `#Contact` had 20+ columns. That would get real ugly.
 
 ---
-
-&nbsp;
 
 ## Using CROSS APPLY
 
