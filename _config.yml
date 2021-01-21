@@ -99,7 +99,7 @@ resume:
     education:    true
     projects:     true
     skills:       true
-    recognition:  false
+    recognition:  true
     associations: false
     interests:    true
     links:        false

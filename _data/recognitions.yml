@@ -1,11 +1,6 @@
-- award: Outstanding Achievement
-  organization: Springfield Young Professionals
-  year: 2010, 2014
-  summary: >
-    Awarded the Outstanding Achievement award for contributions made to the
-    community and professional accomplishments.
-
-- award: Most Likely To Succeed
-  organization: Springfield High School
-  year: 2004
-  summary: Voted Most Likely To Succeed by a panel of my high school peers.
+- award: "Passed Exam 70-761: Querying Data with Transact-SQL"
+  organization: Microsoft
+  year: 2021
+  summary: > 
+    <div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="f004ec0c-5174-4b2a-85bd-1942610b568b" data-share-badge-host="https://www.youracclaim.com"></div>
+    <script type="text/javascript" async src="//cdn.youracclaim.com/assets/utilities/embed.js"></script>
