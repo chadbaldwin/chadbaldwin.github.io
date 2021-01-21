@@ -69,6 +69,29 @@ So now instead of copy pasting the table name into some random empty section of 
 
 ---
 
+## Bonus use case using dynamic SQL
+
+Just discovered this "method" after posting this blog post. It's such an interesting concept that I had to add this section just to throw it out there as I think it opens up a lot of doors to some potentially interesting query shortcuts.
+
+So today I learned, that single word strings do not need to be qualified with quotes when passed into a stored procedure. Now, I **DO NOT** recommend you do this as a general practice...but, it does allow us to come up with some pretty interesting query shortcuts.
+
+Here's an example of this hack:
+
+```tsql
+-- works
+EXEC sp_executesql N'SELECT @string',N'@string varchar(100)',ThisIsATest
+EXEC sp_executesql N'SELECT @string',N'@string varchar(100)',This_Is_A_Test
+EXEC sp_executesql N'SELECT @string',N'@string varchar(100)',[This-Is A Test]
+
+-- doesn't work
+EXEC sp_executesql N'SELECT @string',N'@string varchar(100)',This Is A Test
+EXEC sp_executesql N'SELECT @string',N'@string varchar(100)',This-Is-A-Test
+```
+
+You could set this as one of your query shortcuts. Maybe it looks up info on a table, or a column, or searches stored procedure code, there's all kinds of uses for this. So in this case `ThisIsATest` would be the word you have highlighted. This could be a table, view or stored procedure name. As long as it is a valid object identifier, or is a single word, then it will be simply passed in as a string.
+
+---
+
 ## Setting it up
 
 Setting it up is simple. The option lives under:
