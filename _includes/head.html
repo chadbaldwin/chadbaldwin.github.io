@@ -19,13 +19,17 @@
   <script type="text/javascript" src="/js/highlightjs/languages/powershell.min.js"></script>
   <script type="text/javascript" src="/js/highlightjs/languages/tsql.min.js"></script>
 
-  <script type="text/javascript"> hljs.initHighlightingOnLoad(); </script>
+  <script type="text/javascript"> hljs.highlightAll(); </script>
   <!-- end highlight.js support -->
 
   {%- if jekyll.environment == 'production' -%}
   <!-- dark theme using DarkReader -->
   <script src="//unpkg.com/darkreader@4.9.26/darkreader.js"></script>
-  <script type="text/javascript">DarkReader.auto( {brightness: 100, contrast: 90, sepia: 10} );</script>
+  <script type="text/javascript">
+    DarkReader.setFetchMethod(window.fetch); // Fix to remedy CORS errors in chrome console
+    //DarkReader.enable();
+    DarkReader.auto( {brightness: 100, contrast: 90, sepia: 10} );
+  </script>
   {%- endif -%}
 
   <!-- mathjax support
