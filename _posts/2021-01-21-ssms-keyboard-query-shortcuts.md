@@ -43,9 +43,9 @@ I think that's pretty simple to understand, so we can probably just move on to t
 
 ### The more complex use case:
 
-Take this string `SELECT TOP(100) * FROM ` (make sure there's a space at the end) and assign it to `Ctrl`+`7`...
+Take this string `SELECT TOP(100) * FROM ` (make sure there's a space at the end) and let's say that you've assigned it to `Ctrl`+`7`...
 
-Type this query into a query window and only highlight `sys.tables`
+Type this query into a query window and only highlight `sys.columns`
 
 ```tsql
 SELECT TOP(1000) c.*, t.[name]
@@ -55,9 +55,9 @@ FROM sys.columns c
 
 ...now hit `Ctrl`+`7`
 
-Here's what happens...you've selected `sys.tables`...now when you hit `Ctrl`+`7`, SSMS takes the string you assigned to the shortcut, concatenates your selection to the end of it, and then runs the whole thing as a single statement.
+Here's what happens...you've selected `sys.columns`...now when you hit `Ctrl`+`7`, SSMS takes the string you assigned to the shortcut, concatenates your selection to the end of it, and then runs the whole thing as a single statement.
 
-So `sys.tables` now becomes `SELECT TOP(100) * FROM sys.tables`
+So `sys.columns` now becomes `SELECT TOP(100) * FROM sys.columns`
 
 Here it is in action:
 
@@ -69,13 +69,13 @@ So now instead of copy pasting the table name into some random empty section of 
 
 ---
 
-## Bonus use case using dynamic SQL
+### Bonus use case using dynamic SQL
 
 Just discovered this "method" after posting this blog post. It's such an interesting concept that I had to add this section just to throw it out there as I think it opens up a lot of doors to some potentially interesting query shortcuts.
 
-So today I learned, that single word strings do not need to be qualified with quotes when passed into a stored procedure. Now, I **DO NOT** recommend you do this as a general practice...but, it does allow us to come up with some pretty interesting query shortcuts.
+Single word strings do not need to be qualified with quotes when passed into a stored procedure. Now, I **DO NOT** recommend you do this as a general practice...but, it does allow us to come up with some pretty interesting query shortcuts.
 
-Here's an example of this hack:
+Here's an example of this hack just to give you an idea:
 
 ```tsql
 -- works
@@ -88,7 +88,7 @@ EXEC sp_executesql N'SELECT @string',N'@string varchar(100)',This Is A Test
 EXEC sp_executesql N'SELECT @string',N'@string varchar(100)',This-Is-A-Test
 ```
 
-You could set this as one of your query shortcuts. Maybe it looks up info on a table, or a column, or searches stored procedure code, there's all kinds of uses for this. So in this case `ThisIsATest` would be the word you have highlighted. This could be a table, view or stored procedure name. As long as it is a valid object identifier, or is a single word, then it will be simply passed in as a string.
+You could set this as one of your query shortcuts. Maybe it looks up info on a table, or a column, or searches stored procedure code. There's all kinds of uses for this. So in this case `ThisIsATest` would be the word you have highlighted. This could be a table, view or stored procedure name, whatever. As long as it is a valid object identifier, or is a single word, then it will be simply passed in as a string.
 
 ---
 
@@ -127,7 +127,7 @@ Now you can set all the cool query shortcuts you want...well, up to 9.
 
 ## The poor mans snippet manager?
 
-Okay...I *really* shouldn't be showing you this for multiple reasons. For starters...SSMS actually has a [snippet system built into it](https://www.sqlshack.com/sql-snippets-in-sql-server-management-studio/)  and secondly, this is super hacky. For some reason, I don't remember why, I didn't like the built in SSMS snippet support (though admittedly I've never used it, I've only read about how to use it), and I chose to do this insanity instead. This was long before I learned about [SQL Prompt](https://www.red-gate.com/products/sql-development/sql-prompt/) and other SSMS plugins. But it's too ridiculous not to show it...So, why not...
+Okay...I *really* shouldn't be showing you this for multiple reasons. For starters...SSMS actually has a [snippet system built into it](https://www.sqlshack.com/sql-snippets-in-sql-server-management-studio/) and secondly, this is super hacky. For some reason, I don't remember why, I didn't like the built in SSMS snippet support (though admittedly I've never used it, I've only read about how to use it), and I chose to do this insanity instead. This was long before I learned about [SQL Prompt](https://www.red-gate.com/products/sql-development/sql-prompt/) and other SSMS plugins. But it's too ridiculous not to show it...So, why not...
 
 I threw this together as an example. Say you have a handful of queries that you constantly forget the syntax to and you want to quickly load them into SSMS...Well then...why not just build a snippet table into a keyboard shortcut? Because that seems reasonable....right?
 
@@ -200,7 +200,7 @@ $xmlDoc.Save($ssmsUserSettingsFile);
 $xmlDoc.Save($ssmsUserSettingsFile);
 ```
 
-You can use this same script to make other settings changes to this file, but I that's beyond the scope of this post.
+You can use this same script to make other settings changes to this file, but that's beyond the scope of this post.
 
 ---
 
