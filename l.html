@@ -1,0 +1,49 @@
+---
+layout: page
+---
+<html>
+
+<head>
+    <style>
+        .avatar {
+            width: 95px;
+            max-width: 100%;
+            overflow: hidden;
+            border-radius: 100px;
+            margin: 0 auto;
+            display: block;
+        }
+
+        .link-item {
+            background-color: #ddff00;
+        }
+
+        .link-content {
+            text-align: center;
+            padding-top: 15px;
+            padding-bottom: 15px;
+        }
+
+        a:link, a:visited {
+            color: black;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <a href='{{ site.url }}'>
+            <p><img src="https://www.gravatar.com/avatar/{{ site.gravatar_hash }}?size=100" class="avatar"></p>
+        </a>
+    </div>
+
+    {%- for link in site.social-links -%}
+        <div class="link-item">
+            <a href='{{ link[1] }}'>
+                <p class='link-content'>{{ link[0] }}</p>
+            </a>
+        </div>
+    {%- endfor -%}
+</body>
+
+</html>
