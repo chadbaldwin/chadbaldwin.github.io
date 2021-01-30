@@ -94,5 +94,5 @@ If I didn't read that day, I'll try to list a 1 word reason as to why I skipped 
 |  27  |   X   |      |      |      |      |      |      |      |      |      |      |      |
 |  28  |   X   |      |      |      |      |      |      |      |      |      |      |      |
 |  29  |   X   |      |      |      |      |      |      |      |      |      |      |      |
-|  30  |       |      |      |      |      |      |      |      |      |      |      |      |
+|  30  |   X   |      |      |      |      |      |      |      |      |      |      |      |
 |  31  |       |      |      |      |      |      |      |      |      |      |      |      |
