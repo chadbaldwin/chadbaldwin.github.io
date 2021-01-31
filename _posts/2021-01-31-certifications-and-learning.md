@@ -11,7 +11,7 @@ comment_issue_id: 8
 
 I'm pretty sure I've started watching the same "Getting started with Python" Pluralsight course *at least* half a dozen times. I've been paying for a Pluralsight membership for *years* and I rarely use it, but I don't dare cancel it because I *think* I'll use it.
 
-The only way I'm able to effectively learn something is through hands-on actual job experience. Give me the task, and I do whatever it takes to figure it out. I learned SQL, PowerShell and now C# on the job, among many other things. The reason? Because now someone else is relying on me to get something done; And that's just enough pressure to keep me focused on the task. So if all it takes for me to learn something is to apply a bit of pressure...what's another option for independent learning?
+The only way I'm able to effectively learn something is through hands-on actual job experience. Give me the task, and I will do whatever it takes to figure it out and get it done. I learned SQL, PowerShell and now C# on the job, among many other things. The reason? Because now someone else is relying on me to get something done; And that's just enough pressure to keep me focused on the task. So if all it takes for me to learn something is to apply a bit of pressure...what's another option for independent learning?
 
 ---
 
@@ -21,7 +21,7 @@ A few weeks ago, [Brent Ozar blogged about certifications](https://www.brentozar
 
 I started researching into the [Microsoft certifications](https://docs.microsoft.com/en-us/learn/certifications/) to see what certs best fit my current career path. To my surprise, I found that the certification I was interested in &mdash; [MCSA: SQL 2016 Database Development](https://docs.microsoft.com/en-us/learn/certifications/mcsa-sql2016-database-development-certification) &mdash; was going to be retired on Jan 31st 2021 and at the time, it was Jan 12th...19 days to take and pass two exams (70-761, 70-762). Not only that...but this would be my ONLY chance to ever take them, after that, they'd be retired, no re-takes. **But** one of the things Brent mentioned in his blog post was "No matter why you want the exam, just take it first.". So...that's what I decided to do, win or lose.
 
-The tests were $165 each. I figured worst case scenario, I fail both tests, I'm out $330...but I still learn a **ton** in the course of preparing for the exams.
+The exams were $165 each. I figured worst case scenario, I fail both exams, I'm out $330...but I still learn a **ton** in the course of preparing for the exams.
 
 ---
 
@@ -39,17 +39,17 @@ Exam day came...and to keep it short...I passed!! And the effort I put into stud
 
 ### Exam #2 - 70-762: Developing SQL Databases
 
-Now that I passed the first test, I could focus on the second test. My exam was scheduled for Jan 29th, which gave me 11 days to prepare. This exam, however, I was not nearly as confident taking. All of my work experience was on development...not DBA type work, and this exam covered a lot of areas I knew nothing about. Optimistically, I'd say my experience covered about 30% of the "skills measured" PDF.
+Now that I passed the first exam, I could focus on the second exam. My exam was scheduled for Jan 29th, which gave me 11 days to prepare. This exam, however, I was not nearly as confident taking. All of my work experience was on development...not DBA type work, and this exam covered a lot of areas I knew nothing about. Optimistically, I'd say my experience covered about 30% of the "skills measured" PDF.
 
 Things I knew nothing about prior to this exam: monitoring, extended events, Azure, Resource Governor, columnstore indexes, in-memory OLTP, index maintenance, troubleshooting with system DMV's....Let's just say I had a lot to cover.
 
-I knew in order to have a chance at passing at this exam, I was going to need to put a lot more work. I ordered the [official 70-762 Exam reference](https://amzn.to/35Re73h) from Amazon. It's 368 pages and was expected to arrive in 2 days, giving me 10 days to read it at about 37 pages a day.
+I knew in order to have a chance at passing at this exam, I was going to need to put in a lot more work. I ordered the [official 70-762 Exam reference](https://amzn.to/35Re73h) from Amazon. It's 368 pages and was expected to arrive in 2 days, giving me 10 days to read it at about 37 pages a day.
 
-While waiting for the book to be delivered, I used that time to read a about in-memory OLTP tables, natively compiled stored procedures and columnstore indexes in [Itzik Ben-Gan's book "T-SQL Querying"](https://amzn.to/39BLMzk) which I happened to have already. Those are two HUGE "new" things with SQL Server and I had a feeling they would be heavily covered on the test and that I would need to focus on those areas a lot.
+While waiting for the book to be delivered, I used that time to read about in-memory OLTP tables, natively compiled stored procedures and columnstore indexes in [Itzik Ben-Gan's book "T-SQL Querying"](https://amzn.to/39BLMzk) which I happened to have already. Those are two HUGE "new" things with SQL Server and I had a feeling they would be heavily covered on the exam and that I would need to focus on those areas a lot.
 
 I read and finished the book with 1 day to spare. I read the exam book every morning before work, I used my lunch breaks to watch YouTube videos, and after work I either read the book or I read blog posts, documentation, etc.
 
-Exam day came and I was literally watching YouTube videos on columnstore and in-memory OLTP set to 2X speed minutes before my test trying to absorb as much information as I possibly could.
+Exam day came and I was literally watching YouTube videos on columnstore indexes and in-memory OLTP set to 2X speed minutes before my exam trying to absorb as much information as I possibly could.
 
 But...my studying paid off and I passed! Thus earning my MCSA! My first certification. 🎉
 
@@ -61,4 +61,4 @@ Prior to a few weeks ago, I had no intention of getting a certification. I never
 
 However, this opinion has changed quite a bit in the last few weeks. While I still don't know how much the certification itself will benefit me career-wise...it certainly benefitted me knowledge-wise. I've learned more about SQL Server in the last 3 weeks than I have in the past 3 years, all because I put some money on the line, scheduled an exam and gave myself that pressure I needed to focus and study for a specific goal.
 
-If you read this, and you can relate to it...maybe you could give a certification a shot. Find a certification you're interested in, buy some books, sign up for Pluralsight, find some good YouTube videos, etc. Schedule the test and give it a shot. You never know. Chances are, you're underestimating yourself. Even if you don't pass...now you'll know what you need to study before you take it again. And you never know...you may even be able to get your work to pay for your exam/study materials.
+If you read this, and you can relate to it...maybe you should give a certification a shot. Find a certification you're interested in, buy some books, sign up for Pluralsight, find some good YouTube videos, schedule the exam and give it a shot. You never know. Chances are, you're underestimating yourself. Even if you don't pass...now you'll know what you need to study before you take it again. And you never know...you may even be able to get your work to pay for your exam/study materials.
