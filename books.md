@@ -14,12 +14,7 @@ By some miracle, back in Dec 2020, I got myself to start reading books, for the 
 
 In order to force myself to continue this habit, I'm making this a public page on my blog. With a full year calendar to indicate the days I've read. Kinda like the ["Every Day Calendar" by Simone Giertz](https://www.simonegiertz.com/every-day-calendar)...but I can't afford one, and this site is free.
 
-## Current book(s):
-
-I generally try to only read one book at a time, but sometimes there are exceptions. Right now I'm reading two books because I'm trying to cram for my upcoming 70-762 exam. But once I finish taking that exam, I'll be switching back to reading one book at a time.
-
-* [*Exam Ref 70-762 Developing SQL Databases* by Louis Davidson](https://amzn.to/35Re73h)
-  * Currently preparing to take my 70-762 exam on Jan 29th. I just bought this book, and hoping to plow through it in 10 days 😭 I doubt I'll make it through cover to cover...but, I should be able to cover the sections I'm not familiar with. 🤞
+## Current book:
 
 * [*What Every BODY is Saying* by Joe Navarro](https://amzn.to/3oQtvVh)
   * Body Language...how to read it. I originally read this book back in high school; It ended up being a huge impact on my life. It's helped me perform better in interviews by reading their body language, and also making sure I project the right body language to them. I highly recommend this book. On top of learning how to read body language, the book is chock-full of insane stories from a former FBI counterintelligence officer and their experiences using these skills.
@@ -32,6 +27,8 @@ I generally try to only read one book at a time, but sometimes there are excepti
   * I can't believe I had this goldmine sitting on my bookshelf for nearly 8 years. I wish I had read this when I bought it. This is an incredible book...not only is it great for those looking to learn T-SQL, but even as a database developer with nearly a decade of experience...I learned a TON from this book, and I may even need to read it again, though I'm hoping a new edition will be coming out since the latest edition (3rd) was released in 2016.
 * [*Microsoft SQL Server 2012 High-Performance T-SQL Using Window Functions* by Itzik Ben-Gan](https://amzn.to/3inZ2vd)
   * This one is also a goldmine for those who are a little more advanced. There's a ton of great information in here...but don't expect to understand it all on  your first read. Even if you *think* you know windowing functions well...once you read this,  you'll realize you were very **very** wrong.
+* [*Exam Ref 70-762 Developing SQL Databases* by Louis Davidson](https://amzn.to/35Re73h)
+  * Read in order to prepare for the 70-762 exam. Great book for learning high level concepts for just about everything to do with SQL Server (minus any DML). It was just enough information for me to pass my exam. Unfortunately, the book has a ton of spelling/grammar mistakes (seemed like 1 error per page on average). Many times it was hard to read because the mistakes were very distracting and interrupted the flow of reading. But if you can look past that, this is still a decent book for getting a nice high-level view (even despite the test being retired now, it may still be a good starting point).
 
 ## Todo List:
 
@@ -56,7 +53,7 @@ I generally try to only read one book at a time, but sometimes there are excepti
 
 X = minimum 1 hour of reading
 
-If I didn't read that day, I'll try to list a 1 word reason as to why I skipped that day. But if the day is blank...that means I was lazy and broke the streak.
+If I didn't read that day, I'll try to list a 1 word reason as to why I skipped that day. But if the day is blank...that means I was lazy and didn't do something productive that day.
 
 * "Blog" - chose to work on or write a blog instead of reading
 * "Class" - attended an online training class
@@ -95,4 +92,4 @@ If I didn't read that day, I'll try to list a 1 word reason as to why I skipped 
 |  28  |   X   |      |      |      |      |      |      |      |      |      |      |      |
 |  29  |   X   |      |      |      |      |      |      |      |      |      |      |      |
 |  30  |   X   |      |      |      |      |      |      |      |      |      |      |      |
-|  31  |       |      |      |      |      |      |      |      |      |      |      |      |
+|  31  |   X   |      |      |      |      |      |      |      |      |      |      |      |
