@@ -62,9 +62,9 @@ If I didn't read that day, I'll try to list a 1 word reason as to why I skipped 
 
 | ###  |  Jan  | Feb  | Mar  | Apr  | May  | Jun  | Jul  | Aug  | Sep  | Oct  | Nov  | Dec  |
 | :--: | :---: | :--: | :--: | :--: | :--: | :--: | :--: | :--: | :--: | :--: | :--: | :--: |
-|  1   |   X   |      |      |      |      |      |      |      |      |      |      |      |
-|  2   |   X   |      |      |      |      |      |      |      |      |      |      |      |
-|  3   |   X   |      |      |      |      |      |      |      |      |      |      |      |
+|  1   |   X   |   X  |      |      |      |      |      |      |      |      |      |      |
+|  2   |   X   |   X  |      |      |      |      |      |      |      |      |      |      |
+|  3   |   X   |   X  |      |      |      |      |      |      |      |      |      |      |
 |  4   |   X   |      |      |      |      |      |      |      |      |      |      |      |
 |  5   |   X   |      |      |      |      |      |      |      |      |      |      |      |
 |  6   |   X   |      |      |      |      |      |      |      |      |      |      |      |
