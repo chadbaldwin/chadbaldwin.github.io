@@ -24,11 +24,6 @@ layout: default
     {%- include disqus_comments.html -%}
   {%- endif -%}
 
-  {% comment %}
-    // Not implementing this yet. The cookie accpet banner doesn't seem to load properly, and needs to be larger
-    {% include cookie-consent.html %}
-  {% endcomment %}
-
   {% include comments.html element=".post-content" github_account="chadbaldwin/chadbaldwin.github.io" require_cookie_consent="false" %}
 
   <a class="u-url" href="{{ page.url | relative_url }}" hidden></a>
