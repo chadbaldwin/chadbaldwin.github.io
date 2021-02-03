@@ -16,13 +16,14 @@ layout: default
       {%- endif -%}</p>
   </header>
 
-  <div class="post-content e-content" itemprop="articleBody">
-    {{ content }}
+  <div class="share-links">
+    {% include sharelinks.html %}
   </div>
 
-  {%- if site.disqus.shortname -%}
-    {%- include disqus_comments.html -%}
-  {%- endif -%}
+  <div class="post-content e-content" itemprop="articleBody">
+    {{ content }}
+    {% include navlinks.html %}
+  </div>
 
   {% include comments.html element=".post-content" github_account="chadbaldwin/chadbaldwin.github.io" require_cookie_consent="false" %}
 
