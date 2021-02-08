@@ -1,3 +1,12 @@
+---
+layout: post
+title: Use merge to split data into multiple tables
+description: Need to insert data from one source table into two or more tables while maintaining FK relationship? You can use a merge statement combined with output.
+date: 2021-02-08 09:50:00 -0800
+tags: T-SQL
+comment_issue_id: 9
+---
+
 I wish over the years, as I've learned various tricks, that I had saved where/who I got it from so that I could credit back later on. I guess I never expected to have a blog one day.
 
 This is a trick I've only had to use a few times over the years, but I was going though some code I had written a while back which uses this technique and I thought it would be fun to write about it.
@@ -51,9 +60,9 @@ VALUES ('a', '1','b', '2')
     ,  ('m','13','n','14');
 ```
 
-![](/img/queryresults/merge_split_source_data.png)
+![merge split source data](/img/queryresults/merge_split_source_data.png)
 
-Set up the schema:
+Set up the schema (sorry, can't use temp tables for this one, they don't support FK's):
 
 ```tsql
 CREATE TABLE dbo.Table1 (
@@ -80,7 +89,7 @@ CREATE TABLE #IDs (
 );
 ```
 
-### The meat and potatoes
+### The key to making this whole thing work...
 
 ```tsql
 MERGE INTO dbo.Table1 t
@@ -115,10 +124,12 @@ FROM dbo.Table1 t1
     JOIN dbo.Table2 t2 ON t2.Table1ID = t1.Table1ID
 ```
 
-![](/img/queryresults/merge_split_source_data.png)
+![split data results](/img/queryresults/merge_split_source_data.png)
 
 #### Et Voilà!
 
-I'll leave it to you to tear apart the execution plan, for this particular example, it's really not very interesting. But for those lazy readers who don't want to run the code themselves, here's what it looks like:
+For those interested, here's what the execution plan looks like:
 
-??? INSERT PICTURE OF EXECUTION PLAN HERE ???
+![merge split execution plan](/img/queryresults/merge_split_execution_plan.png)
+
+If you want to know more about the details of a merge execution plan, check out [this blog post from Hugo Kornelis explaining the details of a merge execution plan from his "plansplaining" series](https://sqlserverfast.com/blog/hugo/2020/09/plansplaining-part-11-merge-plans/).
