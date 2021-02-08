@@ -5,7 +5,7 @@ description: Need to insert data from one source table into two or more tables w
 date: 2021-02-08 09:50:00 -0800
 tags: T-SQL
 comment_issue_id: 9
-image: /img/queryresults/merge_split_source_data.png
+image: /img/postbanners/2021-02-08-use-merge-to-split-data.png
 ---
 
 I wish over the years, as I've learned various tricks, that I had saved where/who I got it from so that I could credit back later on. I guess I never expected to have a blog one day.
