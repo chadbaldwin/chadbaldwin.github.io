@@ -16,8 +16,8 @@ In order to force myself to continue this habit, I'm making this a public page o
 
 ## Current book:
 
-* [*What Every BODY is Saying* by Joe Navarro](https://amzn.to/3oQtvVh)
-  * Body Language...how to read it. I originally read this book back in high school; It ended up being a huge impact on my life. It's helped me perform better in interviews by reading their body language, and also making sure I project the right body language to them. I highly recommend this book. On top of learning how to read body language, the book is chock-full of insane stories from a former FBI counterintelligence officer and their experiences using these skills.
+* [*Chronicles of a Motorcycle Gypsy: The 49 States Tour* by Tiffani Burkett](https://amzn.to/3nQdddB)
+  * A friend of mine wrote this book, I bought it almost immediately, but I just haven't had time to read it. It's about her incredible journey around the entire Continental United States while living on the back of her motorcycle, camping wherever she can and running into all sorts of surprises good and bad.
 
 ## Recently finished books:
 
@@ -29,6 +29,11 @@ In order to force myself to continue this habit, I'm making this a public page o
   * This one is also a goldmine for those who are a little more advanced. There's a ton of great information in here...but don't expect to understand it all on  your first read. Even if you *think* you know windowing functions well...once you read this,  you'll realize you were very **very** wrong.
 * [*Exam Ref 70-762 Developing SQL Databases* by Louis Davidson](https://amzn.to/35Re73h)
   * Read in order to prepare for the 70-762 exam. Great book for learning high level concepts for just about everything to do with SQL Server (minus any DML). It was just enough information for me to pass my exam. Unfortunately, the book has a ton of spelling/grammar mistakes (seemed like 1 error per page on average). Many times it was hard to read because the mistakes were very distracting and interrupted the flow of reading. But if you can look past that, this is still a decent book for getting a nice high-level view (even despite the test being retired now, it may still be a good starting point).
+
+### February:
+
+* [*What Every BODY is Saying* by Joe Navarro](https://amzn.to/3oQtvVh)
+  * Body Language...how to read it. I originally read this book back in high school; It ended up being a huge impact on my life. It's helped me perform better in interviews by reading their body language, and also making sure I project the right body language to them. I highly recommend this book. On top of learning how to read body language, the book is chock-full of insane stories from a former FBI counterintelligence officer and their experiences using these skills.
 
 ## Todo List:
 
@@ -42,8 +47,6 @@ In order to force myself to continue this habit, I'm making this a public page o
   * This is probably one of my all time favorite books. I've read it at least twice, but it's been about 12 years since I last read it, so I think it's time to go through it again.
 * [*The Pragmatic Programmer: Your Journey To Mastery, 20th Anniversary Edition (2nd Edition)* by David Thomas, Andrew Hunt](https://amzn.to/3oRAm0K)
   * I recently listened to this as an audio book, and it's definitely a good listen. But there were many parts with code examples where physically reading it would be helpful. So I hope to read this someday soon.
-* [*Chronicles of a Motorcycle Gypsy: The 49 States Tour* by Tiffani Burkett](https://amzn.to/3nQdddB)
-  * A friend of mine wrote this book, I bought it almost immediately, but I just haven't had time to read it. But it's definitely at the top of the list of books I am hoping to read soon.
 * [*C# 8.0 in a Nutshell: The Definitive Reference* by Joseph Albahari, Eric Johannsen](https://amzn.to/2KlumOF)
   * Bought this book a while back and got about 100 pages in and then broke my reading habit. It's a pretty big book, and dense with information...but hoping to get through this one to improve my C# skills one of these days.
 
@@ -69,7 +72,7 @@ If I didn't read that day, I'll try to list a 1 word reason as to why I skipped 
 |  5   |   X   |  X   |      |      |      |      |      |      |      |      |      |      |
 |  6   |   X   | Blog |      |      |      |      |      |      |      |      |      |      |
 |  7   |   X   |  X   |      |      |      |      |      |      |      |      |      |      |
-|  8   |   X   |      |      |      |      |      |      |      |      |      |      |      |
+|  8   |   X   |  X   |      |      |      |      |      |      |      |      |      |      |
 |  9   |   X   |      |      |      |      |      |      |      |      |      |      |      |
 |  10  |   X   |      |      |      |      |      |      |      |      |      |      |      |
 |  11  | Blog  |      |      |      |      |      |      |      |      |      |      |      |
