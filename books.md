@@ -73,9 +73,9 @@ If I didn't read that day, I'll try to list a 1 word reason as to why I skipped 
 |  6   |   X   | Blog |      |      |      |      |      |      |      |      |      |      |
 |  7   |   X   |  X   |      |      |      |      |      |      |      |      |      |      |
 |  8   |   X   |  X   |      |      |      |      |      |      |      |      |      |      |
-|  9   |   X   |      |      |      |      |      |      |      |      |      |      |      |
-|  10  |   X   |      |      |      |      |      |      |      |      |      |      |      |
-|  11  | Blog  |      |      |      |      |      |      |      |      |      |      |      |
+|  9   |   X   |  X   |      |      |      |      |      |      |      |      |      |      |
+|  10  |   X   |  X   |      |      |      |      |      |      |      |      |      |      |
+|  11  | Blog  |  X   |      |      |      |      |      |      |      |      |      |      |
 |  12  | Class |      |      |      |      |      |      |      |      |      |      |      |
 |  13  | Class |      |      |      |      |      |      |      |      |      |      |      |
 |  14  | Class |      |      |      |      |      |      |      |      |      |      |      |
