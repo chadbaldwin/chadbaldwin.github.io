@@ -1,0 +1,130 @@
+current:
+
+
+finished:
+  january:
+      - title: Microsoft SQL Server 2012 T-SQL Fundamentals
+        author: Itzik Ben-Gan
+        summary: I can't believe I had this goldmine sitting on my bookshelf for nearly 8 years. I wish read it when I bought it. This is an incredible book...not only is it great for those looking to learn T-SQL, but even as a database developer with years of experience I learned a TON. I may even read it again, there's so much info to absorb. I'm hoping a new edition will be coming out since the latest edition was released in 2016.
+        link: https://amzn.to/3svr2BU
+        rating: ⭐⭐⭐⭐⭐
+
+      - title: Microsoft SQL Server 2012 High-Performance T-SQL Using Window Functions
+        author: Itzik Ben-Gan
+        summary: This one is also a goldmine for those who are a little more advanced. There's a ton of great information in here...but don't expect to understand it all on  your first read. Even if you *think* you know windowing functions well...once you read this,  you'll realize you were very **very** wrong.
+        link: https://amzn.to/3inZ2vd
+        rating: ⭐⭐⭐⭐⭐
+
+      - title: Exam Ref 70-762 Developing SQL Databases
+        author: Louis Davidson
+        summary: Read in order to prepare for the 70-762 exam. Great book for learning high level concepts for just about everything to do with SQL Server (minus any DML). It was just enough information for me to pass my exam. Unfortunately, the book has a ton of spelling/grammar mistakes. It was hard for me to read because the mistakes were distracting and interrupted the flow. If you can look past that, this is still a decent book for getting a high-level view of SQL Server.
+        link: https://amzn.to/35Re73h
+        rating: ⭐⭐⭐ - Covers a ton of info in a short period, but it was just barely enough to pass the exam. I would have given it 4 stars, except for the amount of typos
+  february:
+      - title: What Every BODY is Saying
+        author: Joe Navarro
+        summary: Body Language...how to read it. I originally read this book back in high school; It ended up being a huge impact on my life. It's helped me perform better in interviews by reading their body language, and also making sure I project the right body language to them. I highly recommend this book. On top of learning how to read body language, the book is chock-full of insane stories from a former FBI counterintelligence officer and their experiences using these skills.
+        link: https://amzn.to/3oQtvVh
+        rating: ⭐⭐⭐⭐⭐
+
+      - title: "Chronicles of a Motorcycle Gypsy: The 49 States Tour"
+        author: Tiffani Burkett
+        summary: A friend of mine wrote this book, I bought it almost immediately in late 2018, but just didn't have time to read it. It's about her incredible journey around the entire Continental United States while living on the back of her motorcycle, camping wherever she can and running into all sorts of surprises good and bad. Even if you don't ride motorcycles, it's worth the read to live vicariously through her.
+        link: https://amzn.to/3nQdddB
+        rating: ⭐⭐⭐⭐⭐ - I was hooked reading this the whole time. Finished the book in 8 days. It was hilarious and fun to read.
+
+todo:
+  - title: T-SQL Querying
+    author: Itzik Ben-Gan, Adam Machanic, Dejan Sarka, Kevin Farlee
+    summary: From what I can tell, it's basically an extended version of T-SQL Fundamentals, which was already an incredible book. Can't wait to get to this one.
+    link: https://amzn.to/39BLMzk
+
+  - title: "T-SQL Window Functions: For data analysis and beyond"
+    author: Itzik Ben-Gan
+    summary: I read the first edition of this book, but since then, it is 100 pages longer, and has an extra chapter, so would be good to re-read this to fill the gaps from the previous edition
+    link: https://amzn.to/3sxF7yv
+
+  - title: "Algorithms to Live By: The Computer Science of Human Decisions"
+    author: Brian Christian, Tom Griffiths
+    summary: I've actually already "read" this via audio book, but I think it would be better as an actual physical book
+    link: https://amzn.to/3ijrSgk
+
+  - title: "Code: The Hidden Language of Computer Hardware and Software"
+    author: Charles Petzold
+    summary: This is probably one of my all time favorite books. I've read it at least twice, but it's been about 12 years since I last read it, so I think it's time to go through it again.
+    link: https://amzn.to/39y9OLu
+
+  - title: "The Pragmatic Programmer (2nd Edition)"
+    author: David Thomas, Andrew Hunt
+    summary: I recently listened to this as an audio book, and it's definitely a good listen. But there were many parts with code examples where physically reading it would be helpful. So I hope to read this someday soon.
+    link: https://amzn.to/3oRAm0K
+
+  - title: "C# 8.0 in a Nutshell: The Definitive Reference"
+    author: Joseph Albahari, Eric Johannsen
+    summary: Bought this book a while back and got about 100 pages in and then broke my reading habit. It's a pretty big book, and dense with information...but hoping to get through this one to improve my C# skills one of these days.
+    link: https://amzn.to/2KlumOF
+
+  - title: "How to Lie with Statistics"
+    author: Darrell Huff
+    summary: 
+    link: https://amzn.to/3s1kgCM
+
+  - title: "What If?: Serious Scientific Answers to Absurd Hypothetical Questions"
+    author: Randall Munroe
+    summary: 
+    link: https://amzn.to/3u6Cqot
+
+  - title: "The Lean Startup"
+    author: Eric Ries
+    summary: 
+    link: https://amzn.to/3dmYtRW
+
+  - title: "Where Wizards Stay Up Late: The Origins Of The Internet"
+    author: Katie Hafner
+    summary: 
+    link: https://amzn.to/3pz2Uvg
+
+  - title: "The Inventions, Researches, and Writings of Nikola Tesla"
+    author: Nikola Tesla
+    summary: 
+    link: https://amzn.to/2OPbQAe
+
+  - title: "The Annotated Turing"
+    author: Charles Petzold
+    summary: 
+    link: https://amzn.to/2ZsPFlp
+
+  - title: "Naked Statistics"
+    author: Charles Wheelan
+    summary: 
+    link: https://amzn.to/3awc07M
+
+  - title: "Ada's Algorithm"
+    author: James Essinger
+    summary: 
+    link: https://amzn.to/3s5oVDU
+
+  - title: "Telling Lies"
+    author: Paul Ekman
+    summary: 
+    link: https://amzn.to/3qzE2F1
+
+  - title: "Zen and the Art of Motorcycle Maintenance"
+    author: Robert M Pirsig
+    summary: 
+    link: https://amzn.to/3puVjhh
+
+  - title: "The Amazing Story of Quantum Mechanics"
+    author: James Kakalios
+    summary: 
+    link: https://amzn.to/3bk60OK
+
+  - title: "Half-Life: The Divided Life of Bruno Pontecorvo, Physicist or Spy"
+    author: Frank Close
+    summary: 
+    link: https://amzn.to/3pABVzw
+
+  - title: "The Making of the Atomic Bomb"
+    author: Richard Rhodes
+    summary: 
+    link: https://amzn.to/3dt9mBI
