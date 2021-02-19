@@ -1,5 +1,5 @@
 - project: chadbaldwin.net
-  role: Blogger Extraordinaire
+  role: Writer
   duration: Dec, 2020 &mdash; Present
   url: "https://chadbaldwin.net"
   description: >
@@ -9,7 +9,7 @@
     like a fun idea.
 
 - project: Schema Search, utility stored procedure
-  role: Sole Developer
+  role: Developer
   duration: 2015 &mdash; Present
   url: "https://github.com/chadbaldwin/SQL"
   description: >

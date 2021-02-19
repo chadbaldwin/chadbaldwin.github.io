@@ -111,7 +111,7 @@ resume:
     skills:       true
     recognition:  true
     associations: false
-    interests:    true
+    interests:    false
     links:        false
     social_links: false
   social:
