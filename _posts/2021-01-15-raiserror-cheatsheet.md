@@ -22,15 +22,11 @@ comment_issue_id: 6
     }
 </style>
 
-> Note: It is suggested in the documentation to use [`THROW`](https://docs.microsoft.com/en-us/sql/t-sql/language-elements/throw-transact-sql) when you can. However, there are times when you want more control over the severity level that is used. `THROW` is hardcoded to use severity level 16.
+> Note: It is suggested in the documentation to use [`THROW`](https://docs.microsoft.com/en-us/sql/t-sql/language-elements/throw-transact-sql) when you can. However, there are times when you want more control over the severity level that is used. `THROW` is hardcoded to use severity level 16 and is treated as a terminating error, meaning execution stops and no further code is run.
 
-This was originally intended to only be a simple table, but then I decided to include demos and screenshots. So prepare yourself for a fairly boring blog post.
+Every time I have to use `RAISERROR`, I forget what all the different severity levels do..."Which ones will jump me to the catch block again?", "What severity do I need to use to fail a job step?"
 
-Every time I have to use `RAISERROR`, I always forget what all the different severity levels do..."Which ones will jump me to the catch block again?", "What severity do I need to use to fail a job step?"
-
-Well, I finally got tired of it and put together a cheatsheet with the most relevant or quirky things I could think of. If you happen to have any additional information you'd like to contribute, feel free to send me an email, or submit a PR for the post.
-
-(Sorry, had to break it up into two tables because I didn't want to figure out the CSS to make a wide table work for my site).
+Got tired of it and put together a cheatsheet with the most relevant or quirky things I could think of.
 
 RAISERROR syntax:
 
