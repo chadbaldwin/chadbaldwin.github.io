@@ -1,5 +1,8 @@
 current:
-
+  - title: "Ada's Algorithm"
+    author: James Essinger
+    summary: A biography about Ada Lovelace, one of the worlds first programmers.
+    link: https://amzn.to/3s5oVDU
 
 finished:
   january:
@@ -98,11 +101,6 @@ todo:
     author: Charles Wheelan
     summary: 
     link: https://amzn.to/3awc07M
-
-  - title: "Ada's Algorithm"
-    author: James Essinger
-    summary: 
-    link: https://amzn.to/3s5oVDU
 
   - title: "Telling Lies"
     author: Paul Ekman
