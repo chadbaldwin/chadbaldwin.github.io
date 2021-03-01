@@ -28,7 +28,7 @@ In order to force myself to continue this habit, I'm making this a public page o
 {% for book in month[1] %}
 * [*{{ book.title }}*{% if book.author %} by {{ book.author }}{% endif %}]({{ book.link }})
 {% if book.rating %}  * My rating: {{ book.rating }}{% endif %}
-{% if book.summary %}  * {{ book.summary }}{% endif %}
+{% if book.summary %}  * Summary: {{ book.summary }}{% endif %}
 {% endfor %}
 {% endfor %}
 
