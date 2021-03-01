@@ -1,8 +1,8 @@
 current:
-  - title: "Ada's Algorithm"
-    author: James Essinger
-    summary: A biography about Ada Lovelace, one of the worlds first programmers.
-    link: https://amzn.to/3s5oVDU
+  - title: "How to Lie with Statistics"
+    author: Darrell Huff
+    summary: Published in 1954, an entertaining book giving a very high-level/introductory look at how statistics can be manipulated and misleading.
+    link: https://amzn.to/3s1kgCM
 
 finished:
   january:
@@ -36,6 +36,12 @@ finished:
         link: https://amzn.to/3nQdddB
         rating: ⭐⭐⭐⭐⭐ - I was hooked reading this the whole time. Finished the book in 8 days. It was hilarious and fun to read.
 
+      - title: "Ada's Algorithm"
+        author: James Essinger
+        summary: A biography about Ada Lovelace, one of the worlds first programmers.
+        link: https://amzn.to/3s5oVDU
+        rating: ⭐⭐⭐ - To be totally honest, it was pretty boring. I expected this book to cover more of the technical items behind her work and her involvement with Charles Babbages Difference and Analytical engine...but it seems more focused on genealogy, personal drama, and historical documentation of social interations. A very small portion of the book actually covered what I had hoped. Though I think that's due to the lack of historical information available.
+
 todo:
   - title: "T-SQL Querying"
     author: Itzik Ben-Gan, Adam Machanic, Dejan Sarka, Kevin Farlee
@@ -66,11 +72,6 @@ todo:
     author: Joseph Albahari, Eric Johannsen
     summary: Bought this book a while back and got about 100 pages in and then broke my reading habit. It's a pretty big book, and dense with information...but hoping to get through this one to improve my C# skills one of these days.
     link: https://amzn.to/2KlumOF
-
-  - title: "How to Lie with Statistics"
-    author: Darrell Huff
-    summary: 
-    link: https://amzn.to/3s1kgCM
 
   - title: "What If?: Serious Scientific Answers to Absurd Hypothetical Questions"
     author: Randall Munroe
