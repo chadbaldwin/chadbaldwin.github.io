@@ -56,7 +56,7 @@ If I didn't read that day, I'll try to list a 1 word reason as to why I skipped 
 | ###  |  Jan  | Feb  | Mar  | Apr  | May  | Jun  | Jul  | Aug  | Sep  | Oct  | Nov  | Dec  |
 | :--: | :---: | :--: | :--: | :--: | :--: | :--: | :--: | :--: | :--: | :--: | :--: | :--: |
 |  1   |   X   |  X   |      |      |      |      |      |      |      |      |      |      |
-|  2   |   X   |  X   |      |      |      |      |      |      |      |      |      |      |
+|  2   |   X   |  X   |  X   |      |      |      |      |      |      |      |      |      |
 |  3   |   X   |  X   |      |      |      |      |      |      |      |      |      |      |
 |  4   |   X   |  X   |      |      |      |      |      |      |      |      |      |      |
 |  5   |   X   |  X   |      |      |      |      |      |      |      |      |      |      |
@@ -83,6 +83,6 @@ If I didn't read that day, I'll try to list a 1 word reason as to why I skipped 
 |  26  |   X   |  X   |      |      |      |      |      |      |      |      |      |      |
 |  27  |   X   |  X   |      |      |      |      |      |      |      |      |      |      |
 |  28  |   X   |  X   |      |      |      |      |      |      |      |      |      |      |
-|  29  |   X   |      |      |      |      |      |      |      |      |      |      |      |
-|  30  |   X   |      |      |      |      |      |      |      |      |      |      |      |
-|  31  |   X   |      |      |      |      |      |      |      |      |      |      |      |
+|  29  |   X   | ████ |      |      |      |      |      |      |      |      |      |      |
+|  30  |   X   | ████ |      |      |      |      |      |      |      |      |      |      |
+|  31  |   X   | ████ |      | ████ |      | ████ |      |      | ████ |      | ████ |      |
