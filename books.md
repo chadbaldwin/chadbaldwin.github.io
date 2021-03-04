@@ -46,13 +46,6 @@ In order to force myself to continue this habit, I'm making this a public page o
 
 X = minimum 1 hour of reading
 
-If I didn't read that day, I'll try to list a 1 word reason as to why I skipped that day. But if the day is blank...that means I was lazy and didn't do something productive that day.
-
-* "Blog" - chose to work on or write a blog instead of reading
-* "Class" - attended an online training class
-* "Study" - chose to study for some sort of certification exam
-* "Exam" - took a certification exam, so the day was spent prepping
-
 | ###  |  Jan  | Feb  | Mar  | Apr  | May  | Jun  | Jul  | Aug  | Sep  | Oct  | Nov  | Dec  |
 | :--: | :---: | :--: | :--: | :--: | :--: | :--: | :--: | :--: | :--: | :--: | :--: | :--: |
 |  1   |   X   |  X   |      |      |      |      |      |      |      |      |      |      |
@@ -60,19 +53,19 @@ If I didn't read that day, I'll try to list a 1 word reason as to why I skipped 
 |  3   |   X   |  X   |  X   |      |      |      |      |      |      |      |      |      |
 |  4   |   X   |  X   |  X   |      |      |      |      |      |      |      |      |      |
 |  5   |   X   |  X   |      |      |      |      |      |      |      |      |      |      |
-|  6   |   X   | Blog |      |      |      |      |      |      |      |      |      |      |
+|  6   |   X   |      |      |      |      |      |      |      |      |      |      |      |
 |  7   |   X   |  X   |      |      |      |      |      |      |      |      |      |      |
 |  8   |   X   |  X   |      |      |      |      |      |      |      |      |      |      |
 |  9   |   X   |  X   |      |      |      |      |      |      |      |      |      |      |
 |  10  |   X   |  X   |      |      |      |      |      |      |      |      |      |      |
-|  11  | Blog  |  X   |      |      |      |      |      |      |      |      |      |      |
-|  12  | Class |  X   |      |      |      |      |      |      |      |      |      |      |
-|  13  | Class |  X   |      |      |      |      |      |      |      |      |      |      |
-|  14  | Class |  X   |      |      |      |      |      |      |      |      |      |      |
-|  15  | Study |  X   |      |      |      |      |      |      |      |      |      |      |
-|  16  | Blog  |  X   |      |      |      |      |      |      |      |      |      |      |
-|  17  | Study | Blog |      |      |      |      |      |      |      |      |      |      |
-|  18  | Exam  |  X   |      |      |      |      |      |      |      |      |      |      |
+|  11  |       |  X   |      |      |      |      |      |      |      |      |      |      |
+|  12  |       |  X   |      |      |      |      |      |      |      |      |      |      |
+|  13  |       |  X   |      |      |      |      |      |      |      |      |      |      |
+|  14  |       |  X   |      |      |      |      |      |      |      |      |      |      |
+|  15  |       |  X   |      |      |      |      |      |      |      |      |      |      |
+|  16  |       |  X   |      |      |      |      |      |      |      |      |      |      |
+|  17  |       |      |      |      |      |      |      |      |      |      |      |      |
+|  18  |       |  X   |      |      |      |      |      |      |      |      |      |      |
 |  19  |   X   |  X   |      |      |      |      |      |      |      |      |      |      |
 |  20  |   X   |  X   |      |      |      |      |      |      |      |      |      |      |
 |  21  |   X   |  X   |      |      |      |      |      |      |      |      |      |      |
