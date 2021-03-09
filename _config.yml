@@ -26,6 +26,12 @@ social-links:
 twitter:
   username: chad_baldwin
   card: summary_large_image
+social:
+  name: Chad Baldwin
+  links:
+    - https://twitter.com/chad_baldwin
+    - https://www.linkedin.com/in/chadbaldwin
+    - https://github.com/chadbaldwin
 
 titles_from_headings:
   strip_title: true
