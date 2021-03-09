@@ -12,6 +12,7 @@ twitter_username: chad_baldwin
 github_username: chadbaldwin
 linkedin_username: chadbaldwin
 
+# Used by simple links page
 social-links:
   LinkedIn: https://linkedin.com/in/chadbaldwin
   Twitter: https://twitter.com/chad_baldwin
@@ -26,13 +27,6 @@ twitter:
   username: chad_baldwin
   card: summary_large_image
 
-social:
-  name: Chad Baldwin
-  links:
-    - https://twitter.com/chad_baldwin
-    - https://www.linkedin.com/in/chadbaldwin
-    - https://github.com/chadbaldwin
-
 titles_from_headings:
   strip_title: true
 
@@ -45,9 +39,9 @@ plugins:
   - jekyll-sitemap
 
 google_analytics: UA-185058308-1
-
 gravatar_hash: 2136e716a089f4a3794f4007328c7bfb
 
+# The github repo that is to be used for looking up comments
 comments_repo: chadbaldwin/chadbaldwin.github.io
 
 defaults:
