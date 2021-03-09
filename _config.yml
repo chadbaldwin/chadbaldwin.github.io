@@ -48,6 +48,8 @@ google_analytics: UA-185058308-1
 
 gravatar_hash: 2136e716a089f4a3794f4007328c7bfb
 
+comments_repo: chadbaldwin/chadbaldwin.github.io
+
 defaults:
   - scope:
       path: ""

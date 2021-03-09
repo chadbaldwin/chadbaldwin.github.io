@@ -26,7 +26,9 @@ layout: default
     {% include navlinks.html %}
   </div>
 
-  {% include comments.html element=".post-content" github_account="chadbaldwin/chadbaldwin.github.io" require_cookie_consent="false" %}
+  {% if site.comments_repo %}
+    {% include comments.html element=".post-content" require_cookie_consent="false" %}
+  {% endif %}
 
   <a class="u-url" href="{{ page.url | relative_url }}" hidden></a>
 </article>
