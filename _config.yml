@@ -8,19 +8,19 @@ url: https://chadbaldwin.net
 description: >
   My first blog. Probably no one else will ever read it, but oh well.
 
-twitter_username: chad_baldwin
-github_username: chadbaldwin
+twitter_username:  chad_baldwin
+github_username:   chadbaldwin
 linkedin_username: chadbaldwin
 
 # Used by simple links page
 social-links:
-  LinkedIn: https://linkedin.com/in/chadbaldwin
-  Twitter: https://twitter.com/chad_baldwin
-  Instagram: https://instagram.com/chad_baldwin
-  GitHub: https://github.com/chadbaldwin
+  LinkedIn:      https://linkedin.com/in/chadbaldwin
+  Twitter:       https://twitter.com/chad_baldwin
+  Instagram:     https://instagram.com/chad_baldwin
+  GitHub:        https://github.com/chadbaldwin
   StackOverflow: https://stackoverflow.com/users/3474677
-  Reddit: https://www.reddit.com/user/chadbaldwin
-  Website: http://chadbaldwin.net
+  Reddit:        https://www.reddit.com/user/chadbaldwin
+  Website:       http://chadbaldwin.net
 
 # for SEO plugin
 twitter:
@@ -97,11 +97,11 @@ resume:
     links:        false
     social_links: false
   social:
-    Website: http://chadbaldwin.net
-    GitHub: https://github.com/chadbaldwin
-    Twitter: https://twitter.com/chad_baldwin
-    #Dribbble: https://dribbble.com/chadbaldwin
-    #FaceBook: https://facebook.com/iamchadbaldwin
-    LinkedIn: https://linkedin.com/in/chadbaldwin
+    Website:    http://chadbaldwin.net
+    GitHub:     https://github.com/chadbaldwin
+    Twitter:    https://twitter.com/chad_baldwin
+    #Dribbble:  https://dribbble.com/chadbaldwin
+    #FaceBook:  https://facebook.com/iamchadbaldwin
+    LinkedIn:   https://linkedin.com/in/chadbaldwin
     #Instagram: https://instagram.com/chad_baldwin
-    #Medium: https://medium.com/@chad-baldwin
+    #Medium:    https://medium.com/@chad-baldwin
