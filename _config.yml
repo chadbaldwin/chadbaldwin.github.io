@@ -1,5 +1,4 @@
 theme: minima
-#remote_theme: jekyll/minima@master
 
 title: Chad's Blog
 author: Chad Baldwin
@@ -35,20 +34,15 @@ social:
     - https://github.com/chadbaldwin
 
 titles_from_headings:
-  enabled: true
   strip_title: true
 
 header_pages:
   - resume.html
   - archive.md
   - books.md
-#  - feed.xml # most people know to look for /feed on a blog to find the feed. Hiding it for now
 
 plugins:
-  - jekyll-feed
   - jekyll-sitemap
-#  - jekyll-remote-theme
-#  - jekyll-include-cache
 
 google_analytics: UA-185058308-1
 
@@ -64,9 +58,6 @@ defaults:
       type: "posts"
     values:
       author: "Chad Baldwin"
-
-#disqus:
-#  shortname: chadbaldwin
 
 # highlighter: none # Not supported by GitHub Pages
 kramdown:
