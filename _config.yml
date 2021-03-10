@@ -54,12 +54,18 @@ defaults:
   - scope:
       path: ""
     values:
-      image: https://s.gravatar.com/avatar/2136e716a089f4a3794f4007328c7bfb?s=800
+      image: https://s.gravatar.com/avatar/2136e716a089f4a3794f4007328c7bfb?s=800 # Apply default site image
+  - scope:
+      path: ""
+      type: posts
+    values:
+      tags: Other # Add a default tag to all posts
 
+# Disable highlighting to use highlightJS instead
 # highlighter: none # Not supported by GitHub Pages
 kramdown:
-    syntax_highlighter_opts:
-      disable: true
+  syntax_highlighter_opts:
+    disable: true
 
 # minima v3.0 - uses new yaml schema for social
 minima:
