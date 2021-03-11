@@ -4,54 +4,55 @@ current:
     summary: From what I can tell, it's basically an extended version of T-SQL Fundamentals, which was already an incredible book. Can't wait to get to this one.
     link: https://amzn.to/39BLMzk
 
-  - title: "What If?: Serious Scientific Answers to Absurd Hypothetical Questions"
-    author: Randall Munroe
-    summary: 
-    link: https://amzn.to/3u6Cqot
-
 finished:
   january:
-      - title: Microsoft SQL Server 2012 T-SQL Fundamentals
-        author: Itzik Ben-Gan
-        summary: I can't believe I had this goldmine sitting on my bookshelf for nearly 8 years. I wish read it when I bought it. This is an incredible book...not only is it great for those looking to learn T-SQL, but even as a database developer with years of experience I learned a TON. I may even read it again, there's so much info to absorb. I'm hoping a new edition will be coming out since the latest edition was released in 2016.
-        link: https://amzn.to/3svr2BU
-        rating: ⭐⭐⭐⭐⭐
+    - title: Microsoft SQL Server 2012 T-SQL Fundamentals
+      author: Itzik Ben-Gan
+      summary: I can't believe I had this goldmine sitting on my bookshelf for nearly 8 years. I wish read it when I bought it. This is an incredible book...not only is it great for those looking to learn T-SQL, but even as a database developer with years of experience I learned a TON. I may even read it again, there's so much info to absorb. I'm hoping a new edition will be coming out since the latest edition was released in 2016.
+      link: https://amzn.to/3svr2BU
+      rating: ⭐⭐⭐⭐⭐
 
-      - title: Microsoft SQL Server 2012 High-Performance T-SQL Using Window Functions
-        author: Itzik Ben-Gan
-        summary: This one is also a goldmine for those who are a little more advanced. There's a ton of great information in here...but don't expect to understand it all on  your first read. Even if you *think* you know windowing functions well...once you read this,  you'll realize you were very **very** wrong.
-        link: https://amzn.to/3inZ2vd
-        rating: ⭐⭐⭐⭐⭐
+    - title: Microsoft SQL Server 2012 High-Performance T-SQL Using Window Functions
+      author: Itzik Ben-Gan
+      summary: This one is also a goldmine for those who are a little more advanced. There's a ton of great information in here...but don't expect to understand it all on  your first read. Even if you *think* you know windowing functions well...once you read this,  you'll realize you were very **very** wrong.
+      link: https://amzn.to/3inZ2vd
+      rating: ⭐⭐⭐⭐⭐
 
-      - title: Exam Ref 70-762 Developing SQL Databases
-        author: Louis Davidson
-        summary: Read in order to prepare for the 70-762 exam. Great book for learning high level concepts for just about everything to do with SQL Server (minus any DML). It was just enough information for me to pass my exam. Unfortunately, the book has a ton of spelling/grammar mistakes. It was hard for me to read because the mistakes were distracting and interrupted the flow. If you can look past that, this is still a decent book for getting a high-level view of SQL Server.
-        link: https://amzn.to/35Re73h
-        rating: ⭐⭐⭐ - Covers a ton of info in a short period, but it was just barely enough to pass the exam. I would have given it 4 stars, except for the amount of typos
+    - title: Exam Ref 70-762 Developing SQL Databases
+      author: Louis Davidson
+      summary: Read in order to prepare for the 70-762 exam. Great book for learning high level concepts for just about everything to do with SQL Server (minus any DML). It was just enough information for me to pass my exam. Unfortunately, the book has a ton of spelling/grammar mistakes. It was hard for me to read because the mistakes were distracting and interrupted the flow. If you can look past that, this is still a decent book for getting a high-level view of SQL Server.
+      link: https://amzn.to/35Re73h
+      rating: ⭐⭐⭐ - Covers a ton of info in a short period, but it was just barely enough to pass the exam. I would have given it 4 stars, except for the amount of typos
   february:
-      - title: What Every BODY is Saying
-        author: Joe Navarro
-        summary: Body Language...how to read it. I originally read this book back in high school; It ended up being a huge impact on my life. It's helped me perform better in interviews by reading their body language, and also making sure I project the right body language to them. I highly recommend this book. On top of learning how to read body language, the book is chock-full of insane stories from a former FBI counterintelligence officer and their experiences using these skills.
-        link: https://amzn.to/3oQtvVh
-        rating: ⭐⭐⭐⭐⭐
+    - title: What Every BODY is Saying
+      author: Joe Navarro
+      summary: Body Language...how to read it. I originally read this book back in high school; It ended up being a huge impact on my life. It's helped me perform better in interviews by reading their body language, and also making sure I project the right body language to them. I highly recommend this book. On top of learning how to read body language, the book is chock-full of insane stories from a former FBI counterintelligence officer and their experiences using these skills.
+      link: https://amzn.to/3oQtvVh
+      rating: ⭐⭐⭐⭐⭐
 
-      - title: "Chronicles of a Motorcycle Gypsy: The 49 States Tour"
-        author: Tiffani Burkett
-        summary: A friend of mine wrote this book, I bought it almost immediately in late 2018, but just didn't have time to read it. It's about her incredible journey around the entire Continental United States while living on the back of her motorcycle, camping wherever she can and running into all sorts of surprises good and bad. Even if you don't ride motorcycles, it's worth the read to live vicariously through her.
-        link: https://amzn.to/3nQdddB
-        rating: ⭐⭐⭐⭐⭐ - I was hooked reading this the whole time. Finished the book in 8 days. It was hilarious and fun to read.
+    - title: "Chronicles of a Motorcycle Gypsy: The 49 States Tour"
+      author: Tiffani Burkett
+      summary: A friend of mine wrote this book, I bought it almost immediately in late 2018, but just didn't have time to read it. It's about her incredible journey around the entire Continental United States while living on the back of her motorcycle, camping wherever she can and running into all sorts of surprises good and bad. Even if you don't ride motorcycles, it's worth the read to live vicariously through her.
+      link: https://amzn.to/3nQdddB
+      rating: ⭐⭐⭐⭐⭐ - I was hooked reading this the whole time. Finished the book in 8 days. It was hilarious and fun to read.
 
-      - title: "Ada's Algorithm"
-        author: James Essinger
-        summary: A biography about Ada Lovelace, one of the worlds first programmers.
-        link: https://amzn.to/3s5oVDU
-        rating: ⭐⭐ - To be totally honest, it was pretty boring. I expected this book to cover more of the technical items behind her work and her involvement with Charles Babbages Difference and Analytical engine...but it seems more focused on genealogy, personal drama, and historical documentation of social interations. A very small portion of the book actually covered what I had hoped. Though I think that's due to the lack of historical information available.
+    - title: "Ada's Algorithm"
+      author: James Essinger
+      summary: A biography about Ada Lovelace, one of the worlds first programmers.
+      link: https://amzn.to/3s5oVDU
+      rating: ⭐⭐ - To be totally honest, it was pretty boring. I expected this book to cover more of the technical items behind her work and her involvement with Charles Babbages Difference and Analytical engine...but it seems more focused on genealogy, personal drama, and historical documentation of social interations. A very small portion of the book actually covered what I had hoped. Though I think that's due to the lack of historical information available.
   march:
-      - title: "How to Lie with Statistics"
-        author: Darrell Huff
-        summary: Published in 1954, an entertaining book giving a very high-level/introductory look at how statistics can be manipulated and misleading.
-        link: https://amzn.to/3s1kgCM
-        rating: ⭐⭐⭐⭐ - Great book for learning a handful of ways that charts and statistics can be used to deceive. It's well written, however, it does seem to fall quite short on visual examples. Many of the examples are simply explained in text. This may be due to when it was printed (1950's), but it still makes some of the points a bit difficult to visualize.
+    - title: "How to Lie with Statistics"
+      author: Darrell Huff
+      summary: Published in 1954, an entertaining book giving a very high-level/introductory look at how statistics can be manipulated and misleading.
+      link: https://amzn.to/3s1kgCM
+      rating: ⭐⭐⭐⭐ - Great book for learning a handful of ways that charts and statistics can be used to deceive. It's well written, however, it does seem to fall quite short on visual examples. Many of the examples are simply explained in text. This may be due to when it was printed (1950's), but it still makes some of the points a bit difficult to visualize.
+
+    - title: "What If?: Serious Scientific Answers to Absurd Hypothetical Questions"
+      author: Randall Munroe
+      summary: Author of the comic website xkcd.com, Randall Munroe answers (scientifically) a variety of random and obscure questions sent to him through his website.
+      link: https://amzn.to/3u6Cqot
+      rating: ⭐⭐⭐⭐⭐ - Originally I thought this was going to be a boring book. I thought the whole Q&A aspect of it would be distracting, and would be better read as maybe a "read one question per day" type thing. But I ended up really enjoying it. It's extremely well-written and funny. I blew through this book in less than a week. I'll probably be first in line if he ever releases a second edition.
 
 todo:
   - title: "Algorithms to Live By: The Computer Science of Human Decisions"
