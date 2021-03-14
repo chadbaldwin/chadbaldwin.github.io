@@ -1,24 +1,26 @@
 <link href="https://fonts.googleapis.com/css?family=Lora:400,700|Open+Sans:400,300,800,700" rel="stylesheet" type="text/css">
 <link href="/css/resume.css" rel="stylesheet" type="text/css">
 
-{% if site.data.contact.phone %}<meta itemprop="telephone" content="{{ site.data.contact.phone }}"/>{% endif %}
-{% if site.data.contact.address %}<meta itemprop="address" content="{{ site.data.contact.address }}"/>{% endif %}
+{% assign resume = site.data.resume %}
+
+{% if resume.contact.phone %}<meta itemprop="telephone" content="{{ resume.contact.phone }}"/>{% endif %}
+{% if resume.contact.address %}<meta itemprop="address" content="{{ resume.contact.address }}"/>{% endif %}
 
 <header class="page-header">
   {% if site.gravatar_hash %}
   <img src="https://www.gravatar.com/avatar/{{ site.gravatar_hash }}?size=100" alt="my photo" class="avatar no-print" itemprop="image">
   {% endif %}
-  <h1 class="header-name" itemprop="name">{{ site.data.header.name }}</h1>
-  {% if site.data.header.display_contact_info %}
+  <h1 class="header-name" itemprop="name">{{ resume.header.name }}</h1>
+  {% if resume.header.display_contact_info %}
   <div class="header-contact-info">
-    <p>{% for item in site.data.contact %}<span>{{ item[1] }}{% if forloop.last %}{% else %} &bull; {% endif %}</span>{% endfor %}</p>
+    <p>{% for item in resume.contact %}<span>{{ item[1] }}{% if forloop.last %}{% else %} &bull; {% endif %}</span>{% endfor %}</p>
   </div>
   {% endif %}
   <div class="title-bar no-print">
-    <h2 class="header-title" itemprop="jobTitle">{{ site.data.header.current_title }}</h2>
-    {% if site.data.social %}
+    <h2 class="header-title" itemprop="jobTitle">{{ resume.header.current_title }}</h2>
+    {% if resume.social %}
     <ul class="icon-links">
-      {% for item in site.data.social %}
+      {% for item in resume.social %}
       <li class="icon-link-item">
         <a href="{{ item[1] }}" class="icon-link" itemprop="sameAs" target="_blank">
           {% case item[0] %}
@@ -37,17 +39,17 @@
     </ul>
     {% endif %}
   </div>
-  <div class="executive-summary" itemprop="description"><p>{{ site.data.header.intro }}</p></div>
-  {% if site.data.header.looking_for_work %}
-  {% if site.data.contact.email %}
-  <a href="mailto:{{ site.data.contact.email }}" class="contact-button no-print" itemprop="email">Contact me</a>
+  <div class="executive-summary" itemprop="description"><p>{{ resume.header.intro }}</p></div>
+  {% if resume.header.looking_for_work %}
+  {% if resume.contact.email %}
+  <a href="mailto:{{ resume.contact.email }}" class="contact-button no-print" itemprop="email">Contact me</a>
   {% endif %}
   {% else %}
   <a class="contact-button not-looking no-print">I'm not looking for work right now.</a>
   {% endif %}
 </header>
 
-{% if site.data.sections.skills %}
+{% if resume.sections.skills %}
 <section class="content-section">
   <header class="section-header"><h2>Skills</h2></header>
   {% for skill in site.data.skills %}
@@ -59,7 +61,7 @@
 </section>
 {% endif %}
 
-{% if site.data.sections.experience %}
+{% if resume.sections.experience %}
 <section class="content-section">
   <header class="section-header"><h2>Experience</h2></header>
   {% for job in site.data.experience %}
@@ -98,7 +100,7 @@
 </section>
 {% endif %}
 
-{% if site.data.sections.recognition %}
+{% if resume.sections.recognition %}
 <section class="content-section">
   <header class="section-header"><h2>Recognition</h2></header>
   {% for recognition in site.data.recognitions %}
@@ -111,7 +113,7 @@
 </section>
 {% endif %}
 
-{% if site.data.sections.education %}
+{% if resume.sections.education %}
 <section class="content-section">
   <header class="section-header"><h2>Education</h2></header>
   {% for education in site.data.education %}
@@ -131,7 +133,7 @@
 </section>
 {% endif %}
 
-{% if site.data.sections.projects %}
+{% if resume.sections.projects %}
 <section class="content-section">
   <header class="section-header"><h2>Personal Projects</h2></header>
   {% for project in site.data.projects %}
@@ -145,7 +147,7 @@
 </section>
 {% endif %}
 
-{% if site.data.sections.associations %}
+{% if resume.sections.associations %}
 <section class="content-section">
   <header class="section-header"><h2>Associations</h2></header>
   {% for association in site.data.associations %}
@@ -158,7 +160,7 @@
 </section>
 {% endif %}
 
-{% if site.data.sections.interests %}
+{% if resume.sections.interests %}
 <section class="content-section">
   <header class="section-header"><h2>Outside Interests</h2></header>
   <div class="resume-item">
@@ -169,7 +171,7 @@
 </section>
 {% endif %}
 
-{% if site.data.sections.links %}
+{% if resume.sections.links %}
 <section class="content-section">
   <header class="section-header"><h2>Additional Links</h2></header>
   <div class="resume-item">
@@ -180,13 +182,13 @@
 </section>
 {% endif %}
 
-{% if site.data.sections.social_links %}
+{% if resume.sections.social_links %}
 <section class="content-section">
   <header class="section-header"><h2>Social Links</h2></header>
   <div class="resume-item">
-    {% if site.data.social %}
+    {% if resume.social %}
     <ul class="resume-item-list">
-      {% for item in site.data.social %}<li><strong>{{ item[0] }}</strong>: <a href="{{ item[1] }}" target="_blank">{{ item[1] }}</a></li>{% endfor %}
+      {% for item in resume.social %}<li><strong>{{ item[0] }}</strong>: <a href="{{ item[1] }}" target="_blank">{{ item[1] }}</a></li>{% endfor %}
     </ul>
     {% endif %}
   </div>
