@@ -42,6 +42,7 @@ header_pages:
   - books.md
 
 plugins:
+  - jekyll-feed
   - jekyll-sitemap
 
 google_analytics: UA-185058308-1
@@ -66,15 +67,3 @@ defaults:
 kramdown:
   syntax_highlighter_opts:
     disable: true
-
-# minima v3.0 - uses new yaml schema for social
-minima:
-  social_links:
-    twitter: chad_baldwin
-    github: chadbaldwin
-    stackoverflow: "3474677"
-    instagram: chad_baldwin
-    linkedin: chadbaldwin
-#   youtube: jekyll
-    youtube_channel: UC1xIzejSoxhymEJxGhncRGQ
-    youtube_channel_name: Chad Baldwin
