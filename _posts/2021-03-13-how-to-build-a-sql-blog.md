@@ -18,17 +18,17 @@ image: /img/postbanners/2021-03-13-how-to-build-a-sql-blog.png
 
 "How do I get that cool code highlighting on my blog?"
 
-This was me, 3 months ago. I played around with various blogging platforms, and they seemed okay, but for some reason, none of them really did what I wanted. Eventually, I learned about [GitHub Pages](https://pages.github.com/). It's a service provided by GitHub. They allow you to host a static website (no backend code), and they host it **for free**.
+This was me, 3 months ago. I played around with various blogging platforms and they seemed okay, but for some reason, none of them really did what I wanted. Eventually I learned about [GitHub Pages](https://pages.github.com/). It's a service provided by GitHub; They allow you to host a static website (no backend code), and they host it **for free**.
 
-GitHub Pages is great, _but_ when you start learning "how to blog using Jekyll", things get pretty overwhelming...You start learning about ruby and how to get it working on Windows (which is a pain), learning how YAML, Jekyll, front matter and liquid work...It gets complicated real quick.
+GitHub Pages is great, _but_ when you start learning "how to blog using Jekyll", things get pretty overwhelming...You start learning about ruby and Jekyll and how to get them working on Windows (which is a pain), learning languages like YAML and Liquid...It gets complicated real quick.
 
 ### Here's what I've done
 
-I've taken _this_ blog, stripped out unecessary extras and converted it into a template you can use. I've left in features that I think are helpful for a blogger who wants to cover SQL Server. For example, I built this template to support T-SQL specific syntax highlighting using the SSMS theme.
+I've taken _this_ blog, stripped out unnecessary extras and converted it into a template you can use. I've left in features that I think are helpful for a blogger who wants to cover SQL Server. For example, I built this template to support T-SQL specific syntax highlighting using the SSMS theme.
 
-Your first blog doesn't need to be some fancy, professionally designed website, you just need good content, and setting one up should be as simple as a few clicks, maybe filling in some personal info, and you're done.
+Your first blog doesn't need to be a fancy, professionally designed website. You just need good content, and setting one up should be as simple as a few clicks, maybe filling in some personal info, and you're done.
 
-That's what I've *tried* to set up for you.
+That is what I've *tried* to set up for you.
 
 ---
 
