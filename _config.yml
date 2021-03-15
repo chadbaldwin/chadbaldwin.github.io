@@ -8,10 +8,20 @@ url: https://chadbaldwin.net
 description: >
   My first blog. Probably no one else will ever read it, but oh well.
 
+# Minima variables
 twitter_username:  chad_baldwin
 github_username:   chadbaldwin
 linkedin_username: chadbaldwin
+#dribbble_username: jekyll
+#facebook_username: jekyll
+#flickr_username: jekyll
+#instagram_username: jekyll
+#pinterest_username: jekyll
+#youtube_username: jekyll
+#googleplus_username: +jekyll
 rss: rss
+
+show_excerpts: false
 
 # Used by simple links page
 social-links:
@@ -48,6 +58,8 @@ plugins:
 
 google_analytics: UA-185058308-1
 gravatar_hash: 2136e716a089f4a3794f4007328c7bfb
+
+home_post_limit: 5
 
 # The github repo that is to be used for looking up comments
 comments_repo: chadbaldwin/chadbaldwin.github.io

@@ -1,8 +1,3 @@
----
-layout: home
-title: null
----
-
 Hi! Glad to see you found my site.
 
 I'm your average everyday nerd, developer, motorcycle enthusiast, dog dad.
