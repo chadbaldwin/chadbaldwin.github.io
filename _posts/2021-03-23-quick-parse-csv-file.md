@@ -86,7 +86,7 @@ PowerShell only requires two commands to do this. The downside is, it loads the 
 
 1. Load the data into a local variable using the `Import-Csv` cmdlet
 ```ps
-$data = Import-Csv -Delimiter '|' -Path .\file.txt -Header 'c1','c2','c3','c4','c5','c6','c7','c8'
+$data = Import-Csv -Delimiter '|' -Path .\file.txt -Header 'c1','c2','c3','c4','c5','c6','c7','c8','c9'
 ```
 2. Get list of unique values from column 3
 ```ps
