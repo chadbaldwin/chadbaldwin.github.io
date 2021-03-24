@@ -98,7 +98,7 @@ $data | select c3 -Unique
 Now that I have my list of values, I need to convert it into something I can easily paste into an `IN` statement, there's quite a few ways to do this.
 
 * Manual/By hand - if it's a small list, just manually add a comma to the beginning or end of each value, and single quotes if needed.
-* Block editing - Still manual, but it's faster than doing each value, one by one. Google "block editing in ssms" and you'll find a few blog posts and videos showing you how to do it. In the future I'd like to blog about this showing various tips and tricks you can do with it.
+* Block editing - Still manual, but it's faster than doing each value, one by one. Google "block editing in ssms" or "block editing in notepad++" and you'll find a few blog posts and videos showing you how to do it. In the future I'd like to blog about this showing various tips and tricks you can do with it.
 
 If you have a list of maybe 1,000+ values...then you need to start using trickier methods, like...
 
@@ -110,7 +110,7 @@ In this case, I only had about 10 unique values, so I did it manually.
 
 ---
 
-There's lots of ways all of this could have been done. I tend to like using Regex and PowerShell, even if it does take a bit longer because I usually learn something new along the way. For example, in this scenario, I had never used PowerShell to load a file without a header, now I know `Import-Csv` lets you supply a list of header names.
+There's lots of ways all of this could have been done. I tend to like using Regex and PowerShell, even if it does take a bit longer because I usually learn something new along the way. For example, in this scenario, I had never used PowerShell to load a file without a header. Now I know `Import-Csv` lets you supply a list of header names.
 
 ---
 
