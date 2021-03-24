@@ -65,7 +65,7 @@ Before you continue reading...I want you to think about how _you_ would do this.
 
 ---
 
-### How did I did it
+### How I chose to do it
 
 My first thought, in hindsight, seems to be the hardest, slowest way possible.
 
