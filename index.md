@@ -6,4 +6,4 @@ Throughout the day, I tend to research deeply into the things that I'm working o
 
 That's going to mean a wide variety of topics... SQL/T-SQL, PowerShell, C#, tool recomendations and reviews, various How-To's, cheatsheets, nerdy home projects...maybe even some less technical topics, like my hobbies; Motorcycles, Rubik's cubes, tools, archery, dogs, the list goes on.
 
-If you like what you're reading, or you have recommendations, feel free to email me. If you want to subscribe, you can use the RSS feed, or I suppose you can watch for changes on this websites GitHub repo... though that will probably be pretty noisy :)
+Hope you enjoy what you're reading here!
