@@ -9,12 +9,18 @@ description: Book reviews and recommendations, reading goal tracker
         margin-bottom: 5px;
     }
 
-    table tbody tr:nth-child(29) td:nth-child(3),
+    /* non-existent days - MonthNum+1 */
+    /* feb */
+    table tbody tr:nth-child(29) td:nth-child(3), /* jekyll code to make conditional if leap year? lol */
     table tbody tr:nth-child(30) td:nth-child(3),
     table tbody tr:nth-child(31) td:nth-child(3),
+    /* apr */
     table tbody tr:nth-child(31) td:nth-child(5),
+    /* jun */
     table tbody tr:nth-child(31) td:nth-child(7),
+    /* aug */
     table tbody tr:nth-child(31) td:nth-child(10),
+    /* nov */
     table tbody tr:nth-child(31) td:nth-child(12) {
         background-color: #cccccc;
     }
@@ -58,34 +64,34 @@ X = minimum 1 hour of reading
 
 | ###  | Jan  | Feb  | Mar  | Apr  | May  | Jun  | Jul  | Aug  | Sep  | Oct  | Nov  | Dec  |
 | :--: | :--: | :--: | :--: | :--: | :--: | :--: | :--: | :--: | :--: | :--: | :--: | :--: |
-|  1   |  X   |  X   |      |      |      |      |      |      |      |      |      |      |
+|  1   |  X   |  X   | &#0; |      |      |      |      |      |      |      |      |      |
 |  2   |  X   |  X   |  X   |      |      |      |      |      |      |      |      |      |
 |  3   |  X   |  X   |  X   |      |      |      |      |      |      |      |      |      |
 |  4   |  X   |  X   |  X   |      |      |      |      |      |      |      |      |      |
 |  5   |  X   |  X   |  X   |      |      |      |      |      |      |      |      |      |
-|  6   |  X   |      |  X   |      |      |      |      |      |      |      |      |      |
+|  6   |  X   | &#0; |  X   |      |      |      |      |      |      |      |      |      |
 |  7   |  X   |  X   |  X   |      |      |      |      |      |      |      |      |      |
 |  8   |  X   |  X   |  X   |      |      |      |      |      |      |      |      |      |
 |  9   |  X   |  X   |  X   |      |      |      |      |      |      |      |      |      |
 |  10  |  X   |  X   |  X   |      |      |      |      |      |      |      |      |      |
-|  11  |      |  X   |  X   |      |      |      |      |      |      |      |      |      |
-|  12  |      |  X   |  X   |      |      |      |      |      |      |      |      |      |
-|  13  |      |  X   |  X   |      |      |      |      |      |      |      |      |      |
-|  14  |      |  X   |  X   |      |      |      |      |      |      |      |      |      |
-|  15  |      |  X   |      |      |      |      |      |      |      |      |      |      |
-|  16  |      |  X   |      |      |      |      |      |      |      |      |      |      |
-|  17  |      |      |  X   |      |      |      |      |      |      |      |      |      |
-|  18  |      |  X   |  X   |      |      |      |      |      |      |      |      |      |
+|  11  | &#0; |  X   |  X   |      |      |      |      |      |      |      |      |      |
+|  12  | &#0; |  X   |  X   |      |      |      |      |      |      |      |      |      |
+|  13  | &#0; |  X   |  X   |      |      |      |      |      |      |      |      |      |
+|  14  | &#0; |  X   |  X   |      |      |      |      |      |      |      |      |      |
+|  15  | &#0; |  X   | &#0; |      |      |      |      |      |      |      |      |      |
+|  16  | &#0; |  X   | &#0; |      |      |      |      |      |      |      |      |      |
+|  17  | &#0; | &#0; |  X   |      |      |      |      |      |      |      |      |      |
+|  18  | &#0; |  X   |  X   |      |      |      |      |      |      |      |      |      |
 |  19  |  X   |  X   |  X   |      |      |      |      |      |      |      |      |      |
 |  20  |  X   |  X   |  X   |      |      |      |      |      |      |      |      |      |
-|  21  |  X   |  X   |      |      |      |      |      |      |      |      |      |      |
+|  21  |  X   |  X   | &#0; |      |      |      |      |      |      |      |      |      |
 |  22  |  X   |  X   |  X   |      |      |      |      |      |      |      |      |      |
 |  23  |  X   |  X   |  X   |      |      |      |      |      |      |      |      |      |
 |  24  |  X   |  X   |  X   |      |      |      |      |      |      |      |      |      |
 |  25  |  X   |  X   |  X   |      |      |      |      |      |      |      |      |      |
 |  26  |  X   |  X   |  X   |      |      |      |      |      |      |      |      |      |
-|  27  |  X   |  X   |      |      |      |      |      |      |      |      |      |      |
-|  28  |  X   |  X   |      |      |      |      |      |      |      |      |      |      |
-|  29  |  X   |      |      |      |      |      |      |      |      |      |      |      |
-|  30  |  X   |      |      |      |      |      |      |      |      |      |      |      |
-|  31  |  X   |      |      |      |      |      |      |      |      |      |      |      |
+|  27  |  X   |  X   | &#0; |      |      |      |      |      |      |      |      |      |
+|  28  |  X   |  X   | &#0; |      |      |      |      |      |      |      |      |      |
+|  29  |  X   |  -   |      |      |      |      |      |      |      |      |      |      |
+|  30  |  X   |  -   |      |      |      |      |      |      |      |      |      |      |
+|  31  |  X   |  -   |      |  -   |      |  -   |      |      |  -   |      |  -   |      |
