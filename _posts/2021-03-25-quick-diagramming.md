@@ -22,7 +22,7 @@ This might sound intimidating, and I thought so too at first, but it's relativel
 
 Let's start off with a simple example:
 
-```plaintext
+```dot
 digraph G {
     thing1 -> thing2
 }
@@ -36,7 +36,7 @@ That's it. I told you it was simple (I'll show you how to convert the code into 
 
 Now, let's take it up one more level...
 
-```plaintext
+```dot
 digraph G {
     thing1 -> thing2
     thing1 -> thing3
@@ -57,7 +57,7 @@ Now that you know the basics, let's show a relatable example.
 
 Say you're quickly running through a process, it starts with a job which calls a proc, and then that proc calls another proc and while also logging to a table.
 
-```plaintext
+```dot
 digraph G {
     # entities can be defined separate from the relationships
     job_someJob [label="Job that runs the first proc"]
@@ -109,7 +109,7 @@ Most of this wasn't really necessary, but in the process, I wanted to learn more
 
 ![final](/img/quickgraphviz/final.png)
 
-```plaintext
+```dot
 digraph G {
     subgraph cluster_Services {
         label="Services"
@@ -189,9 +189,8 @@ digraph G {
     ssrs_report_1 -> usp_StoredProcedure3
     ssrs_report_2 -> usp_StoredProcedure4
 
-    usp_StoredProcedure3, usp_StoredProcedure4 -> vw_View1 [style="dashed"]
+    usp_StoredProcedure3, usp_StoredProcedure4 -> vw_View1 [style=dashed]
     
-    vw_View1 -> Table1, Table2, Table3 [style="dashed"]
+    vw_View1 -> Table1, Table2, Table3 [style=dashed]
 }
 ```
-
