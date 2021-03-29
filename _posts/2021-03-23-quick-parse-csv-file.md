@@ -93,6 +93,32 @@ $data = Import-Csv -Delimiter '|' -Path .\file.txt -Header 'c1','c2','c3','c4','
 $data | select c3 -Unique
 ```
 
+> Update: On Reddit, user u/bis pointed out that my statement about how PowerShell handles memory isn't entirely accurate.
+>
+> I thought that PowerShell would allocate memory for the file whether you saved it to a variable or you wrote it straight through to another file. But after we did some testing, we found that not to be true.
+>
+> In my example above, it definitely will take up memory **at least** the size of the file because I am saving its content to a variable. I did this for the purpose of the blog to make it easier to explain each piece. However, I should include a clean one-liner in this post for those reading to know how to do it.
+>
+> u/bis also pointed out that you can use `Set-Clipbard` to save the result to the clipboard directly.
+
+With regard to the notes above...and using some additional PowerShell syntactic shortcuts, this is a nifty one liner that will do the job:
+
+```ps
+(ipcsv .\file.txt '|' -H a,b,c).c | sort | gu | scb
+```
+
+* `ipcsv` is the default alias for `Import-Csv`
+  * Two parameters can be specified by position (according to the documentation) `-Path` is first, `-Separator` is second.
+  * Then, PowerShell allows you to shortcut parameter names as long as they aren't ambiguous. So `-H` just means `-Header`, since no other parameters start with `-H`.
+  * You might also notice that I'm only listing 3 header names instead of 9 like before. This is because I read the documentation and found that `Import-Csv` will only return fields from rows _up to_ the fields listed in the header. So if you have a file with 9 columns, but only supply headers for the first 3, then it will only import the first 3 columns.
+* `sort` is the default alias for `Sort-Object`
+* `gu` is the default alias for `Get-Unique` which returns a unique list of values from an already sorted list. I decided to use `sort | gu` because it was shorter than using `select '3' -Unique`.
+* `scb` is the default alias for `Set-Clipboard`, which writes the result to the clipboard.
+
+I had a few people say that using PowerShell was overcomplicating it, especially over using something like Excel, which might be true. But had I known of these shortcuts before this post...I think this quick little one-liner definitely gives using Excel's GUI a run for the money.
+
+---
+
 #### Converting a list of values to an IN statement
 
 Now that I have my list of values, I need to convert it into something I can easily paste into an `IN` statement, there's quite a few ways to do this.
