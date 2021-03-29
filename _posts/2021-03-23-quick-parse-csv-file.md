@@ -135,7 +135,35 @@ Explanation of terms used:
 * `-join` concatnates all values in a list together using a delimiter
 * `scb` is the default alias for `Set-Clipboard`, which writes the result to the clipboard.
 
-I had a few people say that using PowerShell was overcomplicating it, especially over using something like Excel, which might be true. But had I known of these shortcuts before this post...I think this quick little one-liner definitely gives using Excel's GUI a run for the money.
+---
+
+> Update #2: In researching this more, and while writing the first update, I learned about the `Join-String` cmdlet and I felt it was such a useful cmdlet, that it was worth adding a second update.
+
+Here's another way similar to the one above, it's slightly longer to type, but, I think it's more understandable, and more flexible for other uses:
+
+```ps
+ipcsv .\file.txt '|' -H a,b,c `
+    | select c -Unique `
+    | Join-String c ',' `
+    | scb
+```
+
+I actually like this one more for a few reasons. I like that it doesn't use parentheses to control the flow. For one-liners, multiple sets of parentheses can make it hard to read, and it's harder to type.
+
+It uses less cmdlets to get the job done. Instead of using `sort`, `gu`, `-join`, it's using `select` and `Join-String`.
+
+`Join-String` seems to be a better fit for the job because it has a built in `-SingleQuote` parameter as well as `-OutputPrefix`, `-OutputSuffix` parameters. So you could do something like this:
+
+```ps
+ipcsv .\file.txt '|' -H a,b,c `
+    | select c -Unique `
+    | Join-String c ',' -OutputPrefix 'IN (' -OutputSuffix ')' -SingleQuote `
+    | scb
+```
+
+Which results in this: `IN ('20005','20002','20004','20001','20000','20003')`
+
+So if you're working with a list of strings, rather than a list of integers. It makes it easy to add single quotes.
 
 ---
 
