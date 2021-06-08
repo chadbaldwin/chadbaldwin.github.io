@@ -101,7 +101,7 @@ This is a list I uploaded to GitHub which has some of the more popular sites tha
 
 If you don't live in California, I don't know what the laws are around whether you can use the CCPA links. That's your call if you choose to use them.
 
-Each site will have it's own opt-out process. Some will require you to email them, others will require you to search for your record and click an opt-out link. Others will ask you to find the URL to your record and submit that with the form. I won't walk you through any of these, if you need help, I recommend finding a friend or family member who is tech-savvy to help walk you through this.
+Each site will have its own opt-out process. Some will require you to email them, others will require you to search for your record and click an opt-out link. Others will ask you to find the URL to your record and submit that with the form. I won't walk you through any of these, if you need help, I recommend finding a friend or family member who is tech-savvy to help walk you through this.
 
 Apologies to all cousins, niblings and siblings who will be getting a Facebook DM from their non-technical family member reading this post.
 
