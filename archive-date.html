@@ -1,0 +1,19 @@
+---
+layout: page
+title: Blog Archive
+---
+
+<a href="/archive-cat.html">Sort by category</a>
+
+{%- assign allposts = site.posts | concat: site.personal | sort_natural: "date" | reverse %}
+
+{%- assign postsByYearMonth = allposts | group_by_exp:"allposts", "allposts.date | date: '%Y %B'"  %}
+
+{%- for yearMonth in postsByYearMonth %}
+<h3>{{ yearMonth.name }}</h3>
+<ul>
+  {%- for post in yearMonth.items %}
+  <li><a href="{{ post.url }}">{{ post.title }}</a></li>
+  {%- endfor %}
+</ul>
+{%- endfor %}

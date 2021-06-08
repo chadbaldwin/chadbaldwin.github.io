@@ -33,7 +33,7 @@ social-links:
   Reddit:        https://www.reddit.com/user/chadbaldwin
   Website:       http://chadbaldwin.net
 
-# for SEO plugin
+# plugin: jekyll-seo-tag
 twitter:
   username: chad_baldwin
   card: summary_large_image
@@ -44,12 +44,17 @@ social:
     - https://www.linkedin.com/in/chadbaldwin
     - https://github.com/chadbaldwin
 
+# plugin: jekyll-titles-from-headings
 titles_from_headings:
   strip_title: true
 
+collections:
+  personal: # collection for personal blog posts
+    output: true
+
 header_pages:
   - resume.html
-  - archive.md
+  - archive.html
   - books.md
   - bookmarks.md
 
