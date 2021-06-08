@@ -43,7 +43,7 @@ This is information that is most commonly returned by "people finder" type sites
 
 ### Let's do a test
 
-Using information the average person would likely be able to figure out just by looking at a public Facebook profile...name, current state and a rough estimation of age.
+Using information the average person would likely be able to figure out just by looking at a public Facebook profile...name, current state and a rough estimation of age, let's see how much information we can find on you, just by using one website.
 
 [truepeoplesearch.com](https://www.truepeoplesearch.com/){:target="_blank"} is one of many people finder / people search sites and is probably one of the most popular ones. If you're viewing this post in the future and that site no longer exists...There are plenty of other sites out there with very similar search processes that I'm about to explain.
 
