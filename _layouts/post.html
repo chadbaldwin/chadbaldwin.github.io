@@ -26,12 +26,17 @@ layout: default
     {% include navlinks.html %}
   </div>
 
-  {% if site.comments_repo %}
-    {% include comments.html element=".post-content" require_cookie_consent="false" %}
-  {% endif %}
-
   <a class="u-url" href="{{ page.url | relative_url }}" hidden></a>
 </article>
+
+<script src="https://utteranc.es/client.js"
+        repo="chadbaldwin/chadbaldwin.github.io"
+        issue-term="og:title"
+        label="Comments"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+</script>
 
 <script type="text/javascript" src="/js/gifffer.min.js"></script>
 <script>window.onload = function() { Gifffer(); }</script>
