@@ -1,5 +1,3 @@
-# Hi! 🙋‍♂️
-
 Just your average everyday nerd, developer, motorcycle enthusiast, dog dad.
 
 The business side of this blog is mostly about SQL Server, PowerShell, programming tips and tools.
