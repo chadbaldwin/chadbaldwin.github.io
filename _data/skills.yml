@@ -7,39 +7,40 @@
     stored procedure development,
     troubleshooting locking and blocking issues
 
-- skill: Programming
-  description: "
-    <div>
-      Daily Use:
-      <ul>
-        <li>SQL &bull; Powershell &bull; Markdown &bull; JSON &bull; YAML &bull; Liquid</li>
-      </ul>
-      Regular Use:
-      <ul>
-        <li>C# &bull; Batch &bull; bash &bull; DOT</li>
-      </ul>
-      Occasional Use:
-      <ul>
-        <li>HTML &bull; CSS &bull; LaTeX</li>
-      </ul>
-    <div>"
+#- skill: Programming
+#  description: "
+#    <div>
+#      Daily Use:
+#      <ul>
+#        <li>SQL &bull; Powershell &bull; Markdown &bull; JSON &bull; YAML &bull; Liquid</li>
+#      </ul>
+#      Regular Use:
+#      <ul>
+#        <li>C# &bull; Batch &bull; bash &bull; DOT</li>
+#      </ul>
+#      Occasional Use:
+#      <ul>
+#        <li>HTML &bull; CSS &bull; LaTeX</li>
+#      </ul>
+#    <div>"
+
 - skill: Tools & Technologies
   description: >
     SQL Server Management Studio (SSMS)
-    &bull; SQL Server Reporting Services (SSRS) 
-    &bull; git 
-    &bull; SVN 
-    &bull; Excel 
-    &bull; Visual Studio 
-    &bull; VS Code 
-    &bull; Red Gate SQL Prompt 
-    &bull; Red Gate SQL Compare 
-    &bull; Sisense BI Reporting 
-    &bull; Elasticsearch 
-    &bull; RabbitMQ 
-    &bull; Docker 
-    &bull; DBATools 
-    &bull; Upsource 
-    &bull; Jira 
-    &bull; Confluence 
+    &bull; SQL Server Reporting Services (SSRS)
+    &bull; git
+    &bull; SVN
+    &bull; Excel
+    &bull; Visual Studio
+    &bull; VS Code
+    &bull; Azure Data Studio (ADS)
+    &bull; Red Gate Toolbelt
+    &bull; Sisense BI Reporting
+    &bull; Elasticsearch
+    &bull; RabbitMQ
+    &bull; Docker
+    &bull; DBATools
+    &bull; Upsource
+    &bull; Jira
+    &bull; Confluence
     &bull; Jitbit
