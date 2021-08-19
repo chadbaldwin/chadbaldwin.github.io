@@ -1,6 +1,5 @@
 p {
 	margin-block-start: 1em;
-	margin-block-end: 1em!important;
 }
 
 ul, ol {
@@ -92,7 +91,6 @@ h1, h2, h3, h4, h5, h6 {
 	line-height: 2rem;
 	letter-spacing: -.05rem;
 	text-align: center;
-	margin: 0 0 .5rem;
 }
 
 @media (min-width: 600px) {
@@ -176,18 +174,9 @@ h1, h2, h3, h4, h5, h6 {
 	width: 400px!important;
 }
 
-.content-section {
-	margin: 0 0 3rem!important;
-}
-
-.content-section .resume-item {
-	margin-bottom: 2rem;
-}
-
 .content-section .resume-item-title {
 	font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
 	font-weight: 700;
-	margin: 0 0 .75rem;
 	font-size: 1.5rem;
 	letter-spacing: -.05rem;
 	line-height: 1;
@@ -195,7 +184,6 @@ h1, h2, h3, h4, h5, h6 {
 
 .content-section .resume-item-details {
 	font-size: 1.125rem;
-	margin: 0 0 .75rem;
 	line-height: 1;
 }
 
@@ -214,19 +202,12 @@ h1, h2, h3, h4, h5, h6 {
 	color: #9c9c9c;
 }
 
-.content-section .resume-item-copy {
-	margin: .75rem 0 0;
-}
-
 .page-footer {
 	border-top: 4px solid #c7c7c7;
-	padding-top: 1.5rem;
 	text-align: center;
-	margin-bottom: 3rem;
 }
 
 .page-footer .footer-line {
-	margin: 0;
 	font-size: .875rem;
 	color: #999;
 }
@@ -254,35 +235,23 @@ h1, h2, h3, h4, h5, h6 {
 		line-height: 1rem;
 	}
 
-	.page-header {
-		padding: 1rem 0 .2rem
-	}
-
 	.page-header .header-name {
 		font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
 		font-weight: 700;
 		font-size: 2rem;
-		margin: 0 0 .2rem;
+		margin: 0px;
 	}
 
 	.section-header {
 		border-top: 1px solid #c7c7c7;
 		border-bottom: 1px solid #c7c7c7;
-		padding: .2rem 0 .2rem;
-		margin-bottom: 1rem;
+		margin-top: 20px;
+		margin-bottom: 10px;
 	}
 
 	.section-header h2 {
 		font-size: 1.2rem;
 		line-height: 1.5rem;
-	}
-
-	.content-section {
-		margin: 0 0 1rem;
-	}
-
-	.content-section .resume-item {
-		margin-bottom: 1rem;
 	}
 
 	.content-section .resume-item-title {
@@ -292,12 +261,15 @@ h1, h2, h3, h4, h5, h6 {
 
 	.content-section .resume-item-details {
 		font-size: 12px;
-		margin: 0 0 .75rem;
 		line-height: .7em;
 		font-style: italic;
 	}
 
 	.content-section .resume-item-details.award-title {
 		font-size: 11px;
+	}
+
+	.page-content {
+		padding: 0px;
 	}
 }

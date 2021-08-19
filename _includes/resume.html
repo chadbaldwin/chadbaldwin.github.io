@@ -62,42 +62,61 @@
 {% endif %}
 
 {% if resume.sections.experience %}
-<section class="content-section">
-  <header class="section-header"><h2>Experience</h2></header>
-  {% for job in site.data.experience %}
-  <div class="resume-item" itemscope itemprop="worksFor" itemtype="http://schema.org/Organization">
-    <img src="{{ job.logo }}" class="company-logo">
-    <h3 class="resume-item-title" itemprop="name" style="display: inline-block;">
-      {% if job.url %}<a href="{{ job.url }}" itemprop="url">{{ job.company }}</a>{% else %}{{ job.company }}{% endif %}
-    </h3>
-    <p>
-      {{ job.summary }}
-    </p>
-    {% for position in job.positions %}
-      {% assign jobstartdays = position.startdate | date: "%s" | divided_by: 86400 %}
-      {% assign jobendedays = position.enddate | default: 'now' | date: "%s" | divided_by: 86400 %}
-      {% assign jobdiffdays = jobendedays | minus: jobstartdays %}
-    <h4 class="resume-item-details" itemprop="description" style="display: inline-block; margin-bottom: 0px;">{{ position.title }}</h4>
-    <span>
-      &bull;
-      {{ position.startdate | date: "%b, %Y" }}
-      &mdash;
-      {{ position.enddate | date: "%b, %Y" | default: "Present" }}
-      &bull;
-      {{ jobdiffdays | divided_by: 365.25 | floor }} yrs {{ jobdiffdays | modulo: 365.25 | divided_by: 30.4375 | round  }} mos
-    </span>
-    <p class="resume-item-copy">
-      {{ position.summary }}
-      {% if position.projects %}
-      <ul class="resume-item-list">
-        {% for project in position.projects %}<li>{{ project }}</li>{% endfor %}
-      </ul>
+  <section class="content-section">
+    <header class="section-header"><h2>Experience</h2></header>
+    {% for job in site.data.experience %}
+      {% assign positions = job.positions | sort_natural: "startdate" | reverse %}
+
+      {% if positions.size > 1 %}
+        {% assign jobfirstpos = positions | last %}
+        {% assign joblastpos = positions | first %}
+        {% assign jobstartdays = jobfirstpos.startdate | date: "%s" | divided_by: 86400 %}
+        {% assign jobenddays = joblastpos.enddate | default: 'now' | date: "%s" | divided_by: 86400 %}
+        {% assign jobdiffdays = jobenddays | minus: jobstartdays %}
+        {% assign jobdiffyears = jobdiffdays | divided_by: 365.25 | floor %}
+        {% assign jobdiffmonths = jobdiffdays | modulo: 365.25 | divided_by: 30.4375 | round %}
       {% endif %}
-    </p>
+
+      <div class="resume-item" itemscope itemprop="worksFor" itemtype="http://schema.org/Organization">
+        <img src="{{ job.logo }}" class="company-logo">
+
+        <h3 class="resume-item-title" itemprop="name" style="display: inline-block;">
+          {% if job.url %}<a href="{{ job.url }}" itemprop="url">{{ job.company }}</a>{% else %}{{ job.company }}{% endif %}
+        </h3>
+
+        {% if positions.size > 1 %}
+          <div>{{ jobfirstpos.startdate | date: "%b, %Y" }} &ndash; {{ joblastpos.enddate | date: "%b, %Y" | default: "Present" }} &bull; {{ jobdiffyears }} yrs {{ jobdiffmonths }} mos</div>
+        {% endif %}
+
+        {% if job.summary %}
+          <p>
+            {{ job.summary }}
+          </p>
+        {% endif %}
+
+        {% for position in positions %}
+          {% assign posstartdays = position.startdate | date: "%s" | divided_by: 86400 %}
+          {% assign posenddays = position.enddate | default: 'now' | date: "%s" | divided_by: 86400 %}
+          {% assign posdiffdays = posenddays | minus: posstartdays %}
+          {% assign posdiffyears = posdiffdays | divided_by: 365.25 | floor %}
+          {% assign posdiffmonths = posdiffdays | modulo: 365.25 | divided_by: 30.4375 | round %}
+
+          <div class="resume-job-position">
+            <h4 class="resume-item-details" itemprop="description" style="display: inline-block; margin-bottom: 0px;">{{position.title }}</h4>
+            <span> &bull; {{ position.startdate | date: "%b, %Y" }} &ndash; {{ position.enddate | date: "%b, %Y" | default: "Present" }} &bull; {{ posdiffyears }} yrs {{ posdiffmonths }} mos</span>
+            <p class="resume-item-copy">
+              {{ position.summary }}
+              {% if position.projects %}
+                <ul class="resume-item-list">
+                  {% for project in position.projects %}<li>{{ project }}</li>{% endfor %}
+                </ul>
+              {% endif %}
+            </p>
+          </div>
+        {% endfor %}
+      </div>
     {% endfor %}
-  </div>
-  {% endfor %}
-</section>
+  </section>
 {% endif %}
 
 {% if resume.sections.recognition %}
@@ -138,7 +157,7 @@
   <header class="section-header"><h2>Personal Projects</h2></header>
   {% for project in site.data.projects %}
   <div class="resume-item" itemscope itemtype="http://schema.org/CreativeWork">
-    <meta itemprop="creator" content="{{ site.resume_name }}" itemtype="http://schema.org/Person" />
+    <meta itemprop="creator" content="{{ site.author }}" itemtype="http://schema.org/Person" />
     <h3 class="resume-item-title" itemprop="name">{% if project.url %}<a href="{{ project.url }}" itemprop="url">{{ project.project }}</a>{% else %}{{ project.project }}{% endif %}</h3>
     <h4 class="resume-item-details" itemprop="description">{{ project.role }}  &bull; {{ project.duration }}</h4>
     <p class="resume-item-copy">{{ project.description }}</p>

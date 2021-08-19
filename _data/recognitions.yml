@@ -2,7 +2,5 @@
   organization: Microsoft
   year: "Certified 2021"
   summary: > 
-    <div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="d70e6c14-b01c-415b-a6da-de78f54c5380" data-share-badge-host="https://www.youracclaim.com"></div>
-    <div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="f004ec0c-5174-4b2a-85bd-1942610b568b" data-share-badge-host="https://www.youracclaim.com"></div>
-    <div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="b4c199d0-5fbf-4319-9ff5-c2abacf42b56" data-share-badge-host="https://www.youracclaim.com"></div>
+    <div class="no-print"><div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="d70e6c14-b01c-415b-a6da-de78f54c5380" data-share-badge-host="https://www.youracclaim.com"></div></div>
     <script type="text/javascript" async src="//cdn.youracclaim.com/assets/utilities/embed.js"></script>

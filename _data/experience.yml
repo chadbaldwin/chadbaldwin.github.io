@@ -1,13 +1,12 @@
 - company: AutoAlert
-  summary: AutoAlert is a data mining company dedicated to identifying leads in automotive dealerships own data with the goal of helping them sell more cars.
+  summary: A data mining company dedicated to identifying leads in automotive dealerships customer data with the goal of helping them increase customer retention and sales.
   logo: /img/companylogos/aa.jpg
   url: https://www.autoalert.com/
   positions:
   - title: Database Developer
     startdate: 2015-10-01
-    summary: As a database developer, I improved their products by working with application developers to engineer the back-end services that supported the features they were building. I developed ETL processes for importing, cleansing and normalizing the dealerships data so that it could be fed into our proprietary calculation engine, which I helped maintain, optimize and enhance.
+    summary: Improved products by working with application developers to engineer back-end services and build stored procedures. Expanded ETL processes for importing, cleansing and normalizing automotive dealership data to be processed by our proprietary calculation engine.
     projects:
-      - Built complex SQL code to add a wide range of new features to a SaaS application
       - Collaborated with 3rd party data providers to build integrations via SQL & C# for tasks such as email/address sanitization, data appends and ETL processes
       - Helped maintain and improve an elaborate calculation engine to support new features and settings
       - Constantly worked to improve existing SQL code to run faster through query and index tuning by analyzing execution plans, server statistics, dynamic management views (DMVs), etc
@@ -36,20 +35,20 @@
       - In charge of installing, configuring and managing network monitoring software for hundreds of network devices using Nagios
       - Established a reliable system for imaging and deploying desktops for new users
 
-- company: American Money Group, Inc
-  logo: /img/companylogos/amg.jpg
-  url: http://www.americanmoneygroup.com/
-  positions:
-  - title: IT Consultant
-    startdate: 2009-03-01
-    enddate: 2011-05-01
-    summary: Provided a broad range of IT services. Helpdesk support, computer repair, VoIP management & configuration, as well as website and intranet maintenance.
+#- company: American Money Group, Inc
+#  logo: /img/companylogos/amg.jpg
+#  url: http://www.americanmoneygroup.com/
+#  positions:
+#  - title: IT Consultant
+#    startdate: 2009-03-01
+#    enddate: 2011-05-01
+#    summary: Provided a broad range of IT services. Helpdesk support, computer repair, VoIP management & configuration, as well as website and intranet maintenance.
 
-- company: Me-N-Ed's Pizza Parlor
-  logo: /img/companylogos/mne.jpg
-  url: https://www.meneds.com/
-  positions:
-  - title: Employee
-    startdate: 2002-09-01
-    enddate: 2008-10-01
-    summary: A family owned business from 1963 to 2020. Worked in the kitchen and the bar, as a cashier and a cook. Helped with business paperwork, quickbooks, building spreadsheets, and in recent years during the COVID pandemic, helped to run social media to keep business going strong with a delivery only business.
+#- company: Me-N-Ed's Pizza Parlor
+#  logo: /img/companylogos/mne.jpg
+#  url: https://www.meneds.com/
+#  positions:
+#  - title: Employee
+#    startdate: 2002-09-01
+#    enddate: 2008-10-01
+#    summary: A family owned business from 1963 to 2020. Worked in the kitchen and the bar, as a cashier and a cook. Helped with business paperwork, quickbooks, building spreadsheets, and in recent years during the COVID pandemic, helped to run social media to keep business going strong with a delivery only business.
