@@ -254,6 +254,14 @@ h1, h2, h3, h4, h5, h6 {
 		margin: 0px;
 	}
 
+	.page-header .header-suffix {
+		font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+		font-weight: 600;
+		font-size: 1rem;
+		margin: 0px;
+		letter-spacing: -.05rem;
+	}
+
 	.section-header {
 		border-top: 1px solid #c7c7c7;
 		border-bottom: 1px solid #c7c7c7;
