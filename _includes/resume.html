@@ -10,7 +10,12 @@
   {% if site.gravatar_hash %}
   <img src="https://www.gravatar.com/avatar/{{ site.gravatar_hash }}?size=100" alt="my photo" class="avatar no-print" itemprop="image">
   {% endif %}
-  <h1 class="header-name" itemprop="name">{{ resume.header.name }}</h1>
+  <div class="header-title">
+    <span class="header-name" itemprop="name">{{ resume.header.name }}</span>
+    {% if resume.header.suffix %}
+      <span class="header-suffix">, {{ resume.header.suffix }}</span>
+    {% endif %}
+  </div>
   {% if resume.header.display_contact_info %}
   <div class="header-contact-info">
     <p>{% for item in resume.contact %}<span>{{ item[1] }}{% if forloop.last %}{% else %} &bull; {% endif %}</span>{% endfor %}</p>
