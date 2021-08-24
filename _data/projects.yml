@@ -3,18 +3,17 @@
   duration: Dec, 2020 &mdash; Present
   url: "https://chadbaldwin.net"
   description: >
-    In Dec of 2020, I decided to start a blog, so that I could share with
-    others the things I learned recently, or things I feel others would benefit
-    from. I've always enjoyed writing, and putting together a public blog seemed
-    like a fun idea.
+    I've always enjoyed teaching, and I love learning new technologies and
+    sharing tips and tricks I've picked up over the years. So back in Dec 2020
+    I decided to build my own blog.
 
 - project: Schema Search, utility stored procedure
   role: Developer
   duration: 2015 &mdash; Present
   url: "https://github.com/chadbaldwin/SQL"
   description: >
-    Years ago, I started writing a SQL stored procedure that focused on
-    searching the contents of system objects in order to help my understanding
-    of the SQL Server system tables. Eventually, it turned into a tool that
-    I use, at minimum, on a daily basis. The project is hosted on GitHub
-    and is licensed for anyone to use or contribute!
+    "Scehma Search" as I've been calling it, is a stored procedure that focuses
+    on searching the contents of system objects in order to help my understanding
+    of the SQL Server system tables. Eventually, it turned into a tool that I use,
+    at minimum, on a daily basis. The project is hosted on GitHub and is licensed
+    for anyone to use or contribute!
