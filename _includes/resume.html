@@ -24,24 +24,24 @@
   <div class="title-bar no-print">
     <h2 class="header-title" itemprop="jobTitle">{{ resume.header.current_title }}</h2>
     {% if resume.social %}
-    <ul class="icon-links">
-      {% for item in resume.social %}
-      <li class="icon-link-item">
-        <a href="{{ item[1] }}" class="icon-link" itemprop="sameAs" target="_blank">
-          {% case item[0] %}
-            {% when "GitHub"    %}<img src="/img/socialicons/github.svg">
-            {% when "Twitter"   %}<img src="/img/socialicons/twitter.svg">
-            {% when "Medium"    %}<img src="/img/socialicons/medium.svg">
-            {% when "Dribbble"  %}<img src="/img/socialicons/dribbble.svg">
-            {% when "Facebook"  %}<img src="/img/socialicons/facebook.svg">
-            {% when "LinkedIn"  %}<img src="/img/socialicons/linkedin.svg">
-            {% when "Instagram" %}<img src="/img/socialicons/instagram.svg">
-            {% when "Website"   %}<img src="/img/socialicons/website.svg">
-          {% endcase %}
-        </a>
-      </li>
-      {% endfor %}
-    </ul>
+      <ul class="icon-links">
+        {% for item in resume.social %}
+          <li class="icon-link-item">
+            <a href="{{ item[1] }}" class="icon-link" itemprop="sameAs" target="_blank">
+              {% case item[0] %}
+                {% when "GitHub"    %}<img src="/img/socialicons/github.svg">
+                {% when "Twitter"   %}<img src="/img/socialicons/twitter.svg">
+                {% when "Medium"    %}<img src="/img/socialicons/medium.svg">
+                {% when "Dribbble"  %}<img src="/img/socialicons/dribbble.svg">
+                {% when "Facebook"  %}<img src="/img/socialicons/facebook.svg">
+                {% when "LinkedIn"  %}<img src="/img/socialicons/linkedin.svg">
+                {% when "Instagram" %}<img src="/img/socialicons/instagram.svg">
+                {% when "Website"   %}<img src="/img/socialicons/website.svg">
+              {% endcase %}
+            </a>
+          </li>
+        {% endfor %}
+      </ul>
     {% endif %}
   </div>
   <div class="executive-summary" itemprop="description"><p>{{ resume.header.intro }}</p></div>

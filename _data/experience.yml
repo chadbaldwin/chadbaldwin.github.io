@@ -1,26 +1,47 @@
 - company: AutoAlert
-  summary: A data mining company dedicated to identifying leads in automotive dealerships customer data with the goal of helping them increase customer retention and sales.
+  summary: >
+    A data mining company dedicated to identifying leads in automotive dealerships customer data
+    with the goal of helping them increase customer retention and sales.
   logo: /img/companylogos/aa.jpg
   url: https://www.autoalert.com/
   positions:
   - title: Database Developer
     startdate: 2015-10-01
-    summary: Improved products by working with application developers to engineer back-end services and build stored procedures. Expanded ETL processes for importing, cleansing and normalizing automotive dealership data to be processed by our proprietary calculation engine.
+    summary: >
+      Improved products by working with application developers to engineer back-end services and
+      build stored procedures. Expanded ETL processes for importing, cleansing and normalizing
+      automotive dealership data to be processed by our proprietary calculation engine.
     projects:
-      - Collaborated with 3rd party data providers to build integrations via SQL & C# for tasks such as email/address sanitization, data appends and ETL processes
-      - Helped maintain and improve an elaborate calculation engine to support new features and settings
-      - Constantly worked to improve existing SQL code to run faster through query and index tuning by analyzing execution plans, server statistics, dynamic management views (DMVs), etc
+      - >
+        Collaborated with 3rd party data providers to build integrations via SQL & C# for tasks such
+        as email/address sanitization, data appends and ETL processes
+      - >
+        Helped maintain and improve an elaborate calculation engine to support new features and
+        settings
+      - >
+        Constantly worked to improve existing SQL code to run faster through query and index tuning
+        by analyzing execution plans, server statistics, dynamic management views (DMVs), etc
       - Worked on many ETL projects utilizing C#, PowerShell, batch and SQL
-      - Contributed to complex back-end applications written in C# utilizing technologies such as Elasticsearch, RabbitMQ, Redis, Amazon SNS, Amazon SES, Amazon S3, Docker and various scraping services (utilizing Selenium)
-      - Experience with using collaboration and CI/CD tools including Jenkins, Slack and Upsource
-
+      - >
+        Contributed to complex back-end applications written in C# utilizing technologies such as
+        Elasticsearch, RabbitMQ, Redis, Amazon SNS, Amazon SES, Amazon S3, Docker and various
+        scraping services (utilizing Selenium)
+      - >
+        Experience with using collaboration and CI/CD tools including Jenkins, Slack and Upsource
   - title: Senior IT Support Analyst
     startdate: 2012-06-01
     enddate: 2015-10-01
-    summary: As an IT Support Analyst I was responsible for quickly triaging and troubleshooting issues in client data. Worked directly with clients over the phone to assist fixing data delivery issues. Built systems and tools to automate detection of bad data quality and reduce the work needed to fix.
+    summary: >
+      As an IT Support Analyst I was responsible for quickly triaging and troubleshooting issues in
+      client data. Worked directly with clients over the phone to assist fixing data delivery
+      issues. Built systems and tools to automate detection of bad data quality and reduce the work
+      needed to fix.
     projects:
-      - Worked heavily with SSRS to write custom reports for all business needs ranging from simple tablix reports to complicated reports with benchmarks, charts, and complex expressions
-      - Established a reporting data warehouse to ensure consistent metrics across all reports
+      - >
+        Worked heavily with SSRS to write custom reports for all business needs ranging from simple
+        tablix reports to complicated reports with benchmarks, charts, and complex expressions
+      - >
+        Established a reporting data warehouse to ensure consistent metrics across all reports
 
 - company: Albert A. Webb Associates
   logo: /img/companylogos/aawa.png
@@ -29,11 +50,19 @@
   - title: IT Intern / Network Technician
     startdate: 2008-10-01
     enddate: 2012-06-01
-    summary: Supported a large multi-location network which hosted on-prem services for hundreds of civil engineers. Assited in the installation and configuration of SAN, virtualization, network and power equipment.
+    summary: >
+      Supported a large multi-location network which hosted on-prem services for hundreds of civil
+      engineers. Assited in the installation and configuration of SAN, virtualization, network and
+      power equipment.
     projects:
-      - Eliminated the need for hiring Cisco consultants by learning to support the Cisco devices through personal research, and formal courses offered at the local college
-      - In charge of installing, configuring and managing network monitoring software for hundreds of network devices using Nagios
-      - Established a reliable system for imaging and deploying desktops for new users
+      - >
+        Eliminated the need for hiring Cisco consultants by learning to support the Cisco devices
+        through personal research, and formal courses offered at the local college
+      - >
+        In charge of installing, configuring and managing network monitoring software for hundreds
+        of network devices using Nagios
+      - >
+        Established a reliable system for imaging and deploying desktops for new users
 
 #- company: American Money Group, Inc
 #  logo: /img/companylogos/amg.jpg
