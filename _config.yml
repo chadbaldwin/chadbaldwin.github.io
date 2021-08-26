@@ -25,6 +25,7 @@ show_excerpts: false
 
 # Used by simple links page
 social-links:
+  Resume:        https://chadbaldwin.net/resume
   LinkedIn:      https://linkedin.com/in/chadbaldwin
   StackOverflow: https://stackoverflow.com/users/3474677
   GitHub:        https://github.com/chadbaldwin
