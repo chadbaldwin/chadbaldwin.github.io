@@ -1,4 +1,9 @@
+{% assign resume = site.data.resume %}
+
 <script>
+  // Hack to get a better name when printing the file to PDF
+  document.title = "{{resume.header.name}}{{if resume.header.suffix}}, {{resume.header.suffix}}{{endif}} - {{resume.header.current_title}} - Resume";
+
   function JobDateDiff (start, end) {
       var startDays = new Date(start).getTime() / 1000 / 86400;
       var endDays = new Date(end).getTime() / 1000 / 86400;
@@ -15,14 +20,12 @@
 <link href="https://fonts.googleapis.com/css?family=Lora:400,700|Open+Sans:400,300,800,700" rel="stylesheet" type="text/css">
 <link href="/css/resume.css" rel="stylesheet" type="text/css">
 
-{% assign resume = site.data.resume %}
-
 {% if resume.contact.phone %}<meta itemprop="telephone" content="{{ resume.contact.phone }}"/>{% endif %}
 {% if resume.contact.address %}<meta itemprop="address" content="{{ resume.contact.address }}"/>{% endif %}
 
 <header class="page-header">
   {% if site.gravatar_hash %}
-  <img src="https://www.gravatar.com/avatar/{{ site.gravatar_hash }}?size=100" alt="my photo" class="avatar no-print" itemprop="image">
+    <img src="https://www.gravatar.com/avatar/{{ site.gravatar_hash }}?size=100" alt="my photo" class="avatar no-print" itemprop="image">
   {% endif %}
   <div class="header-title">
     <span class="header-name" itemprop="name">{{ resume.header.name }}</span>
@@ -31,9 +34,9 @@
     {% endif %}
   </div>
   {% if resume.header.display_contact_info %}
-  <div class="header-contact-info">
-    <p>{% for item in resume.contact %}<span>{{ item[1] }}{% if forloop.last %}{% else %} &bull; {% endif %}</span>{% endfor %}</p>
-  </div>
+    <div class="header-contact-info">
+      <p>{% for item in resume.contact %}<span>{{ item[1] }}{% if forloop.last %}{% else %} &bull; {% endif %}</span>{% endfor %}</p>
+    </div>
   {% endif %}
   <div class="title-bar no-print">
     <h2 class="header-title" itemprop="jobTitle">{{ resume.header.current_title }}</h2>
