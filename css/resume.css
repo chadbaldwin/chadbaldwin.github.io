@@ -238,6 +238,17 @@ h1, h2, h3, h4, h5, h6 {
 		display: none !important;
 	}
 
+	a, a:visited {
+		text-decoration: none;
+		color: unset;
+	}
+
+	/*
+	a[href]:after {
+		content: ' (' attr(href) ')';
+	}
+	*/
+
 	.print-only {
 		display: block !important;
 	}
