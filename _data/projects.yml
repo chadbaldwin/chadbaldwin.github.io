@@ -11,7 +11,7 @@
   duration: 2015 &mdash; Present
   url: "https://github.com/chadbaldwin/SQL"
   description: >
-    "Scehma Search" as I've been calling it, is a stored procedure that focuses on searching the
+    "Schema Search" as I've been calling it, is a stored procedure that focuses on searching the
     contents of system objects in order to help my understanding of the SQL Server system tables.
     Eventually, it turned into a tool that I use, at minimum, on a daily basis. The project is
     hosted on GitHub and is licensed for anyone to use or contribute!

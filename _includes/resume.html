@@ -46,24 +46,24 @@
   </div>
   <div class="executive-summary" itemprop="description"><p>{{ resume.header.intro }}</p></div>
   {% if resume.header.looking_for_work %}
-  {% if resume.contact.email %}
-  <a href="mailto:{{ resume.contact.email }}" class="contact-button no-print" itemprop="email">Contact me</a>
-  {% endif %}
+    {% if resume.contact.email %}
+      <a href="mailto:{{ resume.contact.email }}" class="contact-button no-print" itemprop="email">Contact me</a>
+    {% endif %}
   {% else %}
-  <a class="contact-button not-looking no-print">I'm not looking for work right now.</a>
+    <a class="contact-button not-looking no-print">I'm not looking for work right now.</a>
   {% endif %}
 </header>
 
 {% if resume.sections.skills %}
-<section class="content-section">
-  <header class="section-header"><h2>Skills</h2></header>
-  {% for skill in site.data.skills %}
-  <div class="resume-item">
-    <h4 class="resume-item-details">{{ skill.skill }}</h4>
-    <p class="resume-item-copy">{{ skill.description }}</p>
-  </div>
-  {% endfor %}
-</section>
+  <section class="content-section">
+    <header class="section-header"><h2>Skills</h2></header>
+    {% for skill in site.data.skills %}
+      <div class="resume-item">
+        <h4 class="resume-item-details">{{ skill.skill }}</h4>
+        <p class="resume-item-copy">{{ skill.description }}</p>
+      </div>
+    {% endfor %}
+  </section>
 {% endif %}
 
 {% if resume.sections.experience %}

@@ -8,24 +8,26 @@
   - title: Database Developer
     startdate: 2015-10-01
     summary: >
-      Improved products by working with application developers to engineer back-end services and
-      build stored procedures. Expanded ETL processes for importing, cleansing and normalizing
-      automotive dealership data to be processed by our proprietary calculation engine.
+      Primarily working with SQL, C# and PowerShell; improved products by working with development
+      and product teams to engineer back-end services, build databases and design schemas.
+      Implemented ETL processes for importing, cleansing and normalizing automotive dealership data
+      to be processed by our proprietary calculation engine.
     projects:
       - >
-        Collaborated with 3rd party data providers to build integrations via SQL & C# for tasks such
-        as email/address sanitization, data appends and ETL processes
+        Collaborated with 3rd party data providers to build integrations via SQL, C# and PowerShell
+        for tasks such as email/address sanitization, data appends and ETL processes
       - >
-        Helped maintain and improve an elaborate calculation engine to support new features and
-        settings
+        Helped maintain and improve an elaborate calculation engine written in SQL to support new
+        features and settings
       - >
-        Constantly worked to improve existing SQL code to run faster through query and index tuning
-        by analyzing execution plans, server statistics, dynamic management views (DMVs), etc
-      - Worked on many ETL projects utilizing C#, PowerShell, batch and SQL
+        Tuned existing SQL code to run faster through query and index tuning by analyzing execution
+        plans, server statistics, dynamic management views (DMV's), etc
       - >
-        Contributed to complex back-end applications written in C# utilizing technologies such as
-        Elasticsearch, RabbitMQ, Redis, Amazon SNS, Amazon SES, Amazon S3, Docker and various
-        scraping services (utilizing Selenium)
+        Worked on many ETL projects utilizing SQL, C#, PowerShell, batch and SSIS
+      - >
+        Contributed to complex back-end services written in C# utilizing technologies such as
+        Elasticsearch, RabbitMQ, Redis, Amazon SNS, Amazon SES, Amazon S3, Docker, Selenium web
+        scraping, and handling files via FTP
       - >
         Experience with using collaboration and CI/CD tools including Jenkins, Slack and Upsource
   - title: Senior IT Support Analyst
@@ -39,7 +41,7 @@
     projects:
       - >
         Worked heavily with SSRS to write custom reports for all business needs ranging from simple
-        tablix reports to complicated reports with benchmarks, charts, and complex expressions
+        tablix reports to intricate reports with benchmarks, charts, and complex expressions
       - >
         Established a reporting data warehouse to ensure consistent metrics across all reports
 
@@ -52,7 +54,7 @@
     enddate: 2012-06-01
     summary: >
       Supported a large multi-location network which hosted on-prem services for hundreds of civil
-      engineers. Assited in the installation and configuration of SAN, virtualization, network and
+      engineers. Assisted in the installation and configuration of SAN, virtualization, network and
       power equipment.
     projects:
       - >

@@ -1,46 +1,37 @@
-- skill: SQL Database and Query tuning
+- skill: Database Design, Development and Reporting
   description: >
-    9+ years of experience in
-    database design,
-    query tuning,
-    index tuning,
-    stored procedure development,
-    troubleshooting locking and blocking issues
-
-#- skill: Programming
-#  description: "
-#    <div>
-#      Daily Use:
-#      <ul>
-#        <li>SQL &bull; Powershell &bull; Markdown &bull; JSON &bull; YAML &bull; Liquid</li>
-#      </ul>
-#      Regular Use:
-#      <ul>
-#        <li>C# &bull; Batch &bull; bash &bull; DOT</li>
-#      </ul>
-#      Occasional Use:
-#      <ul>
-#        <li>HTML &bull; CSS &bull; LaTeX</li>
-#      </ul>
-#    <div>"
-
+    9+ years of experience in database/schema design, query tuning, index tuning, SQL development,
+    troubleshooting issues locking and blocking issues, data analysis, reporting and data
+    visualization.
+- skill: .NET Development Using C# and PowerShell
+  description: >
+    6+ years experience with PowerShell and 2+ years of experience working with C# and .NET to build
+    back end services integrating with 3rd party API's, web scraping, ETL processes and task
+    automation.
 - skill: Tools & Technologies
   description: >
-    SQL Server Management Studio (SSMS)
-    &bull; SQL Server Reporting Services (SSRS)
-    &bull; git
-    &bull; SVN
+    Azure Data Studio (ADS)
+    &bull; Confluence
+    &bull; DBATools
+    &bull; Docker
+    &bull; Elasticsearch
     &bull; Excel
-    &bull; Visual Studio
-    &bull; VS Code
-    &bull; Azure Data Studio (ADS)
+    &bull; Fiddler
+    &bull; git
+    &bull; Jira
+    &bull; Jitbit
+    &bull; Postman
+    &bull; PowerShell
+    &bull; RabbitMQ
     &bull; Red Gate Toolbelt
     &bull; Sisense BI Reporting
-    &bull; Elasticsearch
-    &bull; RabbitMQ
-    &bull; Docker
-    &bull; DBATools
+    &bull; SQL Server Integration Services (SSIS)
+    &bull; SQL Server Management Studio (SSMS)
+    &bull; SQL Server Profiler
+    &bull; SQL Server Reporting Services (SSRS)
+    &bull; SVN
+    &bull; Sysinternals
     &bull; Upsource
-    &bull; Jira
-    &bull; Confluence
-    &bull; Jitbit
+    &bull; Visual Studio
+    &bull; VS Code
+    &bull; Wireshark
