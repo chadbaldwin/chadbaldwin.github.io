@@ -233,6 +233,11 @@ h1, h2, h3, h4, h5, h6 {
 	display: none !important;
 }
 
+/* Set print margins */
+@page {
+	margin: 0.3in 0.4in 0.3in 0.4in;
+}
+
 @media print {
 	.no-print {
 		display: none !important;
