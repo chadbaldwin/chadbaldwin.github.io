@@ -1,7 +1,7 @@
 - skill: Database Design, Development and Reporting
   description: >
     9+ years of experience in database/schema design, query tuning, index tuning, SQL development,
-    troubleshooting issues locking and blocking issues, data analysis, reporting and data
+    troubleshooting locking and blocking issues, data analysis, custom reporting and data
     visualization.
 - skill: .NET Development Using C# and PowerShell
   description: >
@@ -19,7 +19,6 @@
     &bull; Fiddler
     &bull; git
     &bull; Jira
-    &bull; Jitbit
     &bull; Postman
     &bull; PowerShell
     &bull; RabbitMQ
@@ -30,7 +29,6 @@
     &bull; SQL Server Profiler
     &bull; SQL Server Reporting Services (SSRS)
     &bull; SVN
-    &bull; Sysinternals
     &bull; Upsource
     &bull; Visual Studio
     &bull; VS Code
