@@ -78,7 +78,19 @@
       <div class="resume-item">
         <h4 class="resume-item-details">{{ skill.skill }}</h4>
         <p class="resume-item-copy">
-          {{ skill.description }}
+          {% if skill.description %}
+            <div>
+              {{ skill.description }}
+            </div>
+          {% endif %}
+          {% if skill.list %}
+            {% assign skillSorted = skill.list | sort_natural %}
+            <div>
+              {% for item in skillSorted %}
+                {{ item }}{% if forloop.last %}{% else %} &bull; {% endif %}
+              {% endfor %}
+            </div>
+          {% endif %}
         </p>
       </div>
     {% endfor %}

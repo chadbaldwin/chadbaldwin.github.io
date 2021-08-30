@@ -1,3 +1,13 @@
+#- skill: string
+#  description: string
+#  list:
+#    - array
+#    - of
+#    - strings
+#
+# Template supports both a description AND a skill list, however it may look best if only one or the
+# other is used. Lists are sorted and separated without line breaks by • (&bull;)
+
 - skill: Database Design, Development and Reporting
   description: >
     9+ years of experience in database/schema design, query tuning, index tuning, SQL development,
@@ -9,27 +19,27 @@
     back end services integrating with 3rd party API's, web scraping, ETL processes and task
     automation.
 - skill: Tools & Technologies
-  description: >
-    Azure Data Studio (ADS)
-    &bull; Confluence
-    &bull; DBATools
-    &bull; Docker
-    &bull; Elasticsearch
-    &bull; Excel
-    &bull; Fiddler
-    &bull; git
-    &bull; Jira
-    &bull; Postman
-    &bull; PowerShell
-    &bull; RabbitMQ
-    &bull; Red Gate Toolbelt
-    &bull; Sisense BI Reporting
-    &bull; SQL Server Integration Services (SSIS)
-    &bull; SQL Server Management Studio (SSMS)
-    &bull; SQL Server Profiler
-    &bull; SQL Server Reporting Services (SSRS)
-    &bull; SVN
-    &bull; Upsource
-    &bull; Visual Studio
-    &bull; VS Code
-    &bull; Wireshark
+  list:
+    - Azure Data Studio (ADS)
+    - Confluence
+    - DBATools
+    - Docker
+    - Elasticsearch
+    - Excel
+    - Fiddler
+    - git
+    - Jira
+    - Postman
+    - PowerShell
+    - RabbitMQ
+    - Red Gate Toolbelt
+    - Sisense BI Reporting
+    - SQL Server Integration Services (SSIS)
+    - SQL Server Management Studio (SSMS)
+    - SQL Server Profiler
+    - SQL Server Reporting Services (SSRS)
+    - SVN
+    - Upsource
+    - Visual Studio
+    - VS Code
+    - Wireshark
