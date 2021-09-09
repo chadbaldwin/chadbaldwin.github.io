@@ -223,7 +223,9 @@
   <section class="content-section">
     <header class="section-header"><h2>Outside Interests</h2></header>
     <div class="resume-item">
+      <p class="resume-item-copy">
       {{ site.data.interests.description }}
+      </p>
     </div>
   </section>
 {% endif %}
@@ -233,7 +235,7 @@
     <header class="section-header"><h2>Additional Links</h2></header>
     <div class="resume-item">
       <ul class="resume-item-list">
-        {% for link in site.data.links %}<li><a href="{{ link.url }}" itemprop="url">{{ link.description }}</a></li>{% endfor %}
+        {% for item in site.data.links %}<li><strong>{{ item.name }}</strong>: <a href="{{ item.url }}" target="_blank">{{ item.label }}</a></li>{% endfor %}
       </ul>
     </div>
   </section>

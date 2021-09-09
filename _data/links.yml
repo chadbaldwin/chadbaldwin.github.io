@@ -1,4 +1,19 @@
-- url: "#"
-  description: Springfield Jazz Enthusiasts
-- url: "#"
-  description: Springfield Young Professionals
+- name: LinkedIn
+  url: https://linkedin.com/in/chadbaldwin
+  label: chadbaldwin
+
+- name: Credly/Acclaim
+  url: https://credly.com/users/chadbaldwin
+  label: chadbaldwin
+
+- name: Website
+  url: https://chadbaldwin.net
+  label: chadbaldwin.net
+
+- name: GitHub
+  url: https://github.com/chadbaldwin
+  label: chadbaldwin
+
+- name: StackOverflow
+  url: https://stackoverflow.com/users/3474677
+  label: chad-baldwin

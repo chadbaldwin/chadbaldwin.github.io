@@ -23,7 +23,7 @@ sections:
   recognition:  true
   associations: false
   interests:    true
-  links:        false
+  links:        true
   social_links: false
 social:
   Website:    http://chadbaldwin.net
