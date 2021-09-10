@@ -31,6 +31,10 @@ fiddlers:
     description: Multi-language fiddler (too many to list) (requires signing up)
     link: https://repl.it
 
+  - name: Visualizing Git
+    description: Online visualizer for practicing git commands
+    link: https://git-school.github.io/visualizing-git
+
 code sharing / collaboration:
   - name: Board
     description: "Online Whiteboard, alternative link: <https://board.new>"
