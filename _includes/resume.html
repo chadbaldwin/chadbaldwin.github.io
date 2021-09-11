@@ -87,7 +87,7 @@
             {%- assign skillSorted = skill.list | sort_natural -%}
             <div>
               {%- for item in skillSorted -%}
-                {{ item }}{%- if forloop.last -%}{%- else -%} &bull; {%- endif -%}
+                <span>{{ item }}</span>{%- if forloop.last -%}{%- else -%}<span> &bull; </span>{%- endif -%}
               {%- endfor -%}
             </div>
           {%- endif -%}
@@ -120,14 +120,16 @@
 
         {%- if positions.size > 1 -%}
           <div>
-            <span>{{ jobfirstpos.startdate | date: "%b, %Y" }} &ndash; {{ joblastpos.enddate | date: "%b, %Y" | default: "Present" }}</span>
+            <span>{{ jobfirstpos.startdate | date: "%b, %Y" }}</span>
+            <span> &ndash; </span>
+            <span>{{ joblastpos.enddate | date: "%b, %Y" | default: "Present" }}</span>
             <span> &bull; </span>
             <span><script>JobDateDiff("{{ jobStartDate }}","{{ jobEndDate }}")</script></span>
           </div>
         {%- endif -%}
 
         {%- if job.summary -%}
-          <p>
+          <p class="job-summary">
             {{ job.summary }}
           </p>
         {%- endif -%}
@@ -140,18 +142,20 @@
             <h4 class="resume-item-details" itemprop="description" style="display: inline-block; margin-bottom: 0px;">{{position.title }}</h4>
             <div style="display:inline;">
               <span> &bull; </span>
-              <span>{{ position.startdate | date: "%b, %Y" }} &ndash; {{ position.enddate | date: "%b, %Y" | default: "Present" }}</span>
+              <span>{{ position.startdate | date: "%b, %Y" }}</span>
+              <span> &ndash; </span>
+              <span>{{ position.enddate | date: "%b, %Y" | default: "Present" }}</span>
               <span> &bull; </span>
               <span><script>JobDateDiff("{{ posStartDate }}","{{ posEndDate }}")</script></span>
             </div>
-            <p class="resume-item-copy">
-              {{ position.summary }}
+            <div class="resume-item-copy">
+              <p class="position-summary">{{ position.summary }}</p>
               {%- if position.projects -%}
                 <ul class="resume-item-list">
                   {%- for project in position.projects -%}<li>{{ project }}</li>{%- endfor -%}
                 </ul>
               {%- endif -%}
-            </p>
+            </div>
           </div>
         {%- endfor -%}
       </div>
@@ -180,13 +184,14 @@
         <h3 class="resume-item-title" itemprop="name">{{ education.uni }}</h3>
         <h4 class="resume-item-details group" itemprop="description">{{ education.degree }} &bull; {{ education.year }}</h4>
         <h5 class="resume-item-details award-title" itemprop="description">{{ education.award }}</h5>
-        <p class="resume-item-copy" itemprop="description">
+        <div class="resume-item-copy" >
           {%- if education.awards -%}
             <ul class="resume-item-list">
               {%- for award in education.awards -%}<li>{{ award.award }}</li>{%- endfor -%}
             </ul>
           {%- endif -%}
-        <p class="resume-item-copy">{{ education.summary }}</p>
+          </div>
+        <p class="resume-item-copy" itemprop="description">{{ education.summary }}</p>
       </div>
     {%- endfor -%}
   </section>
@@ -223,9 +228,7 @@
   <section class="content-section">
     <header class="section-header"><h2>Outside Interests</h2></header>
     <div class="resume-item">
-      <p class="resume-item-copy">
-      {{ site.data.interests.description }}
-      </p>
+      <p class="resume-item-copy">{{ site.data.interests.description }}</p>
     </div>
   </section>
 {%- endif -%}
