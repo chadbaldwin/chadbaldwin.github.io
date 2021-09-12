@@ -1,0 +1,259 @@
+---
+---
+
+@mixin heading-font {
+    font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;	
+}
+
+h1, h2, h3, h4, h5, ul, ol, li, p {
+    margin-bottom: 0px;
+}
+
+ul, ol {
+    margin-left: 40px;
+}
+
+.page-content {
+    .page-header {
+        .avatar {
+            width: 6rem;
+            border-radius: 3rem;
+            margin: 0 auto;
+            display: block;
+        }
+
+        .header-title {
+            @include heading-font;
+            text-align: center;
+
+            .header-name, .header-suffix {
+                font-weight: 900;
+                line-height: 1;
+                letter-spacing: -.1rem;
+            }
+
+            .header-name {
+                font-size: 3rem;
+            }
+
+            .header-suffix {
+                font-size: 1.5rem;
+            }
+        }
+
+        .header-contact-info {
+            text-align: center;
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .title-bar {
+            border-top: 4px solid #c7c7c7;
+            border-bottom: 2px solid #c7c7c7;
+            font-size: 1.75rem;
+            font-weight: 300;
+            margin-bottom: 1rem;
+
+            .job-title {
+                @include heading-font;
+                float: left;
+                letter-spacing: -0.08rem;
+            }
+
+            .icon-links {
+                text-align: right;
+                padding-bottom: 0.2rem;
+
+                .icon-link {
+                    padding: 0.3rem;
+                }
+            }
+        }
+
+        .executive-summary {
+            font-size: 1.125rem;
+        }
+
+        .contact-button {
+            // block
+            display: block;
+            width: 220px;
+            line-height: 55px;
+            border-radius: 0.2rem;
+            background-color: #efefef;
+            margin: 1rem auto;
+        
+            // text
+            text-align: center;
+            text-decoration: none;
+            @include heading-font;
+            font-size: 1.375rem;
+            font-weight: 300;
+            color: #333333;
+            
+            // link
+            transition: all 0.2s ease;
+            &:hover {
+                background-color: #333333;
+                color: #ffffff;
+            }
+        }
+    }
+
+    .content-section {
+        .section-header {
+            border-top: 4px solid #c7c7c7;
+            border-bottom: 2px solid #c7c7c7;
+            padding: .1rem 0 .2rem;
+            margin-bottom: 1rem;
+
+            h2 {
+                @include heading-font;
+                font-size: 1.75rem;
+                font-weight: 900;
+                letter-spacing: -0.05rem;
+            }
+        }
+
+        .resume-item {
+            margin-bottom: 1rem;
+
+            .resume-item-title, .resume-item-copy, .resume-item-list {
+                a {
+                    color: #333;
+                    text-decoration: none;
+                    border-bottom: 1px solid;
+                }
+            }
+        
+            .resume-item-title {
+                font-weight: 700;
+                font-size: 1.125rem;
+                margin-bottom: 0.5rem;
+
+                &.company-name {
+                    @include heading-font;
+                    font-size: 1.5rem;
+                }
+            }
+
+            .company-logo {
+                width: 3.5rem;
+                border-radius: 1rem;
+                margin-right: 0.2rem;
+                margin-bottom: 0.2rem;
+            }
+
+            .company-duration, .job-summary, .position-title, .resume-job-position {
+                margin-bottom: 1rem;
+            }
+
+            .resume-job-position {
+                .position-title {
+                    .resume-item-details {
+                        display: inline-block;
+                        margin-bottom: 0px;
+                        font-size: 1.125rem;
+                        font-weight: 700;
+                    }
+                }
+
+                .resume-item-copy {
+                    .position-summary {
+                        margin-bottom: 1rem;
+                    }
+                }
+            }
+
+            .resume-item-details {
+                font-weight: 700;
+            }
+        }
+    }
+}
+
+.print-only {
+    display: none !important;
+}
+
+// Set print margins
+@page {
+    margin: 0.3in 0.4in 0.3in 0.4in;
+}
+
+@media print {
+    .no-print {
+        display: none !important;
+    }
+
+    html, body {
+        font-size: 12px;
+    }
+
+    .page-content {
+        padding: 0px;
+    
+        .page-header {
+            .header-title {
+                .header-name {
+                    font-size: 2.75rem;
+                }
+    
+                .header-suffix {
+                    font-size: 1.4rem;
+                }
+            }
+
+            .header-contact-info {
+                margin-top: 0.5rem;
+                margin-bottom: 0.5rem;
+            }
+        
+            .executive-summary {
+                font-size: 1rem;
+                line-height: 1.4rem;
+                margin-bottom: 0.75rem;
+            }
+        }
+    
+        .content-section {
+            .section-header {
+                border-top: 1px solid #c7c7c7;
+                border-bottom: 1px solid #c7c7c7;
+                margin-bottom: 0.5rem;
+
+                h2 {
+                    font-size: 1.6rem;
+                }
+            }
+    
+            .resume-item {
+                margin-bottom: 0.75rem;
+    
+                .company-duration, .job-summary, .position-title, .resume-job-position {
+                    margin-bottom: 0.5rem;
+                }
+    
+                .resume-item-details {
+                    margin-bottom: 0.25rem;
+                }
+
+                .resume-item-copy {
+                    line-height: 1.35rem;
+                }
+
+                .resume-item-details {
+                    font-style: italic;
+                }
+
+                .resume-job-position {
+                    .resume-item-copy {
+                        .position-summary {
+                            margin-bottom: 0.5rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
