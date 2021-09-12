@@ -1,41 +1,27 @@
 - company: AutoAlert
-  summary: >
-    A data mining company dedicated to identifying leads in automotive dealerships customer data
-    with the goal of helping them increase customer retention and sales.
+  summary: A data mining company dedicated to identifying leads in automotive dealerships customer data with the goal of helping them increase customer retention and sales.
   logo: /img/companylogos/aa.jpg
   url: https://www.autoalert.com/
   positions:
   - title: Database Developer
     startdate: 2015-10-01
-    summary: >
-      Primarily working with SQL, C# and PowerShell; improved products by working with development
-      and product teams to engineer back-end services, build databases and design schemas.
-      Implemented ETL processes for importing, cleansing and normalizing automotive dealership data
-      to be processed by our proprietary calculation engine.
+    summary: Primarily working with SQL, C# and PowerShell; improved products by working with development and product teams to engineer back-end services, build databases and design schemas. Implemented ETL processes for importing, cleansing and normalizing automotive dealership data to be processed by our proprietary calculation engine.
     projects:
       - "Collaborated with 3rd party data providers to build integrations for tasks such as SalesForce data syncing, email/address sanitization, data appends and ETL processes"
       - "Helped maintain and improve an elaborate calculation engine written in SQL to support new features and settings"
       - "Tuned existing SQL code to run faster and more efficiently reducing both runtime and resource usage through query and index tuning by analyzing execution plans, server statistics, dynamic management views (DMV's), SQL Server First Responder Kit and SentryOne Plan Explorer"
       - "Worked on many ETL projects using SQL, C#, PowerShell and batch scripting, and SSIS packages"
       - "Contributed to complex back-end services written in C# utilizing technologies such as Elasticsearch, RabbitMQ, Redis, Amazon SNS, Amazon SES, Amazon S3, Docker, Selenium web scraping, and handling files via FTP"
-      - "this is a test line"
       - "Experience with using collaboration and CI/CD tools including Jenkins, Slack, Upsource, Jira and Confluence"
       - "Worked primarily with SQL Server versions 2008, 2012, 2014 practicing good HA/DR policies, using replication and Always On availability groups"
       - "Used AWS tools for troubleshooting, logging and deployment such as CloudWatch, CodeDeploy, and managing/monitoring servers through EC2"
   - title: Senior IT Support Analyst
     startdate: 2012-06-01
     enddate: 2015-10-01
-    summary: >
-      As an IT Support Analyst I was responsible for quickly triaging and troubleshooting issues in
-      client data. Worked directly with clients over the phone to assist fixing data delivery
-      issues. Built systems and tools to automate detection of bad data quality and reduce the work
-      needed to fix.
+    summary: As an IT Support Analyst I was responsible for quickly triaging and troubleshooting issues in client data. Worked directly with clients over the phone to assist fixing data delivery issues. Built systems and tools to automate detection of bad data quality and reduce the work needed to fix.
     projects:
-      - >
-        Worked heavily with SSRS to write custom reports for all business needs ranging from simple
-        tablix reports to intricate reports with benchmarks, charts, and complex expressions
-      - >
-        Established a reporting data warehouse to ensure consistent metrics across all reports
+      - Worked heavily with SSRS to write custom reports for all business needs ranging from simple tablix reports to intricate reports with benchmarks, charts, and complex expressions
+      - Established a reporting data warehouse to ensure consistent metrics across all reports
 
 - company: Albert A. Webb Associates
   logo: /img/companylogos/aawa.png
@@ -44,19 +30,11 @@
   - title: IT Intern / Network Technician
     startdate: 2008-10-01
     enddate: 2012-06-01
-    summary: >
-      Supported a large multi-location network which hosted on-prem services for hundreds of civil
-      engineers. Assisted in the installation and configuration of SAN, virtualization, network and
-      power equipment.
+    summary: Supported a large multi-location network which hosted on-prem services for hundreds of civil engineers. Assisted in the installation and configuration of SAN, virtualization, network and power equipment.
     projects:
-      - >
-        Eliminated the need for hiring Cisco consultants by learning to support the Cisco devices
-        through personal research, and formal courses offered at the local college
-      - >
-        In charge of installing, configuring and managing network monitoring software for hundreds
-        of network devices using Nagios
-      - >
-        Established a reliable system for imaging and deploying desktops for new users
+      - Eliminated the need for hiring Cisco consultants by learning to support the Cisco devices through personal research, and formal courses offered at the local college
+      - In charge of installing, configuring and managing network monitoring software for hundreds of network devices using Nagios
+      - Established a reliable system for imaging and deploying desktops for new users
 
 #- company: American Money Group, Inc
 #  logo: /img/companylogos/amg.jpg
