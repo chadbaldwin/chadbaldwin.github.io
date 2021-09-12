@@ -13,32 +13,15 @@
       Implemented ETL processes for importing, cleansing and normalizing automotive dealership data
       to be processed by our proprietary calculation engine.
     projects:
-      - >
-        Collaborated with 3rd party data providers to build integrations for tasks such as
-        SalesForce data syncing, email/address sanitization, data appends and ETL processes
-      - >
-        Helped maintain and improve an elaborate calculation engine written in SQL to support new
-        features and settings
-      - >
-        Tuned existing SQL code to run faster and more efficiently reducing both runtime and
-        resource usage through query and index tuning by analyzing execution plans, server
-        statistics, dynamic management views (DMV's), SQL Server First Responder Kit and SentryOne
-        Plan Explorer
-      - >
-        Worked on many ETL projects using SQL, C#, PowerShell and batch scripting, and SSIS packages
-      - >
-        Contributed to complex back-end services written in C# utilizing technologies such as
-        Elasticsearch, RabbitMQ, Redis, Amazon SNS, Amazon SES, Amazon S3, Docker, Selenium web
-        scraping, and handling files via FTP
-      - >
-        Experience with using collaboration and CI/CD tools including Jenkins, Slack, Upsource,
-        Jira and Confluence
-      - >
-        Worked primarily with SQL Server versions 2008, 2012, 2014 practicing good HA/DR policies,
-        using replication and Always On availability groups
-      - >
-        Used AWS tools for troubleshooting, logging and deployment such as CloudWatch, CodeDeploy,
-        and managing/monitoring servers through EC2
+      - "Collaborated with 3rd party data providers to build integrations for tasks such as SalesForce data syncing, email/address sanitization, data appends and ETL processes"
+      - "Helped maintain and improve an elaborate calculation engine written in SQL to support new features and settings"
+      - "Tuned existing SQL code to run faster and more efficiently reducing both runtime and resource usage through query and index tuning by analyzing execution plans, server statistics, dynamic management views (DMV's), SQL Server First Responder Kit and SentryOne Plan Explorer"
+      - "Worked on many ETL projects using SQL, C#, PowerShell and batch scripting, and SSIS packages"
+      - "Contributed to complex back-end services written in C# utilizing technologies such as Elasticsearch, RabbitMQ, Redis, Amazon SNS, Amazon SES, Amazon S3, Docker, Selenium web scraping, and handling files via FTP"
+      - "this is a test line"
+      - "Experience with using collaboration and CI/CD tools including Jenkins, Slack, Upsource, Jira and Confluence"
+      - "Worked primarily with SQL Server versions 2008, 2012, 2014 practicing good HA/DR policies, using replication and Always On availability groups"
+      - "Used AWS tools for troubleshooting, logging and deployment such as CloudWatch, CodeDeploy, and managing/monitoring servers through EC2"
   - title: Senior IT Support Analyst
     startdate: 2012-06-01
     enddate: 2015-10-01
