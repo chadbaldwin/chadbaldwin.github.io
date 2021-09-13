@@ -17,6 +17,7 @@
     - AWS Services (incl. Console, RDS, CloudWatch, EC2, S3, SES, SNS, Secrets Manager and CodeCommit)
     - Azure Data Studio (ADS)
     - Confluence
+    - Chrome DevTools
     - DBATools
     - Docker
     - Elasticsearch
