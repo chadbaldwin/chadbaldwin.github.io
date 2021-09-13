@@ -45,6 +45,10 @@ ul, ol {
             text-align: center;
             margin-top: 1rem;
             margin-bottom: 1rem;
+
+            .header-contact-info-item {
+                white-space: nowrap;
+            }
         }
 
         .title-bar {
@@ -132,6 +136,7 @@ ul, ol {
                 margin-bottom: 0.5rem;
 
                 &.company-name {
+                    display: inline-block;
                     @include heading-font;
                     font-size: 1.5rem;
                 }
@@ -155,6 +160,10 @@ ul, ol {
                         margin-bottom: 0px;
                         font-size: 1.125rem;
                         font-weight: 700;
+                    }
+
+                    .position-duration {
+                        white-space: nowrap;
                     }
                 }
 

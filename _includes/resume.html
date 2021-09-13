@@ -39,7 +39,7 @@
   {%- if resume.header.display_contact_info -%}
     <div class="header-contact-info">
       {%- for item in resume.contact -%}
-        <span>{{ item[1] }}</span>
+        <span class="header-contact-info-item">{{ item[1] }}</span>
           {%- if forloop.last -%}
           {%- else -%}
             <span> &bull; </span>
@@ -122,17 +122,13 @@
       <div class="resume-item" itemscope itemprop="worksFor" itemtype="http://schema.org/Organization">
         <img src="{{ job.logo }}" class="company-logo">
 
-        <h3 class="resume-item-title company-name" itemprop="name" style="display: inline-block;">
+        <h3 class="resume-item-title company-name" itemprop="name" >
           {%- if job.url -%}<a href="{{ job.url }}" itemprop="url">{{ job.company }}</a>{%- else -%}{{ job.company }}{%- endif -%}
         </h3>
 
         {%- if positions.size > 1 -%}
           <div class="company-duration">
-            <span>{{ jobfirstpos.startdate | date: "%b, %Y" }}</span>
-            <span> &ndash; </span>
-            <span>{{ joblastpos.enddate | date: "%b, %Y" | default: "Present" }}</span>
-            <span> &bull; </span>
-            <span><script>JobDateDiff("{{ jobStartDate }}","{{ jobEndDate }}")</script></span>
+            {{ jobfirstpos.startdate | date: "%b, %Y" }} &ndash; {{ joblastpos.enddate | date: "%b, %Y" | default: "Present" }} &bull; <script>JobDateDiff("{{ jobStartDate }}","{{ jobEndDate }}")</script></span>
           </div>
         {%- endif -%}
 
