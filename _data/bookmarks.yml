@@ -155,3 +155,7 @@ reference:
   - name: dotnet-install scripts reference
     description: Script to install various versions of the .NET SDK
     link: https://docs.microsoft.com/en-us/dotnet/core/tools/dotnet-install-script
+
+  - name: SQLServerFast Execution Plan Operator List
+    description: List of all known execution plan operator icons, their names, a descripition, and usually a link to a more in-depth breakdown of how it works
+    link: https://sqlserverfast.com/epr/operator-list
