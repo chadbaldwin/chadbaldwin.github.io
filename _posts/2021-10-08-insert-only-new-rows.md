@@ -21,7 +21,7 @@ In this post, instead of `EXISTS` and `EXCEPT` to look for records that are diff
 
 This task is normally not very high on the difficulty scale. Most people would use one of these two methods
 
-*  Lets say for whatever reason, you have a 4 part key `KeyCol1, KeyCol2, KeyCol3, KeyCol4`.
+* Lets say for whatever reason, you have a 4 part key `KeyCol1, KeyCol2, KeyCol3, KeyCol4`.
 
 ```tsql
 -- Using LEFT JOIN
@@ -58,7 +58,7 @@ This is where the post hooks back into "[only update rows that changed]({% post_
 My solution is to use the inverse of the update logic. Since we are not performing updates we don't need access to the target table within the scope of the `SELECT` statement. That means the table can also go into the `NOT EXISTS()` query.
 
 ```tsql
--- Using NOT EXISTS and INTERSET
+-- Using NOT EXISTS and INTERSECT
 INSERT INTO dbo.TargetTable (KeyCol1, KeyCol2, KeyCol3, KeyCol4, Foo, Bar)
 SELECT x.KeyCol1, x.KeyCol2, x.KeyCol3, x.KeyCol4, x.Foo, x.Bar
 FROM #SomeOtherTable x
