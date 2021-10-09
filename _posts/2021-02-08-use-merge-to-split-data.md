@@ -34,7 +34,7 @@ Unless you have access to make schema changes, some of these may not be good sol
 
 ### In comes the merge statement
 
-`MERGE` might sound like an odd tool to use for this, especially since you're only planning to do an update, no inserts or deletes. The thing that makes it awesome is the `OUTPUT` clause. I know what you're thinking..."but the output clause is supported on insert statements too"...yes...you're right; but when using merge, you get something a little extra with the `OUTPUT` clause.
+`MERGE` might sound like an odd tool to use for this, especially since you're only planning to do an insert, no updates or deletes. The thing that makes it awesome is the `OUTPUT` clause. I know what you're thinking..."but the output clause is supported on insert statements too"...yes...you're right; but when using merge, you get something a little extra with the `OUTPUT` clause.
 
 When using the `OUTPUT` clause with a `MERGE` statement, not only do you get access to the inserted/deleted columns of the destination table, but you also have access to columns in the _source_ table. This is not something you can do with an `OUTPUT` clause on a simple `INSERT`.
 
