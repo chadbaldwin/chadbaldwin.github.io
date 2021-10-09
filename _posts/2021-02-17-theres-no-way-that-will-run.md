@@ -4,7 +4,6 @@ title: "\"There's no way that will run\""
 description: Things that you probably didn't think would actually run in SQL Server
 date: 2021-02-17 08:40:00 -0800
 tags: T-SQL
-comment_issue_id: 10
 image: /img/postbanners/2021-02-17-theres-no-way-that-will-run.png
 ---
 

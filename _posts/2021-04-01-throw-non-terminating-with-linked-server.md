@@ -4,7 +4,6 @@ title: "THROW command is non-terminating across linked servers"
 description: While working on a project, I realized today that the THROW command is non-terminating if returned by a stored procedure executed over a linked-server.
 date: 2021-04-01 21:20:00 -0700
 tags: T-SQL
-comment_issue_id: 14
 image: /img/postbanners/2021-04-01-throw-non-terminating-with-linked-server.png
 ---
 

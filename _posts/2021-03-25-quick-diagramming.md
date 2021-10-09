@@ -4,7 +4,6 @@ title: Building diagrams using graphviz
 description: You're tracing through a bunch of code, and you want to quickly visualize the dependency chain? Check out tools like Graphviz.
 date: 2021-03-25 21:00:00 -0700
 tags: Quick-Post
-comment_issue_id: 13
 image: /img/postbanners/2021-03-25-quick-diagramming.png
 ---
 

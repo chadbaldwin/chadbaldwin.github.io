@@ -4,7 +4,6 @@ title: SSMS Keyboard Query Shortcuts
 description: Speed up your query testing and development skills by using the query shortcuts feature built into SSMS.
 date: 2021-01-21 07:30:00 -0800
 tags: SSMS
-comment_issue_id: 7
 ---
 
 Did you know you could do this in SSMS? Not sure what's happening here? Keep reading...

@@ -4,7 +4,6 @@ title: Building a Free Blog with GitHub Pages in Minutes
 description: How to build a blog for free, using GitHub Pages.
 date: 2021-03-13 18:20:00 -0800
 tags: Blogging
-comment_issue_id: 11
 image: /img/postbanners/2021-03-13-how-to-build-a-sql-blog.png
 ---
 

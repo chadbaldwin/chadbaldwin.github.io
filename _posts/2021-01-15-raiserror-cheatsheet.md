@@ -4,7 +4,6 @@ title: RAISERROR Cheatsheet
 description: All the quirks with using raiserror
 date: 2021-01-15 11:22:00 -0800
 tags: T-SQL
-comment_issue_id: 6
 ---
 
 <style>

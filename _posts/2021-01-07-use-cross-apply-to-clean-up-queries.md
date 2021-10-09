@@ -4,7 +4,6 @@ title: Clean up your queries and simplify logic with CROSS APPLY
 description: Reuse code within a SQL query using CROSS APPLY without hurting performance.
 date: 2021-01-07 08:02:44 -0800
 tags: T-SQL
-comment_issue_id: 5
 ---
 
 ### For you impatient readers, you can click here: [tl;dr](#using-cross-apply)

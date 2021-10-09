@@ -4,7 +4,6 @@ title: Certifications and learning
 description: I recently earned my MCSA certification. Here's a bit about my opinion of certifications.
 date: 2021-01-31 10:40:00 -0800
 tags: Misc
-comment_issue_id: 8
 ---
 
 ![](https://media.giphy.com/media/12YWqHikTndSRG/giphy.gif){:alt="drawing" style="width:200px; float:right;"}If you're anything like me...learning is hard...like...really hard. I have ADHD which makes learning new things a bit of a challenge. Watching a technical video on YouTube, attending an online class, following a Pluralsight course, all are next to impossible most of the time. I *can* do it...but it takes me multiple attempts to *really* retain the information. YouTube tutorials turn into hours long spelunking adventures. I go from watching a video on tuning indexes, to watching someone feeding watermelons to a hippo.

@@ -4,7 +4,6 @@ title: Use merge to split data into multiple tables
 description: Need to insert data from one source table into two or more tables while maintaining FK relationship? You can use a merge statement combined with output.
 date: 2021-02-08 09:50:00 -0800
 tags: T-SQL
-comment_issue_id: 9
 image: /img/postbanners/2021-02-08-use-merge-to-split-data.png
 ---
 

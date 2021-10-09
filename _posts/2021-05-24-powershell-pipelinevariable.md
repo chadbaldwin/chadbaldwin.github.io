@@ -4,7 +4,6 @@ title: "PowerShell Common Parameters: PipelineVariable"
 description: "TIL about the -PipelineVariable common parameter in PowerShell. All the pain I've put myself through to fix pipeline scope issues, when I could have just been using this!?"
 date: 2021-05-24T18:30:00-07:00
 tags: PowerShell
-comment_issue_id: 16
 image: /img/postbanners/2021-05-24-powershell-pipelinevariable.png
 ---
 
