@@ -79,22 +79,22 @@ If you want to play around with this a bit more, there is a TON of information o
 
 If you want to learn more about Graphviz and the DOT language, you can check out their website:
 
-* [https://graphviz.org]()
+* <https://graphviz.org>
 
 To convert the code into a visual graph, you can use an online renderer (just copy paste any of the examples here, and it will render live):
 
-* [https://dreampuf.github.io/GraphvizOnline]()
-* [http://viz-js.com]()
+* <https://dreampuf.github.io/GraphvizOnline>
+* <http://viz-js.com>
 
 If you use Visual Studio Code, there are some extensions that work quite well. One of them is a live preview, similar to the web based options above, the other enhances the markdown preview to render inline graphs.
 
-* [https://marketplace.visualstudio.com/items?itemName=joaompinto.vscode-graphviz]()
-* [https://marketplace.visualstudio.com/items?itemName=geeklearningio.graphviz-markdown-preview]()
+* <https://marketplace.visualstudio.com/items?itemName=joaompinto.vscode-graphviz>
+* <https://marketplace.visualstudio.com/items?itemName=geeklearningio.graphviz-markdown-preview>
 
 Outside of Graphviz, there are other sites which also use graph description languages similar to DOT...These other sites are nice because you can build other types of charts that you can't do with Graphviz, like a sequence diagram.
 
-* [https://www.websequencediagrams.com]()
-* [https://www.diagram.codes]()
+* <https://www.websequencediagrams.com>
+* <https://www.diagram.codes>
 
 ---
 

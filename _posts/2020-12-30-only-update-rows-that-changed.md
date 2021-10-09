@@ -60,7 +60,7 @@ This is where my favorite trick comes in; Using the `EXISTS` operator and the `E
 
 ---
 
-## The Basics - How does EXCEPT work?
+## The Basics - How EXCEPT works
 
 The `EXCEPT` set operator compares two sets of records, and returns all of the records from the first set that don't have a matching record in the second set.
 
@@ -155,7 +155,7 @@ Cool right? This is giving you all records in `#Customer` which do not have a ma
 
 To go from that to an update or a merge statement, is fairly simple...
 
-### Update:
+### Update
 
 ```tsql
 UPDATE c
@@ -172,7 +172,7 @@ WHERE EXISTS (
 );
 ```
 
-### Merge:
+### Merge
 
 ```tsql
 MERGE INTO #Customer c

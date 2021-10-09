@@ -7,7 +7,7 @@ tags: Blogging
 image: /img/postbanners/2021-03-13-how-to-build-a-sql-blog.png
 ---
 
->  *Disclaimer: If you're familiar with GitHub Pages, Jekyll, etc. You might notice me saying some "incorrect" things...this is because I'm trying to keep it simple. I might say "you have to do it this way", but you, Jekyll expert, may know that's not true.*
+> *Disclaimer: If you're familiar with GitHub Pages, Jekyll, etc. You might notice me saying some "incorrect" things...this is because I'm trying to keep it simple. I might say "you have to do it this way", but you, Jekyll expert, may know that's not true.*
 
 "How do I start blogging?"
 
@@ -124,13 +124,13 @@ That's about all you need to know to get started.
   * Write this as the first line `## This is my first blog post`
 5. Add some content...write some random things, whatever you want
 6. Throw in a code block (code blocks are created by surrounding your code snippet with three backticks at each end and an optional "language hint"), copy paste this in:
-````plaintext
-```tsql
-SELECT *
-FROM sys.tables
-WHERE [name] = 'SomeTable'
-```
-````
+    ````plaintext
+    ```tsql
+    SELECT *
+    FROM sys.tables
+    WHERE [name] = 'SomeTable'
+    ```
+    ````
   * **Important note**, if you're using T-SQL code, make sure to use the `tsql` tag. This will tell your site that you want to use the SSMS style formatting.
 7. Click the `Preview` tab so you can see what it looks like so far.
 
@@ -158,6 +158,6 @@ If all you care about is getting content out there, then there isn't much more y
 
 If you're interested in diving deeper into Jekyll, how it works behind the scenes, or other things you can do with it, let me know, I'd love to write some blog posts about it. I've had a lot of fun figuring out how to get it all set up and working.
 
-There's lot of things you can do to this template, fairly easily, to add some fun features. Things like a comments section on your posts, adding a dark theme to your entire site or maybe you want to add some custom pages, like [my book tracking page](https://chadbaldwin.net/books) or [my resume](https://chadbaldwin.net/resume). The possiblities are endless...but, it comes at a cost, it all has to be done manually by writing or copy/pasting code, learning new languages like HTML, CSS, Liquid, YAML...this is where platforms like WordPress starts to shine.
+There's lot of things you can do to this template, fairly easily, to add some fun features. Things like a comments section on your posts, adding a dark theme to your entire site or maybe you want to add some custom pages, like [my book tracking page](https://chadbaldwin.net/books) or [my resume](https://chadbaldwin.net/resume). The possibilities are endless...but, it comes at a cost, it all has to be done manually by writing or copy/pasting code, learning new languages like HTML, CSS, Liquid, YAML...this is where platforms like WordPress starts to shine.
 
 I realize this particular setup may not work for everyone, and in the long run, it may even be more complicated than just sticking with a popular blogging platform, with their fancy UI's, plugins, etc. But I've had a lot of fun learning about GitHub Pages, Jekyll, Markdown, etc, so I figured I'd share how I got started, and try to make it easier for you if this is the route you're thinking of going.

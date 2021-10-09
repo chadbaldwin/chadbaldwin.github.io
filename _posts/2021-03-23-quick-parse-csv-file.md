@@ -84,13 +84,14 @@ I killed notepad++.exe and moved on to try another method. It probably would hav
 PowerShell only requires two commands to do this. The downside is, it loads the whole file into memory, and generally doesn't release that memory. So if it's a huge 2GB file, it's not a great option. In this case, I'm okay with loading a 50MB file into memory.
 
 1. Load the data into a local variable using the `Import-Csv` cmdlet
-```ps
-$data = Import-Csv -Delimiter '|' -Path .\file.txt -Header 'c1','c2','c3','c4','c5','c6','c7','c8','c9'
-```
+    ```ps
+    $data = Import-Csv -Delimiter '|' -Path .\file.txt -Header 'c1','c2','c3','c4','c5','c6','c7','c8','c9'
+    ```
+
 2. Get list of unique values from column 3
-```ps
-$data | select c3 -Unique
-```
+    ```ps
+    $data | select c3 -Unique
+    ```
 
 #### Converting a list of values to an IN statement
 

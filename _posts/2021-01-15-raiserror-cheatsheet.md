@@ -62,6 +62,7 @@ I like to use this rather than `PRINT 'Your message here'` for a number of reaso
 4. `RAISERROR` allows for templating, like swapping in values.
 
 Column descriptions:
+
 * **Prevents output** - An error is thrown, SSMS switches you over to the "Messages" tab, and execution will *appear* to have stopped...but guess what...it didn't! (And I'll prove it in a demo)
 * **Stops Execution / Kills Connection** - The code will stop executing wherever it's sitting, and you will be disconnected from the server. If you are mid-transaction, the transaction will be automatically rolled back, regardless of whether you have `SET XACT_ABORT ON`.
 * **Fails Job Step** - If an error with this severity level is thrown, in a batch which was executed by a job, either directly, or in a stored procedure, the job step will report it failed. It's important to note, that despite reporting it failed...that does not necessarily mean the code stopped running where the error happened.
