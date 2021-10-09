@@ -90,7 +90,7 @@ CREATE TABLE #IDs (
 );
 ```
 
-### The key to making this whole thing work...
+### The key to making this whole thing work
 
 ```tsql
 MERGE INTO dbo.Table1 t
