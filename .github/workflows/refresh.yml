@@ -10,7 +10,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Trigger GitHub pages rebuild
-        run: |
-          curl --fail --request POST --url https://api.github.com/repos/${{ github.repository }}/pages/builds --header "Authorization: Bearer $USER_TOKEN"
         env:
           USER_TOKEN: ${{ secrets.USER_TOKEN }}
+          FAKE_TOKEN: Test_123
+        run: |
+          curl --fail --request POST --url https://api.github.com/repos/${{ github.repository }}/pages/builds --header "Authorization: bearer $FAKE_TOKEN"
