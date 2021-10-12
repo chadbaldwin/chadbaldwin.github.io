@@ -1,0 +1,18 @@
+name: Refresh
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron:  '5 14 * * *' # Runs every day at 14:05 UTC. 5 min added to ensure posts scheduled for on the hour go out.
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Trigger GitHub pages rebuild
+        run: |
+          curl --fail --request POST \
+            --url https://api.github.com/repos/${{ github.repository }}/pages/builds \
+            --header "Authorization: Bearer $USER_TOKEN"
+        env:
+          USER_TOKEN: ${{ secrets.USER_TOKEN }}
