@@ -3,7 +3,7 @@ name: Refresh
 on:
   workflow_dispatch:
   schedule:
-    - cron:  '05 14 * * *' # Runs every day at 14:05 UTC. 5 min added to ensure posts scheduled for on the hour go out.
+    - cron: '05 14 * * *' # Runs every day at 14:05 UTC. 5 min added to ensure posts scheduled for on the hour go out.
 
 jobs:
   refresh:
