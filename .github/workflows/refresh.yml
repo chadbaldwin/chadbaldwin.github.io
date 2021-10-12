@@ -12,5 +12,7 @@ jobs:
       - name: Trigger GitHub pages rebuild
         env:
           USER_TOKEN: ${{ secrets.USER_TOKEN }}
+          FAKE_TOKEN: ${{ secrets.FAKE_TOKEN }}
         run: |
+          echo "$FAKE_TOKEN"
           curl --fail --request POST --url https://api.github.com/repos/${{ github.repository }}/pages/builds --header "Authorization: bearer $USER_TOKEN"
