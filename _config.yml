@@ -5,6 +5,9 @@ author: Chad Baldwin
 email: blog@chadbaldwin.net
 url: https://chadbaldwin.net
 
+timezone: UTC # GitHub uses UTC. This is to force dev environment to match
+future: false # GitHub Pages will publish future posts if this isn't set to false
+
 description: >
   My first blog. Probably no one else will ever read it, but oh well.
 
