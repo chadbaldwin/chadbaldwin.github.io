@@ -76,11 +76,11 @@
   <!-- Summary -->
   <div class="executive-summary" itemprop="description"><p>{{ resume.header.intro }}</p></div>
   <!-- Contact me button -->
-  <div>
-    {%- if resume.contact.email -%}
+  {%- if resume.contact.email -%}
+    <div>
       <a href="mailto:{{ resume.contact.email }}" class="contact-button no-print" itemprop="email">Contact me</a>
-    {%- endif -%}
-  </div>
+    </div>
+  {%- endif -%}
 </header>
 
 {%- if resume.sections.skills -%}
