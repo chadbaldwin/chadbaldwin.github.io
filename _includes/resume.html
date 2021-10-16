@@ -15,6 +15,12 @@
 
       document.write(`${years} yrs ${months} mos`);
   }
+
+  document.addEventListener("click", function(e) {
+    if (e.target.className.indexOf("bottom-bar__close") !== -1) {
+      document.getElementsByClassName("bottom-bar")[0].remove();
+    }
+  });
 </script>
 
 <link href="https://fonts.googleapis.com/css?family=Lora:400,700|Open+Sans:400,300,800,700" rel="stylesheet" type="text/css">
@@ -262,6 +268,17 @@
     </div>
   </section>
 {%- endif -%}
+
+<div class="bottom-bar no-print">
+  <div class="bottom-bar__content">
+    <div class="bottom-bar__text">
+      <a href="/assets/Chad Baldwin, MCSA - Senior Database Developer - Resume.pdf" >
+        PDF version available here
+      </a>
+    </div>
+    <button class="bottom-bar__close" type="button">&times;</button>
+  </div>
+</div>
 
 {%- comment -%}
 <footer class="page-footer">

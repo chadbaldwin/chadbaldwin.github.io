@@ -180,6 +180,39 @@ ul, ol {
             }
         }
     }
+
+    .bottom-bar {
+        position: fixed;
+        bottom: 0;
+        right: 0;
+        background: #333333;
+        color: #ffffff;
+        //box-sizing: border-box;
+        padding: 10px;
+
+        .bottom-bar__content > * {
+            display: flex;
+            align-items: center;
+        }
+
+        .bottom-bar__content {
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+
+            .bottom-bar__text {
+                padding-right: 10px;
+            }
+
+            .bottom-bar__close {
+                background: none;
+                border: none;
+                color: #ffffff;
+                cursor: pointer;
+                font-size: 2rem;
+            }
+        }
+    }
 }
 
 .print-only {
