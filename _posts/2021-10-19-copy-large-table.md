@@ -15,13 +15,13 @@ You have a table with 50 million records and about 3GB in size. You need to copy
 
 You may immediately have an answer...or you may have absolutely no clue. I was somewhere in the middle. I could think of a few ways...but none of them sounded ideal.
 
----
+----
 
 The majority of these solutions will be using `dbatools` cmdlets. If you're not familiar with what that is...I highly recommend you check it out, learn it, install it, use it.
 
 More info here: <https://dbatools.io/>{:target="_blank"}
 
----
+----
 
 ## A few disclaimers
 
@@ -31,7 +31,7 @@ These transfers were through my slow network connection. Running these transfers
 
 This is why things such as "jump boxes" and servers dedicated to data transfer tasks can be very useful in cutting down these transfer times.
 
----
+----
 
 ## Attempt #1 - Export to CSV using PowerShell
 
@@ -59,7 +59,7 @@ This wasn't too surprising. I've run into memory issues with PowerShell in the p
 
 I immediately killed the process. Checking the export file, it had only made it to about 2 million records, not even a dent in the 50 million we needed to export.
 
----
+----
 
 ## Attempt #2 - Export to CSV using PowerShell...but do it better
 
@@ -94,7 +94,7 @@ After kicking this process off and letting it run for a bit, I did some math and
 
 On the upside, it was only using 234MB of RAM. So I guess that's better, but not good enough. So I killed the process to move on to the next attempt.
 
----
+----
 
 ## Attempt #3 - Using the right tool for the job
 
@@ -136,7 +136,7 @@ Immediately I could tell it was significantly faster, on top of the fact that it
 
 Total runtime was 28 minutes. That's right, 28 minutes to move all 50 million rows from one server to the other. Compared to my previous attempts...that's lightning quick.
 
----
+----
 
 ## Honorable mentions and notes
 
@@ -189,7 +189,7 @@ I don't want to go into great detail on all of the ways dbatools can import and 
 
 As you can see...there's quite a few options to choose from.
 
----
+----
 
 ## Final thoughts
 
