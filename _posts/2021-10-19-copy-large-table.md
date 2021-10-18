@@ -142,13 +142,22 @@ Total runtime was 28 minutes. That's right, 28 minutes to move all 50 million ro
 
 ### bcp.exe utility
 
-The `bcp` utility can be used to export table/view/query data to a data file, and can also be used to import the data file into a table or view.
+The `bcp` utility can be used to export table/view/query data to a data file, and can also be used to import the data file into a table or view. I think you can accomplish many of the same tasks using dbatools cmdlets, but I do think `bcp` has some advantages that make it uniquely useful for a number of tasks.
 
-I won't go into detail on this 1) because I don't have much experience with it and 2) because I think you can accomplish the many of the same tasks using dbatools cmdlets.
+* Can export table data to a data file with very low overhead (takes up less space than a CSV)
+* Supports storing the table structure in an XML "format" file. This maintains datatypes for when you need to import the data. Rather than importing everything as character data, you can import it as the original datatype
+* Maintains `NULL` values in the exported data rather than converting them to blank
+* Is incredibly fast and efficient
 
-However, one thing I think `bcp` has over using dbatools cmdlets, is the ability to export table data to a raw data file, while also storing the table structure in an xml file. This allows you to backup the data in a low-overhead data format, as well as maintaining the datatypes. So if you need to backup an individual table to disk for some reason, it's a great tool.
+These features and capabilities come as both pro's and con's depending on the usage.
 
-However, if you need to do anything other than that...I think dbatools has it beat.
+Here's a few great uses I could personally think of for `bcp`
+
+* If you have table data you need to restore to SQL often, say for a testing or demo database, but you don't want/need to restore the entire DB every time. Store your table(s) as data files (and their XML format files) on disk. Then write a script that restores them using `bcp`.
+
+* If you need to copy a table from one server to another, but you do not have direct access to both servers from the same machine. In that case `Copy-DbaDbTableData` isn't useful as it needs access to both machines. But with `bcp`, you can save the table to a data and format file, transfer them somewhere else, and then use `bcp` to import the data.
+
+* Technically, you can generate a CSV using `bcp`, but when I tried it, I ran into a handful of issues. Such as...you can't add text qualification or headers, and the workarounds to add them may not be worth it. It also retain's `NULL` values by storing them as a `NUL` character (`0x0`). If you're planning on sending this file out to another system...you'd likely want to convert those `NULL` values to a blank value. But if none of these caveats affect you...then this may be a great option since it's so fast at exporting the data to disk.
 
 ### Other dbatools cmdlets
 
