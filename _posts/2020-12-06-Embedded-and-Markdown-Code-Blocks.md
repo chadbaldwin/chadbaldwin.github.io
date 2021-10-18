@@ -5,7 +5,7 @@ published: false
 
 Trying to decide which code blocks would be best for posting blogs.
 
----
+----
 
 ### Jekyll/Liquid highlight block, for sql
 
@@ -43,7 +43,7 @@ ORDER BY o.[object_id];
 * Liquid tags in markdown file
 * Source file isn't portable to other markdown platforms
 
----
+----
 
 ### Markdown fenced code block, for sql
 
@@ -80,15 +80,15 @@ ORDER BY o.[object_id];
 * May not highlight in preferred color scheme, but will probably be "good enough"
   * This could potentially be fixed using a custom style
 
----
+----
 
 ### Ace editor code block, for sqlserver
 
-* [Homepage](https://ace.c9.io)
-* [GitHub (source)](https://github.com/ajaxorg/ace)
-* [GitHub (builds)](https://github.com/ajaxorg/ace-builds)
-* [Demo](https://ace.c9.io/build/kitchen-sink.html)
-* [Bookmarklet](https://ace.c9.io/build/demo/bookmarklet/index.html) - Allows you to set a bookmark which lets you convert any html pre tag into an ace editor
+* [Homepage](https://ace.c9.io){:target="_blank"}
+* [GitHub (source)](https://github.com/ajaxorg/ace){:target="_blank"}
+* [GitHub (builds)](https://github.com/ajaxorg/ace-builds){:target="_blank"}
+* [Demo](https://ace.c9.io/build/kitchen-sink.html){:target="_blank"}
+* [Bookmarklet](https://ace.c9.io/build/demo/bookmarklet/index.html){:target="_blank"} - Allows you to set a bookmark which lets you convert any html pre tag into an ace editor
 
 **Source:**
 
@@ -128,7 +128,7 @@ ORDER BY o.[object_id];</pre>
 * Library could become outdated/unmaintained/deprecated over time, and potentially lead to errors due to unsupported legacy code
 * Requires more setup to make workable long term (adding scripts/css to jekyll layout)
 
----
+----
 
 ### GitHub gist
 
@@ -167,7 +167,7 @@ ORDER BY o.[object_id];</pre>
   * Scripts can be downloaded, starred, subscribed to and embedded by others
 * Editing a gist does not require re-deploying the website
 * Portable IF the markdown renderer supports script tags
-* Can be customized with css, see [this blog post](https://codersblock.com/blog/customizing-github-gists/)
+* Can be customized with css, see [this blog post](https://codersblock.com/blog/customizing-github-gists/){:target="_blank"}
 
 **Cons:**
 

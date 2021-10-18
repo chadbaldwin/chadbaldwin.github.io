@@ -15,7 +15,7 @@ This also acts as a type of daily notes I can refer back to for snippets or tric
 
 With all that said...here is todays post....
 
----
+----
 
 First, lets get something out of the way. The term CSV to mean "Comma Separated Values" is outdated. If you work in a job that deals with data files for long enough, you'll learn very quickly that when people say "CSV", **many** times, they don't actually mean "_Comma_ Separated Values"...they _actually_ mean...tab separated, semicolon separated, pipe separated, fixed width, etc. I've seen all kinds of characters used for "CSV" files.
 
@@ -62,7 +62,7 @@ You need to extract a list of unique values from column 3 to use like this `WHER
 
 Before you continue reading...I want you to think about how _you_ would do this...where do you start? What are your first thoughts? These are the things I want to know and learn from, feel free to post in the comments.
 
----
+----
 
 ### How I chose to do it
 
@@ -108,7 +108,7 @@ If you have a list of maybe 1,000+ values...then you need to start using trickie
 
 In this case, I only had about 10 unique values, so I did it manually.
 
----
+----
 
 > Update: On Reddit, u/bis noted that my statement regarding how PowerShell handles memory isn't entirely accurate. I thought PowerShell would allocate memory for the file no matter what you did with the contents (save to variable, write to file, did nothing, etc). After we did some testing, we found that to be wrong.
 >
@@ -132,10 +132,10 @@ Explanation of terms used:
   * You might also notice that I'm only listing 3 header names instead of 9 like before. This is because I read the documentation and found that `Import-Csv` will only return fields from rows _up to_ the fields listed in the header. So if you have a file with 9 columns, but only supply headers for the first 3, then it will only import the first 3 columns.
 * `sort` is the default alias for `Sort-Object`
 * `gu` is the default alias for `Get-Unique` which returns a unique list of values from an already sorted list. I decided to use `sort | gu` because it was shorter than using `select '3' -Unique`.
-* `-join` concatnates all values in a list together using a delimiter
+* `-join` concatenates all values in a list together using a delimiter
 * `scb` is the default alias for `Set-Clipboard`, which writes the result to the clipboard.
 
----
+----
 
 > Update #2: In researching this more, and while writing the first update, I learned about the `Join-String` cmdlet and I felt it was such a useful cmdlet, that it was worth adding a second update.
 
@@ -165,11 +165,11 @@ Which results in this: `IN ('20005','20002','20004','20001','20000','20003')`
 
 So if you're working with a list of strings, rather than a list of integers. It makes it easy to add single quotes.
 
----
+----
 
 There's lots of ways all of this could have been done. I tend to like using Regex and PowerShell, even if it does take a bit longer because I usually learn something new along the way. For example, in this scenario, I had never used PowerShell to load a file without a header. Now I know `Import-Csv` lets you supply a list of header names.
 
----
+----
 
 For those curious how I generated the sample data, here's the SQL script I used to do it:
 

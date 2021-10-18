@@ -9,13 +9,13 @@ image: /img/postbanners/2021-10-07-insert-only-new-rows.png
 
 I haven't posted in a while, so I thought I would throw a quick one together to hopefully restart the habit of writing and posting on a regular basis.
 
-One of my first blog posts covered how to [only update rows that changed]({% post_url 2020-12-30-only-update-rows-that-changed %}). In that post, I described a popular method that uses `EXISTS` and `EXCEPT` to find rows that had changed while also implicitly handling `NULL` values.
+One of my first blog posts covered how to [only update rows that changed]({% post_url 2020-12-30-only-update-rows-that-changed %}){:target="_blank"}. In that post, I described a popular method that uses `EXISTS` and `EXCEPT` to find rows that had changed while also implicitly handling `NULL` values.
 
 This will be a bit of a continuation on that so if you're not familiar with set functions like `UNION`, `EXCEPT` and `INTERSECT` then I would recommend reading that post first to get caught up.
 
 In this post, instead of `EXISTS` and `EXCEPT` to look for records that are different in order to update them, I will be using `NOT EXISTS` and `INTERSECT` to insert records that do not exist in the target table.
 
----
+----
 
 ### When NULL's are not an issue
 
@@ -53,7 +53,7 @@ Both of these methods work...but only if your key columns are `NOT NULL`. I woul
 
 ### How to deal with nulls
 
-This is where the post hooks back into "[only update rows that changed]({% post_url 2020-12-30-only-update-rows-that-changed %})".
+This is where the post hooks back into "[only update rows that changed]({% post_url 2020-12-30-only-update-rows-that-changed %}){:target="_blank"}".
 
 My solution is to use the inverse of the update logic. Since we are not performing updates we don't need access to the target table within the scope of the `SELECT` statement. That means the table can also go into the `NOT EXISTS()` query.
 

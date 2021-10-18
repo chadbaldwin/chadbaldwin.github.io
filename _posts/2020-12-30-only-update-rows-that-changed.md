@@ -14,7 +14,7 @@ One of the daunting parts of writing updates, especially with a large number of 
 
 Of course, there's always more than one way to bake a cake.
 
----
+----
 
 One method is to compare each column in the `WHERE` clause separating each comparison with an `OR`...
 
@@ -58,7 +58,7 @@ This works...but it is hard to read, and now you need to keep track of which col
 
 This is where my favorite trick comes in; Using the `EXISTS` operator and the `EXCEPT` set operator to identify changed rows.
 
----
+----
 
 ## The Basics - How EXCEPT works
 
@@ -87,7 +87,7 @@ The first example returns nothing because the two sets match, but the following 
 
 The other thing to note is that the `EXCEPT` operator treats the comparison of `NULL` values as equal. Unlike standard comparison operators. It's this difference that helps us use it to find changed rows.
 
----
+----
 
 ## Let's set up some sample data:
 
@@ -136,7 +136,7 @@ VALUES (11, 'Chad', NULL, 'Baldwin', '1990-01-12');
 
 Now we have a copy of the `#Customer` table named `#Updates`, and we've made a few changes to the data.
 
----
+----
 
 Let's use `EXISTS` and `EXCEPT` to find all records which changed...
 
@@ -193,7 +193,7 @@ THEN
     VALUES (u.CustomerID, u.FirstName, u.MiddleName, u.LastName, u.DateOfBirth);
 ```
 
----
+----
 
 ## What about performance?
 

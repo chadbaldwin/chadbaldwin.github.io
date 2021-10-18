@@ -22,7 +22,7 @@ If that doesn't make any sense...I don't blame you, it's a difficult thing to ex
 
 **Note:** You must use numbers from the number row. Using `Ctrl`+`# from 10-key` won't work.
 
----
+----
 
 ## Let's do some demos
 
@@ -38,7 +38,7 @@ Now, every time you press `Ctrl`+`3` it will run `EXEC sp_whoisactive;`.
 
 I think that's pretty simple to understand, so we can probably just move on to the more complicated usage...
 
----
+----
 
 ### The more complex use case:
 
@@ -66,7 +66,7 @@ Woah...pretty cool right?
 
 So now instead of copy pasting the table name into some random empty section of the code just so you can check out what the table looks like and then accidentally leave it there and push it to production...That's weird, why is everyone so angry? 🔥🚒
 
----
+----
 
 ### Bonus use case using dynamic SQL
 
@@ -89,7 +89,7 @@ EXEC sp_executesql N'SELECT @string',N'@string varchar(100)',This-Is-A-Test
 
 You could set this as one of your query shortcuts. Maybe it looks up info on a table, or a column, or searches stored procedure code. There's all kinds of uses for this. So in this case `ThisIsATest` would be the word you have highlighted. This could be a table, view or stored procedure name, whatever. As long as it is a valid object identifier, or is a single word, then it will be simply passed in as a string.
 
----
+----
 
 ## Setting it up
 
@@ -105,9 +105,9 @@ Now you can set all the cool query shortcuts you want...well, up to 9.
 
 **Note:** Changing query shortcuts requires a restart of SSMS
 
-**Note:** You'll also see a setting labeled "Execute stored procedure shortcuts without additional execution options". For more info about that, see [this post on Stack Overflow](https://dba.stackexchange.com/questions/162801/what-is-the-ssms-option-execute-stored-procedure-shortcuts-without-additional-e).
+**Note:** You'll also see a setting labeled "Execute stored procedure shortcuts without additional execution options". For more info about that, see [this post on Stack Overflow](https://dba.stackexchange.com/questions/162801/what-is-the-ssms-option-execute-stored-procedure-shortcuts-without-additional-e){:target="_blank"}.
 
----
+----
 
 ## My personal query shortcuts
 
@@ -122,11 +122,11 @@ Now you can set all the cool query shortcuts you want...well, up to 9.
 | `SELECT * FROM[space]`                                       | Highlight a table name, or an entire query from the table name down and use shortcut to return all rows and columns. |
 | `SELECT[space]`                                              | Highlight a scalar calculation to see its value. Such as `DATEADD(hour, 100, GETDATE())` |
 
----
+----
 
 ## The poor mans snippet manager?
 
-Okay...I *really* shouldn't be showing you this for multiple reasons. For starters...SSMS actually has a [snippet system built into it](https://www.sqlshack.com/sql-snippets-in-sql-server-management-studio/) and secondly, this is super hacky. For some reason, I don't remember why, I didn't like the built in SSMS snippet support (though admittedly I've never used it, I've only read about how to use it), and I chose to do this insanity instead. This was long before I learned about [SQL Prompt](https://www.red-gate.com/products/sql-development/sql-prompt/) and other SSMS plugins. But it's too ridiculous not to show it...So, why not...
+Okay...I *really* shouldn't be showing you this for multiple reasons. For starters...SSMS actually has a [snippet system built into it](https://www.sqlshack.com/sql-snippets-in-sql-server-management-studio/){:target="_blank"} and secondly, this is super hacky. For some reason, I don't remember why, I didn't like the built in SSMS snippet support (though admittedly I've never used it, I've only read about how to use it), and I chose to do this insanity instead. This was long before I learned about [SQL Prompt](https://www.red-gate.com/products/sql-development/sql-prompt/){:target="_blank"} and other SSMS plugins. But it's too ridiculous not to show it...So, why not...
 
 I threw this together as an example. Say you have a handful of queries that you constantly forget the syntax to and you want to quickly load them into SSMS...Well then...why not just build a snippet table into a keyboard shortcut? Because that seems reasonable....right?
 
@@ -160,7 +160,7 @@ I mean, I guess in the grand scheme of things, this isn't horrible. And yes...th
 
 Moving on from this atrocity to show you something maybe slightly more useful...
 
----
+----
 
 ## Applying the query shortcuts via PowerShell
 
@@ -201,7 +201,7 @@ $xmlDoc.Save($ssmsUserSettingsFile);
 
 You can use this same script to make other settings changes to this file, but that's beyond the scope of this post.
 
----
+----
 
 ## Final comments
 

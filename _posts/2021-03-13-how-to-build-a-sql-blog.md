@@ -17,7 +17,7 @@ image: /img/postbanners/2021-03-13-how-to-build-a-sql-blog.png
 
 "How do I get that cool code highlighting on my blog?"
 
-This was me, 3 months ago. I played around with various blogging platforms and they seemed okay, but for some reason, none of them really did what I wanted. Eventually I learned about [GitHub Pages](https://pages.github.com/). It's a service provided by GitHub; They allow you to host a static website (no backend code), and they host it **for free**.
+This was me, 3 months ago. I played around with various blogging platforms and they seemed okay, but for some reason, none of them really did what I wanted. Eventually I learned about [GitHub Pages](https://pages.github.com/){:target="_blank"}. It's a service provided by GitHub; They allow you to host a static website (no backend code), and they host it **for free**.
 
 GitHub Pages is great, _but_ when you start learning "how to blog using Jekyll", things get pretty overwhelming...You start learning about ruby and Jekyll and how to get them working on Windows (which is a pain), learning languages like YAML and Liquid...It gets complicated real quick.
 
@@ -29,7 +29,7 @@ Your first blog doesn't need to be a fancy, professionally designed website. You
 
 That is what I've *tried* to set up for you.
 
----
+----
 
 ## Let's get started
 
@@ -43,7 +43,7 @@ If you don't have a GitHub account, create one, otherwise go log in.
 
 After logging into your GitHub account, open this link and follow the instructions in Step 3:
 
-[https://github.com/chadbaldwin/simple-blog-bootstrap/generate](https://github.com/chadbaldwin/simple-blog-bootstrap/generate)
+<https://github.com/chadbaldwin/simple-blog-bootstrap/generate>{:target="_blank"}
 
 ### Step 3 - Name and create your repository
 
@@ -61,7 +61,7 @@ Now you can click "Create repository from template".
 
 ![create_blog_copy_template](/img/createblog/create_blog_copy_template.gif){:data-gifffer="/img/createblog/create_blog_copy_template.gif"}
 
----
+----
 
 ***Congrats!*** You just set up a SQL blog! (kinda) I mean, it's just the default template. We still need to add things like your name, maybe a personal bio, your social media usernames, and, you know...some blog posts. But other than that...you now have a published and viewable blog on the interwebs.
 
@@ -69,9 +69,9 @@ There may be a few minute delay, but eventually GitHub will recognize that you c
 
 If it's been a few minutes...go check out your new site! Your blogs home page will simply be the name of the repository.
 
-Like this: [https://chadblogtest.github.io](https://chadblogtest.github.io)
+Like this: <https://chadblogtest.github.io>{:target="_blank"}
 
----
+----
 
 ## Customization
 
@@ -93,7 +93,7 @@ Open up `index.md`, hit the edit button, and start writing. If you know how to u
 
 You might be tempted to immediately go to your site to look at the changes, but like I mentioned earlier, you need to wait a minute or two for GitHub to detect that you made changes, and then it needs to rebuild your site. But eventually, you'll see the changes.
 
----
+----
 
 ## Your first blog post
 
@@ -109,11 +109,11 @@ Before we dive too deep into this, let's lay out a some of the things you need t
 
 * A post written on January 28th, 2021, would be named `2021-01-28-my-blog-post.md`. Be careful not to use future dates because the post won't show up.
 
-* Posts are written in markdown, if you don't know it, don't worry, there's not much to it. [See this post by GitHub](https://guides.github.com/features/mastering-markdown/) to learn some of the basics.
+* Posts are written in markdown, if you don't know it, don't worry, there's not much to it. [See this post by GitHub](https://guides.github.com/features/mastering-markdown/){:target="_blank"} to learn some of the basics.
 
 That's about all you need to know to get started.
 
----
+----
 
 ### Lets create a new blog post
 
@@ -142,7 +142,7 @@ Once you save (Commit) the file, after a minute or two your new post will show u
 
 > Note: Once you've got this  figured out, you'll probably want to delete those sample blog posts. You can delete them using the trash bin button that is next to the edit button you've been using to edit files.
 
----
+----
 
 ### Checking out all the new changes
 
@@ -150,7 +150,7 @@ Now that you've updated your settings, you've renamed your blog, customized your
 
 ![create_blog_review](/img/createblog/create_blog_review.gif){:data-gifffer="/img/createblog/create_blog_review.gif"}
 
----
+----
 
 ### Where to go from here
 
@@ -158,6 +158,6 @@ If all you care about is getting content out there, then there isn't much more y
 
 If you're interested in diving deeper into Jekyll, how it works behind the scenes, or other things you can do with it, let me know, I'd love to write some blog posts about it. I've had a lot of fun figuring out how to get it all set up and working.
 
-There's lot of things you can do to this template, fairly easily, to add some fun features. Things like a comments section on your posts, adding a dark theme to your entire site or maybe you want to add some custom pages, like [my book tracking page](https://chadbaldwin.net/books) or [my resume](https://chadbaldwin.net/resume). The possibilities are endless...but, it comes at a cost, it all has to be done manually by writing or copy/pasting code, learning new languages like HTML, CSS, Liquid, YAML...this is where platforms like WordPress starts to shine.
+There's lot of things you can do to this template, fairly easily, to add some fun features. Things like a comments section on your posts, adding a dark theme to your entire site or maybe you want to add some custom pages, like [my book tracking page](https://chadbaldwin.net/books){:target="_blank"} or [my resume](https://chadbaldwin.net/resume){:target="_blank"}. The possibilities are endless...but, it comes at a cost, it all has to be done manually by writing or copy/pasting code, learning new languages like HTML, CSS, Liquid, YAML...this is where platforms like WordPress starts to shine.
 
 I realize this particular setup may not work for everyone, and in the long run, it may even be more complicated than just sticking with a popular blogging platform, with their fancy UI's, plugins, etc. But I've had a lot of fun learning about GitHub Pages, Jekyll, Markdown, etc, so I figured I'd share how I got started, and try to make it easier for you if this is the route you're thinking of going.

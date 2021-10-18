@@ -11,17 +11,17 @@ While working on a project today, I ran into an interesting issue I'd never enco
 
 The `THROW` command is non-terminating if it is used in a stored procedure over a linked-server.
 
-I don't know the details to why it works this way. The `THROW` command returns an error message with a severity level of 16, which, according to my [RAISERROR Cheatsheet]({% post_url 2021-01-15-raiserror-cheatsheet %}), does not stop execution.
+I don't know the details to why it works this way. The `THROW` command returns an error message with a severity level of 16, which, according to my [RAISERROR Cheatsheet]({% post_url 2021-01-15-raiserror-cheatsheet %}){:target="_blank"}, does not stop execution.
 
 There's something special about the `THROW` command beyond raising an error message. Behind the scenes, there is likely some extra information being passed to tell SQL Server that execution needs to stop in that moment, and that extra bit of information does not appear to be passed between linked servers.
 
----
+----
 
 ### Setting up the demo instance
 
 This was fairly easy to set up a demo script for. I personally tested this using SQL Server 2019 on Docker. Normally I wouldn't mention using Docker, but since this requires setting up a linked server, some of you may not have access to do so.
 
-I won't walk through setting up docker or anything like that (I'd like to in a future blog post), but if you are already familiar with it, you can [go here](https://hub.docker.com/_/microsoft-mssql-server) to see what images are available. This is the command I used:
+I won't walk through setting up docker or anything like that (I'd like to in a future blog post), but if you are already familiar with it, you can [go here](https://hub.docker.com/_/microsoft-mssql-server){:target="_blank"} to see what images are available. This is the command I used:
 
 ```plaintext
 docker run -e 'ACCEPT_EULA=Y' -e 'SA_PASSWORD=yourStrong(!)Password' -p 1433:1433 -d mcr.microsoft.com/mssql/server:2019-latest
@@ -36,7 +36,7 @@ USE SandBox;
 GO
 ```
 
----
+----
 
 ### Recreating the issue
 
@@ -77,7 +77,7 @@ RAISERROR('If you can see this, it didnt terminate',0,1) WITH NOWAIT;
 GO
 ```
 
----
+----
 
 ### Run the procs
 
@@ -101,7 +101,7 @@ EXEC SandBox.dbo.FailLinkServer
 
 This time, we ran `dbo.Fail` via our linked sever connection. But, rather than raising an exception and terminating execution, it continued on running.
 
----
+----
 
 ### The remedy
 

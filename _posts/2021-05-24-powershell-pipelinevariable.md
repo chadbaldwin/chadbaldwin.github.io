@@ -9,11 +9,11 @@ image: /img/postbanners/2021-05-24-powershell-pipelinevariable.png
 
 PowerShell has been a daily tool for me for at least 5 or 6 years at this point, so when I learn something new that seems fairly useful I figure it's probably worth writing about. These posts also help me remember because they force me to do more research into it than I normally would.
 
-TIL (Today I Learned) about the `-PipelineVariable` parameter in PowerShell, known as a "Common Parameter"; which are automatically added by PowerShell to cmdlets that are decorated with the [`[cmdletbinding()]`](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_functions_cmdletbindingattribute) attribute.
+TIL (Today I Learned) about the `-PipelineVariable` parameter in PowerShell, known as a "Common Parameter"; which are automatically added by PowerShell to cmdlets that are decorated with the [`[cmdletbinding()]`](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_functions_cmdletbindingattribute){:target="_blank"} attribute.
 
-This is by no means a "new" feature, `-PipelineVariable` was [added as a common parameter in 2017 for version v4.0](https://docs.microsoft.com/en-us/powershell/scripting/windows-powershell/whats-new/what-s-new-in-windows-powershell-50?view=powershell-7.1#new-features-in-windows-powershell-40#:~:text=PipelineVariable).
+This is by no means a "new" feature, `-PipelineVariable` was [added as a common parameter in 2017 for version v4.0](https://docs.microsoft.com/en-us/powershell/scripting/windows-powershell/whats-new/what-s-new-in-windows-powershell-50?view=powershell-7.1#new-features-in-windows-powershell-40#:~:text=PipelineVariable){:target="_blank"}.
 
----
+----
 
 ### What problem does it fix?
 
@@ -39,7 +39,7 @@ There's nothing wrong with building it this way. In my opinion, if you were buil
 
 The problem is that you don't _always_ have the ability to structure your code this way. Sometimes you need to work with things in the pipeline, or you're writing a quick one off script in the terminal and you don't need to worry about formality.
 
----
+----
 
 ### Basic usage
 
@@ -55,7 +55,7 @@ This is how it would look:
 
 Now...I agree, it's ugly, it's not easy to read, especially when using all of the aliases and syntax shortcuts. But, it's certainly a useful trick and I've already used it a few times since I originally drafted this post.
 
----
+----
 
 ### Let's break down what's happening here...
 
@@ -72,7 +72,7 @@ foreach ($letter in 'a','b','c') {
 }
 ```
 
----
+----
 
 Then we need to add in the numbers array and the `$number` variable...
 
@@ -90,7 +90,7 @@ foreach ($letter in 'a','b','c') {
 }
 ```
 
----
+----
 
 And finally, we want to generate our output:
 
@@ -112,7 +112,7 @@ foreach ($letter in 'a','b','c') {
 }
 ```
 
----
+----
 
 You're probably looking at those last two code snippets and thinking the `-PipelineVariable` method is _way_ uglier than just using `foreach`, and I would agree with you. Like I said earlier, if I were building a nice, polished production script, I likely wouldn't build it using pipelines if I didn't have to.
 
@@ -128,13 +128,13 @@ So, if I were writing this as a quick one-off command in the terminal, I'd build
 
 The reason I like this over using `foreach` is because I'm a fan of using pipelines where you don't have to deal with nesting things, or keeping track of brackets or parenthesis. This method allows you to write everything in a single continuous line, using only pipes.
 
----
+----
 
 ### Advanced: Create a function that supports `-PipelineVariable`
 
 This is more of an advanced section, but if you're curious, keep reading.
 
-You might be wondering how you would create a function that is able to use this common parameter. Well...You can't...I mean, you can, but it won't work correctly because there's a bug in PowerShell that causes `-PipelineVariable` to be assigned to just once. However, [this was fixed with version 7.2.0 of PowerShell Core](https://github.com/PowerShell/PowerShell/pull/12766).
+You might be wondering how you would create a function that is able to use this common parameter. Well...You can't...I mean, you can, but it won't work correctly because there's a bug in PowerShell that causes `-PipelineVariable` to be assigned to just once. However, [this was fixed with version 7.2.0 of PowerShell Core](https://github.com/PowerShell/PowerShell/pull/12766){:target="_blank"}.
 
 So if you want to do this, you can either wait for 7.2.0 to be fully released, or you can download a 7.2.0 preview release.
 
@@ -179,11 +179,11 @@ PS> 1,2,3 | Invoke-AddOne -PV test | % { $test }
 
 Woohoo! It works.
 
----
+----
 
 ### Bonus tip
 
-In the course of writing this post, I came across an interesting [tip from someone on Reddit](https://www.reddit.com/r/PowerShell/comments/dvf4sf/pipeline_variable_is_awseome/).
+In the course of writing this post, I came across an interesting [tip from someone on Reddit](https://www.reddit.com/r/PowerShell/comments/dvf4sf/pipeline_variable_is_awseome/){:target="_blank"}.
 
 If a cmdlet you are trying to use does not support the `-PipelineVariable` parameter, you can get around this by passing it through `Where-Object` (`?`).
 

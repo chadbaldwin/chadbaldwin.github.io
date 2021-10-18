@@ -8,9 +8,9 @@ tags: T-SQL
 
 ### For you impatient readers, you can click here: [tl;dr](#using-cross-apply)
 
-[DRY...Don't Repeat Yourself.](https://en.wikipedia.org/wiki/Don%27t_repeat_yourself)
+[DRY...Don't Repeat Yourself.](https://en.wikipedia.org/wiki/Don%27t_repeat_yourself){:target="_blank"}
 
-There are multiple ways to re-use code in SQL, such as [subqueries](https://docs.microsoft.com/en-us/sql/relational-databases/performance/subqueries) and [CTE's](https://docs.microsoft.com/en-us/sql/t-sql/queries/with-common-table-expression-transact-sql); But I'd like to show you another way utilizing `CROSS APPLY`.
+There are multiple ways to re-use code in SQL, such as [subqueries](https://docs.microsoft.com/en-us/sql/relational-databases/performance/subqueries){:target="_blank"} and [CTE's](https://docs.microsoft.com/en-us/sql/t-sql/queries/with-common-table-expression-transact-sql){:target="_blank"}; But I'd like to show you another way utilizing `CROSS APPLY`.
 
 Subqueries and CTE's are great, but they're not exactly easy to daisy chain. What if you wanted to declare some kind of "inline variable" that you can assign a formula to, and then reference multiple times?
 
@@ -18,7 +18,7 @@ A lot of people who are new to SQL think that you can write something in the `SE
 
 But, using `CROSS APPLY`, you can sort of achieve this.
 
----
+----
 
 ## Sample data:
 
@@ -41,8 +41,7 @@ VALUES ('Tyler Durden'  , '1973-03-06', 'Wilmington' , 'DE', '(210) 658-5511')
     ,  ('Emmett Brown'  , '1946-05-16', 'Hill Valley', 'CA', '626/214-2760');
 ```
 
----
-
+----
 
 ## The Challenge...
 
@@ -56,7 +55,7 @@ You can probably imagine how ugly this is going to get...but think about how you
 
 **Tip**: Note that not ALL phone numbers contain an area code...
 
----
+----
 
 ## The conventional way:
 
@@ -91,7 +90,7 @@ Now you need to copy paste it again...
 WHERE LEN(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(c.PhoneNumber,'(',''),')',''),'.',''),'/',''),'-',''),' ','')) = 10
 ```
 
----
+----
 
 ## Using CTE's
 
@@ -129,7 +128,7 @@ This really isn't too bad. We only had to write the `REPLACE` logic once, and re
 
 What if next month, a new field is added to the table? Now you have to add it to the top CTE and route it all the way through. This would be even worse if `#Contact` had 20+ columns. That would get real ugly.
 
----
+----
 
 ## Using CROSS APPLY
 

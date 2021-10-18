@@ -12,17 +12,17 @@ I'm pretty sure I've started watching the same "Getting started with Python" Plu
 
 The only way I'm able to effectively learn something is through hands-on actual job experience. Give me the task, and I will do whatever it takes to figure it out and get it done. I learned SQL, PowerShell and now C# on the job, among many other things. The reason? Because now someone else is relying on me to get something done; And that's just enough pressure to keep me focused on the task. So if all it takes for me to learn something is to apply a bit of pressure...what's another option for independent learning?
 
----
+----
 
 ### Certifications
 
-A few weeks ago, [Brent Ozar blogged about certifications](https://www.brentozar.com/archive/2021/01/which-microsoft-certification-should-you-get/). Reading it encouraged me to look into what Microsoft offered. Due to the COVID-19 pandemic, like many others, I've been stuck at home on top of already having a work from home job. So I might as well do something productive with all of this free time I have.
+A few weeks ago, [Brent Ozar blogged about certifications](https://www.brentozar.com/archive/2021/01/which-microsoft-certification-should-you-get/){:target="_blank"}. Reading it encouraged me to look into what Microsoft offered. Due to the COVID-19 pandemic, like many others, I've been stuck at home on top of already having a work from home job. So I might as well do something productive with all of this free time I have.
 
-I started researching into the [Microsoft certifications](https://docs.microsoft.com/en-us/learn/certifications/) to see what certs best fit my current career path. To my surprise, I found that the certification I was interested in &mdash; [MCSA: SQL 2016 Database Development](https://docs.microsoft.com/en-us/learn/certifications/mcsa-sql2016-database-development-certification) &mdash; was going to be retired on Jan 31st 2021 and at the time, it was Jan 12th...19 days to take and pass two exams (70-761, 70-762). Not only that...but this would be my ONLY chance to ever take them, after that, they'd be retired, no re-takes. **But** one of the things Brent mentioned in his blog post was "No matter why you want the exam, just take it first.". So...that's what I decided to do, win or lose.
+I started researching into the [Microsoft certifications](https://docs.microsoft.com/en-us/learn/certifications/){:target="_blank"} to see what certs best fit my current career path. To my surprise, I found that the certification I was interested in &mdash; [MCSA: SQL 2016 Database Development](https://docs.microsoft.com/en-us/learn/certifications/mcsa-sql2016-database-development-certification){:target="_blank"} &mdash; was going to be retired on Jan 31st 2021 and at the time, it was Jan 12th...19 days to take and pass two exams (70-761, 70-762). Not only that...but this would be my ONLY chance to ever take them, after that, they'd be retired, no re-takes. **But** one of the things Brent mentioned in his blog post was "No matter why you want the exam, just take it first.". So...that's what I decided to do, win or lose.
 
 The exams were $165 each. I figured worst case scenario, I fail both exams, I'm out $330...but I still learn a **ton** in the course of preparing for the exams.
 
----
+----
 
 ### Exam #1 - 70-761: Querying Data with Transact-SQL
 
@@ -30,11 +30,11 @@ The first exam (70-761) I scheduled for Jan 18th, giving me about 6 days to prep
 
 To study, I downloaded the "skills measured" PDF provided by Microsoft, broke it up into bullet points and highlighted each bullet in red, yellow, green depending on my level of confidence. I studied in depth the yellows and reds and only touched on the greens.
 
-A huge help to me was [this blog post](https://mika-s.github.io/sql/certification/70-761/2019/05/27/notes-on-70-761-Querying-Data-with-Transact-SQL) which covers the entire 70-761 exam reference book with nice copy/paste demos. Even though the exam is now retired, this is still a wonderful reference for learning SQL and huge credit to Mika for the work they put into this (unfortunately, they have no social media information on their website or GitHub, so I can't give them more credit than this).
+A huge help to me was [this blog post](https://mika-s.github.io/sql/certification/70-761/2019/05/27/notes-on-70-761-Querying-Data-with-Transact-SQL){:target="_blank"} which covers the entire 70-761 exam reference book with nice copy/paste demos. Even though the exam is now retired, this is still a wonderful reference for learning SQL and huge credit to Mika for the work they put into this (unfortunately, they have no social media information on their website or GitHub, so I can't give them more credit than this).
 
 Exam day came...and to keep it short...I passed!! And the effort I put into studying definitely helped.
 
----
+----
 
 ### Exam #2 - 70-762: Developing SQL Databases
 
@@ -42,9 +42,9 @@ Now that I passed the first exam, I could focus on the second exam. My exam was 
 
 Things I knew nothing about prior to this exam: monitoring, extended events, Azure, Resource Governor, columnstore indexes, in-memory OLTP, index maintenance, troubleshooting with system DMV's....Let's just say I had a lot to cover.
 
-I knew in order to have a chance at passing at this exam, I was going to need to put in a lot more work. I ordered the [official 70-762 Exam reference](https://amzn.to/35Re73h) from Amazon. It's 368 pages and was expected to arrive in 2 days, giving me 10 days to read it at about 37 pages a day.
+I knew in order to have a chance at passing at this exam, I was going to need to put in a lot more work. I ordered the [official 70-762 Exam reference](https://amzn.to/35Re73h){:target="_blank"} from Amazon. It's 368 pages and was expected to arrive in 2 days, giving me 10 days to read it at about 37 pages a day.
 
-While waiting for the book to be delivered, I used that time to read about in-memory OLTP tables, natively compiled stored procedures and columnstore indexes in [Itzik Ben-Gan's book "T-SQL Querying"](https://amzn.to/39BLMzk) which I happened to have already. Those are two HUGE "new" things with SQL Server and I had a feeling they would be heavily covered on the exam and that I would need to focus on those areas a lot.
+While waiting for the book to be delivered, I used that time to read about in-memory OLTP tables, natively compiled stored procedures and columnstore indexes in [Itzik Ben-Gan's book "T-SQL Querying"](https://amzn.to/39BLMzk){:target="_blank"} which I happened to have already. Those are two HUGE "new" things with SQL Server and I had a feeling they would be heavily covered on the exam and that I would need to focus on those areas a lot.
 
 I read and finished the book with 1 day to spare. I read the exam book every morning before work, I used my lunch breaks to watch YouTube videos, and after work I either read the book or I read blog posts, documentation, etc.
 
@@ -52,7 +52,7 @@ Exam day came and I was literally watching YouTube videos on columnstore indexes
 
 But...my studying paid off and I passed! Thus earning my MCSA! My first certification. 🎉
 
----
+----
 
 ### My take from all of this
 

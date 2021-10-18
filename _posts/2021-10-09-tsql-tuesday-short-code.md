@@ -7,8 +7,8 @@ tags: T-SQL-Tuesday
 image: /img/companylogos/T-SQL-Tuesday-banner.png
 ---
 
-[![T-SQL Tuesday Logo](/img/companylogos/T-SQL-Tuesday-logo.png){:alt="drawing" style="width:200px; float:right;"}](https://johnmccormack.it/2021/10/t-sql-tuesday-143-short-code-examples/)
-For the October [T-SQL Tuesday](http://tsqltuesday.com/) invitation, [John McCormack](https://johnmccormack.it/) is inviting others to share some of their favorite short code examples. These could be SSMS/SQL Prompt snippets, one liners, keyboard query shortcuts or snippets you've committed to memory. It doesn't have to be T-SQL, it could be Python, PowerShell, or anything else you use on a daily basis.
+[![T-SQL Tuesday Logo](/img/companylogos/T-SQL-Tuesday-logo.png){:alt="drawing" style="width:200px; float:right;"}](https://johnmccormack.it/2021/10/t-sql-tuesday-143-short-code-examples/){:target="_blank"}
+For the October [T-SQL Tuesday](http://tsqltuesday.com/){:target="_blank"} invitation, [John McCormack](https://johnmccormack.it/){:target="_blank"} is inviting others to share some of their favorite short code examples. These could be SSMS/SQL Prompt snippets, one liners, keyboard query shortcuts or snippets you've committed to memory. It doesn't have to be T-SQL, it could be Python, PowerShell, or anything else you use on a daily basis.
 
 I'm excited that this will be my first time participating in a T-SQL Tuesday topic!
 
@@ -16,7 +16,7 @@ Most of my time is spent writing T-SQL, PowerShell and working in the PowerShell
 
 I had to cut it short otherwise this post would be a mile long. If you're interested in seeing more quick tricks, SQL Prompt snippets, etc, please leave a comment and let me know and I can do a Part 2 in the future.
 
----
+----
 
 ## T-SQL
 
@@ -79,9 +79,9 @@ SELECT CHECKSUM(NEWID())%(@RangeSize+1);
 
 #### Tally table
 
-* Tally / Numbers tables can be used for all sorts of things. For example, avoiding cursors, loops, etc by performing those tasks by row. Jeff Moden has [a great article using a tally table to build a string split function](https://www.sqlservercentral.com/articles/tally-oh-an-improved-sql-8k-%E2%80%9Ccsv-splitter%E2%80%9D-function). He's also [written about how tally tables can be used to replace loops](https://www.sqlservercentral.com/articles/the-numbers-or-tally-table-what-it-is-and-how-it-replaces-a-loop-1).
+* Tally / Numbers tables can be used for all sorts of things. For example, avoiding cursors, loops, etc by performing those tasks by row. Jeff Moden has [a great article using a tally table to build a string split function](https://www.sqlservercentral.com/articles/tally-oh-an-improved-sql-8k-%E2%80%9Ccsv-splitter%E2%80%9D-function){:target="_blank"}. He's also [written about how tally tables can be used to replace loops](https://www.sqlservercentral.com/articles/the-numbers-or-tally-table-what-it-is-and-how-it-replaces-a-loop-1){:target="_blank"}.
 * Another great use of them is generating sample data. Utilizing the snippets above for generating random numbers, you can easily generate random data for testing, including date ranges.
-* Plenty of other bloggers have written about them, [including Itzik Ben-Gan](https://sqlperformance.com/2021/01/t-sql-queries/number-series-solutions-1) who I believe is the first person I learned this from.
+* Plenty of other bloggers have written about them, [including Itzik Ben-Gan](https://sqlperformance.com/2021/01/t-sql-queries/number-series-solutions-1){:target="_blank"} who I believe is the first person I learned this from.
 
 ```tsql
 -- Using CTEs
@@ -119,7 +119,7 @@ FROM c;
 SET STATISTICS IO, TIME ON;
 ```
 
----
+----
 
 ## PowerShell / CLI
 
@@ -200,7 +200,7 @@ $host.ui.RawUI.WindowTitle = 'changed title';
 
 #### Run SQL Server from Docker
 
-* This is a straight copy-paste from the [SQL Server docker hub page](https://hub.docker.com/_/microsoft-mssql-server). If you use Docker Desktop, this is an awesome way to quickly spin up a local instance of SQL Server, ready for all sorts of testing. I use this before every blog post to give me a clean working environment to test in, and then I can quickly and easily clean it up when I'm done by removing the container.
+* This is a straight copy-paste from the [SQL Server docker hub page](https://hub.docker.com/_/microsoft-mssql-server){:target="_blank"}. If you use Docker Desktop, this is an awesome way to quickly spin up a local instance of SQL Server, ready for all sorts of testing. I use this before every blog post to give me a clean working environment to test in, and then I can quickly and easily clean it up when I'm done by removing the container.
 
 ```powershell
 docker run -e 'ACCEPT_EULA=Y' -e "SA_PASSWORD=${pass}" -p 1433:1433 -d mcr.microsoft.com/mssql/server:2019-latest;
@@ -209,7 +209,7 @@ docker run -e 'ACCEPT_EULA=Y' -e "SA_PASSWORD=${pass}" -p 1433:1433 -d mcr.micro
 #### Use ripgrep to search files
 
 * I actually want to do a full length blog post just on this tool and other similar CLI workflows, but for now, I'm just putting this out there as a quick tip.
-* This is more of a public service announcement than anything...Please install, learn and use [ripgrep](https://github.com/BurntSushi/ripgrep). It is one of the most useful tools I have added to my CLI toolbelt. You will not regret it, _especially_ if you are a Windows user because the built in alternatives such as `FIND` in cmd and `Select-String` in PowerShell are _sooo sloooooowwwww_ compared to this, and don't even compare when it comes to features.
+* This is more of a public service announcement than anything...Please install, learn and use [ripgrep](https://github.com/BurntSushi/ripgrep){:target="_blank"}. It is one of the most useful tools I have added to my CLI toolbelt. You will not regret it, _especially_ if you are a Windows user because the built in alternatives such as `FIND` in cmd and `Select-String` in PowerShell are _sooo sloooooowwwww_ compared to this, and don't even compare when it comes to features.
 
 ```powershell
 rg -i some_text_or_regex_to_search
@@ -223,12 +223,12 @@ rg -i some_text_or_regex_to_search
 Set-Alias -Name npp -Value 'notepad++.exe';
 ```
 
----
+----
 
 ## Bonus
 
 Shruggie: `¯\_(ツ)_/¯`
 
----
+----
 
 That's all I've got for you today...despite how long this post is, I really had to cut it short and leave a lot out. If you found any of these useful or if you have any snippets you'd like to suggest yourself, please leave a comment and let me know.

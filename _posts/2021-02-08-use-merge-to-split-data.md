@@ -132,4 +132,4 @@ For those interested, here's what the execution plan looks like:
 
 ![merge split execution plan](/img/queryresults/merge_split_execution_plan.png)
 
-If you want to know more about the details of a merge execution plan, check out [this blog post from Hugo Kornelis explaining the details of a merge execution plan from his "plansplaining" series](https://sqlserverfast.com/blog/hugo/2020/09/plansplaining-part-11-merge-plans/).
+If you want to know more about the details of a merge execution plan, check out [this blog post from Hugo Kornelis explaining the details of a merge execution plan from his "plansplaining" series](https://sqlserverfast.com/blog/hugo/2020/09/plansplaining-part-11-merge-plans/){:target="_blank"}.

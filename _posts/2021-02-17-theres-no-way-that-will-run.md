@@ -13,7 +13,7 @@ Or maybe, the code looks completely normal, you run it, only to realize it does 
 
 Well, that's what we're here to do today. All of my previous blog posts have been about serious tips and tricks for you to use. But today, I wanted to have some fun and write about some of the things I've come across that have really messed with me and others. Sometimes I'll sprinkle them into my own (non-production) code, just to see who is paying attention.
 
----
+----
 
 ### The shortest variable name ever
 
@@ -50,7 +50,7 @@ SELECT *
 FROM #;
 ```
 
----
+----
 
 ### Emojis for object names?
 
@@ -80,7 +80,7 @@ Unfortunately, yes, the square brackets are necessary.
 
 I definitely should not have written this part while hungry. Now I'm craving pizza.
 
----
+----
 
 ### When dividing by zero doesn't matter...
 
@@ -112,7 +112,7 @@ FROM sys.objects;
 
 This will apply a row numbering scheme without caring about order. However, I would say that using `ORDER BY (SELECT NULL)` is much safer. But this is a fun one to mess with people.
 
----
+----
 
 ### C̬͖͚͙͉̰̒̆ͥö͙̜̮́r̞̤͐ͪr͍u̩̘̳p̪̖̳͙̯ͤ͗ͨͧ̌̋t̟ͭe͌̉ͫ̔d̀̅͑ͬ̈ ̮̬̤̰̘̒c͇͕͊͂o̜͍̼̩d̼̖͍̰͂ͅe̖̮̮͔͓̜ͥͬͩ!͓̮͍̮
 
@@ -132,11 +132,11 @@ Well...Try it for yourself. The code snippet below and the screenshot above are 
 SELECT [A̸̧̡̨̨̧̢̨̛͉͇̗̣̗͕̘̝͙̦͇̲͔͈͖̮̱̘̩̺̭͈͔̠̩̦̥̞̞͕̬̱̩̹͇̙̤̩̞̜͎̺̦̪̼͖̼̝̟͓̮̗͙̙̳͙̭̙̝̩̥̞̖̘̲̫̻̭̳̱͖͔̲̲͇̜͖̼̱̬͈̼̼̙͙͇̦̳̝̥̺͇̪̾͊͛̾̍̇͑̈́̆̔̇̽̀̅̂̑̐̚͜͜͝͠͠] = LEN(N'Ą̶̨̧̢̨̨̧̨̨̛̛̛̛̛̰͕͙̭̙̝̩̥̞̖̘̲̫̻̭̳̱͖͔̲̲͇̜͖̼̱̬͈̼̼̙͙͇̦̳̝̥̺͇̪͇̞̟͍̜̙͉̬͉͙͓̮̪̣̲̱̠͇̺̥̰̰̘̪̘̠̦̥͕͉͍̯̯͕̹͓̻͓̦̖̲̫͕̪̘̦̖͖̘͚̩́̍͐̔́͛͛̇̈́̆̄̿̉͗̿̍̔̀̆̀͊́̅̑̒̄͑̂̀̂̎̄̇̓̒̈́̾͐̈́̐̇̂̏̽̈͊͆͊͌̌͛̊͌̍̐͒́͑̉̄̎̈̈́̏̏̾͛͐̈́͂̓̆̾̾̓̿̃̽͌̐͆̓͂̀̈̄͂̐̐̉̊͗́̓̀̍͗̓̏̏̐̋̄̀̆̊̈́̈́̓̿̐̓̌̏̔̃̏͊̋̈́̃̈́̀̌͛͑̊̏͒̃͂͒̔̊͒͊́̆͛̓̏̉̅̏̑̉̓́͗̌́̀͂̉͂̑͒̆͂̋͐̾͒̈́̀̽͋̈́͊̃͂͒̉̓̂̉̅̂͌̃̎͛͒͆̋̎̈́͑̉̓̈́̇͋̐͒͑͋̃́̀̉̈́̄͂̍͒͂́̾̔̿͊̓̎̈́́͌͒̅̕͘͘̚̚̚̚̚̚̚͘͘͘͘͘̕͘͘͘͘͘̕̚̕̕̕̚̕̚͜͜͝͠͠͝͠͝͝͝͠͠͠͠͝͝͠͝͝͝͝'), [A̸̧̡̨̨̧̢̨̛͉͇̗̣̗͕̘̝͙̦͇̲͔͈͖̮̱̘̩̺̭͈͔̠̩̦̥̞̞͕̬̱̩̹͇̙̤̩̞̜͎̺̦̪̼͖̼̝̟͓̮̗͙̙̳͙̭̙̝̩̥̞̖̘̲̫̻̭̳̱͖͔̲̲͇̜͖̼̱̬͈̼̼̙͙͇̦̳̝̥̺͇̪̾͊͛̾̍̇͑̈́̆̔̇̽̀̅̂̑̐̚͜͜͝͠͠] = DATALENGTH(N'a̶̧̨̢̧̧̢̢̧̢̨̡̨̧̨̨̛̛̝̩̥͖͖̺̞̣͍͇̬͔̻͍͖̤͕͖͚̺̟͚͔̼͉̪̻̘̼̦͉̠͈̼̱͚̹͍͕̦̼̗͕̼̩̰̼̰͇̪̰͇̠̟̪̞͙̦͉̹̟̞̱͇̞̟͍̜̙͉̬͉͙͓̮̪̣̲̱̠͇̺̥̰̰̘̪̘̠̦̥͕͉͍̯̯͕̹͓̻͓̦̖̲̫͕̪̘̦̖͖̘͚̩̋̄̈̊́̏͂̒̈́̄̈́͌̉̏̾̋̈́̈́̔̒̔̃̽̒̍̑́̈́̒̔̎̒͐̈̂̑̾͒̂̅̔͒̆̌͐͑̓͐̄̂͗̄̈́̈́͒̀́̒̋͑͛̀̓̇̐̈͗̽̀̉̌̆͂̍̽̒̑̓͌̆̄̂̏̎͆̎̍͛̚̕͘͘̕̚̕͘̕͘͜͜͜͜͠͝͝͝͝͠ͅͅ'), [A̸̧̡̨̨̧̢̨̛͉͇̗̣̗͕̘̝͙̦͇̲͔͈͖̮̱̘̩̺̭͈͔̠̩̦̥̞̞͕̬̱̩̹͇̙̤̩̞̜͎̺̦̪̼͖̼̝̟͓̮̗͙̙̳͙̭̙̝̩̥̞̖̘̲̫̻̭̳̱͖͔̲̲͇̜͖̼̱̬͈̼̼̙͙͇̦̳̝̥̺͇̪̾͊͛̾̍̇͑̈́̆̔̇̽̀̅̂̑̐̚͜͜͝͠͠] = N'a̶̧̨̢̧̧̢̢̧̢̨̡̨̧̨̨̛̛̝̩̥͖͖̺̞̣͍͇̬͔̻͍͖̤͕͖͚̺̟͚͔̼͉̪̻̘̼̦͉̠͈̼̱͚̹͍͕̦̼̗͕̼̩̰̼̰͇̪̰͇̠̟̪̞͙̦͉̹̟̞̱͇̞̟͍̜̙͉̬͉͙͓̮̪̣̲̱̠͇̺̥̰̰̘̪̘̠̦̥͕͉͍̯̯͕̹͓̻͓̦̖̲̫͕̪̘̦̖͖̘͚̩̋̄̈̊́̏͂̒̈́̄̈́͌̉̏̾̋̈́̈́̔̒̔̃̽̒̍̑́̈́̒̔̎̒͐̈̂̑̾͒̂̅̔͒̆̌͐͑̓͐̄̂͗̄̈́̈́͒̀́̒̋͑͛̀̓̇̐̈͗̽̀̉̌̆͂̍̽̒̑̓͌̆̄̂̏̎͆̎̍͛̚̕͘͘̕̚̕͘̕͘͜͜͜͜͠͝͝͝͝͠ͅͅ' --a̶̧̨̢̧̧̢̢̧̢̨̡̨̧̨̨̛̛̝̩̥͖͖̺̞̣͍͇̬͔̻͍͖̤͕͖͚̺̟͚͔̼͉̪̻̘̼̦͉̠͈̼̱͚̹͍͕̦̼̗͕̼̩̰̼̰͇̪̰͇̠̟̪̞͙̦͉̹̟̞̱͇̞̟͍̜̙͉̬͉͙͓̮̪̣̲̱̠͇̺̥̰̰̘̪̘̠̦̥͕͉͍̯̯͕̹͓̻͓̦̖̲̫͕̪̘̦̖͖̘͚̩̋̄̈̊́̏͂̒̈́̄̈́͌̉̏̾̋̈́̈́̔̒̔̃̽̒̍̑́̈́̒̔̎̒͐̈̂̑̾͒̂̅̔͒̆̌͐͑̓͐̄̂͗̄̈́̈́͒̀́̒̋͑͛̀̓̇̐̈͗̽̀̉̌̆͂̍̽̒̑̓͌̆̄̂̏̎͆̎̍͛̚̕͘͘̕̚̕͘̕͘͜͜͜͜͠͝͝͝͝͠ͅͅ
 ```
 
-If you've been on the interwebs long enough, you'll recognize this as "[Zalgo Text](https://en.wikipedia.org/wiki/Combining_character#Zalgo_text)". There are generators online for creating this. Unicode allows you to layer multiple diacritics on top of each other. These generators take advantage of that, and layer a whole TON of them onto each character randomly, giving it this crazy look. [Here's the generator I used for this demo](https://zalgo.org).
+If you've been on the interwebs long enough, you'll recognize this as "[Zalgo Text](https://en.wikipedia.org/wiki/Combining_character#Zalgo_text){:target="_blank"}". There are generators online for creating this. Unicode allows you to layer multiple diacritics on top of each other. These generators take advantage of that, and layer a whole TON of them onto each character randomly, giving it this crazy look. [Here's the generator I used for this demo](https://zalgo.org){:target="_blank"}.
 
 Oh, by the way....this also works for naming databases, columns, tables, schemas, etc. However, you'll run into the max length limit fairly quickly.
 
----
+----
 
 ### Shorten your code by not using spaces
 
@@ -170,11 +170,11 @@ You can copy this into SSMS and run it...change the value of the variable to wha
 
 Okay....so did you figure out how this is able to run, despite not having spaces? It's weird stuff right?
 
-Okay, here's the secret...Zero Width Spaces. Yup...there's many different types of spaces, you've likely even used some of them...like `&nbsp;`...That's a non-breaking space. There's also an em space, en space, thin space, hair space...aaaanndd...a zero width space, which, you guessed it...it's basically invisible. Here's one right here (&#8203;). You can do some cool things with these....I use them on Facebook posts to add full height line breaks. There's also [this cool link shortening website](https://zws.im/) which uses them to generate seemingly identical links which go to different locations.
+Okay, here's the secret...Zero Width Spaces. Yup...there's many different types of spaces, you've likely even used some of them...like `&nbsp;`...That's a non-breaking space. There's also an em space, en space, thin space, hair space...aaaanndd...a zero width space, which, you guessed it...it's basically invisible. Here's one right here (&#8203;). You can do some cool things with these....I use them on Facebook posts to add full height line breaks. There's also [this cool link shortening website](https://zws.im/){:target="_blank"} which uses them to generate seemingly identical links which go to different locations.
 
 Full disclosure though...I don't think this trick would gain you any points in code golf, as it's still a character, you just can't see it...so it's kind of cheating 😢
 
----
+----
 
 ### SQL Server loves consistency
 
@@ -193,7 +193,7 @@ That's right, DDL statements support trailing commas.
 
 In their defense though, I'm in support of trailing commas for most things. It makes it easier to diff changes, or change the order of things, so I'm okay with this one. I have confused a few people with my scripts though...it's occasionally spotted as a "typo".
 
----
+----
 
 ### String values don't always need quotes
 
@@ -209,9 +209,9 @@ GO
 EXEC #usp_TestProc @string = This_Is_A_Test
 ```
 
-As long as the value follows the rules of an object identifier, like a table or proc name, then it technically doesn't need to be put in single quotes. I actually mentioned this trick in a previous blog post where you can use it to build some interesting [SSMS keyboard query shortcuts](/2021/01/21/ssms-keyboard-query-shortcuts.html). However, in practice, you should always qualify your strings with single quotes for clarity.
+As long as the value follows the rules of an object identifier, like a table or proc name, then it technically doesn't need to be put in single quotes. I actually mentioned this trick in a previous blog post where you can use it to build some interesting [SSMS keyboard query shortcuts]({% post_url 2021-01-21-ssms-keyboard-query-shortcuts %}){:target="_blank"}. However, in practice, you should always qualify your strings with single quotes for clarity.
 
----
+----
 
 There's plenty more of these, but these are the most interesting/fun ones that I wanted to share.
 

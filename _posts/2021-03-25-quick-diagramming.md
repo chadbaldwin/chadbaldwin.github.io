@@ -17,7 +17,7 @@ My personal favorite is called DOT, which is a graph description language. Along
 
 This might sound intimidating, and I thought so too at first, but it's relatively simple. There's nothing to install on your computer (if you don't want to) and it's very easy to get started.
 
----
+----
 
 Let's start off with a simple example:
 
@@ -50,7 +50,7 @@ As far as throwing together simple dependency charts go...that's it. The reason 
 
 Of course, there is a whole world beyond this. Once you gain more experience with it, you can set up groups, change the shapes, line color, fill color, labels, and more. But, just knowing these basics alone are enough to get most things done.
 
----
+----
 
 Now that you know the basics, let's show a relatable example.
 
@@ -73,34 +73,34 @@ digraph G {
 
 Here, I've thrown in a label so that it's a bit more readable.
 
----
+----
 
 If you want to play around with this a bit more, there is a TON of information online, but I just wanted to give a quick run through. There's a lot of benefits to using a language like this over something like a graphing tool, for example, this could be checked into source control, and changes tracked.
 
 If you want to learn more about Graphviz and the DOT language, you can check out their website:
 
-* <https://graphviz.org>
+* <https://graphviz.org>{:target="_blank"}
 
 To convert the code into a visual graph, you can use an online renderer (just copy paste any of the examples here, and it will render live):
 
-* <https://dreampuf.github.io/GraphvizOnline>
-* <http://viz-js.com>
+* <https://dreampuf.github.io/GraphvizOnline>{:target="_blank"}
+* <http://viz-js.com>{:target="_blank"}
 
 If you use Visual Studio Code, there are some extensions that work quite well. One of them is a live preview, similar to the web based options above, the other enhances the markdown preview to render inline graphs.
 
-* <https://marketplace.visualstudio.com/items?itemName=joaompinto.vscode-graphviz>
-* <https://marketplace.visualstudio.com/items?itemName=geeklearningio.graphviz-markdown-preview>
+* <https://marketplace.visualstudio.com/items?itemName=joaompinto.vscode-graphviz>{:target="_blank"}
+* <https://marketplace.visualstudio.com/items?itemName=geeklearningio.graphviz-markdown-preview>{:target="_blank"}
 
 Outside of Graphviz, there are other sites which also use graph description languages similar to DOT...These other sites are nice because you can build other types of charts that you can't do with Graphviz, like a sequence diagram.
 
-* <https://www.websequencediagrams.com>
-* <https://www.diagram.codes>
+* <https://www.websequencediagrams.com>{:target="_blank"}
+* <https://www.diagram.codes>{:target="_blank"}
 
----
+----
 
 Using this tool isn't limited to just visualizing SQL. I've used this to create charts to document simple workflows, apps I'm working with, my home network. It even comes in handy if you're trying to describe something to someone via instant message and you need to throw a quick chart together.
 
----
+----
 
 For fun, here's the chart I threw together today, using nested groups, different types of lines, colors, shapes, etc.
 

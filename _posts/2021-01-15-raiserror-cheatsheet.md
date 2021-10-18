@@ -21,7 +21,7 @@ tags: T-SQL
     }
 </style>
 
-> Note: It is suggested in the documentation to use [`THROW`](https://docs.microsoft.com/en-us/sql/t-sql/language-elements/throw-transact-sql) when you can. However, there are times when you want more control over the severity level that is used. `THROW` is hardcoded to use severity level 16 and is treated as a terminating error, meaning execution stops and no further code is run.
+> Note: It is suggested in the documentation to use [`THROW`](https://docs.microsoft.com/en-us/sql/t-sql/language-elements/throw-transact-sql){:target="_blank"} when you can. However, there are times when you want more control over the severity level that is used. `THROW` is hardcoded to use severity level 16 and is treated as a terminating error, meaning execution stops and no further code is run.
 
 Every time I have to use `RAISERROR`, I forget what all the different severity levels do..."Which ones will jump me to the catch block again?", "What severity do I need to use to fail a job step?"
 
@@ -29,7 +29,7 @@ Got tired of it and put together a cheatsheet with the most relevant or quirky t
 
 RAISERROR syntax:
 
-[Official Documentation](https://docs.microsoft.com/en-us/sql/t-sql/language-elements/raiserror-transact-sql)
+[Official Documentation](https://docs.microsoft.com/en-us/sql/t-sql/language-elements/raiserror-transact-sql){:target="_blank"}
 
 ```tsql
 RAISERROR ( { msg_id | msg_str | @local_variable }  
@@ -151,7 +151,7 @@ Column descriptions:
     </tbody>
 </table>
 
----
+----
 
 ## Lets do a couple demos:
 
@@ -208,7 +208,7 @@ One last tip for utilizing this behavior is within `WHILE` loops. This is certai
 
 In the case of a loop that has lots of iterations and you don't want to flood the messages tab (or slow down your loop) by printing a message for every iteration. There's times I've built a loop counter and then used something like `IF (@counter % 2000 = 0)...` to only output messages at certain checkpoints.
 
----
+----
 
 ### *Prevents output*
 
@@ -243,7 +243,7 @@ SELECT * FROM #tmp;
 
 Wait what!? But...If `SELECT 'After the error'` never ran...then how did the temp table get populated?? Yup...Don't let this one screw you up, thinking it stopped where it threw.
 
----
+----
 
 ### *Stops Execution / Kills Connection*
 
@@ -290,7 +290,7 @@ DBCC OPENTRAN;
 
 And (assuming your server does not have any other open transactions) now you can see the transaction was not left open.
 
----
+----
 
 ### *Fails Job Step*
 
@@ -331,7 +331,7 @@ SELECT @jobId = job_id FROM msdb.dbo.sysjobs WHERE [name] = N'Raiserror testing'
 EXEC msdb.dbo.sp_delete_job @job_id = @jobId;
 ```
 
----
+----
 
 ### *Transfers to CATCH Block*
 
@@ -392,7 +392,7 @@ BEGIN TRY RAISERROR('Raiserror severity 25', 25, 1) WITH LOG END TRY BEGIN CATCH
 
 These examples are only here for completeness. They won't get caught by the `CATCH` block, and only the first one will run.
 
----
+----
 
 ### *Bonus demo: messages returned out of order*
 
