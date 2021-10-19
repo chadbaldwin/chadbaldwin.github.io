@@ -69,20 +69,21 @@ Now I need to handle this memory issue. I've run into these before with PowerShe
 $c = 0; # counter
 $b = 100000; # batch size
 foreach ($num in 1..500) {
-    $c += $b;
-    write "Pulling records $($c-$b) - ${c}";
+    write "Pulling records ${c} - $($c+$b)";
     $query = "
         SELECT *
         FROM dbo.SourceTable
         ORDER BY ID -- Sort by the clustered key
         OFFSET ${c} ROWS FETCH NEXT ${b} ROWS ONLY
     ";
+    # write $query;
     Invoke-DbaQuery -SqlInstance ServerA -Database SourceDB -Query $query |
         Export-CSV E:\export.csv -UseQuotes AsNeeded -Append
+    $c += $b;
 }
 ```
 
-This time, I broke the export up into batches of 100,000 records. I changed the query to sort the table by the clustered key, and added an `OFFSET` clause to grab the data in segments.
+This time, I broke the export up into batches of 100,000 records. I changed the query to sort the table by the clustered key, and added an `OFFSET` clause to grab the data in segments. FYI, the ranges output from the loop are not exact, it's just meant to give a basic idea of where it's at.
 
 I'm doing a bit of math trickery here so I don't have to figure out when the loop needs to stop.
 
