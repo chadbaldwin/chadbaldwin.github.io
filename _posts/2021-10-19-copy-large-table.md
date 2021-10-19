@@ -98,7 +98,7 @@ On the upside, it was only using 234MB of RAM. So I guess that's better, but not
 
 ## Attempt #3 - Using the right tool for the job
 
-I reached out to the SQL Community Slack to see if anyone had some better ideas. Almost immediately I had a couple great suggestions.
+I reached out to the [SQL Community Slack](http://aka.ms/sqlslack){:target="_blank"} to see if anyone had some better ideas. Almost immediately I had a couple great suggestions.
 
 Andy Levy [![Twitter](/img/socialicons/twitter.svg)](https://twitter.com/ALevyInROC){:target="_blank"} [![Website](/img/socialicons/website.svg)](https://www.flxsql.com){:target="_blank"} recommended `Copy-DbaDbTableData` from dbatools.
 
