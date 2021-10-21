@@ -1,3 +1,36 @@
+sql:
+  - name: SQLServerFast Execution Plan Operator List
+    description: List of all known execution plan operator icons, their names, a description, and usually a link to a more in-depth breakdown of how it works
+    link: https://sqlserverfast.com/epr/operator-list
+
+  - name: SQL Server Updates
+    description: The Most Recent Updates for Microsoft SQL Server
+    link: https://sqlserverupdates.com
+
+  - name: SQLShack - SQL Server wait types
+    description: Database of SQL Server wait types and recommended actions
+    link: https://www.sqlshack.com/sql-server-wait-types
+
+  - name: Statistics Parser
+    description: SQL Statistics Parser
+    link: http://statisticsparser.com
+
+  - name: SQL Fiddle
+    description: RDBMS Fiddler (MySQL, Oracle, Postgres, SQL Server) - Nearly always broken or slow, try dbfiddle.uk instead
+    link: https://sqlfiddle.com
+
+  - name: db<>fiddle
+    description: RDBMS Fiddler (MySQL, Oracle, Postgres, SQL Server, SQLite, etc)
+    link: https://dbfiddle.uk
+
+  - name: PasteThePlan
+    description: Share SQL Server Execution Plans
+    link: https://www.brentozar.com/pastetheplan
+
+  - name: RAISERROR Cheatsheet
+    description: Everything you need to know about using RAISERROR in SQL Server
+    link: https://chadbaldwin.net/2021/01/15/raiserror-cheatsheet.html
+
 fiddlers:
   - name: .NET Fiddle
     description: C#, VB.NET, F#
@@ -15,14 +48,6 @@ fiddlers:
     description: Regex Fiddler
     link: https://regex101.com
 
-  - name: SQL Fiddle
-    description: RDBMS Fiddler (MySQL, Oracle, Postgres, SQL Server) - Nearly always broken or slow, try dbfiddle.uk instead
-    link: https://sqlfiddle.com
-
-  - name: db<>fiddle
-    description: RDBMS Fiddler (MySQL, Oracle, Postgres, SQL Server, SQLite, etc)
-    link: https://dbfiddle.uk
-
   - name: Rextester
     description: Multi-language fiddler (too many to list)
     link: https://rextester.com
@@ -39,10 +64,6 @@ code sharing / collaboration:
   - name: Board
     description: "Online Whiteboard, alternative link: <https://board.new>"
     link: https://letsboard.co
-
-  - name: PasteThePlan
-    description: Share SQL Server Execution Plans
-    link: https://www.brentozar.com/pastetheplan
 
   - name: PasteBin
     description: Share text
@@ -68,6 +89,36 @@ diagramming:
   - name: asciiflow
     description: Draw ascii art style diagrams and flowcharts
     link: https://asciiflow.com
+
+networking:
+  - name: Speed test - CloudFlare
+    description: Speed/Latency testing
+    link: https://speed.cloudflare.com
+
+  - name: Speed test - SpeedTest.net
+    description: Speed/Latency testing
+    link: https://www.speedtest.net
+
+  - name: Speed test - Fast.com
+    description: Speed/Latency testing
+    link: https://fast.com
+
+  - name: MXToolbox SuperTool
+    description: MX record, DNS, blacklist and SMTP diagnostics
+    link: https://mxtoolbox.com/SuperTool.aspx
+
+reference:
+  - name: Javascript Equality Table
+    description: Reference chart showing result of equality operations
+    link: https://dorey.github.io/JavaScript-Equality-Table/unified/
+
+  - name: HTTP Status Codes
+    description: Database of HTTP Status Codes with their definitions and helpful code references
+    link: https://httpstatuses.com
+
+  - name: dotnet-install scripts reference
+    description: Script to install various versions of the .NET SDK
+    link: https://docs.microsoft.com/en-us/dotnet/core/tools/dotnet-install-script
 
 misc:
   - name: Base64 Guru
@@ -98,10 +149,6 @@ misc:
     description: Sort and Compare JSON
     link: http://jsondiff.com
 
-  - name: Statistics Parser
-    description: SQL Statistics Parser
-    link: http://statisticsparser.com
-
   - name: httpbin.org
     description: Testing HTTP calls/responses
     link: http://httpbin.org
@@ -117,45 +164,3 @@ misc:
   - name: KeyCode.info
     description: Visualizer for JavaScript 'on-key pressed' keycode
     link: https://keycode.info
-
-networking:
-  - name: Speed test - CloudFlare
-    description: Speed/Latency testing
-    link: https://speed.cloudflare.com
-
-  - name: Speed test - SpeedTest.net
-    description: Speed/Latency testing
-    link: https://www.speedtest.net
-
-  - name: Speed test - Fast.com
-    description: Speed/Latency testing
-    link: https://fast.com
-
-  - name: MXToolbox SuperTool
-    description: MX record, DNS, blacklist and SMTP diagnostics
-    link: https://mxtoolbox.com/SuperTool.aspx
-
-reference:
-  - name: Javascript Equality Table
-    description: Reference chart showing result of equality operations
-    link: https://dorey.github.io/JavaScript-Equality-Table/unified/
-
-  - name: HTTP Status Codes
-    description: Database of HTTP Status Codes with their definitions and helpful code references
-    link: https://httpstatuses.com
-
-  - name: SQL Server Updates
-    description: The Most Recent Updates for Microsoft SQL Server
-    link: https://sqlserverupdates.com
-
-  - name: SQLShack - SQL Server wait types
-    description: Database of SQL Server wait types and recommended actions
-    link: https://www.sqlshack.com/sql-server-wait-types
-
-  - name: dotnet-install scripts reference
-    description: Script to install various versions of the .NET SDK
-    link: https://docs.microsoft.com/en-us/dotnet/core/tools/dotnet-install-script
-
-  - name: SQLServerFast Execution Plan Operator List
-    description: List of all known execution plan operator icons, their names, a descripition, and usually a link to a more in-depth breakdown of how it works
-    link: https://sqlserverfast.com/epr/operator-list
