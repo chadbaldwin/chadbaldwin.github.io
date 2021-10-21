@@ -6,7 +6,6 @@ current:
 
   - title: "A Brief History of Time"
     author: Stephen Hawking
-    summary: 
     link: https://amzn.to/3s9xoWm
 
 finished:
@@ -72,72 +71,58 @@ todo:
 
   - title: "The Lean Startup"
     author: Eric Ries
-    summary: 
     link: https://amzn.to/3dmYtRW
 
   - title: "Where Wizards Stay Up Late: The Origins Of The Internet"
     author: Katie Hafner
-    summary: 
     link: https://amzn.to/3pz2Uvg
 
   - title: "The Inventions, Researches, and Writings of Nikola Tesla"
     author: Nikola Tesla
-    summary: 
     link: https://amzn.to/2OPbQAe
 
   - title: "The Annotated Turing"
     author: Charles Petzold
-    summary: 
     link: https://amzn.to/2ZsPFlp
 
   - title: "Naked Statistics"
     author: Charles Wheelan
-    summary: 
     link: https://amzn.to/3awc07M
 
   - title: "Telling Lies"
     author: Paul Ekman
-    summary: 
     link: https://amzn.to/3qzE2F1
 
   - title: "Zen and the Art of Motorcycle Maintenance"
     author: Robert M Pirsig
-    summary: 
     link: https://amzn.to/3puVjhh
 
   - title: "The Amazing Story of Quantum Mechanics"
     author: James Kakalios
-    summary: 
     link: https://amzn.to/3bk60OK
 
   - title: "Half-Life: The Divided Life of Bruno Pontecorvo, Physicist or Spy"
     author: Frank Close
-    summary: 
     link: https://amzn.to/3pABVzw
 
   - title: "The Making of the Atomic Bomb"
     author: Richard Rhodes
-    summary: 
     link: https://amzn.to/3dt9mBI
 
   - title: "\"Surely You’re Joking, Mr. Feynman!\""
     author: Richard P. Feynman
-    summary: 
     link: https://amzn.to/3ucXolC
 
   - title: "The Grand Design"
     author: Stephen Hawking, Leonard Mlodinow
-    summary: 
     link: https://amzn.to/3pw2hCP
 
   - title: "Fortune's Formula"
     author: William Poundstone
-    summary: 
     link: https://amzn.to/37s3QLN
 
   - title: "Introducing NLP"
     author: Joseph O'Connor, John Seymour
-    summary: 
     link: https://amzn.to/2ZrfuSH
 
   - title: "How to Avoid a Climate Disaster"
@@ -147,7 +132,6 @@ todo:
 
   - title: "\"What Do You Care What Other People Think?\""
     author: Richard P. Feynman
-    summary: 
     link: https://amzn.to/37ragLr
 
   - title: "The Pragmatic Programmer (2nd Edition)"
