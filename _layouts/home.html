@@ -33,10 +33,11 @@ layout: default
   {%- endif -%}
 
   {%- if site.personal.size > 0 -%}
+    {%- assign personalPosts = site.personal | sort: date | reverse -%}
     <h2 class="post-list-heading">Latest Personal Posts</h2>
     <ul class="post-list">
       {%- assign post_limit = site.home_post_limit | default: 5 -%}
-      {%- for post in site.personal limit:post_limit -%}
+      {%- for post in personalPosts limit:post_limit -%}
       <li>
         {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
         <span class="post-meta">{{ post.date | date: date_format }}</span>
