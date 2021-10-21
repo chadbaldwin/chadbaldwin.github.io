@@ -29,14 +29,19 @@ Got tired of it and put together a cheatsheet with the most relevant or quirky t
 
 RAISERROR syntax:
 
-[Official Documentation](https://docs.microsoft.com/en-us/sql/t-sql/language-elements/raiserror-transact-sql){:target="_blank"}
-
 ```tsql
 RAISERROR ( { msg_id | msg_str | @local_variable }  
     { ,severity ,state }  
     [ ,argument [ ,...n ] ] )  
     [ WITH option [ ,...n ] ]
 ```
+
+Documentation Links:
+
+* [Official Documentation](https://docs.microsoft.com/en-us/sql/t-sql/language-elements/raiserror-transact-sql){:target="_blank"}
+* [Database Engine Error Severities](https://docs.microsoft.com/en-us/sql/relational-databases/errors-events/database-engine-error-severities){:target="_blank"} - Explains what each of the severities mean and how they should be used depending on the context of the error
+* [Database engine errors](https://docs.microsoft.com/en-us/sql/relational-databases/errors-events/database-engine-events-and-errors){:target="_blank"} - List of all database engine errors by error number. Warning - this page will take a while to load, it's huge
+
 
 Most common usages (log a message, but don't throw an error):
 
