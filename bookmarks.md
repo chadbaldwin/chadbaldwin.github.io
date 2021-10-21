@@ -19,5 +19,5 @@ If you have any suggestions to add, or a better way to organize this page, feel 
 {% endfor %}
 
 {% if site.comments_repo %}
-  {% include comments.html element=".post-content" require_cookie_consent="false" %}
+  {% include comments.html %}
 {% endif %}

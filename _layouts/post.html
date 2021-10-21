@@ -30,16 +30,9 @@ layout: default
   <a class="u-url" href="{{ page.url | relative_url }}" hidden></a>
 </article>
 
-<div class="no-print">
-<script src="https://utteranc.es/client.js"
-        repo="chadbaldwin/chadbaldwin.github.io"
-        issue-term="og:title"
-        label="Comments"
-        theme="preferred-color-scheme"
-        crossorigin="anonymous"
-        async>
-</script>
-</div>
+{% if site.comments_repo %}
+  {% include comments.html %}
+{% endif %}
 
 <script type="text/javascript" src="/js/gifffer.min.js"></script>
 <script>window.onload = function() { Gifffer(); }</script>
