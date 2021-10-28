@@ -7,7 +7,7 @@ tags: T-SQL-Tuesday
 image: /img/companylogos/T-SQL-Tuesday-banner.png
 ---
 
-[![T-SQL Tuesday Logo](/img/companylogos/T-SQL-Tuesday-logo.png){:alt="drawing" style="width:200px; float:right;"}](https://johnmccormack.it/2021/10/t-sql-tuesday-143-short-code-examples/){:target="_blank"}
+[![T-SQL Tuesday Logo](/img/companylogos/T-SQL-Tuesday-logo.png){: style="width:200px; float:right;"}](https://johnmccormack.it/2021/10/t-sql-tuesday-143-short-code-examples/){:target="_blank"}
 For the October [T-SQL Tuesday](http://tsqltuesday.com/){:target="_blank"} invitation, [John McCormack](https://johnmccormack.it/){:target="_blank"} is inviting others to share some of their favorite short code examples. These could be SSMS/SQL Prompt snippets, one liners, keyboard query shortcuts or snippets you've committed to memory. It doesn't have to be T-SQL, it could be Python, PowerShell, or anything else you use on a daily basis.
 
 I'm excited that this will be my first time participating in a T-SQL Tuesday topic!
