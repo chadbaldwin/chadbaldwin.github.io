@@ -6,6 +6,24 @@ date: 2021-11-01T07:00:00-07:00
 tags: PowerShell
 ---
 
+----
+
+#### Update
+
+Since posting this I've had a few people respond with some great suggestions, such as:
+
+* [Posh-SSH PowerShell Module](https://github.com/darkoperator/Posh-SSH){:target="_blank"}
+* [Transferetto PowerShell Module](https://github.com/EvotecIT/Transferetto){:target="_blank"}
+* Using the `System.Net.FtpWebRequest` .NET class for working with FTPS in PowerShell
+
+I'll definitely be checking these out to learn more about them and see how they compare to using the WinSCP module.
+
+Thanks for all the suggestions and responses I've received to this post! This is how I improve my own skills by learning from you, and hopefully you learn a thing or two from me.
+
+----
+
+## Back to the post
+
 > Disclaimer: While WinSCP does support FTPS, I will be focusing on SFTP in the examples since that's what I had at hand to test with. If you don't know the differences between FTP, SFTP or FTPS, there are plenty of resources online that cover it. The main thing to know is that SFTP/FTPS are secure alternatives to using plain FTP and the info I provide here, can easily be adjusted to work for FTPS.
 
 For the impatient ones: [TL;DR](#tldr)
