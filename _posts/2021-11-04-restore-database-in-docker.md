@@ -10,6 +10,9 @@ If you google "restore sql database in docker", you'll probably find 20 other bl
 
 This is more of a personal note for future Chad to come back to.
 
+Everything below is bascially a summarized version of the official docs, with small tweaks here and there:
+<https://docs.microsoft.com/en-us/sql/linux/tutorial-restore-backup-in-sql-server-container>
+
 ----
 
 Yesterday, I was watching a Pluralsight course which provided a database `.bak` file to follow along with the examples. I generally like to use Docker when working with SQL Server locally...but as a somewhat novice user, I have found it to be a bit of a pain if you need to deal with restoring or attaching a database.
