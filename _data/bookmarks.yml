@@ -164,3 +164,7 @@ misc:
   - name: KeyCode.info
     description: Visualizer for JavaScript 'on-key pressed' keycode
     link: https://keycode.info
+
+  - name: ExtendsClass.com
+    description: Fiddlers, API tools, Converters, Formatters
+    link: https://extendsclass.com
