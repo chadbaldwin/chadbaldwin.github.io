@@ -90,6 +90,10 @@ diagramming:
     description: Draw ascii art style diagrams and flowcharts
     link: https://asciiflow.com
 
+  - name: dbdiagram.io
+    description: A free, simple tool to draw Entity-Relationship diagrams by just writing code
+    link: https://dbdiagram.io/
+
 networking:
   - name: Speed test - CloudFlare
     description: Speed/Latency testing
