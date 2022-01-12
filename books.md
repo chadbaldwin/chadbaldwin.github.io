@@ -29,34 +29,44 @@ description: Book reviews and recommendations, reading goal tracker
 In order to try and enforce a habit of reading daily, I'm making this a public page on my blog. With a full year calendar to indicate the days I've read. Similar to the ["Every Day Calendar" by Simone Giertz](https://www.simonegiertz.com/every-day-calendar)...but I can't afford one, and this site is free.
 
 ## Current book:
-
-{% for book in site.data.books.current %}
+{% assign currentBooks = site.data.books | where: "isCurrent", true %}
+{% for book in currentBooks %}
 * [*{{ book.title }}*{% if book.author %} by {{ book.author }}{% endif %}]({{ book.link }})
 {% if book.summary %}  * {{ book.summary }}{% endif %}
 {% endfor %}
 
+<!--
+    What a mess...Jekyll does not handle dates very well. So I had to come up with this hack.
+    I created a .yml file with just start and "nextStart" dates. For some reason, Jekyll does
+    not have a way to convert a string to a date type, only the other way around. So I got around
+    that using the .yml data file.
+
+    Then I look up the date record corresponding to the current year and use those for filtering.
+-->
+{% assign currentYear = "now" | date: "%Y" | to_integer %}
+{% assign currentYearRecord = site.data.dates | where_exp: "item", "item.year == currentYear" %}
+{% assign recentBooks = site.data.books
+        | where_exp: "item", "item.completeDate >= currentYearRecord[0].start"
+        | where_exp: "item", "item.completeDate < currentYearRecord[0].nextStart"
+        | sort: "completeDate" | reverse
+        | group_by_exp: "item", "item.completeDate | date: '%B'"
+%}
+{% if recentBooks.size > 0 %}
 ## Recently finished books:
 
-{% for month in site.data.books.recentFinished %}
-### {{ month[0] | capitalize }}:
-{% for book in month[1] %}
+{% for month in recentBooks %}
+### {{ month.name | capitalize }}:
+{% for book in month.items %}
 * [*{{ book.title }}*{% if book.author %} by {{ book.author }}{% endif %}]({{ book.link }})
 {% if book.rating %}  * My rating: {{ book.rating }}{% endif %}
 {% if book.summary %}  * Summary: {{ book.summary }}{% endif %}
 {% endfor %}
 {% endfor %}
-
-## Todo List:
-
-{% assign todoSorted = site.data.books.todo | sort: "title" %}
-{% for book in todoSorted %}
-* [*{{ book.title }}*{% if book.author %} by {{ book.author }}{% endif %}]({{ book.link }})
-{% if book.summary %}  * {{ book.summary }}{% endif %}
-{% endfor %}
+{% endif %}
 
 ----
 
-## 2022
+## 2022 Reading
 
 X = minimum 1 hour of reading
 
@@ -94,10 +104,28 @@ X = minimum 1 hour of reading
 |  30  |      |  -   |      |      |      |      |      |      |      |      |      |      |
 |  31  |      |  -   |      |  -   |      |  -   |      |      |  -   |      |  -   |      |
 
+----
+
 ## Past reviews and recommendations:
 
-{% for book in site.data.books.finished %}
+{% assign pastBooks = site.data.books
+        | where_exp: "item", "item.completeDate < currentYearRecord[0].start"
+        | sort: "title"
+%}
+{% for book in pastBooks %}
 * [*{{ book.title }}*{% if book.author %} by {{ book.author }}{% endif %}]({{ book.link }})
 {% if book.rating %}  * My rating: {{ book.rating }}{% endif %}
 {% if book.summary %}  * Summary: {{ book.summary }}{% endif %}
+{% endfor %}
+
+## Todo List:
+
+{% assign todoSorted = site.data.books
+        | where_exp: "item", "item.isCurrent != true"
+        | where_exp: "item", "item.completeDate == nil"
+        | sort: "title"
+%}
+{% for book in todoSorted %}
+* [*{{ book.title }}*{% if book.author %} by {{ book.author }}{% endif %}]({{ book.link }})
+{% if book.summary %}  * {{ book.summary }}{% endif %}
 {% endfor %}
