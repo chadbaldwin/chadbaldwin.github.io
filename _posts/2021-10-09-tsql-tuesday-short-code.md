@@ -176,7 +176,7 @@ $string.Substring($string.Length - [System.Math]::Min($n, $string.Length))
 * The two filters use regex strings to perform the matching
 
 ```powershell
-cat .\<filename>.log | ? { $_ -match '(error|warning)' } | ? { $_ -notmatch '(debug)' }
+gc .\<filename>.log -Wait | ? { $_ -match '(error|warning)' } | ? { $_ -notmatch '(debug)' }
 ```
 
 #### Pseudo sudo
