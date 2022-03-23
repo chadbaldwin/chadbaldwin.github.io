@@ -1,4 +1,4 @@
-{% for token in site.google_analytics %}
+{% for token in site.google_analytics -%}
   <script async src="https://www.googletagmanager.com/gtag/js?id={{ token }}"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -7,4 +7,4 @@
 
     gtag('config', '{{ token }}');
   </script>
-{% endfor %}
+{%- endfor %}
