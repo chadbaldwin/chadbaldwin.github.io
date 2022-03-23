@@ -6,16 +6,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <!-- Begin SEO -->
-  {%- seo -%}
+  {% seo %}
   <!-- End SEO -->
 
   <link rel="stylesheet" href="{{ "/assets/main.css" | relative_url }}">
   <link rel="stylesheet" type="text/css" href="/css/override.css">
 
-  {%- feed_meta -%}
-  {%- if jekyll.environment == 'production' and site.google_analytics -%}
-    {%- include google-analytics.html -%}
-  {%- endif -%}
+  {% feed_meta %}
+
+  {% if jekyll.environment == 'production' and site.google_analytics %}
+    {% include google-analytics.html %}
+  {% endif %}
 
   <!-- highlight.js support -->
   <link rel="stylesheet" href="/js/highlightjs/styles/github.css">
@@ -32,7 +33,7 @@
   <script type="text/javascript"> hljs.highlightAll(); </script>
   <!-- end highlight.js support -->
 
-  {%- if jekyll.environment == 'production' -%}
+  {% if jekyll.environment == 'production' %}
   <!-- dark theme using DarkReader -->
   <script src="//unpkg.com/darkreader@4.9.40/darkreader.js"></script>
   <script type="text/javascript">
@@ -40,7 +41,7 @@
     //DarkReader.enable();
     DarkReader.auto( {brightness: 100, contrast: 90, sepia: 10} );
   </script>
-  {%- endif -%}
+  {% endif %}
 
   <!-- mathjax support
   <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
