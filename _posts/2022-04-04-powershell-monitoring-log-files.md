@@ -299,7 +299,7 @@ Unfortunately, there's only 16 colors defined in the [`[ConsoleColor]` .NET enum
 gci -Path '*\log\*' -Recurse -Filter '*2022-04-03.log' |
     % -Parallel {
         $file = $_;
-        $color = Get-Random -Min 1 -Max 15;
+        $color = 1..15 | Get-Random;
         gc -Wait -Tail 0 -Path $file |
             % {
                 Write-Host "$($file.Name): ${_}" -ForegroundColor $color;
