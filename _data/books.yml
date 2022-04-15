@@ -6,6 +6,16 @@
 #   isCurrent: bool - indicating currently reading
 #   completeDate: date of completion
 
+- title: The Unicorn Project
+  author: Gene Kim
+  summary: With The Phoenix Project we learned about the Three Ways. Now with The Unicorn Project, Gene Kim introduces the Five Ideals. This highly anticipated follow-up to the bestselling title The Phoenix Project takes another look at Parts Unlimited, this time from the perspective of software development
+  link: https://amzn.to/3xLNFqX
+
+- title: The Phoenix Project
+  author: Gene Kim
+  summary: The Phoenix Project is a best-selling business book that's told in narrative form. The book's characters reveal through their actions why it's so important for organizations to put security first and tear down the silos that have traditionally existed between development and operations teams.
+  link: https://amzn.to/3Ei4Dye
+
 - title: "T-SQL Querying"
   author: Itzik Ben-Gan, Adam Machanic, Dejan Sarka, Kevin Farlee
   summary: From what I can tell, it's basically an extended version of T-SQL Fundamentals, which was already an incredible book. Can't wait to get to this one.
@@ -161,3 +171,4 @@
   author: Itzik Ben-Gan
   summary: I read the first edition of this book, but since then, it is 100 pages longer, and has an extra chapter, so would be good to re-read this to fill the gaps from the previous edition
   link: https://amzn.to/3sxF7yv
+ 
