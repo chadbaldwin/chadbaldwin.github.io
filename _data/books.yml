@@ -15,12 +15,12 @@
   author: Gene Kim
   summary: The Phoenix Project is a best-selling business book that's told in narrative form. The book's characters reveal through their actions why it's so important for organizations to put security first and tear down the silos that have traditionally existed between development and operations teams.
   link: https://amzn.to/3Ei4Dye
+  isCurrent: true
 
 - title: "T-SQL Querying"
   author: Itzik Ben-Gan, Adam Machanic, Dejan Sarka, Kevin Farlee
   summary: From what I can tell, it's basically an extended version of T-SQL Fundamentals, which was already an incredible book. Can't wait to get to this one.
   link: https://amzn.to/39BLMzk
-  isCurrent: true
 
 - title: "A Brief History of Time"
   author: Stephen Hawking
