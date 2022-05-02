@@ -5,7 +5,7 @@ author: Chad Baldwin
 email: blog@chadbaldwin.net
 url: https://chadbaldwin.net
 
-timezone: UTC # GitHub uses UTC. This is to force dev environment to match
+timezone: Etc/UTC # GitHub uses UTC. This is to force dev environment to match
 future: false # GitHub Pages will publish future posts if this isn't set to false
 
 description: >
@@ -89,7 +89,8 @@ defaults:
       path: ""
       type: posts
     values:
-      tags: Other # Add a default tag to all posts
+      tags:
+        - Other # Add a default tag to all posts
 
 # Disable highlighting to use highlightJS instead
 # highlighter: none # Not supported by GitHub Pages
