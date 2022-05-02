@@ -72,7 +72,7 @@ In order to try and enforce a habit of reading daily, I'm making this a public p
 
 | ###  | Jan  | Feb  | Mar  | Apr  | May  | Jun  | Jul  | Aug  | Sep  | Oct  | Nov  | Dec  |
 | :--: | :--: | :--: | :--: | :--: | :--: | :--: | :--: | :--: | :--: | :--: | :--: | :--: |
-|  1   |  ❌  |  ❌  |  ❌  |      |      |      |      |      |      |      |      |      |
+|  1   |  ❌  |  ❌  |  ❌  |  ✔  |      |      |      |      |      |      |      |      |
 |  2   |  ❌  |  ❌  |  ❌  |      |      |      |      |      |      |      |      |      |
 |  3   |  ❌  |  ❌  |  ❌  |      |      |      |      |      |      |      |      |      |
 |  4   |  ❌  |  ❌  |  ❌  |      |      |      |      |      |      |      |      |      |
