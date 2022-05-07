@@ -68,8 +68,6 @@ In order to try and enforce a habit of reading daily, I'm making this a public p
 
 ## 2022 Reading
 
-✅ = minimum 1 hour of reading
-
 | ###  | Jan  | Feb  | Mar  | Apr  | May  | Jun  | Jul  | Aug  | Sep  | Oct  | Nov  | Dec  |
 | :--: | :--: | :--: | :--: | :--: | :--: | :--: | :--: | :--: | :--: | :--: | :--: | :--: |
 |  1   |  ❌  |  ❌  |  ❌  |  ✅  |      |      |      |      |      |      |      |      |
