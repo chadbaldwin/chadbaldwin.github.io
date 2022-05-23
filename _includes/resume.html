@@ -8,9 +8,15 @@
       var daysDiff = (new Date(end).getTime() -  new Date(start).getTime()) / 86400000 //ms in a day;
 
       var years = Math.floor(daysDiff / 365.25);
-      var months = Math.round(daysDiff % 365.25 / 30.4375);
+      var months = Math.ceil(daysDiff % 365.25 / 30.4375);
+      if (months == 12) { months = 0; years++; }
 
-      document.write(`${years} yrs ${months} mos`);
+      var returnText = "";
+      if (years > 0) { returnText += `${years} yrs ` }
+      if (months > 0) { returnText += `${months} mos ` }
+      returnText = returnText.trim();
+
+      document.write(returnText);
   }
 
   // Remove the bottom-bar when X is clicked
@@ -86,6 +92,7 @@
 {%- if resume.sections.skills -%}
   <section class="content-section">
     <header class="section-header"><h2>Skills</h2></header>
+    <div class="section-content">
     {%- for skill in site.data.skills -%}
       <div class="resume-item">
         <h4 class="resume-item-details">{{ skill.skill }}</h4>
@@ -106,12 +113,14 @@
         </div>
       </div>
     {%- endfor -%}
+    </div>
   </section>
 {%- endif -%}
 
 {%- if resume.sections.experience -%}
   <section class="content-section">
     <header class="section-header"><h2>Experience</h2></header>
+    <div class="section-content">
     {%- for job in site.data.experience -%}
       {%- assign positions = job.positions | sort_natural: "startdate" | reverse -%}
 
@@ -127,12 +136,16 @@
         <img src="{{ job.logo }}" class="company-logo">
 
         <h3 class="resume-item-title company-name" itemprop="name" >
-          {%- if job.url -%}<a href="{{ job.url }}" itemprop="url">{{ job.company }}</a>{%- else -%}{{ job.company }}{%- endif -%}
+          {%- if job.url -%}<a href="{{ job.url }}" itemprop="url" target="_blank">{{ job.company }}</a>{%- else -%}{{ job.company }}{%- endif -%}
         </h3>
 
         {%- if positions.size > 1 -%}
           <div class="company-duration">
-            {{ jobfirstpos.startdate | date: "%b, %Y" }} &ndash; {{ joblastpos.enddate | date: "%b, %Y" | default: "Present" }} &bull; <script>JobDateDiff("{{ jobStartDate }}","{{ jobEndDate }}")</script></span>
+            <span>{{ jobfirstpos.startdate | date: "%b, %Y" }}</span>
+            <span> &ndash; </span>
+            <span>{{ joblastpos.enddate | date: "%b, %Y" | default: "Present" }}</span>
+            <span> &bull; </span>
+            <span><script>JobDateDiff("{{ jobStartDate }}","{{ jobEndDate }}")</script></span>
           </div>
         {%- endif -%}
 
@@ -170,12 +183,14 @@
         {%- endfor -%}
       </div>
     {%- endfor -%}
+    </div>
   </section>
 {%- endif -%}
 
 {%- if resume.sections.recognition -%}
   <section class="content-section">
     <header class="section-header"><h2>Recognition</h2></header>
+    <div class="section-content">
     {%- for recognition in site.data.recognitions -%}
       <div class="resume-item">
         <h3 class="resume-item-title" itemprop="award">{{ recognition.award }}</h3>
@@ -183,12 +198,14 @@
         <div class="resume-item-copy">{{ recognition.summary }}</div>
       </div>
     {%- endfor -%}
+    </div>
   </section>
 {%- endif -%}
 
 {%- if resume.sections.education -%}
   <section class="content-section">
     <header class="section-header"><h2>Education</h2></header>
+    <div class="section-content">
     {%- for education in site.data.education -%}
       <div class="resume-item" itemscope itemprop="alumniOf" itemtype="http://schema.org/CollegeOrUniversity">
         <h3 class="resume-item-title" itemprop="name">{{ education.uni }}</h3>
@@ -204,12 +221,14 @@
         <div class="resume-item-copy" itemprop="description">{{ education.summary }}</div>
       </div>
     {%- endfor -%}
+    </div>
   </section>
 {%- endif -%}
 
 {%- if resume.sections.projects -%}
   <section class="content-section">
     <header class="section-header"><h2>Personal Projects</h2></header>
+    <div class="section-content">
     {%- for project in site.data.projects -%}
       <div class="resume-item" itemscope itemtype="http://schema.org/CreativeWork">
         <meta itemprop="creator" content="{{ site.author }}" itemtype="http://schema.org/Person" />
@@ -218,12 +237,14 @@
         <div class="resume-item-copy">{{ project.description }}</div>
       </div>
     {%- endfor -%}
+    </div>
   </section>
 {%- endif -%}
 
 {%- if resume.sections.associations -%}
   <section class="content-section">
     <header class="section-header"><h2>Associations</h2></header>
+    <div class="section-content">
     {%- for association in site.data.associations -%}
       <div class="resume-item" itemscope itemprop="memberOf" itemtype="http://schema.org/Organization">
         <h3 class="resume-item-title" itemprop="name">{%- if association.url -%}<a href="{{ association.url }}">{{ association.organization }}</a>{%- else -%}{{ association.organization }}{%- endif -%}</h3>
@@ -231,14 +252,17 @@
         <div class="resume-item-copy">{{ association.summary }}</div>
       </div>
     {%- endfor -%}
+    </div>
   </section>
 {%- endif -%}
 
 {%- if resume.sections.interests -%}
   <section class="content-section">
     <header class="section-header"><h2>Outside Interests</h2></header>
-    <div class="resume-item">
-      <div class="resume-item-copy">{{ site.data.interests.description }}</div>
+    <div class="section-content">
+      <div class="resume-item">
+        <div class="resume-item-copy">{{ site.data.interests.description }}</div>
+      </div>
     </div>
   </section>
 {%- endif -%}
@@ -246,10 +270,12 @@
 {%- if resume.sections.links -%}
   <section class="content-section">
     <header class="section-header"><h2>Additional Links</h2></header>
-    <div class="resume-item">
-      <ul class="resume-item-list">
-        {%- for item in site.data.links -%}<li><strong>{{ item.name }}</strong>: <a href="{{ item.url }}" target="_blank">{{ item.label }}</a></li>{%- endfor -%}
-      </ul>
+    <div class="section-content">
+      <div class="resume-item">
+        <ul class="resume-item-list">
+          {%- for item in site.data.links -%}<li><strong>{{ item.name }}</strong>: <a href="{{ item.url }}" target="_blank">{{ item.label }}</a></li>{%- endfor -%}
+        </ul>
+      </div>
     </div>
   </section>
 {%- endif -%}
@@ -257,12 +283,14 @@
 {%- if resume.sections.social_links -%}
   <section class="content-section">
     <header class="section-header"><h2>Social Links</h2></header>
-    <div class="resume-item">
-      {%- if resume.social -%}
-        <ul class="resume-item-list">
-          {%- for item in resume.social -%}<li><strong>{{ item[0] }}</strong>: <a href="{{ item[1] }}" target="_blank">{{ item[1] }}</a></li>{%- endfor -%}
-        </ul>
-      {%- endif -%}
+    <div class="section-content">
+      <div class="resume-item">
+        {%- if resume.social -%}
+          <ul class="resume-item-list">
+            {%- for item in resume.social -%}<li><strong>{{ item[0] }}</strong>: <a href="{{ item[1] }}" target="_blank">{{ item[1] }}</a></li>{%- endfor -%}
+          </ul>
+        {%- endif -%}
+      </div>
     </div>
   </section>
 {%- endif -%}
