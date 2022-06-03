@@ -7,7 +7,7 @@ tags: T-SQL
 image: img/postbanners/2022-06-02-whats-new-in-sql-server-2022.png
 ---
 
-I've been exicted to play around with some of the new features and language enhancements that are available in SQL Server 2022 so I've been keeping an eye on the Microsoft Docker repository for a new 2022 image. Well, they finally added it to Docker Hub! I immediately pulled the image and started playing with it.
+I've been exicted to play with the new features and language enhancements in SQL Server 2022 so I've been keeping an eye on the Microsoft Docker repository for the 2022 image. Well they finally added it! I immediately pulled the image and started playing with it.
 
 I want to focus on the language enhancements as those are the easiest to demonstrate, and I feel that's what you'll be able to take advantage of the quickest after upgrading.
 
@@ -24,7 +24,7 @@ Table of contents:
 
 ## Docker Tag
 
-I won't go into the details of how to set up or use Docker. But you should definitely set aside some time to learn it. You can copy paste the command supplied by Microsoft on [their Docker Hub page for SQL Server](https://hub.docker.com/_/microsoft-mssql-server){:target="_blank"}, but this is the one I prefer to use:
+I won't go into the details of how to set up or use Docker, but you should definitely set aside some time to learn it. You can copy paste the command supplied by Microsoft [on their Docker Hub page for SQL Server](https://hub.docker.com/_/microsoft-mssql-server){:target="_blank"}, but this is the one I prefer to use:
 
 ```powershell
 docker run -it `
@@ -36,7 +36,7 @@ docker run -it `
     mcr.microsoft.com/mssql/server:2022-latest;
 ```
 
-This sets it up to always use the same name of "sqlserver" for the container, it keeps it in interactive mode so you can watch for system errors, and it starts it up with SQL Agent running. Also, this will automatically download and run the SQL Server image if you don't already have it.
+This sets it up to always use the same name of "sqlserver" for the container, this keeps you from creating multiple SQL server containers. It keeps it in interactive mode so you can watch for system errors, and it starts it up with SQL Agent running. Also, this will automatically download and run the SQL Server image if you don't already have it.
 
 You won't need to worry about loading up any specific databases for this blog post, but if that's something you'd like to learn how to do, [I've blogged about it here]({% post_url 2021-11-04-restore-database-in-docker %}){:target="_blank"}.
 
@@ -46,17 +46,17 @@ You won't need to worry about loading up any specific databases for this blog po
 
 [Microsoft Documentation](https://docs.microsoft.com/en-us/sql/t-sql/functions/date-bucket-transact-sql){:target="_blank"}
 
-The reason I want to cover this function first is so we can use it to help us with building sample data for the rest of this post.
+I want to cover this function first so we can use it to help us with building sample data for the rest of this post.
 
 Generating a series of incrementing (or decrementing) values is extremely useful. If you've never used a "tally table" or a "numbers table" plenty of other SQL bloggers have covered it and I highly recommend looking up their posts.
 
 A few uses for tally tables:
 
-* They can often be the solution that avoids reverting to what Jeff Moden likes to call "RBAR"...Row-By-Agonizing-Row. Tally tables can help you perform iterative / incremental tasks without having to build any looping mechanisms. In fact, one of the fastest solutions for splitting strings (prior to `STRING_SPLIT()`) is using a tally table method; And up until recently (we'll cover that later), it was still one of the best methods even despite `STRING_SPLIT()` being available.
+* Can often be the solution that avoids reverting to what Jeff Moden likes to call "RBAR"...Row-By-Agonizing-Row. Tally tables can help you perform iterative / incremental tasks without having to build any looping mechanisms. In fact, one of the fastest solutions for splitting strings (prior to `STRING_SPLIT()`) is using a tally table. Up until recently (we'll cover that later), that tally table string split function was still one of the best methods even despite `STRING_SPLIT()` being available.
 
-* They can help you with reporting, such as building a list of dates so that you don't have gaps in your aggregated report that is grouped by day or month. If you group sales by month, but a particular month had no sales you can use the tally table to fill the gaps with "0" sales.
+* Can help you with reporting, such as building a list of dates so that you don't have gaps in your aggregated report that is grouped by day or month. If you group sales by month, but a particular month had no sales you can use the tally table to fill the gaps with "0" sales.
 
-* They're great for helping you generate sample data.
+* They're great for helping you generate sample data as you'll see throughout this post.
 
 Prior to this new function, the best way I've seen to generate a tally table is using the CTE method, like so:
 
@@ -76,14 +76,19 @@ Another method I personally figured out while trying to work on a code golf prob
 
 ```tsql
 DECLARE @x xml = REPLICATE(CONVERT(varchar(MAX),'<n/>'), 999); --Table size
-WITH c(rn) AS (SELECT 0 UNION ALL SELECT ROW_NUMBER() OVER (ORDER BY (SELECT 1)) FROM @x.nodes('n') x(n))
+WITH c(rn) AS (
+    SELECT 0 
+    UNION ALL
+    SELECT ROW_NUMBER() OVER (ORDER BY (SELECT 1))
+    FROM @x.nodes('n') x(n)
+)
 SELECT c.rn
 FROM c;
 ```
 
 This method is more for fun, and I typically wouldn't use this in a production environment. I'm sure it's plenty stable, I just prefer the CTE method more. This method also returns 1000 records (0 - 999).
 
-Now, in comes the new `GENERATE_SERIES()` function. This function is great, you specify where it starts, where it ends and what to increment by. Though, this is certainly not a direct drop in replacement for the options above and I'll show you why.
+Now, in comes the `GENERATE_SERIES()` function. You specify where it starts, where it ends and what to increment by (optional). Though, this is certainly not a direct drop in replacement for the options above and I'll show you why.
 
 ```tsql
 SELECT [value]
@@ -96,16 +101,18 @@ I think it's great that you can customize it to increment, decrement, change the
 
 ```tsql
 -- List of dates going back every 30 days for 180 days
-SELECT CONVERT(date, DATEADD(DAY, [value], '2022-06-01'))
+SELECT DateValue = CONVERT(date, DATEADD(DAY, [value], '2022-06-01'))
 FROM GENERATE_SERIES(START = -30, STOP = -180, STEP = -30);
 
 /*
-2022-05-02
-2022-04-02
-2022-03-03
-2022-02-01
-2022-01-02
-2021-12-03
+| DateValue  |
+|------------|
+| 2022-05-02 |
+| 2022-04-02 |
+| 2022-03-03 |
+| 2022-02-01 |
+| 2022-01-02 |
+| 2021-12-03 |
 */
 ```
 
@@ -123,9 +130,9 @@ Generating 1,000,001 rows from 0 to 1,000,000:
 | XML                 |    775        |    784            |
 | `GENERATE_SERIES()` | 47,801        | 44,371            |
 
-Unless there's something wrong with my docker image...this doesn't yet seem ready for prime time. I could definitely see this being used in utility scripts, sample scripts (like this blog post), reporting procs, etc. Where you only need to generate a small set of records...but if you need to generate a large set of records...you're best sticking with the CTE method for now.
+Unless there's something wrong with my docker image...this doesn't seem ready for prime time. I could see this being used in utility scripts, sample scripts (like this blog post), reporting procs, etc. Where you only need to generate a small set of records, but if you need to generate a large set of records often, it seems you're best sticking with the CTE method for now.
 
-I could possibly see this being useful when used inline where you need to generate a different set of records for each row (e.g. in an `APPLY` operator). However, even then...seeing how slow this is, you might be better off just building your own table valued function using the CTE method 🤷‍♂️. So while it may be shorter and much easier to use...I'm just not sure if the performance trade-off is worth it. Hopefully it's just my machine.
+I could possibly see this being useful when used inline where you need to generate a different number of records for each row (e.g. in an `APPLY` operator). However, even then, seeing how slow this is, you might be better off building your own TVF using the CTE method 🤷‍♂️. So while it may be shorter and much easier to use, I'm not sure if the performance trade-off is worth it. Hopefully it's just my machine?
 
 Now that we've got this one out of the way, we can use it to help us with generating sample data for the rest of this post.
 
@@ -140,11 +147,11 @@ Microsoft Documentation:
 
 These are not exactly new. They have made their way around the blogging community for a while after they were discovered as undocumented functions in Azure SQL Database, but they're still worth demonstrating since they are part of the official 2022 release changes.
 
-I'm sure all of you know how to use `MIN()` and `MAX()`. These are aggregate functions that run against a grouping, or a window. Their usage is fairly straight forward. If you want to find the highest or lowest value for a single column, you would use one of those.
+I'm sure all of you know how to use `MIN()` and `MAX()`. These are aggregate functions that run against a grouping, or a window. Their usage is fairly straight forward. If you want to find the highest or lowest value for a single column in a `GROUP BY` or a window function, you would use one of those.
 
-But what if you want to get the highest or lowest value from multiple columns within a row? For example, maybe you have `LastModifiedDate`, `LastAccessDate` and `LastErrorDate` columns and you want the most recent date in order to determine the last interaction with that item?
+But what if you want to get the highest or lowest value from multiple columns _within_ a row? For example, maybe you have `LastModifiedDate`, `LastAccessDate` and `LastErrorDate` columns and you want the most recent date in order to determine the last interaction with that item?
 
-Previously, you'd need to use a case statement or a table value constructor...
+Previously, you'd need to use a case statement or a table value constructor.
 
 It would look something like this:
 
@@ -163,7 +170,7 @@ INSERT INTO #event (LastModifiedDate, LastAccessDate, LastErrorDate)
 SELECT DATEADD(SECOND, -(RAND(CHECKSUM(NEWID())) * 200000000), GETDATE())
     ,  DATEADD(SECOND, -(RAND(CHECKSUM(NEWID())) * 200000000), GETDATE())
     ,  DATEADD(SECOND, -(RAND(CHECKSUM(NEWID())) * 200000000), GETDATE())
-FROM GENERATE_SERIES(START = 1, STOP = 5, STEP = 1);
+FROM GENERATE_SERIES(START = 1, STOP = 5); -- See...nifty, right?
 ```
 
 ```tsql
@@ -187,7 +194,7 @@ Results:
 
 ![Result set showing the usage of greatest and least functions](/img/sqlserver2022/20220601_181117.png)
 
-Of course this also comes with a caveat. These new functions are great if all you want to do is find the highest or lowest value...but if you want to use any other aggregate function, like `AVG()` or `SUM()`...unfortunately, you'd still need to use the old method.
+Of course this also comes with a caveat. These new functions are great if all you want to do is find the highest or lowest value...but if you want to use any other aggregate function, like `AVG()` or `SUM()`...unfortunately you'd still need to use the old method.
 
 ----
 
@@ -195,21 +202,22 @@ Of course this also comes with a caveat. These new functions are great if all yo
 
 [Microsoft Documentation](https://docs.microsoft.com/en-us/sql/t-sql/functions/string-split-transact-sql){:target="_blank"}
 
-This is not a new function, however, after (I'm sure) many requests...it has been enhanced. Most people probably don't know, or maybe just haven't bothered to care, but up until now, you should never rely on the order that `STRING_SPLIT()` returns its results. They are not considered to be returned in any particular order, and that is still the case.
+This is also not a new function, however, after (I'm sure) many requests...it has been enhanced. Most people probably don't know, or maybe just haven't bothered to care, but up until now, you should never rely on the order that `STRING_SPLIT()` returns its results. They are not considered to be returned in any particular order, and that is still the case.
 
-However, they have now added an additional (and optional) "ordinal" column that you can turn on using an optional setting.
+However, they have now added an additional "ordinal" column that you can turn on using an optional setting.
 
 Before, you would often seen people use `STRING_SPLIT()` like this:
 
 ```tsql
-SELECT [Value], ordinal
+SELECT [value], ordinal
 FROM (
-    SELECT [Value], ordinal = ROW_NUMBER() OVER (ORDER BY (SELECT NULL))
+    SELECT [value]
+        , ordinal = ROW_NUMBER() OVER (ORDER BY (SELECT NULL))
     FROM STRING_SPLIT('one fish,two fish,red fish,blue fish', ',')
-) x
+) x;
 
 /*
-| Value     | ordinal |
+| value     | ordinal |
 |-----------|---------|
 | one fish  | 1       |
 | two fish  | 2       |
@@ -218,16 +226,16 @@ FROM (
 */
 ```
 
-And while you more than likely will get the right numbers associated with the correct position of the item...you really shouldn't do this because it's undocumented behavior. At any time, Microsoft could change how this function works (perhaps for optimization purposes or something), and now all of a sudden that production code you wrote relying on its order is messing up.
+And while you more than likely will get the right numbers associated with the correct position of the item...you really shouldn't do this because it's undocumented behavior. At any time, Microsoft could change how this function works internally, and now all of a sudden that production code you wrote relying on its order is messing up.
 
-But now with SQL Server 2022 we have an optional parameter added to the function. You can enable an "ordinal" column to be included in the output. The value of the column indicates the order in which the item occurs in the string.
+But now you can enable an "ordinal" column to be included in the output. The value of the column indicates the order in which the item occurs in the string.
 
 ```tsql
-SELECT [Value], ordinal
-FROM STRING_SPLIT('one fish,two fish,red fish,blue fish', ',', 1)
+SELECT [value], ordinal
+FROM STRING_SPLIT('one fish,two fish,red fish,blue fish', ',', 1);
 
 /*
-| Value     | ordinal |
+| value     | ordinal |
 |-----------|---------|
 | one fish  | 1       |
 | two fish  | 2       |
@@ -242,7 +250,7 @@ FROM STRING_SPLIT('one fish,two fish,red fish,blue fish', ',', 1)
 
 [Microsoft Documentation](https://docs.microsoft.com/en-us/sql/t-sql/functions/date-bucket-transact-sql){:target="_blank"}
 
-Now this is a cool new function that I'm looking forward to testing out. Basically, this function is able to give you the beginning of a date range based on the increment you provide it. For example "what's the first day of the month for this date".
+Now this is a cool new function that I'm looking forward to testing out. It's able to give you the beginning of a date range based on the interval you provide it. For example "what's the first day of the month for this date".
 
 Simple usage:
 
@@ -259,7 +267,7 @@ FROM (VALUES
     , ('MONTH'  , DATE_BUCKET(MONTH  , 1, @date))
     , ('QUARTER', DATE_BUCKET(QUARTER, 1, @date))
     , ('YEAR'   , DATE_BUCKET(YEAR   , 1, @date))
-) x(Interval, [Value])
+) x(Interval, [Value]);
 ```
 
 Results:
@@ -278,42 +286,42 @@ Results:
 | YEAR     | 2022-01-01 00:00:00.000 |
 ```
 
-See how each interval is being rounded down to the nearest occurence? This is super useful for things like grouping data by month. For example, "group sales by month using purchase date". Prior to this you'd have to use methods like this:
+See how each interval is being rounded down to the nearest occurence? This is super useful for things like grouping data by month. For example, "group sales by month using purchase date". Prior to this you'd have to use methods like the following:
 
 ```tsql
 SELECT DATEPART(MONTH, PurchaseDate), DATEPART(YEAR, PurchaseDate)
 FROM dbo.Sale
-GROUP BY DATEPART(MONTH, PurchaseDate), DATEPART(YEAR, PurchaseDate)
+GROUP BY DATEPART(MONTH, PurchaseDate), DATEPART(YEAR, PurchaseDate);
 
 --OR
 
 SELECT MONTH(PurchaseDate), YEAR(PurchaseDate)
 FROM dbo.Sale
-GROUP BY MONTH(PurchaseDate), YEAR(PurchaseDate)
+GROUP BY MONTH(PurchaseDate), YEAR(PurchaseDate);
 ```
 
-And those work, but it's ugly, because now you have a column for month and a column for year. So then you might use something like:
+Those work, but they're ugly, because now you have a column for month and a column for year. So then you might use something like:
 
 ```tsql
 SELECT DATEFROMPARTS(YEAR(PurchaseDate), MONTH(PurchaseDate), 1)
 FROM dbo.Sale
-GROUP BY DATEFROMPARTS(YEAR(PurchaseDate), MONTH(PurchaseDate), 1)
+GROUP BY DATEFROMPARTS(YEAR(PurchaseDate), MONTH(PurchaseDate), 1);
 
 --OR
 
 SELECT DATEADD(MONTH, DATEDIFF(MONTH, 0, GETDATE()), 0)
 FROM dbo.Sale
-GROUP BY DATEADD(MONTH, DATEDIFF(MONTH, 0, GETDATE()), 0)
+GROUP BY DATEADD(MONTH, DATEDIFF(MONTH, 0, GETDATE()), 0);
 ```
 
-These methods work...but they're both a bit ugly, especially that second method, but it comes in handy when you need to use other intervals, like `WEEK` or `QUARTER` because then the `DATEFROMPARTS()` method doesn't work.
+These methods work too...but they're both a bit ugly, especially that second method. But that second method comes in handy when you need to use other intervals, like `WEEK` or `QUARTER` because then the `DATEFROMPARTS()` method doesn't work.
 
 So rather than using all those old methods, now you can use:
 
 ```tsql
 SELECT DATE_BUCKET(MONTH, 1, PurchaseDate)
 FROM dbo.Sale
-GROUP BY DATE_BUCKET(MONTH, 1, PurchaseDate)
+GROUP BY DATE_BUCKET(MONTH, 1, PurchaseDate);
 ```
 
 Easy as that. Easier to read, easier to know what it's doing.
@@ -329,7 +337,7 @@ CREATE TABLE #log (
 -- Generate 1000 events with random times spread out across a single day
 INSERT INTO #log (InsertDate)
 SELECT DATEADD(SECOND, -(RAND(CHECKSUM(NEWID())) * 86400), '2022-06-02')
-FROM GENERATE_SERIES(START = 1, STOP = 1000, STEP = 1);
+FROM GENERATE_SERIES(START = 1, STOP = 1000); -- I told you this would be useful
 
 SELECT TOP(5) InsertDate FROM #log;
 /*
@@ -349,7 +357,7 @@ In this example, I've generate 1,000 random events to simulate a log table. Prio
 SELECT DATEADD(HOUR, (DATEDIFF(HOUR, 0, InsertDate) / 8) * 8, 0)
     , Total = COUNT(*)
 FROM #log
-GROUP BY DATEADD(HOUR, (DATEDIFF(HOUR, 0, InsertDate) / 8) * 8, 0)
+GROUP BY DATEADD(HOUR, (DATEDIFF(HOUR, 0, InsertDate) / 8) * 8, 0);
 ```
 
 All this is doing is getting the number of hours since `1900-01-01` (`0`), then dividing by 8. Since I'm dividing an int by an int, it automatically floors the result. So `10 / 8 = 1`, `15 / 8 = 1`, `16 / 8 = 2`, otherwise you would need to explicitly use `FLOOR()`. Then it is re-adding those hours back to 0 to get the datetime rounded to the nearst increment of 8 hours. Fortunately, increments of 2, 3, 4, 6, 8 and 12 all work nicely with this method.
@@ -360,17 +368,15 @@ However, `DATE_BUCKET()` makes this a lot easier:
 SELECT Bucket = DATE_BUCKET(HOUR, 8, InsertDate)
     , Total = COUNT(*)
 FROM #log
-GROUP BY DATE_BUCKET(HOUR, 8, InsertDate)
-```
+GROUP BY DATE_BUCKET(HOUR, 8, InsertDate);
 
-Resulting in:
-
-```plaintext
+/* Resulting in:
 | Bucket                  | Total |
 |-------------------------|-------|
 | 2022-06-01 00:00:00.000 | 378   |
 | 2022-06-01 08:00:00.000 | 303   |
 | 2022-06-01 16:00:00.000 | 319   |
+*/
 ```
 
 ----
@@ -390,7 +396,7 @@ I've personally never run into this as a major problem, there's always ways arou
 
 In a similar way, you can run into issues with this when using `FIRST_VALUE()` or `LAST_VALUE()` and the data contains `NULL` values. It's not _exactly_ the same issue, but it goes along the same lines as having control over how `NULL` values are treated.
 
-I _was_ going to build a example for this, but then I ran across this article from Microsoft that perfectly explains and demonstrates how you can use this new feature to fill in missing data using `IGNORE NULLS`:
+I _was_ going to build a example for this, but then I ran across this article from Microsoft, which uses the exact example I was going to build, and it perfectly explains and demonstrates how you can use this new feature to fill in missing data using `IGNORE NULLS`:
 
 <https://docs.microsoft.com/en-us/azure/azure-sql-edge/imputing-missing-values>{:target="_blank"}
 
@@ -412,11 +418,8 @@ SELECT [value]
     , RunAvg = AVG([value]) OVER (PARTITION BY [value] % 2 ORDER BY [value])
 FROM GENERATE_SERIES(START = 1, STOP = 10)
 ORDER BY [value];
-```
 
-Result:
-
-```plaintext
+/* Result:
 | value | RowNum | RunSum | RunCnt | RunAvg |
 |-------|--------|--------|--------|--------|
 | 1     | 1      | 1      | 1      | 1      |
@@ -429,9 +432,10 @@ Result:
 | 8     | 4      | 20     | 4      | 5      |
 | 9     | 5      | 25     | 5      | 5      |
 | 10    | 5      | 30     | 5      | 6      |
+*/
 ```
 
-The problem here is we're repeating a lot of code...`OVER (PARTITION BY [value] % 2 ORDER BY [value])` is repeated on every line. That's a bit wasteful, and open to error. All it takes is for that window to change and a developer accidentally forgets to update one of them.
+The problem here is we're repeating a lot of code...`OVER (PARTITION BY [value] % 2 ORDER BY [value])` is repeated four times. That's a bit wasteful, and open to error. All it takes is for that window to change and a developer accidentally forgets to update one of them.
 
 That's where the new `WINDOW` clause comes in. Instead, you can define your window with a name/alias and then reuse it. So it is only defined once.
 
@@ -502,7 +506,7 @@ This is an interesting one, the syntax is a bit odd, but you're basically passin
 
 ```tsql
 SELECT item = x.y, jsonstring = JSON_OBJECT('item':x.y)
-FROM (VALUES ('one fish'),('two fish'),('red fish'),('blue fish')) x(y)
+FROM (VALUES ('one fish'),('two fish'),('red fish'),('blue fish')) x(y);
 
 /* Resulting in:
 | item      | jsonstring           | 
@@ -518,17 +522,17 @@ So it allows you to generate a JSON object for a set of values/columns on a per 
 
 ### JSON_ARRAY()
 
-This is similar as `JSON_OBJECT()` in regard to generating JSON from data, except instead of creating an object with various properties, it's creating a list of values or objects.
+This is similar as `JSON_OBJECT()` in regard to generating JSON from data, except instead of creating an object with various properties, it's creating an array of values or objects.
 
 ```tsql
-SELECT JSON_ARRAY('one fish','two fish','red fish','blue fish')
+SELECT JSON_ARRAY('one fish','two fish','red fish','blue fish');
 
 /* Resulting in:
 ["one fish","two fish","red fish","blue fish"]
 */
 ```
 
-From there you can combine `JSON_OBJECT` and `JSON_ARRAY` together to generate nested JSON blobs from your data.
+From there you can combine `JSON_OBJECT` and `JSON_ARRAY` to generate nested JSON blobs from your data.
 
 ----
 
