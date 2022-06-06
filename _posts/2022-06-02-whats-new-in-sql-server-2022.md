@@ -46,7 +46,7 @@ You won't need to worry about loading up any specific databases for this blog po
 
 ## GENERATE_SERIES()
 
-[Microsoft Documentation](https://docs.microsoft.com/en-us/sql/t-sql/functions/date-bucket-transact-sql){:target="_blank"}
+[Microsoft Documentation](https://docs.microsoft.com/en-us/sql/t-sql/functions/generate-series-transact-sql){:target="_blank"}
 
 I want to cover this function first so we can use it to help us with building sample data for the rest of this post.
 
