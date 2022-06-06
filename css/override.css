@@ -49,7 +49,7 @@ hr {
 
 /* HighlightJS overrides */
 .hljs {
-	max-height: {{site.code_block_max_height | default: "500px"}};
+  max-height: {{site.code_block_max_height | default: "500px"}};
 }
 
 /* Copy code button */
@@ -93,7 +93,7 @@ hr {
 }
 
 @media print {
-	.no-print {
-		display: none !important;
-	}
+  .no-print {
+    display: none !important;
+  }
 }

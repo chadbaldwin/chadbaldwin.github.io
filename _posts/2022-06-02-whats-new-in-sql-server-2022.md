@@ -7,6 +7,8 @@ tags: T-SQL
 image: img/postbanners/2022-06-02-whats-new-in-sql-server-2022.png
 ---
 
+<style> .hljs { max-height: 1000px; } </style>
+
 I've been exicted to play with the new features and language enhancements in SQL Server 2022 so I've been keeping an eye on the Microsoft Docker repository for the 2022 image. Well they finally added it! I immediately pulled the image and started playing with it.
 
 I want to focus on the language enhancements as those are the easiest to demonstrate, and I feel that's what you'll be able to take advantage of the quickest after upgrading.
@@ -104,7 +106,7 @@ I think it's great that you can customize it to increment, decrement, change the
 SELECT DateValue = CONVERT(date, DATEADD(DAY, [value], '2022-06-01'))
 FROM GENERATE_SERIES(START = -30, STOP = -180, STEP = -30);
 
-/*
+/* Result:
 | DateValue  |
 |------------|
 | 2022-05-02 |
@@ -190,7 +192,7 @@ SELECT LastModifiedDate, LastAccessDate, LastErrorDate
 FROM #event;
 ```
 
-Results:
+Result:
 
 ![Result set showing the usage of greatest and least functions](/img/sqlserver2022/20220601_181117.png)
 
@@ -216,7 +218,7 @@ FROM (
     FROM STRING_SPLIT('one fish,two fish,red fish,blue fish', ',')
 ) x;
 
-/*
+/* Result:
 | value     | ordinal |
 |-----------|---------|
 | one fish  | 1       |
@@ -234,7 +236,7 @@ But now you can enable an "ordinal" column to be included in the output. The val
 SELECT [value], ordinal
 FROM STRING_SPLIT('one fish,two fish,red fish,blue fish', ',', 1);
 
-/*
+/* Result:
 | value     | ordinal |
 |-----------|---------|
 | one fish  | 1       |
@@ -268,11 +270,8 @@ FROM (VALUES
     , ('QUARTER', DATE_BUCKET(QUARTER, 1, @date))
     , ('YEAR'   , DATE_BUCKET(YEAR   , 1, @date))
 ) x(Interval, [Value]);
-```
 
-Results:
-
-```plaintext
+/* Result:
 | Interval | Value                   |
 |----------|-------------------------|
 | Source   | 2022-06-02 13:30:48.353 |
@@ -284,6 +283,7 @@ Results:
 | MONTH    | 2022-06-01 00:00:00.000 |
 | QUARTER  | 2022-04-01 00:00:00.000 |
 | YEAR     | 2022-01-01 00:00:00.000 |
+*/
 ```
 
 See how each interval is being rounded down to the nearest occurence? This is super useful for things like grouping data by month. For example, "group sales by month using purchase date". Prior to this you'd have to use methods like the following:
@@ -370,7 +370,7 @@ SELECT Bucket = DATE_BUCKET(HOUR, 8, InsertDate)
 FROM #log
 GROUP BY DATE_BUCKET(HOUR, 8, InsertDate);
 
-/* Resulting in:
+/* Result:
 | Bucket                  | Total |
 |-------------------------|-------|
 | 2022-06-01 00:00:00.000 | 378   |
@@ -483,47 +483,44 @@ However, the new parameter allows you to do a little more than just check whehte
 Here's some examples:
 
 ```tsql
-SELECT json_type_constraint = 'VALUE'
-    , string    = ISJSON('"testing"'        , VALUE)
-    , [scalar]  = ISJSON('1234'             , VALUE)
-    , boolean   = ISJSON('true'             , VALUE)
-    , [null]    = ISJSON('null'             , VALUE)
-    , [array]   = ISJSON('[1,2,3]'          , VALUE)
-    , [object]  = ISJSON('{"name":"chad"}'  , VALUE)
-UNION
-SELECT 'SCALAR'
-    ,  string   = ISJSON('"testing"'        , SCALAR)
-    ,  [scalar] = ISJSON('1234'             , SCALAR)
-    ,  boolean  = ISJSON('true'             , SCALAR)
-    ,  [null]   = ISJSON('null'             , SCALAR)
-    ,  [array]  = ISJSON('[1,2,3]'          , SCALAR)
-    ,  [object] = ISJSON('{"name":"chad"}'  , SCALAR)
-UNION
-SELECT 'ARRAY'
-    ,  string   = ISJSON('"testing"'        , ARRAY)
-    ,  [scalar] = ISJSON('1234'             , ARRAY)
-    ,  boolean  = ISJSON('true'             , ARRAY)
-    ,  [null]   = ISJSON('null'             , ARRAY)
-    ,  [array]  = ISJSON('[1,2,3]'          , ARRAY)
-    ,  [object] = ISJSON('{"name":"chad"}'  , ARRAY)
-UNION
-SELECT 'OBJECT'
-    ,  string   = ISJSON('"testing"'        , OBJECT)
-    ,  [scalar] = ISJSON('1234'             , OBJECT)
-    ,  boolean  = ISJSON('true'             , OBJECT)
-    ,  [null]   = ISJSON('null'             , OBJECT)
-    ,  [array]  = ISJSON('[1,2,3]'          , OBJECT)
-    ,  [object] = ISJSON('{"name":"chad"}'  , OBJECT)
+SELECT x.*, '----->' 'Result', y.*
+FROM (VALUES  ('string','"testing"')
+            , ('empty string','""')
+            , ('bad string','asdf')
+            , ('scalar','1234')
+            , ('boolean','true')
+            , ('null literal','null')
+            , ('array','[1,2,{"object":"abc"}]')
+            , ('empty array', '[]')
+            , ('object','{"name":"chad"}')
+            , ('empty object','{}')
+            , ('blank value', '')
+            , ('NULL value', NULL)
+) x([type], [value])
+    CROSS APPLY (
+        SELECT [VALUE]  = ISJSON(x.[value], VALUE)
+            ,  [SCALAR] = ISJSON(x.[value], SCALAR)
+            ,  [ARRAY]  = ISJSON(x.[value], ARRAY)
+            ,  [OBJECT] = ISJSON(x.[value], OBJECT)
+    ) y
+
+/* Result:
+| type         | value                  | Result | VALUE | SCALAR | ARRAY | OBJECT |
+|--------------|------------------------|--------|-------|--------|-------|--------|
+| string       | "testing"              | -----> | 1     | 1      | 0     | 0      |
+| empty string | ""                     | -----> | 1     | 1      | 0     | 0      |
+| bad string   | asdf                   | -----> | 0     | 0      | 0     | 0      |
+| scalar       | 1234                   | -----> | 1     | 1      | 0     | 0      |
+| boolean      | true                   | -----> | 1     | 0      | 0     | 0      |
+| null literal | null                   | -----> | 1     | 0      | 0     | 0      |
+| array        | [1,2,{"object":"abc"}] | -----> | 1     | 0      | 1     | 0      |
+| empty array  | []                     | -----> | 1     | 0      | 1     | 0      |
+| object       | {"name":"chad"}        | -----> | 1     | 0      | 0     | 1      |
+| empty object | {}                     | -----> | 1     | 0      | 0     | 1      |
+| blank value  |                        | -----> | 0     | 0      | 0     | 0      |
+| NULL value   | NULL                   | -----> | NULL  | NULL   | NULL  | NULL   |
+*/
 ```
-
-Results:
-
-| json_type_constraint | string | scalar | boolean | null | array | object |
-|----------------------|--------|--------|---------|------|-------|--------|
-| ARRAY                | 0      | 0      | 0       | 0    | 1     | 0      |
-| OBJECT               | 0      | 0      | 0       | 0    | 0     | 1      |
-| SCALAR               | 1      | 1      | 0       | 0    | 0     | 0      |
-| VALUE                | 1      | 1      | 1       | 1    | 1     | 1      |
 
 ### JSON_PATH_EXISTS()
 
@@ -557,7 +554,7 @@ This is an interesting one, the syntax is a bit odd, but you're basically passin
 SELECT item = x.y, jsonstring = JSON_OBJECT('item':x.y)
 FROM (VALUES ('one fish'),('two fish'),('red fish'),('blue fish')) x(y);
 
-/* Resulting in:
+/* Result:
 | item      | jsonstring           | 
 |-----------|----------------------| 
 | one fish  | {"item":"one fish"}  | 
@@ -576,7 +573,7 @@ This is similar as `JSON_OBJECT()` in regard to generating JSON from data, excep
 ```tsql
 SELECT JSON_ARRAY('one fish','two fish','red fish','blue fish');
 
-/* Resulting in:
+/* Result:
 ["one fish","two fish","red fish","blue fish"]
 */
 ```
