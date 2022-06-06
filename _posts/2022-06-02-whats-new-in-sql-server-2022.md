@@ -483,17 +483,13 @@ However, the new parameter allows you to do a little more than just check whehte
 Here's some examples:
 
 ```tsql
-SELECT x.*, '----->' 'Result', y.*
-FROM (VALUES  ('string','"testing"')
-            , ('empty string','""')
-            , ('bad string','asdf')
+SELECT *
+FROM (VALUES  ('string','"testing"'), ('empty string','""'), ('bad string','asdf')
             , ('scalar','1234')
-            , ('boolean','true')
+            , ('boolean','true'), ('bad boolean', 'TRUE')
+            , ('array','[1,2,{"object":"abc"}]'), ('empty array', '[]')
+            , ('object','{"name":"chad"}'), ('empty object','{}')
             , ('null literal','null')
-            , ('array','[1,2,{"object":"abc"}]')
-            , ('empty array', '[]')
-            , ('object','{"name":"chad"}')
-            , ('empty object','{}')
             , ('blank value', '')
             , ('NULL value', NULL)
 ) x([type], [value])
@@ -505,20 +501,21 @@ FROM (VALUES  ('string','"testing"')
     ) y
 
 /* Result:
-| type         | value                  | Result | VALUE | SCALAR | ARRAY | OBJECT |
-|--------------|------------------------|--------|-------|--------|-------|--------|
-| string       | "testing"              | -----> | 1     | 1      | 0     | 0      |
-| empty string | ""                     | -----> | 1     | 1      | 0     | 0      |
-| bad string   | asdf                   | -----> | 0     | 0      | 0     | 0      |
-| scalar       | 1234                   | -----> | 1     | 1      | 0     | 0      |
-| boolean      | true                   | -----> | 1     | 0      | 0     | 0      |
-| null literal | null                   | -----> | 1     | 0      | 0     | 0      |
-| array        | [1,2,{"object":"abc"}] | -----> | 1     | 0      | 1     | 0      |
-| empty array  | []                     | -----> | 1     | 0      | 1     | 0      |
-| object       | {"name":"chad"}        | -----> | 1     | 0      | 0     | 1      |
-| empty object | {}                     | -----> | 1     | 0      | 0     | 1      |
-| blank value  |                        | -----> | 0     | 0      | 0     | 0      |
-| NULL value   | NULL                   | -----> | NULL  | NULL   | NULL  | NULL   |
+| type         | value               | VALUE | SCALAR | ARRAY | OBJECT |
+|--------------|---------------------|-------|--------|-------|--------|
+| string       | "testing"           | 1     | 1      | 0     | 0      |
+| empty string | ""                  | 1     | 1      | 0     | 0      |
+| bad string   | asdf                | 0     | 0      | 0     | 0      |
+| scalar       | 1234                | 1     | 1      | 0     | 0      |
+| boolean      | true                | 1     | 0      | 0     | 0      |
+| bad boolean  | TRUE                | 0     | 0      | 0     | 0      |
+| array        | [1,2,{"foo":"bar"}] | 1     | 0      | 1     | 0      |
+| empty array  | []                  | 1     | 0      | 1     | 0      |
+| object       | {"name":"chad"}     | 1     | 0      | 0     | 1      |
+| empty object | {}                  | 1     | 0      | 0     | 1      |
+| null literal | null                | 1     | 0      | 0     | 0      |
+| blank value  |                     | 0     | 0      | 0     | 0      |
+| NULL value   | NULL                | NULL  | NULL   | NULL  | NULL   |
 */
 ```
 
