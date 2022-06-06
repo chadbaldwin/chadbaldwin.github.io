@@ -518,16 +518,12 @@ SELECT 'OBJECT'
 
 Results:
 
-```tsql
-/*
 | json_type_constraint | string | scalar | boolean | null | array | object |
 |----------------------|--------|--------|---------|------|-------|--------|
 | ARRAY                | 0      | 0      | 0       | 0    | 1     | 0      |
 | OBJECT               | 0      | 0      | 0       | 0    | 0     | 1      |
 | SCALAR               | 1      | 1      | 0       | 0    | 0     | 0      |
 | VALUE                | 1      | 1      | 1       | 1    | 1     | 1      |
-*/
-```
 
 ### JSON_PATH_EXISTS()
 
