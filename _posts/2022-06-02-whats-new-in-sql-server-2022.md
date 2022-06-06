@@ -480,42 +480,43 @@ SELECT ISJSON('{ name:"Chad" }');   -- Returns 0 because it is invalid JSON
 
 However, the new parameter allows you to do a little more than just check whehter the blob you pass to it is valid or not. Now you can check if its type is valid as well. Maybe you're generating JSON and you want to test the individual parts rather than testing the entire blob at the end of your task.
 
-Here's some examples:
+Here are some test cases:
 
 ```tsql
 SELECT *
 FROM (VALUES  ('string','"testing"'), ('empty string','""'), ('bad string','asdf')
             , ('scalar','1234')
             , ('boolean','true'), ('bad boolean', 'TRUE')
-            , ('array','[1,2,{"object":"abc"}]'), ('empty array', '[]')
+            , ('array','[1,2,{"foo":"bar"}]'), ('empty array', '[]')
             , ('object','{"name":"chad"}'), ('empty object','{}')
             , ('null literal','null')
             , ('blank value', '')
             , ('NULL value', NULL)
 ) x([type], [value])
     CROSS APPLY (
-        SELECT [VALUE]  = ISJSON(x.[value], VALUE)
-            ,  [SCALAR] = ISJSON(x.[value], SCALAR)
-            ,  [ARRAY]  = ISJSON(x.[value], ARRAY)
-            ,  [OBJECT] = ISJSON(x.[value], OBJECT)
+        -- Case statements to make visualization of results easier
+        SELECT [VALUE]  = CASE ISJSON(x.[value], VALUE)  WHEN 1 THEN 'True' WHEN 0 THEN '' ELSE NULL END
+            ,  [SCALAR] = CASE ISJSON(x.[value], SCALAR) WHEN 1 THEN 'True' WHEN 0 THEN '' ELSE NULL END
+            ,  [ARRAY]  = CASE ISJSON(x.[value], ARRAY)  WHEN 1 THEN 'True' WHEN 0 THEN '' ELSE NULL END
+            ,  [OBJECT] = CASE ISJSON(x.[value], OBJECT) WHEN 1 THEN 'True' WHEN 0 THEN '' ELSE NULL END
     ) y
 
 /* Result:
-| type         | value               | VALUE | SCALAR | ARRAY | OBJECT |
-|--------------|---------------------|-------|--------|-------|--------|
-| string       | "testing"           | 1     | 1      | 0     | 0      |
-| empty string | ""                  | 1     | 1      | 0     | 0      |
-| bad string   | asdf                | 0     | 0      | 0     | 0      |
-| scalar       | 1234                | 1     | 1      | 0     | 0      |
-| boolean      | true                | 1     | 0      | 0     | 0      |
-| bad boolean  | TRUE                | 0     | 0      | 0     | 0      |
-| array        | [1,2,{"foo":"bar"}] | 1     | 0      | 1     | 0      |
-| empty array  | []                  | 1     | 0      | 1     | 0      |
-| object       | {"name":"chad"}     | 1     | 0      | 0     | 1      |
-| empty object | {}                  | 1     | 0      | 0     | 1      |
-| null literal | null                | 1     | 0      | 0     | 0      |
-| blank value  |                     | 0     | 0      | 0     | 0      |
-| NULL value   | NULL                | NULL  | NULL   | NULL  | NULL   |
+| type         | value               | VALUE | SCALAR | ARRAY | OBJECT | 
+|--------------|---------------------|-------|--------|-------|--------| 
+| string       | "testing"           | True  | True   |       |        | 
+| empty string | ""                  | True  | True   |       |        | 
+| bad string   | asdf                |       |        |       |        | 
+| scalar       | 1234                | True  | True   |       |        | 
+| boolean      | true                | True  |        |       |        | 
+| bad boolean  | TRUE                |       |        |       |        | 
+| array        | [1,2,{"foo":"bar"}] | True  |        | True  |        | 
+| empty array  | []                  | True  |        | True  |        | 
+| object       | {"name":"chad"}     | True  |        |       | True   | 
+| empty object | {}                  | True  |        |       | True   | 
+| null literal | null                | True  |        |       |        | 
+| blank value  |                     |       |        |       |        | 
+| NULL value   | NULL                | NULL  | NULL   | NULL  | NULL   | 
 */
 ```
 
