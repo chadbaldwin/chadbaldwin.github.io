@@ -469,11 +469,64 @@ Microsoft Documentation:
 
 ### ISJSON()
 
-This one is about as simple as it gets...Checks whether the value you pass is valid JSON or not.
+The `ISJSON()` function is not new (thank you to the reddit user that pointed this out to me), but it was enhanced. There is now a `json_type_constraint` parameter.
+
+Without the new parameter, this one is about as simple as it gets...It checks whether the value you pass is valid JSON or not.
 
 ```tsql
 SELECT ISJSON('{ "name":"Chad" }'); -- Returns 1 because it is valid JSON
 SELECT ISJSON('{ name:"Chad" }');   -- Returns 0 because it is invalid JSON
+```
+
+However, the new parameter allows you to do a little more than just check whehter the blob you pass to it is valid or not. Now you can check if its type is valid as well. Maybe you're generating JSON and you want to test the individual parts rather than testing the entire blob at the end of your task.
+
+Here's some examples:
+
+```tsql
+SELECT json_type_constraint = 'VALUE'
+    , string    = ISJSON('"testing"'        , VALUE)
+    , scalar    = ISJSON('1234'             , VALUE)
+    , boolean   = ISJSON('true'             , VALUE)
+    , [null]    = ISJSON('null'             , VALUE)
+    , array     = ISJSON('[1,2,3]'          , VALUE)
+    , [object]  = ISJSON('{"name":"chad"}'  , VALUE)
+UNION
+SELECT 'SCALAR'
+    ,  string   = ISJSON('"testing"'        , SCALAR)
+    ,  scalar   = ISJSON('1234'             , SCALAR)
+    ,  boolean  = ISJSON('true'             , SCALAR)
+    ,  [null]   = ISJSON('null'             , SCALAR)
+    ,  array    = ISJSON('[1,2,3]'          , SCALAR)
+    ,  [object] = ISJSON('{"name":"chad"}'  , SCALAR)
+UNION
+SELECT 'ARRAY'
+    ,  string   = ISJSON('"testing"'        , ARRAY)
+    ,  scalar   = ISJSON('1234'             , ARRAY)
+    ,  boolean  = ISJSON('true'             , ARRAY)
+    ,  [null]   = ISJSON('null'             , ARRAY)
+    ,  array    = ISJSON('[1,2,3]'          , ARRAY)
+    ,  [object] = ISJSON('{"name":"chad"}'  , ARRAY)
+UNION
+SELECT 'OBJECT'
+    ,  string   = ISJSON('"testing"'        , OBJECT)
+    ,  scalar   = ISJSON('1234'             , OBJECT)
+    ,  boolean  = ISJSON('true'             , OBJECT)
+    ,  [null]   = ISJSON('null'             , OBJECT)
+    ,  array    = ISJSON('[1,2,3]'          , OBJECT)
+    ,  [object] = ISJSON('{"name":"chad"}'  , OBJECT)
+```
+
+Results:
+
+```tsql
+/*
+| json_type_constraint | string | scalar | boolean | null | array | object |
+|----------------------|--------|--------|---------|------|-------|--------|
+| ARRAY                | 0      | 0      | 0       | 0    | 1     | 0      |
+| OBJECT               | 0      | 0      | 0       | 0    | 0     | 1      |
+| SCALAR               | 1      | 1      | 0       | 0    | 0     | 0      |
+| VALUE                | 1      | 1      | 1       | 1    | 1     | 1      |
+*/
 ```
 
 ### JSON_PATH_EXISTS()
