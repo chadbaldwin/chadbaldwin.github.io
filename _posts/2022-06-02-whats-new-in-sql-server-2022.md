@@ -520,6 +520,8 @@ FROM (VALUES  ('string','"testing"'), ('empty string','""'), ('bad string','asdf
 */
 ```
 
+Based on these results you can see that `VALUE` is a generic check, determining whether the value is valid regardless of type. Whereas `SCALAR`, `ARRAY` and `OBJECT` are more granular and check for specific types.
+
 ### JSON_PATH_EXISTS()
 
 Checks to see whether the path you specify exists in the provided JSON blob.
