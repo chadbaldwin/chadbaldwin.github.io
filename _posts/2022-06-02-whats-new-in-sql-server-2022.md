@@ -485,34 +485,34 @@ Here's some examples:
 ```tsql
 SELECT json_type_constraint = 'VALUE'
     , string    = ISJSON('"testing"'        , VALUE)
-    , scalar    = ISJSON('1234'             , VALUE)
+    , [scalar]  = ISJSON('1234'             , VALUE)
     , boolean   = ISJSON('true'             , VALUE)
     , [null]    = ISJSON('null'             , VALUE)
-    , array     = ISJSON('[1,2,3]'          , VALUE)
+    , [array]   = ISJSON('[1,2,3]'          , VALUE)
     , [object]  = ISJSON('{"name":"chad"}'  , VALUE)
 UNION
 SELECT 'SCALAR'
     ,  string   = ISJSON('"testing"'        , SCALAR)
-    ,  scalar   = ISJSON('1234'             , SCALAR)
+    ,  [scalar] = ISJSON('1234'             , SCALAR)
     ,  boolean  = ISJSON('true'             , SCALAR)
     ,  [null]   = ISJSON('null'             , SCALAR)
-    ,  array    = ISJSON('[1,2,3]'          , SCALAR)
+    ,  [array]  = ISJSON('[1,2,3]'          , SCALAR)
     ,  [object] = ISJSON('{"name":"chad"}'  , SCALAR)
 UNION
 SELECT 'ARRAY'
     ,  string   = ISJSON('"testing"'        , ARRAY)
-    ,  scalar   = ISJSON('1234'             , ARRAY)
+    ,  [scalar] = ISJSON('1234'             , ARRAY)
     ,  boolean  = ISJSON('true'             , ARRAY)
     ,  [null]   = ISJSON('null'             , ARRAY)
-    ,  array    = ISJSON('[1,2,3]'          , ARRAY)
+    ,  [array]  = ISJSON('[1,2,3]'          , ARRAY)
     ,  [object] = ISJSON('{"name":"chad"}'  , ARRAY)
 UNION
 SELECT 'OBJECT'
     ,  string   = ISJSON('"testing"'        , OBJECT)
-    ,  scalar   = ISJSON('1234'             , OBJECT)
+    ,  [scalar] = ISJSON('1234'             , OBJECT)
     ,  boolean  = ISJSON('true'             , OBJECT)
     ,  [null]   = ISJSON('null'             , OBJECT)
-    ,  array    = ISJSON('[1,2,3]'          , OBJECT)
+    ,  [array]  = ISJSON('[1,2,3]'          , OBJECT)
     ,  [object] = ISJSON('{"name":"chad"}'  , OBJECT)
 ```
 
