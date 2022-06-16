@@ -7,6 +7,18 @@ tags: Blogging
 image: /img/postbanners/2021-03-13-how-to-build-a-sql-blog.png
 ---
 
+### This blog post is pending update, but I want your help!
+
+Hello there fellow internet traveler. When I wrote this post a over a year ago...I did not expect it to become as popular as it is today. 99% of the traffic for this post comes from simple Google searches, many times it appears above GitHub's own instructions for Github Pages. In fact...most of the traffic to this website is just this post alone.
+
+I originally wrote this post to help other members of the SQL Server community who wanted to get into blogging. I spent a lot of time customizing this blog to support the SQL Server language syntax highlighting. But...over time, the audience for this post has changed quite a lot.
+
+If you read this post and would like to help me improve it, please comment below, send me an email or a tweet, and let me know how I could improve this post for you and future readers.
+
+Thanks!
+
+----
+
 > *Disclaimer: If you're familiar with GitHub Pages, Jekyll, etc. You might notice me saying some "incorrect" things...this is because I'm trying to keep it simple. I might say "you have to do it this way", but you, Jekyll expert, may know that's not true.*
 
 "How do I start blogging?"
