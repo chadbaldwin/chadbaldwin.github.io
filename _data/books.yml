@@ -6,11 +6,19 @@
 #   isCurrent: bool - indicating currently reading
 #   completeDate: date of completion
 
+- title: Operations Anti-Patterns, DevOps Solutions
+  author: Jeffery D. Smith
+  summary: \"Operations Anti-Patterns, DevOps Solutions shows how to implement DevOps techniques in the kind of imperfect environments most developers work in. Part technology tutorial, part reference manual, and part psychology handbook, this practical guide shows you realistic ways to bring DevOps to your team when you don’t have the flexibility to make sweeping changes in organizational structure.\"
+  link: https://amzn.to/3Pqgvmz
+  startDate: 2022-07-10
+  isCurrent: true
+
 - title: The Unicorn Project
   author: Gene Kim
-  summary: With The Phoenix Project we learned about the Three Ways. Now with The Unicorn Project, Gene Kim introduces the Five Ideals. This highly anticipated follow-up to the bestselling title The Phoenix Project takes another look at Parts Unlimited, this time from the perspective of software development
+  summary: \"With The Phoenix Project we learned about the Three Ways. Now with The Unicorn Project, Gene Kim introduces the Five Ideals. This highly anticipated follow-up to the bestselling title The Phoenix Project takes another look at Parts Unlimited, this time from the perspective of software development\"
   link: https://amzn.to/3xLNFqX
-  isCurrent: true
+  rating: ⭐⭐⭐⭐⭐
+  completeDate: 2022-07-10
 
 - title: The Phoenix Project
   author: Gene Kim
