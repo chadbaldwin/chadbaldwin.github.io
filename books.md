@@ -26,12 +26,12 @@ description: Book reviews and recommendations, reading goal tracker
     }
 </style>
 
-In order to try and enforce a habit of reading daily, I'm making this a public page on my blog. With a full year calendar to indicate the days I've read. Similar to the ["Every Day Calendar" by Simone Giertz](https://www.simonegiertz.com/every-day-calendar)...but I can't afford one, and this site is free.
+In order to try and enforce a habit of reading daily, I'm making this a public page on my blog. With a full year calendar to indicate the days I've read. Similar to the ["Every Day Calendar" by Simone Giertz](https://www.simonegiertz.com/every-day-calendar){:target="_blank"}...but I can't afford one, and this site is free.
 
 ## Current book:
 {% assign currentBooks = site.data.books | where: "isCurrent", true %}
 {% for book in currentBooks %}
-* [*{{ book.title }}*{% if book.author %} by {{ book.author }}{% endif %}]({{ book.link }})
+* [*{{ book.title }}*{% if book.author %} by {{ book.author }}{% endif %}]({{ book.link }}){:target="_blank"}
 {% if book.summary %}  * {{ book.summary }}{% endif %}
 {% endfor %}
 
@@ -57,7 +57,7 @@ In order to try and enforce a habit of reading daily, I'm making this a public p
 {% for month in recentBooks %}
 ### {{ month.name | capitalize }}:
 {% for book in month.items %}
-* [*{{ book.title }}*{% if book.author %} by {{ book.author }}{% endif %}]({{ book.link }})
+* [*{{ book.title }}*{% if book.author %} by {{ book.author }}{% endif %}]({{ book.link }}){:target="_blank"}
 {% if book.rating %}  * My rating: {{ book.rating }}{% endif %}
 {% if book.summary %}  * Summary: {{ book.summary }}{% endif %}
 {% endfor %}
@@ -111,7 +111,7 @@ In order to try and enforce a habit of reading daily, I'm making this a public p
         | sort: "title"
 %}
 {% for book in pastBooks %}
-* [*{{ book.title }}*{% if book.author %} by {{ book.author }}{% endif %}]({{ book.link }})
+* [*{{ book.title }}*{% if book.author %} by {{ book.author }}{% endif %}]({{ book.link }}){:target="_blank"}
 {% if book.rating %}  * My rating: {{ book.rating }}{% endif %}
 {% if book.summary %}  * Summary: {{ book.summary }}{% endif %}
 {% endfor %}
@@ -124,6 +124,6 @@ In order to try and enforce a habit of reading daily, I'm making this a public p
         | sort: "title"
 %}
 {% for book in todoSorted %}
-* [*{{ book.title }}*{% if book.author %} by {{ book.author }}{% endif %}]({{ book.link }})
+* [*{{ book.title }}*{% if book.author %} by {{ book.author }}{% endif %}]({{ book.link }}){:target="_blank"}
 {% if book.summary %}  * {{ book.summary }}{% endif %}
 {% endfor %}
