@@ -93,6 +93,10 @@ diagramming:
   - name: dbdiagram.io
     description: A free, simple tool to draw Entity-Relationship diagrams by just writing code
     link: https://dbdiagram.io/
+    
+  - name: markmap.js
+    description: Visualize your Markdown with mindmaps (and interactive)
+    link: https://markmap.js.org/repl
 
 networking:
   - name: Speed test - CloudFlare
