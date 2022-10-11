@@ -13,4 +13,4 @@ jobs:
         env:
           USER_TOKEN: ${{ secrets.USER_TOKEN }}
         run: |
-          curl --fail --request POST --url https://api.github.com/repos/${{ github.repository }}/pages/builds --header "Authorization: bearer $USER_TOKEN"
+          curl -X POST -H "Accept: application/vnd.github+json" -H "Authorization: Bearer $USER_TOKEN" https://api.github.com/repos/${{ github.repository }}/pages/builds
