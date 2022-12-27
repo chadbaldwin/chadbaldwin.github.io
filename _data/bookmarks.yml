@@ -30,6 +30,14 @@ sql:
   - name: RAISERROR Cheatsheet
     description: Everything you need to know about using RAISERROR in SQL Server
     link: https://chadbaldwin.net/2021/01/15/raiserror-cheatsheet.html
+    
+  - name: SQLSkills - SQL Server wait types
+    description: Database of SQL Server wait types
+    link: https://www.sqlskills.com/help/waits
+    
+  - name: SQLSkills - SQL Server latch types
+    description: Database of SQL Server latch types
+    link: https://www.sqlskills.com/help/latches
 
 fiddlers:
   - name: .NET Fiddle
