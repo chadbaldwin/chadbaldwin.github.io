@@ -9,6 +9,8 @@ image: img/postbanners/2022-06-02-whats-new-in-sql-server-2022.png
 
 <style> .hljs { max-height: 1000px; } </style>
 
+> Note: It seems since this post was written, some functions have been added, or some syntax has changed. So until I have time to update this post with the latest information, keep that in mind.
+
 I've been exicted to play with the new features and language enhancements in SQL Server 2022 so I've been keeping an eye on the Microsoft Docker repository for the 2022 image. Well they finally added it! I immediately pulled the image and started playing with it.
 
 I want to focus on the language enhancements as those are the easiest to demonstrate, and I feel that's what you'll be able to take advantage of the quickest after upgrading.
