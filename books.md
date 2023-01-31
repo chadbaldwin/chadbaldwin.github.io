@@ -28,7 +28,7 @@ description: Book reviews and recommendations, reading goal tracker
 
 In order to try and enforce a habit of reading daily, I'm making this a public page on my blog. With a full year calendar to indicate the days I've read. Similar to the ["Every Day Calendar" by Simone Giertz](https://www.simonegiertz.com/every-day-calendar){:target="_blank"}...but I can't afford one, and this site is free.
 
-## Current book:
+## Current book
 {% assign currentBooks = site.data.books | where: "isCurrent", true %}
 {% for book in currentBooks %}
 * [*{{ book.title }}*{% if book.author %} by {{ book.author }}{% endif %}]({{ book.link }}){:target="_blank"}
@@ -52,10 +52,10 @@ In order to try and enforce a habit of reading daily, I'm making this a public p
         | group_by_exp: "item", "item.completeDate | date: '%B'"
 %}
 {% if recentBooks.size > 0 %}
-## Recently finished books:
+## Recently finished books
 
 {% for month in recentBooks %}
-### {{ month.name | capitalize }}:
+### {{ month.name | capitalize }}
 {% for book in month.items %}
 * [*{{ book.title }}*{% if book.author %} by {{ book.author }}{% endif %}]({{ book.link }}){:target="_blank"}
 {% if book.rating %}  * My rating: {{ book.rating }}{% endif %}
@@ -66,45 +66,45 @@ In order to try and enforce a habit of reading daily, I'm making this a public p
 
 ----
 
-## 2022 Reading
+## 2023 Reading
 
 | ###  | Jan  | Feb  | Mar  | Apr  | May  | Jun  | Jul  | Aug  | Sep  | Oct  | Nov  | Dec  |
 | :--: | :--: | :--: | :--: | :--: | :--: | :--: | :--: | :--: | :--: | :--: | :--: | :--: |
-|  1   |  ❌  |  ❌  |  ❌  |  ❌  |  ✅  |  ✅  |  ✅  |  ✅  |  ❌  |  ❌  |  ❌  |  ❌  |
-|  2   |  ❌  |  ❌  |  ❌  |  ❌  |  ✅  |  ✅  |  ✅  |  ✅  |  ❌  |  ❌  |  ❌  |  ❌  |
-|  3   |  ❌  |  ❌  |  ❌  |  ❌  |  ✅  |  ✅  |  ✅  |  ✅  |  ❌  |  ❌  |  ❌  |  ❌  |
-|  4   |  ❌  |  ❌  |  ❌  |  ❌  |  ✅  |  ✅  |  ✅  |  ✅  |  ❌  |  ❌  |  ❌  |  ❌  |
-|  5   |  ❌  |  ❌  |  ❌  |  ❌  |  ✅  |  ✅  |  ✅  |  ✅  |  ❌  |  ❌  |  ❌  |  ❌  |
-|  6   |  ❌  |  ❌  |  ❌  |  ❌  |  ✅  |  ✅  |  ✅  |  ✅  |  ❌  |  ❌  |  ❌  |  ❌  |
-|  7   |  ❌  |  ❌  |  ❌  |  ❌  |  ✅  |  ✅  |  ✅  |  ✅  |  ❌  |  ❌  |  ❌  |  ❌  |
-|  8   |  ❌  |  ❌  |  ❌  |  ❌  |  ✅  |  ✅  |  ✅  |  ✅  |  ❌  |  ❌  |  ❌  |  ❌  |
-|  9   |  ❌  |  ❌  |  ❌  |  ❌  |  ✅  |  ✅  |  ✅  |  ✅  |  ❌  |  ❌  |  ❌  |  ❌  |
-|  10  |  ❌  |  ❌  |  ❌  |  ❌  |  ✅  |  ✅  |  ✅  |  ✅  |  ❌  |  ❌  |  ❌  |  ❌  |
-|  11  |  ❌  |  ❌  |  ❌  |  ❌  |  ✅  |  ✅  |  ✅  |  ✅  |  ❌  |  ❌  |  ❌  |  ❌  |
-|  12  |  ❌  |  ❌  |  ❌  |  ❌  |  ✅  |  ✅  |  ✅  |  ✅  |  ❌  |  ❌  |  ❌  |  ❌  |
-|  13  |  ❌  |  ❌  |  ❌  |  ❌  |  ✅  |  ✅  |  ✅  |  ✅  |  ❌  |  ❌  |  ❌  |  ❌  |
-|  14  |  ❌  |  ❌  |  ❌  |  ❌  |  ✅  |  ✅  |  ✅  |  ✅  |  ❌  |  ❌  |  ❌  |  ❌  |
-|  15  |  ❌  |  ❌  |  ❌  |  ❌  |  ✅  |  ✅  |  ✅  |  ✅  |  ❌  |  ❌  |  ❌  |  ❌  |
-|  16  |  ❌  |  ❌  |  ❌  |  ❌  |  ✅  |  ✅  |  ✅  |  ✅  |  ❌  |  ❌  |  ❌  |  ❌  |
-|  17  |  ❌  |  ❌  |  ❌  |  ❌  |  ✅  |  ✅  |  ✅  |  ✅  |  ❌  |  ❌  |  ❌  |  ❌  |
-|  18  |  ❌  |  ❌  |  ❌  |  ❌  |  ✅  |  ✅  |  ✅  |  ✅  |  ❌  |  ❌  |  ❌  |  ❌  |
-|  19  |  ❌  |  ❌  |  ❌  |  ❌  |  ✅  |  ✅  |  ✅  |  ✅  |  ❌  |  ❌  |  ❌  |  ❌  |
-|  20  |  ❌  |  ❌  |  ❌  |  ❌  |  ✅  |  ✅  |  ✅  |  ✅  |  ❌  |  ❌  |  ❌  |  ❌  |
-|  21  |  ❌  |  ❌  |  ❌  |  ❌  |  ✅  |  ✅  |  ✅  |  ✅  |  ❌  |  ❌  |  ❌  |  ❌  |
-|  22  |  ❌  |  ❌  |  ❌  |  ❌  |  ✅  |  ✅  |  ✅  |  ✅  |  ❌  |  ❌  |  ❌  |  ❌  |
-|  23  |  ❌  |  ❌  |  ❌  |  ❌  |  ✅  |  ✅  |  ✅  |  ❌  |  ❌  |  ❌  |  ❌  |  ❌  |
-|  24  |  ❌  |  ❌  |  ❌  |  ❌  |  ✅  |  ✅  |  ✅  |  ❌  |  ❌  |  ❌  |  ❌  |  ❌  |
-|  25  |  ❌  |  ❌  |  ❌  |  ❌  |  ✅  |  ✅  |  ✅  |  ✅  |  ❌  |  ❌  |  ❌  |  ❌  |
-|  26  |  ❌  |  ❌  |  ❌  |  ❌  |  ✅  |  ✅  |  ✅  |  ✅  |  ❌  |  ❌  |  ❌  |  ❌  |
-|  27  |  ❌  |  ❌  |  ❌  |  ❌  |  ✅  |  ✅  |  ✅  |  ✅  |  ❌  |  ❌  |  ❌  |      |
-|  28  |  ❌  |  ❌  |  ❌  |  ❌  |  ✅  |  ✅  |  ✅  |  ✅  |  ❌  |  ❌  |  ❌  |      |
-|  29  |  ❌  |  -   |  ❌  |  ❌  |  ✅  |  ✅  |  ✅  |  ✅  |  ❌  |  ❌  |  ❌  |      |
-|  30  |  ❌  |  -   |  ❌  |  ❌  |  ✅  |  ✅  |  ✅  |  ✅  |  ❌  |  ❌  |  ❌  |      |
-|  31  |  ❌  |  -   |  ❌  |  -   |  ✅  |  -   |  ✅  |  ✅  |  -   |  ❌  |  -   |      |
+|  1   |  ❌  |      |      |      |      |      |      |      |      |      |      |      |
+|  2   |  ❌  |      |      |      |      |      |      |      |      |      |      |      |
+|  3   |  ❌  |      |      |      |      |      |      |      |      |      |      |      |
+|  4   |  ❌  |      |      |      |      |      |      |      |      |      |      |      |
+|  5   |  ❌  |      |      |      |      |      |      |      |      |      |      |      |
+|  6   |  ❌  |      |      |      |      |      |      |      |      |      |      |      |
+|  7   |  ❌  |      |      |      |      |      |      |      |      |      |      |      |
+|  8   |  ❌  |      |      |      |      |      |      |      |      |      |      |      |
+|  9   |  ❌  |      |      |      |      |      |      |      |      |      |      |      |
+|  10  |  ❌  |      |      |      |      |      |      |      |      |      |      |      |
+|  11  |  ❌  |      |      |      |      |      |      |      |      |      |      |      |
+|  12  |  ❌  |      |      |      |      |      |      |      |      |      |      |      |
+|  13  |  ❌  |      |      |      |      |      |      |      |      |      |      |      |
+|  14  |  ❌  |      |      |      |      |      |      |      |      |      |      |      |
+|  15  |  ❌  |      |      |      |      |      |      |      |      |      |      |      |
+|  16  |  ❌  |      |      |      |      |      |      |      |      |      |      |      |
+|  17  |  ❌  |      |      |      |      |      |      |      |      |      |      |      |
+|  18  |  ❌  |      |      |      |      |      |      |      |      |      |      |      |
+|  19  |  ❌  |      |      |      |      |      |      |      |      |      |      |      |
+|  20  |  ❌  |      |      |      |      |      |      |      |      |      |      |      |
+|  21  |  ❌  |      |      |      |      |      |      |      |      |      |      |      |
+|  22  |  ❌  |      |      |      |      |      |      |      |      |      |      |      |
+|  23  |  ❌  |      |      |      |      |      |      |      |      |      |      |      |
+|  24  |  ❌  |      |      |      |      |      |      |      |      |      |      |      |
+|  25  |  ❌  |      |      |      |      |      |      |      |      |      |      |      |
+|  26  |  ❌  |      |      |      |      |      |      |      |      |      |      |      |
+|  27  |  ❌  |      |      |      |      |      |      |      |      |      |      |      |
+|  28  |  ❌  |      |      |      |      |      |      |      |      |      |      |      |
+|  29  |  ❌  |  -   |      |      |      |      |      |      |      |      |      |      |
+|  30  |  ❌  |  -   |      |      |      |      |      |      |      |      |      |      |
+|  31  |  ❌  |  -   |      |  -   |      |  -   |      |      |  -   |      |  -   |      |
 
 ----
 
-## Past reviews and recommendations:
+## Past reviews and recommendations
 
 {% assign pastBooks = site.data.books
         | where_exp: "item", "item.completeDate < currentYearRecord[0].start"
@@ -116,7 +116,7 @@ In order to try and enforce a habit of reading daily, I'm making this a public p
 {% if book.summary %}  * Summary: {{ book.summary }}{% endif %}
 {% endfor %}
 
-## Todo List:
+## Todo List
 
 {% assign todoSorted = site.data.books
         | where_exp: "item", "item.isCurrent != true"

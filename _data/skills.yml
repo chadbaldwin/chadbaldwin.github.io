@@ -9,9 +9,9 @@
 # other is used. Lists are sorted and concatenated without line breaks separated by • (&bull;)
 
 - skill: Database Design, Development and Reporting
-  description: "9+ years of experience in database/schema design, query tuning, index tuning, SQL development, troubleshooting locking and blocking issues, data analysis, custom reporting and data visualization."
+  description: "10+ years of experience in database/schema design, query tuning, index tuning, SQL development, troubleshooting locking and blocking issues, data analysis, custom reporting and data visualization."
 - skill: .NET Development Using C# and PowerShell
-  description: "6+ years experience with PowerShell and 2+ years of experience working with C# and .NET to build back end services integrating with 3rd party API's, web scraping, ETL processes and task automation."
+  description: "7+ years experience with PowerShell and 2+ years of experience working with C# and .NET to build back end services integrating with 3rd party API's, web scraping, ETL processes and task automation."
 - skill: Tools & Technologies
   list:
     - AWS Services (incl. Console, CloudWatch, EC2, S3, SES, SNS, Secrets Manager)
@@ -37,3 +37,5 @@
     - Upsource
     - Visual Studio
     - VS Code
+
+# Azure, Bicep, ADO, Pipelines (YAML), SSDT, DacFx

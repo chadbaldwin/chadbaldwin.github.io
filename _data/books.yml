@@ -10,8 +10,8 @@
   author: Jeffery D. Smith
   summary: \"Operations Anti-Patterns, DevOps Solutions shows how to implement DevOps techniques in the kind of imperfect environments most developers work in. Part technology tutorial, part reference manual, and part psychology handbook, this practical guide shows you realistic ways to bring DevOps to your team when you don’t have the flexibility to make sweeping changes in organizational structure.\"
   link: https://amzn.to/3Pqgvmz
-  startDate: 2022-07-10
-  isCurrent: true
+  #startDate: 2022-07-10
+  #isCurrent: true # removing isCurrent status - intend to restart book from beginning
 
 - title: The Unicorn Project
   author: Gene Kim

@@ -10,7 +10,7 @@ If you have any suggestions to add, or a better way to organize this page, feel 
 
 {% for category in site.data.bookmarks %}
 {% assign items = category[1] | sort_natural: "name" %}
-### {{ category[0] | capitalize }}:
+### {{ category[0] | capitalize }}
 {% for item in items %}
 * [{{ item.name }}]({{ item.link }}){:target="_blank"}
   * {{ item.description }}
