@@ -203,7 +203,7 @@ $host.ui.RawUI.WindowTitle = 'changed title';
 * This is a straight copy-paste from the [SQL Server docker hub page](https://hub.docker.com/_/microsoft-mssql-server){:target="_blank"}. If you use Docker Desktop, this is an awesome way to quickly spin up a local instance of SQL Server, ready for all sorts of testing. I use this before every blog post to give me a clean working environment to test in, and then I can quickly and easily clean it up when I'm done by removing the container.
 
 ```powershell
-docker run -e 'ACCEPT_EULA=Y' -e "SA_PASSWORD=${pass}" -p 1433:1433 -d mcr.microsoft.com/mssql/server:2019-latest;
+docker run -e 'ACCEPT_EULA=Y' -e "MSSQL_SA_PASSWORD=${pass}" -p 1433:1433 -d mcr.microsoft.com/mssql/server:2019-latest;
 ```
 
 #### Use ripgrep to search files
