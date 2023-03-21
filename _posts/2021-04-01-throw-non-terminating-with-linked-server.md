@@ -24,7 +24,7 @@ This was fairly easy to set up a demo script for. I personally tested this using
 I won't walk through setting up docker or anything like that (I'd like to in a future blog post), but if you are already familiar with it, you can [go here](https://hub.docker.com/_/microsoft-mssql-server){:target="_blank"} to see what images are available. This is the command I used:
 
 ```plaintext
-docker run -e 'ACCEPT_EULA=Y' -e 'SA_PASSWORD=yourStrong(!)Password' -p 1433:1433 -d mcr.microsoft.com/mssql/server:2019-latest
+docker run -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=yourStrong(!)Password' -p 1433:1433 -d mcr.microsoft.com/mssql/server:2019-latest
 ```
 
 After that's all done and running, connect to the instance, and create a database:
