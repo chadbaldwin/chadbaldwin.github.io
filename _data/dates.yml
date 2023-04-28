@@ -1,3 +1,7 @@
+# List of date ranges. Created to make data calculations in Jekyll easier.
+# Jekyll does not seem to have the ability to create a value as a date datatype
+# But you can store a date value and use that instead
+
 - { year: 2019, start: 2019-01-01, nextStart: 2019-01-01 }
 - { year: 2020, start: 2020-01-01, nextStart: 2020-01-01 }
 - { year: 2021, start: 2021-01-01, nextStart: 2021-01-01 }
