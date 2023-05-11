@@ -11,9 +11,12 @@
       var months = Math.ceil(daysDiff % 365.25 / 30.4375);
       if (months == 12) { months = 0; years++; }
 
+      // Yeah, I know this is hacky, deal with it, I just threw it in real quick because I was tired of seeing "1 yrs 1 mos"
       var returnText = "";
-      if (years > 0) { returnText += `${years} yrs ` }
-      if (months > 0) { returnText += `${months} mos ` }
+      if (years = 1) { returnText += `${years} yr ` }
+      if (years > 1) { returnText += `${years} yrs ` }
+      if (months = 1) { returnText += `${months} mo ` }
+      if (months > 1) { returnText += `${months} mos ` }
       returnText = returnText.trim();
 
       document.write(returnText);
