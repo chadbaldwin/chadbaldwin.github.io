@@ -13,9 +13,9 @@
 
       // Yeah, I know this is hacky, deal with it, I just threw it in real quick because I was tired of seeing "1 yrs 1 mos"
       var returnText = "";
-      if (years = 1) { returnText += `${years} yr ` }
+      if (years == 1) { returnText += `${years} yr ` }
       if (years > 1) { returnText += `${years} yrs ` }
-      if (months = 1) { returnText += `${months} mo ` }
+      if (months == 1) { returnText += `${months} mo ` }
       if (months > 1) { returnText += `${months} mos ` }
       returnText = returnText.trim();
 
