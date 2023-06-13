@@ -105,6 +105,10 @@ diagramming:
   - name: markmap.js
     description: Visualize your Markdown with mindmaps (and interactive)
     link: https://markmap.js.org/repl
+    
+  - name: swimlanes.io
+    description: Build swimlane charts using code
+    link: https://swimlanes.io/
 
 networking:
   - name: Speed test - CloudFlare
