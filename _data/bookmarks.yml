@@ -116,7 +116,7 @@ networking:
     link: https://speed.cloudflare.com
 
   - name: Speed test - SpeedTest.net
-    description: Speed/Latency testing
+    description: Speed/Latency testing - Also has a CLI tool
     link: https://www.speedtest.net
 
   - name: Speed test - Fast.com
