@@ -31,6 +31,7 @@
     - RabbitMQ
     - Red Gate Toolbelt
     - Sisense BI Reporting
+    - Splunk
     - SQL Server Data Tools (SSDT)
     - SQL Server Management Studio (SSMS)
     - SQL Server Profiler
@@ -40,4 +41,6 @@
     - Visual Studio
     - VS Code
 
-# Azure, Bicep, ADO, Pipelines (YAML), DacFx
+# HCHB to add:
+# Azure, Bicep, Azure DevOps, Pipelines (YAML), DacFx
+# Splunk, SentryOne, JAMS, Rancher, DBADash, 
