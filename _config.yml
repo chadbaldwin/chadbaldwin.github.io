@@ -28,16 +28,17 @@ show_excerpts: false
 
 # Used by simple links page
 social-links:
-  Resume:        https://chadbaldwin.net/resume
-  LinkedIn:      https://linkedin.com/in/chadbaldwin
-  StackOverflow: https://stackoverflow.com/users/3474677
-  HackerRank:    https://hackerrank.com/chadwin
-  GitHub:        https://github.com/chadbaldwin
-  Twitter:       https://twitter.com/chad_baldwin
-  Reddit:        https://reddit.com/user/chadbaldwin
-  Credly:        https://credly.com/users/chadbaldwin
-  PluralSight:   https://app.pluralsight.com/profile/chadbaldwin
-  Website:       https://chadbaldwin.net
+  Resume:          https://chadbaldwin.net/resume
+  LinkedIn:        https://linkedin.com/in/chadbaldwin
+  StackOverflow:   https://stackoverflow.com/users/3474677
+  HackerRank:      https://hackerrank.com/chadwin
+  GitHub:          https://github.com/chadbaldwin
+  Microsoft Learn: https://learn.microsoft.com/en-us/users/chadbaldwin/transcript/v0ylxf6nq5l8ny8
+  Twitter:         https://twitter.com/chad_baldwin
+  Reddit:          https://reddit.com/user/chadbaldwin
+  Credly:          https://credly.com/users/chadbaldwin
+  PluralSight:     https://app.pluralsight.com/profile/chadbaldwin
+  Website:         https://chadbaldwin.net
 
 # plugin: jekyll-seo-tag
 twitter:
