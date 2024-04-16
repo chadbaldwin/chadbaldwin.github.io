@@ -4,16 +4,22 @@
   logo: "/img/companylogos/hchb.png"
   url: "https://www.hchb.com/"
   positions:
+
   - title: "Data Engineer III"
     startdate: 2022-05-23
-    summary:
+#   enddate:
+    summary: "Specialized in research and development with a focus on performance tuning for SQL Server. Designed and implemented systems for identifying and solving complex database issues through innovative proof-of-concept systems and strategic process improvements. Demonstrated ability to deliver outside-the-box solutions that enhance data management and operational effectiveness."
     projects:
+      - "Developed a system to monitor millions of SQL Server indexes, enabling the identification and removal of unused indexes to optimize database performance and resource allocation. Leading to a significant reduction in superfluous write activity by removing unnecessary indexes while ensuring no performance regression."
+      - "Engineered an advanced analytics tool to evaluate physical index structures, successfully identifying and resolving issues with duplicate, overlapping, and mergeable indexes, which significantly enhanced query efficiency and storage utilization."
+      - "Designed and implemented a robust system for synchronizing and consolidating system metadata from hundreds of SQL Server instances into a central repository. This tool aids in monitoring and managing schema and configuration drift, improving consistency and control across the database environment."
 
 - company: "AutoAlert"
   summary: "A data mining company dedicated to identifying leads in automotive dealerships customer data with the goal of helping them increase customer retention and sales."
   logo: "/img/companylogos/aa.jpg"
   url: "https://www.autoalert.com/"
   positions:
+
   - title: "Database Developer"
     startdate: 2015-10-01
     enddate: 2022-05-13
@@ -27,6 +33,7 @@
       - "Experience with using collaboration and CI/CD tools including Jenkins, Slack, Upsource, Jira and Confluence"
       - "Worked primarily with SQL Server versions 2008, 2012, 2014 practicing good HA/DR policies, using replication and Always On availability groups"
       - "Used AWS tools for troubleshooting, logging and deployment such as CloudWatch, CodeDeploy, and managing/monitoring servers through EC2"
+
   - title: "Senior IT Support Analyst"
     startdate: 2012-06-04
     enddate: 2015-10-01
@@ -39,7 +46,8 @@
   summary:
   logo: "/img/companylogos/aawa.png"
   url: "https://www.webbassociates.com/"
-  positions: 
+  positions:
+
   - title: "IT Intern / Network Technician"
     startdate: 2008-10-13
     enddate: 2012-06-01
