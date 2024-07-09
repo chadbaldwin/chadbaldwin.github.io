@@ -28,7 +28,7 @@ show_excerpts: false
 
 # Used by simple links page
 social-links:
-  Resume:          https://chadbaldwin.net/resume
+  Resume:          /resume
   LinkedIn:        https://linkedin.com/in/chadbaldwin
   StackOverflow:   https://stackoverflow.com/users/3474677
   HackerRank:      https://hackerrank.com/chadwin
@@ -38,7 +38,7 @@ social-links:
   Reddit:          https://reddit.com/user/chadbaldwin
   Credly:          https://credly.com/users/chadbaldwin
   PluralSight:     https://app.pluralsight.com/profile/chadbaldwin
-  Website:         https://chadbaldwin.net
+  Website:         /
 
 # plugin: jekyll-seo-tag
 twitter:
@@ -62,7 +62,7 @@ collections:
 header_pages:
   - resume.html
   - archive.html
-  - books.md
+#  - books.md # Commenting out for now as putting more focus on pluralsight than reading
   - bookmarks.md
 
 plugins:
