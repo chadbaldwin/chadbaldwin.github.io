@@ -27,7 +27,7 @@ Before anyone asks "how do you type these"...To be honest, I don't, because I us
 
 ```tsql
 SELECT N'This is a Unicode string in SQL Server! 🦄'
-SELECT 'This is NOT a Unicode string in SQL Server! 😭'
+SELECT 'This is NOT a Unicode string in SQL Server! 😭' -- Except when using UTF-8 collations in 2019+...read the blog post linked above
 ```
 
 ----
