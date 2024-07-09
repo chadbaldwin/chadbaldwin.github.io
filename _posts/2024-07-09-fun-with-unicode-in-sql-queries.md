@@ -4,7 +4,7 @@ title: "Fun with Unicode characters in SQL Queries"
 description: "Unicode characters are a fun and useful way to help make your query results easier to read and even make some fun graphics."
 date: 2024-07-09T07:00:00-07:00
 tags: T-SQL
-#image: img/postbanners/2022-06-02-whats-new-in-sql-server-2022.png
+image: img/postbanners/2024-07-09-fun-with-unicode-in-sql-queries.png
 ---
 
 I never thought this would make for a good blog post, but here we are. Every single time I share a query that uses Unicode characters, someone _always_ asks me what it is and why I'm using it. So now I have this blog post I can send to anyone who asks about it 😄.
