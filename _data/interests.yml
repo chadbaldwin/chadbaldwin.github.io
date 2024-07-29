@@ -1,5 +1,5 @@
 description: >
-  In my free time I enjoy writing on <a href="https://chadbaldwin.net">my blog</a> about SQL and
+  In my free time I enjoy writing on <a href="{{ site.baseurl }}">my blog</a> about SQL and
   PowerShell, working on technical home projects such as smart home automation, networking,
   3D printing and 3D design. I also like to contribute to StackOverflow, Reddit
   communities for SQL/PowerShell and the SQL community Slack channel by helping answer peoples
