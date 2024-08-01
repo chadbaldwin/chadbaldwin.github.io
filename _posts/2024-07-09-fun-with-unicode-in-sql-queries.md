@@ -58,7 +58,7 @@ SELECT 'sys.indexes ->'  , i.*
 FROM ...
 ```
 
-![alt text](/img/unicodequeries/20240708_155925.png)
+![Screenshot of SSMS data grid results using a column containing "sys.stats ->" as a way to visually separate related columns](/img/unicodequeries/20240708_155925.png)
 
 Don't try to convince me that after staring at result grid's all day that you're going to easily and quickly spot that out of 100 columns.
 
@@ -72,7 +72,7 @@ SELECT N'█ sys.indexes -> █'   , i.*
 FROM ...
 ```
 
-![alt text](/img/unicodequeries/20240708_160956.png)
+![Screenshot of SSMS data grid results using a column containing unicode block characters like "█ sys.stats -> █" to visually separate related columns](/img/unicodequeries/20240708_160956.png)
 
 I find that to be _significantly_ easier to spot...Though, most times I really only do this...
 
@@ -84,7 +84,7 @@ SELECT N'█' [█], i.*
 FROM ...
 ```
 
-![alt text](/img/unicodequeries/20240708_161344.png)
+![Screenshot of SSMS data grid results using a column containing only unicode block characters like "█" to visually separate related columns](/img/unicodequeries/20240708_161344.png)
 
 Does it make the SELECT portion of the queries just a little bit ugly? Sure, but I've gotten used to it. And I feel the pros outweigh the cons.
 
@@ -92,7 +92,7 @@ Does it make the SELECT portion of the queries just a little bit ugly? Sure, but
 
 ## Adding a visual row identifier
 
-My second most common usage for `█` is to easily spot specific rows I'm targeting while looking at a larger dataset. For example, I have a table of records with expiration dates, but I'm doing some data analysis, looking for patterns and I want to see the whole dataset, and not _just_ those that are expiered or vice versa.
+My second most common usage for `█` is to easily spot specific rows I'm targeting while looking at a larger dataset. For example, I have a table of records with expiration dates, but I'm doing some data analysis, looking for patterns and I want to see the whole dataset, and not _just_ those that are expired or vice versa.
 
 Here's a sample query/data generator:
 
@@ -106,7 +106,7 @@ FROM (VALUES(1),(2),(3),(4),(5),(6),(7),(8),(9),(10)) x(ItemID) -- If you're on 
 
 And here's what that output might look like...
 
-![alt text](/img/unicodequeries/20240708_164754.png)
+![Screenshot of SSMS data grid results using a column containing unicode block characters like "█" to visually identify target rows](/img/unicodequeries/20240708_164754.png)
 
 Obviously, you don't HAVE to use Unicode here, you'd probably be just as well off using `1` or `##` or whatever you want. I personally find that this makes it incredibly obvious and easy to spot.
 
@@ -122,7 +122,7 @@ I won't paste the whole script, but you can see where I've done this in a [simpl
 
 The result of which looks like this:
 
-![alt text](/img/unicodequeries/20240708_171010.png)
+![Screenshot of SSMS data grid results using unicode block characters like "█" and "▒" to build a bar chart for each record](/img/unicodequeries/20240708_171010.png)
 
 Except here you'll notice I'm actually using two different characters. `█` to represent used space, and `▒` (`alt+177`) to represent unused space.
 
@@ -143,7 +143,7 @@ SELECT REPLICATE(N'█', CONVERT(int,   FLOOR((1 - @pct) * @barwidth)))
 
 ----
 
-## Use as a delimeter
+## Use as a delimiter
 
 I'm pretty sure I stole this idea from Adam Bertrand, but I can't seem to find the post. The idea is to use a Unicode character that has a very unlikely chance of occurring in your data to use as a split point / delimiter.
 
@@ -172,6 +172,6 @@ This isn't necessarily a great option in all cases, you could also use something
 
 This is really only scratching the surface of what Unicode has to offer and how you can use it in SQL. I recommend checking out various Unicode blocks (related sections of characters). Some good ones to check out would be [block elements](https://unicode-explorer.com/b/2580){:target="_blank"} (what we've been using in this post), [box drawing](https://unicode-explorer.com/b/2500){:target="_blank"}, [arrows](https://unicode-explorer.com/b/2190){:target="_blank"} (there's actually like 4 blocks just for arrows), [playing cards](https://unicode-explorer.com/b/1F0A0){:target="_blank"}...just to name a few. You can view [the full list here](https://unicode-explorer.com/blocks){:target="_blank"}.
 
-I've also seen some pretty cool stuff for writing 3D text in SQL comments, using box drawing characters to visualize a parent-child heirarchy (kinda like when you run the windows `tree` command), etc.
+I've also seen some pretty cool stuff for writing 3D text in SQL comments, using box drawing characters to visualize a parent-child hierarchy (kinda like when you run the windows `tree` command), etc.
 
 Let me know what some of your favorite tricks are using Unicode characters.
