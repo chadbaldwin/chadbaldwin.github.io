@@ -62,7 +62,7 @@ VALUES ('a', '1','b', '2')
 
 ![merge split source data](/img/queryresults/merge_split_source_data.png)
 
-Set up the schema (sorry, can't use temp tables for this one, they don't support FK's):
+Set up the schema (sorry, can't use temp tables for this one, they don't support FKs):
 
 ```tsql
 CREATE TABLE dbo.Table1 (

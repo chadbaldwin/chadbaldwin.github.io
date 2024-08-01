@@ -11,7 +11,7 @@
 - skill: Database Design, Development and Reporting
   description: "12+ years of experience in database/schema design, query tuning, index tuning, SQL development, troubleshooting locking and blocking issues, data analysis, custom reporting and data visualization."
 - skill: .NET Development Using C# and PowerShell
-  description: "9+ years experience with PowerShell and 2+ years of experience working with C# and .NET to build back end services integrating with 3rd party API's, web scraping, ETL processes and task automation."
+  description: "9+ years experience with PowerShell and 2+ years of experience working with C# and .NET to build back end services integrating with 3rd party APIs, web scraping, ETL processes and task automation."
 - skill: Tools & Technologies
   list:
     - Azure DevOps

@@ -392,7 +392,7 @@ Microsoft Documentation:
 
 Similar to `SPLIT_STRING()`, neither of these are new, but they have been greatly enhanced. After years of waiting, we finally have the ability to control how `NULL` values are handled with the use of `IGNORE NULLS` and `RESPECT NULLS`.
 
-In SQL Server, `NULL` values are always sorted to the "lowest" end. So if you sort ascending, `NULL` values will be at the top. Unfortunately, we don't have a choice over that matter. In other RDBMS's such as Postgres, you can control this behavior (e.g. `ORDER BY MyValue ASC NULLS LAST`).
+In SQL Server, `NULL` values are always sorted to the "lowest" end. So if you sort ascending, `NULL` values will be at the top. Unfortunately, we don't have a choice over that matter. In other RDBMSs such as Postgres, you can control this behavior (e.g. `ORDER BY MyValue ASC NULLS LAST`).
 
 I've personally never run into this as a major problem, there's always ways around it, such as `ORDER BY IIF(MyValue IS NULL, 0, 1), MyValue`, which will sort `NULL` values to the bottom first, _then_ sort by `MyValue`.
 

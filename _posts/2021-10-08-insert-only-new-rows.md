@@ -17,7 +17,7 @@ In this post, instead of `EXISTS` and `EXCEPT` to look for records that are diff
 
 ----
 
-### When NULL's are not an issue
+### When NULLs are not an issue
 
 This task is normally not very high on the difficulty scale. Most people would use one of these two methods
 

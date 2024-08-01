@@ -60,7 +60,7 @@ FROM ...
 
 ![Screenshot of SSMS data grid results using a column containing "sys.stats ->" as a way to visually separate related columns](/img/unicodequeries/20240708_155925.png)
 
-Don't try to convince me that after staring at result grid's all day that you're going to easily and quickly spot that out of 100 columns.
+Don't try to convince me that after staring at result grids all day that you're going to easily and quickly spot that out of 100 columns.
 
 Now, my typical pattern is to do something like this:
 

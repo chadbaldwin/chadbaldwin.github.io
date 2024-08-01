@@ -9,11 +9,11 @@ image: /img/postbanners/2022-04-04-powershell-monitoring-log-files.png
 
 Inspecting and monitoring log files.
 
-Let's talk about how to make something that's already super exciting, even more fun, by using PowerShell. Why bother with fancy GUI's and polished tools when you can do it the fun way?
+Let's talk about how to make something that's already super exciting, even more fun, by using PowerShell. Why bother with fancy GUIs and polished tools when you can do it the fun way?
 
 Yes, there's lots of good options now when it comes to logging, like structured logs, AWS CloudWatch, Azure Monitor, ELK, etc. Tools that give you a lot of power when it comes to filtering, alerts, and monitoring. However, I still often find myself digging through good ol' `*.log` files on a server.
 
-There's lots of "tail" style GUI's and CLI tools out there, but it's still good to know how to do it using plain PowerShell, especially when you don't want to deal with installing or downloading some app to a blank server.
+There's lots of "tail" style GUIs and CLI tools out there, but it's still good to know how to do it using plain PowerShell, especially when you don't want to deal with installing or downloading some app to a blank server.
 
 ----
 
@@ -320,7 +320,7 @@ Get-Random ([System.ConsoleColor].GetEnumNames() | ? { $_ -NE 'Black' })
 
 If you actually read this giant blog post and are bothering to read my final thoughts section...I applaud and thank you. Obviously there are a lot of tools out there that would probably make this easier. There's also a lot of tools that may be better suited for scanning, searching and filtering large text files. My personal favorite is ripgrep, and I hope to write a post about it one day.
 
-That said, I feel it's good to learn how to do things the long way. You won't always have access to your fancy GUI's and CLI tools, and you may have to deal with what you've got at hand.
+That said, I feel it's good to learn how to do things the long way. You won't always have access to your fancy GUIs and CLI tools, and you may have to deal with what you've got at hand.
 
 I'd love to hear feed back on what you think, along with any tips and tricks you might have on this topic as well.
 

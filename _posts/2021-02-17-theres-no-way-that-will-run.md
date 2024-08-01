@@ -122,7 +122,7 @@ Not really...but SSMS sure makes it look that way...I'll show you how it looks i
 
 ![image-20210216172330200](/img/confusingcode/image-20210216172330200.png)
 
-Yeah....there's no way *that* will run...right?
+Yeah...there's no way *that* will run...right?
 
 Well...Try it for yourself. The code snippet below and the screenshot above are the exact same string. However, for some reason, SSMS renders this text differently, making it look like the identifiers, strings and comments are in some way "infecting" the rest of the line.
 

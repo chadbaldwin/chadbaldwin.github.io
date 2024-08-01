@@ -52,7 +52,7 @@ Using information the average person would likely be able to figure out just by 
 Let's continue with our test using True People Search:
 
 1. Fill in your name (for me, I would use my first name and last name). If you have one or more middle names, just leave those out, the less specific the better in this case (some of these sites aren't always able to get your full name).
-2. Type in your state, not your city or zip code. 
+2. Type in your state, not your city or zip code.
 3. Hit search.
 4. At the top, use the age filter to narrow down your search to an age range of about +/- 3-5 years. If you're 30, use something like 25-35.
 

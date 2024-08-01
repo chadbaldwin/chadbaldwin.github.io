@@ -150,7 +150,7 @@ The `bcp` utility can be used to export table/view/query data to a data file, an
 * Maintains `NULL` values in the exported data rather than converting them to blank
 * Is incredibly fast and efficient
 
-These features and capabilities come as both pro's and con's depending on the usage.
+These features and capabilities come as both pros and cons depending on the usage.
 
 Here's a few great uses I could personally think of for `bcp`
 
@@ -158,7 +158,7 @@ Here's a few great uses I could personally think of for `bcp`
 
 * If you need to copy a table from one server to another, but you do not have direct access to both servers from the same machine. In that case `Copy-DbaDbTableData` isn't useful as it needs access to both machines. But with `bcp`, you can save the table to a data and format file, transfer them somewhere else, and then use `bcp` to import the data.
 
-* Technically, you can generate a CSV using `bcp`, but when I tried it, I ran into a handful of issues. Such as...you can't add text qualification or headers, and the workarounds to add them may not be worth it. It also retain's `NULL` values by storing them as a `NUL` character (`0x0`). If you're planning on sending this file out to another system...you'd likely want to convert those `NULL` values to a blank value. But if none of these caveats affect you...then this may be a great option since it's so fast at exporting the data to disk.
+* Technically, you can generate a CSV using `bcp`, but when I tried it, I ran into a handful of issues. Such as...you can't add text qualification or headers, and the workarounds to add them may not be worth it. It also retains `NULL` values by storing them as a `NUL` character (`0x0`). If you're planning on sending this file out to another system...you'd likely want to convert those `NULL` values to a blank value. But if none of these caveats affect you...then this may be a great option since it's so fast at exporting the data to disk.
 
 ### Other dbatools cmdlets
 
