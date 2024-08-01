@@ -168,7 +168,7 @@ PS> 1,2,3 | Invoke-AddOne
 
 Looks good, we passed in 1,2,3 and got back 2,3,4.
 
-Now, lets test using `-PipeLinevariable`
+Now, lets test using `-PipelineVariable`
 
 ```powershell
 PS> 1,2,3 | Invoke-AddOne -PV test | % { $test }

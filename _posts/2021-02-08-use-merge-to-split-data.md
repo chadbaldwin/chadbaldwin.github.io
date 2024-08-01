@@ -105,7 +105,7 @@ Let's go through this. For the most part, it's just a simple boring merge statem
 
 First, we've hard coded `1 = 0` in for the join logic. This is to force the merge to **always** jump to the `WHEN NOT MATCHED BY TARGET` part of the merge, since all we care about is performing inserts.
 
-Second, we've added an `OUTPUT` statement returning both the original identity PK value from `#Source` *as well as* the new identity value from `Table1`. Thus giving us a perfect mapping of our source data to the new identity values!
+Second, we've added an `OUTPUT` statement returning both the original identity PK value from `#Source` _as well as_ the new identity value from `Table1`. Thus giving us a perfect mapping of our source data to the new identity values!
 
 Now that we've got `Table1` populated, lets finish it up and populate `Table2` using our ID Mapping table to include the FK values.
 

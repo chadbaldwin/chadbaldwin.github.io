@@ -31,11 +31,11 @@ Thanks!
 
 This was me, 3 months ago. I played around with various blogging platforms and they seemed okay, but for some reason, none of them really did what I wanted. Eventually I learned about [GitHub Pages](https://pages.github.com/){:target="_blank"}. It's a service provided by GitHub; They allow you to host a static website (no backend code), and they host it **for free**.
 
-GitHub Pages is great, _but_ when you start learning "how to blog using Jekyll", things get pretty overwhelming...You start learning about ruby and Jekyll and how to get them working on Windows (which is a pain), learning languages like YAML and Liquid...It gets complicated real quick.
+GitHub Pages is great, *but* when you start learning "how to blog using Jekyll", things get pretty overwhelming...You start learning about ruby and Jekyll and how to get them working on Windows (which is a pain), learning languages like YAML and Liquid...It gets complicated real quick.
 
 ### Here's what I've done
 
-I've taken _this_ blog, stripped out unnecessary extras and converted it into a template you can use. I've left in features that I think are helpful for a blogger who wants to cover SQL Server. For example, I built this template to support T-SQL specific syntax highlighting using the SSMS theme.
+I've taken *this* blog, stripped out unnecessary extras and converted it into a template you can use. I've left in features that I think are helpful for a blogger who wants to cover SQL Server. For example, I built this template to support T-SQL specific syntax highlighting using the SSMS theme.
 
 Your first blog doesn't need to be a fancy, professionally designed website. You just need good content, and setting one up should be as simple as a few clicks, maybe filling in some personal info, and you're done.
 
@@ -130,12 +130,13 @@ That's about all you need to know to get started.
 ### Lets create a new blog post
 
 1. Navigate to the `_posts` folder on GitHub
-2. Click `Add file` > `Create new file`
-3. Name your file `{{ site.time | date: '%Y-%m-%d' }}-your-new-blog-post.md`
-4. Set the title of your blog post by using a markdown header
-  * Write this as the first line `## This is my first blog post`
-5. Add some content...write some random things, whatever you want
-6. Throw in a code block (code blocks are created by surrounding your code snippet with three backticks at each end and an optional "language hint"), copy paste this in:
+1. Click `Add file` > `Create new file`
+1. Name your file `{{ site.time | date: '%Y-%m-%d' }}-your-new-blog-post.md`
+1. Set the title of your blog post by using a markdown header
+   * Write this as the first line `## This is my first blog post`
+1. Add some content...write some random things, whatever you want
+1. Throw in a code block (code blocks are created by surrounding your code snippet with three backticks at each end and an optional "language hint"), copy paste this in:
+
     ````plaintext
     ```tsql
     SELECT *
@@ -143,8 +144,9 @@ That's about all you need to know to get started.
     WHERE [name] = 'SomeTable'
     ```
     ````
-  * **Important note**, if you're using T-SQL code, make sure to use the `tsql` tag. This will tell your site that you want to use the SSMS style formatting.
-7. Click the `Preview` tab so you can see what it looks like so far.
+
+   * **Important note**, if you're using T-SQL code, make sure to use the `tsql` tag. This will tell your site that you want to use the SSMS style formatting.
+1. Click the `Preview` tab so you can see what it looks like so far.
 
 Here's a full playback of what it would look like:
 
@@ -172,4 +174,4 @@ If you're interested in diving deeper into Jekyll, how it works behind the scene
 
 There's lot of things you can do to this template, fairly easily, to add some fun features. Things like a comments section on your posts, adding a dark theme to your entire site or maybe you want to add some custom pages, like [my book tracking page]({{ 'books' | relative_url }}){:target="_blank"} or [my resume]({{ 'resume' | relative_url }}){:target="_blank"}. The possibilities are endless...but, it comes at a cost, it all has to be done manually by writing or copy/pasting code, learning new languages like HTML, CSS, Liquid, YAML...this is where platforms like WordPress starts to shine.
 
-I realize this particular setup may not work for everyone, and in the long run, it may even be more complicated than just sticking with a popular blogging platform, with their fancy UI's, plugins, etc. But I've had a lot of fun learning about GitHub Pages, Jekyll, Markdown, etc, so I figured I'd share how I got started, and try to make it easier for you if this is the route you're thinking of going.
+I realize this particular setup may not work for everyone, and in the long run, it may even be more complicated than just sticking with a popular blogging platform, with their fancy UIs, plugins, etc. But I've had a lot of fun learning about GitHub Pages, Jekyll, Markdown, etc, so I figured I'd share how I got started, and try to make it easier for you if this is the route you're thinking of going.

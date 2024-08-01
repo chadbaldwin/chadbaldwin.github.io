@@ -10,7 +10,7 @@ If you google "restore sql database in docker", you'll probably find 20 other bl
 
 This is more of a personal note for future Chad to come back to.
 
-Everything below is bascially a summarized version of the official docs, with small tweaks here and there:
+Everything below is basically a summarized version of the official docs, with small tweaks here and there:
 <https://docs.microsoft.com/en-us/sql/linux/tutorial-restore-backup-in-sql-server-container>
 
 ----

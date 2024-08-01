@@ -10,9 +10,9 @@ tags: T-SQL
 
 [DRY...Don't Repeat Yourself.](https://en.wikipedia.org/wiki/Don%27t_repeat_yourself){:target="_blank"}
 
-There are multiple ways to re-use code in SQL, such as [subqueries](https://docs.microsoft.com/en-us/sql/relational-databases/performance/subqueries){:target="_blank"} and [CTE's](https://docs.microsoft.com/en-us/sql/t-sql/queries/with-common-table-expression-transact-sql){:target="_blank"}; But I'd like to show you another way utilizing `CROSS APPLY`.
+There are multiple ways to re-use code in SQL, such as [subqueries](https://docs.microsoft.com/en-us/sql/relational-databases/performance/subqueries){:target="_blank"} and [CTEs](https://docs.microsoft.com/en-us/sql/t-sql/queries/with-common-table-expression-transact-sql){:target="_blank"}; But I'd like to show you another way utilizing `CROSS APPLY`.
 
-Subqueries and CTE's are great, but they're not exactly easy to daisy chain. What if you wanted to declare some kind of "inline variable" that you can assign a formula to, and then reference multiple times?
+Subqueries and CTEs are great, but they're not exactly easy to daisy chain. What if you wanted to declare some kind of "inline variable" that you can assign a formula to, and then reference multiple times?
 
 A lot of people who are new to SQL think that you can write something in the `SELECT` clause, assign an alias, and then re-use that alias throughout the query. They soon realize that will throw an error. This is because aliases assigned in the `SELECT` clause are only accessible in the `ORDER BY`.
 
@@ -20,7 +20,7 @@ But, using `CROSS APPLY`, you can sort of achieve this.
 
 ----
 
-## Sample data:
+## Sample data
 
 ```tsql
 IF OBJECT_ID('tempdb..#Contact','U') IS NOT NULL DROP TABLE #Contact; --SELECT * FROM #Contact
@@ -43,7 +43,7 @@ VALUES ('Tyler Durden'  , '1973-03-06', 'Wilmington' , 'DE', '(210) 658-5511')
 
 ----
 
-## The Challenge...
+## The Challenge
 
 Let's try to do something really ugly just for the sake of teaching.
 
@@ -57,7 +57,7 @@ You can probably imagine how ugly this is going to get...but think about how you
 
 ----
 
-## The conventional way:
+## The conventional way
 
 ```tsql
 SELECT c.ContactID, c.FullName, c.DateOfBirth, c.City, c.[State]
@@ -92,9 +92,9 @@ WHERE LEN(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(c.PhoneNumber,'(',''),
 
 ----
 
-## Using CTE's
+## Using CTEs
 
-CTE's are a great tool, allowing you to re-use a table expression multiple times. But they're not great about allowing you to re-use a column expression.
+CTEs are a great tool, allowing you to re-use a table expression multiple times. But they're not great about allowing you to re-use a column expression.
 
 ```tsql
 WITH cte_1 AS (

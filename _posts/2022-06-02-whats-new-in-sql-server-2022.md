@@ -11,7 +11,7 @@ image: img/postbanners/2022-06-02-whats-new-in-sql-server-2022.png
 
 > Note: It seems since this post was written, some functions have been added, or some syntax has changed. So until I have time to update this post with the latest information, keep that in mind.
 
-I've been exicted to play with the new features and language enhancements in SQL Server 2022 so I've been keeping an eye on the Microsoft Docker repository for the 2022 image. Well they finally added it! I immediately pulled the image and started playing with it.
+I've been excited to play with the new features and language enhancements in SQL Server 2022 so I've been keeping an eye on the Microsoft Docker repository for the 2022 image. Well they finally added it! I immediately pulled the image and started playing with it.
 
 I want to focus on the language enhancements as those are the easiest to demonstrate, and I feel that's what you'll be able to take advantage of the quickest after upgrading.
 
@@ -288,7 +288,7 @@ FROM (VALUES
 */
 ```
 
-See how each interval is being rounded down to the nearest occurence? This is super useful for things like grouping data by month. For example, "group sales by month using purchase date". Prior to this you'd have to use methods like the following:
+See how each interval is being rounded down to the nearest occurrence? This is super useful for things like grouping data by month. For example, "group sales by month using purchase date". Prior to this you'd have to use methods like the following:
 
 ```tsql
 SELECT DATEPART(MONTH, PurchaseDate), DATEPART(YEAR, PurchaseDate)
@@ -328,7 +328,7 @@ GROUP BY DATE_BUCKET(MONTH, 1, PurchaseDate);
 
 Easy as that. Easier to read, easier to know what it's doing.
 
-It also allows you to specify a "bucket width". To put it in plain terms, it allows you to round down to the nearst increment of time. For example, you could use it to round down to the nearst interval of 5 minutes. So `06:33:34` rounds down to `06:30:00`. This is great for reporting. You can break data up into chunks, for example, maybe you want to break the day up into 8 hour shifts.
+It also allows you to specify a "bucket width". To put it in plain terms, it allows you to round down to the nearest increment of time. For example, you could use it to round down to the nearest interval of 5 minutes. So `06:33:34` rounds down to `06:30:00`. This is great for reporting. You can break data up into chunks, for example, maybe you want to break the day up into 8 hour shifts.
 
 ```tsql
 DROP TABLE IF EXISTS #log;
@@ -362,7 +362,7 @@ FROM #log
 GROUP BY DATEADD(HOUR, (DATEDIFF(HOUR, 0, InsertDate) / 8) * 8, 0);
 ```
 
-All this is doing is getting the number of hours since `1900-01-01` (`0`), then dividing by 8. Since I'm dividing an int by an int, it automatically floors the result. So `10 / 8 = 1`, `15 / 8 = 1`, `16 / 8 = 2`, otherwise you would need to explicitly use `FLOOR()`. Then it is re-adding those hours back to 0 to get the datetime rounded to the nearst increment of 8 hours. Fortunately, increments of 2, 3, 4, 6, 8 and 12 all work nicely with this method.
+All this is doing is getting the number of hours since `1900-01-01` (`0`), then dividing by 8. Since I'm dividing an int by an int, it automatically floors the result. So `10 / 8 = 1`, `15 / 8 = 1`, `16 / 8 = 2`, otherwise you would need to explicitly use `FLOOR()`. Then it is re-adding those hours back to 0 to get the datetime rounded to the nearest increment of 8 hours. Fortunately, increments of 2, 3, 4, 6, 8 and 12 all work nicely with this method.
 
 However, `DATE_BUCKET()` makes this a lot easier:
 
@@ -460,7 +460,7 @@ I love how simple this is. Now our window is defined only once. Any future chang
 
 I saved this section for last on purpose because I have almost no experience working with JSON so I likely won't have great real-world examples, but I can at least walk through the usage of these functions.
 
-Microsoft has great examples in their documeneation already, so this walk-through is more for me than you because it's forcing me to learn how to use these functions.
+Microsoft has great examples in their documentation already, so this walk-through is more for me than you because it's forcing me to learn how to use these functions.
 
 Microsoft Documentation:
 
@@ -480,7 +480,7 @@ SELECT ISJSON('{ "name":"Chad" }'); -- Returns 1 because it is valid JSON
 SELECT ISJSON('{ name:"Chad" }');   -- Returns 0 because it is invalid JSON
 ```
 
-However, the new parameter allows you to do a little more than just check whehter the blob you pass to it is valid or not. Now you can check if its type is valid as well. Maybe you're generating JSON and you want to test the individual parts rather than testing the entire blob at the end of your task.
+However, the new parameter allows you to do a little more than just check whether the blob you pass to it is valid or not. Now you can check if its type is valid as well. Maybe you're generating JSON and you want to test the individual parts rather than testing the entire blob at the end of your task.
 
 Here are some test cases:
 
@@ -545,7 +545,7 @@ SELECT JSON_PATH_EXISTS(@jsonblob, '$.addresses[0].zip'); -- returns 1 because t
 Explanation of `$.addresses[0].zip`:
 
 * `$` - represents the root of the blob
-* `addresses[0]` - returns the first object witin the `addresses` array.
+* `addresses[0]` - returns the first object within the `addresses` array.
 * `zip` - looks for a property named `zip` within that object
 
 ### JSON_OBJECT()

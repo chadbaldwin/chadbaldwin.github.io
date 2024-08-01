@@ -148,7 +148,7 @@ The goal was to write a piece of code that will generate a tree...like so...
 
 If N=3 then the result should be:
 
-```
+```plaintext
    *
   ***
  *****

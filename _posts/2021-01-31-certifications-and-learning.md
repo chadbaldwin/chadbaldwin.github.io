@@ -40,7 +40,7 @@ Exam day came...and to keep it short...I passed!! And the effort I put into stud
 
 Now that I passed the first exam, I could focus on the second exam. My exam was scheduled for Jan 29th, which gave me 11 days to prepare. This exam, however, I was not nearly as confident taking. All of my work experience was on development...not DBA type work, and this exam covered a lot of areas I knew nothing about. Optimistically, I'd say my experience covered about 30% of the "skills measured" PDF.
 
-Things I knew nothing about prior to this exam: monitoring, extended events, Azure, Resource Governor, columnstore indexes, in-memory OLTP, index maintenance, troubleshooting with system DMV's....Let's just say I had a lot to cover.
+Things I knew nothing about prior to this exam: monitoring, extended events, Azure, Resource Governor, columnstore indexes, in-memory OLTP, index maintenance, troubleshooting with system DMVs....Let's just say I had a lot to cover.
 
 I knew in order to have a chance at passing at this exam, I was going to need to put in a lot more work. I ordered the [official 70-762 Exam reference](https://amzn.to/35Re73h){:target="_blank"} from Amazon. It's 368 pages and was expected to arrive in 2 days, giving me 10 days to read it at about 37 pages a day.
 

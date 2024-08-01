@@ -8,7 +8,7 @@ tags: T-SQL
 
 <style>
     pre {
-    	overflow-x: auto;
+        overflow-x: auto;
     }
     .note-wrapper {
         text-align: left;
@@ -41,7 +41,6 @@ Documentation Links:
 * [Official Documentation](https://docs.microsoft.com/en-us/sql/t-sql/language-elements/raiserror-transact-sql){:target="_blank"}
 * [Database Engine Error Severities](https://docs.microsoft.com/en-us/sql/relational-databases/errors-events/database-engine-error-severities){:target="_blank"} - Explains what each of the severities mean and how they should be used depending on the context of the error
 * [Database engine errors](https://docs.microsoft.com/en-us/sql/relational-databases/errors-events/database-engine-events-and-errors){:target="_blank"} - List of all database engine errors by error number. Warning - this page will take a while to load, it's huge
-
 
 Most common usages (log a message, but don't throw an error):
 
@@ -158,7 +157,7 @@ Column descriptions:
 
 ----
 
-## Lets do a couple demos:
+## Lets do a couple demos
 
 ### *Flush output buffer using WITH NOWAIT*
 
@@ -367,14 +366,14 @@ As expected, the code in the `CATCH` block was never run.
 ```tsql
 -- Severity levels 11 - 19 will switch control to the catch block:
 CREATE TABLE #caughterrors (SeverityLevel int)
-BEGIN TRY RAISERROR('Raiserror severity 11', 11, 1) WITH NOWAIT	END TRY BEGIN CATCH INSERT INTO #caughterrors VALUES (ERROR_SEVERITY()) END CATCH;
-BEGIN TRY RAISERROR('Raiserror severity 12', 12, 1) WITH NOWAIT	END TRY BEGIN CATCH INSERT INTO #caughterrors VALUES (ERROR_SEVERITY()) END CATCH;
-BEGIN TRY RAISERROR('Raiserror severity 13', 13, 1) WITH NOWAIT	END TRY BEGIN CATCH INSERT INTO #caughterrors VALUES (ERROR_SEVERITY()) END CATCH;
-BEGIN TRY RAISERROR('Raiserror severity 14', 14, 1) WITH NOWAIT	END TRY BEGIN CATCH INSERT INTO #caughterrors VALUES (ERROR_SEVERITY()) END CATCH;
-BEGIN TRY RAISERROR('Raiserror severity 15', 15, 1) WITH NOWAIT	END TRY BEGIN CATCH INSERT INTO #caughterrors VALUES (ERROR_SEVERITY()) END CATCH;
-BEGIN TRY RAISERROR('Raiserror severity 16', 16, 1) WITH NOWAIT	END TRY BEGIN CATCH INSERT INTO #caughterrors VALUES (ERROR_SEVERITY()) END CATCH;
-BEGIN TRY RAISERROR('Raiserror severity 17', 17, 1) WITH NOWAIT	END TRY BEGIN CATCH INSERT INTO #caughterrors VALUES (ERROR_SEVERITY()) END CATCH;
-BEGIN TRY RAISERROR('Raiserror severity 18', 18, 1) WITH NOWAIT	END TRY BEGIN CATCH INSERT INTO #caughterrors VALUES (ERROR_SEVERITY()) END CATCH;
+BEGIN TRY RAISERROR('Raiserror severity 11', 11, 1) WITH NOWAIT END TRY BEGIN CATCH INSERT INTO #caughterrors VALUES (ERROR_SEVERITY()) END CATCH;
+BEGIN TRY RAISERROR('Raiserror severity 12', 12, 1) WITH NOWAIT END TRY BEGIN CATCH INSERT INTO #caughterrors VALUES (ERROR_SEVERITY()) END CATCH;
+BEGIN TRY RAISERROR('Raiserror severity 13', 13, 1) WITH NOWAIT END TRY BEGIN CATCH INSERT INTO #caughterrors VALUES (ERROR_SEVERITY()) END CATCH;
+BEGIN TRY RAISERROR('Raiserror severity 14', 14, 1) WITH NOWAIT END TRY BEGIN CATCH INSERT INTO #caughterrors VALUES (ERROR_SEVERITY()) END CATCH;
+BEGIN TRY RAISERROR('Raiserror severity 15', 15, 1) WITH NOWAIT END TRY BEGIN CATCH INSERT INTO #caughterrors VALUES (ERROR_SEVERITY()) END CATCH;
+BEGIN TRY RAISERROR('Raiserror severity 16', 16, 1) WITH NOWAIT END TRY BEGIN CATCH INSERT INTO #caughterrors VALUES (ERROR_SEVERITY()) END CATCH;
+BEGIN TRY RAISERROR('Raiserror severity 17', 17, 1) WITH NOWAIT END TRY BEGIN CATCH INSERT INTO #caughterrors VALUES (ERROR_SEVERITY()) END CATCH;
+BEGIN TRY RAISERROR('Raiserror severity 18', 18, 1) WITH NOWAIT END TRY BEGIN CATCH INSERT INTO #caughterrors VALUES (ERROR_SEVERITY()) END CATCH;
 BEGIN TRY RAISERROR('Raiserror severity 19', 19, 1) WITH LOG    END TRY BEGIN CATCH INSERT INTO #caughterrors VALUES (ERROR_SEVERITY()) END CATCH;
 SELECT * FROM #caughterrors c ORDER BY c.SeverityLevel
 ```
@@ -382,7 +381,6 @@ SELECT * FROM #caughterrors c ORDER BY c.SeverityLevel
 ![](/img/raiserror/20210115_111128.png) ![](/img/raiserror/20210115_111238.png)
 
 No messages were logged because they were all caught and inserted into the temp table instead.
-
 
 ```tsql
 -- Anything above severity level 19 will just kill the connection

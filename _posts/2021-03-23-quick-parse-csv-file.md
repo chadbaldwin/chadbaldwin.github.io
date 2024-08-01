@@ -84,11 +84,13 @@ I killed notepad++.exe and moved on to try another method. It probably would hav
 PowerShell only requires two commands to do this. The downside is, it loads the whole file into memory, and generally doesn't release that memory. So if it's a huge 2GB file, it's not a great option. In this case, I'm okay with loading a 50MB file into memory.
 
 1. Load the data into a local variable using the `Import-Csv` cmdlet
+
     ```ps
     $data = Import-Csv -Delimiter '|' -Path .\file.txt -Header 'c1','c2','c3','c4','c5','c6','c7','c8','c9'
     ```
 
 2. Get list of unique values from column 3
+
     ```ps
     $data | select c3 -Unique
     ```
@@ -114,7 +116,7 @@ In this case, I only had about 10 unique values, so I did it manually.
 >
 > In my example above, I'm writing the contents to a variable, so it definitely will allocate enough memory **at least** the size of the file. I did this to make it easier to explain, but I should include a clean one-liner to show how to do it.
 >
-> u/bis also pointed out that you can use `Set-Clipbard` to save the result to the clipboard directly.
+> u/bis also pointed out that you can use `Set-Clipboard` to save the result to the clipboard directly.
 
 With regard to the notes above...and using some additional PowerShell syntactic shortcuts, this is a nifty one liner that will do the job:
 

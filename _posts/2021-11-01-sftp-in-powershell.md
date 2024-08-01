@@ -34,13 +34,13 @@ Currently I'm working on a data append ETL/integration. These are pretty common.
 
 For me, it usually looks something like this:
 
-  * Run stored procedure in SQL
-  * Export results to CSV file abiding by the 3rd party's specs (i.e. headers, delimiter, quote qualifiers, line endings, header/trailer records)
-  * Copy file to their server via SFTP
-  * Wait for a response file to appear, could be minutes, could be days
-  * Download the response file to disk
-  * Parse and import file into a table in SQL
-  * Archive file
+* Run stored procedure in SQL
+* Export results to CSV file abiding by the 3rd party's specs (i.e. headers, delimiter, quote qualifiers, line endings, header/trailer records)
+* Copy file to their server via SFTP
+* Wait for a response file to appear, could be minutes, could be days
+* Download the response file to disk
+* Parse and import file into a table in SQL
+* Archive file
 
 Over the years I've written dozens of these, one thing that often hangs me up are the "copy to SFTP" and "copy from SFTP" steps. usually what happens is I build two scripts...an "export script", which has a manual step of "open FileZilla and upload file", and then an Import script with another manual step to download the file.
 
@@ -79,16 +79,16 @@ Without the module, you would need to load the DLL file as a new type into Power
 For those who hate reading and feel this is looking too much like a recipe write-up where I tell you my life story before giving you what you came here for, here's the 🥩 and 🥔's...
 
 Various links:
+
 * [Working with WinSCP via PowerShell](https://winscp.net/eng/docs/library_powershell#powershell_module){:target="_blank"}
 * PowerShell Module
   * [Homepage](https://dotps1.github.io/WinSCP){:target="_blank"}
   * [Github repo](https://github.com/dotps1/WinSCP){:target="_blank"}
   * [PSGallery](https://www.powershellgallery.com/packages/WinSCP){:target="_blank"}
 
-
 You can install the PowerShell module like normal:
 
-```
+```pwsh
 # install module
 Install-Module winscp
 

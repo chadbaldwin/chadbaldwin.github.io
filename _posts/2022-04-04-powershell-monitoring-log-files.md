@@ -160,7 +160,7 @@ Use `-NoEmphasis` to disable highlighting and `-Raw` to disable highlighting and
 
 Another great option besides filtering is being able to modify the output by passing each line through a script.
 
-### Adding some color
+### Add color by assignment
 
 In the course of writing this post, I discovered a fun new trick...coloring the messages based on their content.
 
@@ -198,7 +198,7 @@ gc '.\2022-04-03.log' |
 
 Ending up with this:
 
-![](/img/pwshlogs/color.png)
+![Screenshot of powershell terminal showing results of the earlier powershell script where each log output has its own text color based on which app logged the record](/img/pwshlogs/color.png)
 
 ----
 
@@ -288,8 +288,7 @@ OtherApp_2022-04-03.log: Original log message 1
 AnotherApp_2022-04-03.log: Original log message 1
 ```
 
-### Adding some color
-
+### Add color randomly
 
 I've never used in practice, but I thought it would be fun to figure out and I could see how it could prove to be useful if you need to randomly assign colors to output. Since I was monitoring 27 actively used log files, I needed some way to visually separate one file from another. I applied our `-ForegroundColor` trick we used earlier.
 

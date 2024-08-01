@@ -89,7 +89,7 @@ The other thing to note is that the `EXCEPT` operator treats the comparison of `
 
 ----
 
-## Let's set up some sample data:
+## Let's set up some sample data
 
 ```tsql
 IF OBJECT_ID('tempdb..#Customer','U') IS NOT NULL DROP TABLE #Customer; --SELECT * FROM #Customer

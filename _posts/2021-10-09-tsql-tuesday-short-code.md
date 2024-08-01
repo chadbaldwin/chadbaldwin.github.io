@@ -20,7 +20,7 @@ I had to cut it short otherwise this post would be a mile long. If you're intere
 
 ## T-SQL
 
-#### Right justify values
+### Right justify values
 
 * While you usually shouldn't be formatting output at the data layer, I find this to be particularly useful when building utility stored procedures that are used directly and not feeding a report or an application.
 * Note, be careful using `FORMAT()` it's pretty inefficient, but if your code only returns a handful of records, then there's likely no need to worry. Just don't use it on queries that are returning large datasets.
@@ -34,9 +34,9 @@ FROM (
 ) x(val);
 ```
 
-![](/img/tsltuesday143/20211009_122006.png)
+![Screenshot of SSMS grid results showcasing how the align right sql logic looks](/img/tsltuesday143/20211009_122006.png)
 
-#### Divide by zero safe percentage
+### Divide by zero safe percentage
 
 * This snippet gets used in almost every report I build. You need to return a percentage, but you need to handle NULL values. Most of the time, if the denominator is zero, then I want to return a percentage of 0%.
 * Depending on whether you want to return the percentage as a whole number or as a decimal you can change the multiplier on the denominator. `0.01` will give you a whole number percentage whereas `1.00` will give you the percentage as a proper decimal.
@@ -51,9 +51,9 @@ SELECT PctAsWhole   = CONVERT(decimal(6,3), COALESCE(@Numerator / NULLIF(@Denomi
      , PctAsDecimal = CONVERT(decimal(6,5), COALESCE(@Numerator / NULLIF(@Denominator * 1.00, 0), 0.00));
 ```
 
-![](/img/tsltuesday143/20211009_122541.png)
+![Screenshot of SSMS grid results showing the output of the safe percentage SQL snippet looks](/img/tsltuesday143/20211009_122541.png)
 
-#### Generating random numbers within a range
+### Generating random numbers within a range
 
 * These are great for generating test data
 * The values returned by the snippets below could be fed into a `DATEADD()` function for generating random dates within a range
@@ -77,7 +77,7 @@ DECLARE @RangeSize int = 1;
 SELECT CHECKSUM(NEWID())%(@RangeSize+1);
 ```
 
-#### Tally table
+### Tally table
 
 * Tally / Numbers tables can be used for all sorts of things. For example, avoiding cursors, loops, etc by performing those tasks by row. Jeff Moden has [a great article using a tally table to build a string split function](https://www.sqlservercentral.com/articles/tally-oh-an-improved-sql-8k-%E2%80%9Ccsv-splitter%E2%80%9D-function){:target="_blank"}. He's also [written about how tally tables can be used to replace loops](https://www.sqlservercentral.com/articles/the-numbers-or-tally-table-what-it-is-and-how-it-replaces-a-loop-1){:target="_blank"}.
 * Another great use of them is generating sample data. Utilizing the snippets above for generating random numbers, you can easily generate random data for testing, including date ranges.
@@ -102,7 +102,7 @@ SELECT c.rn
 FROM c;
 ```
 
-#### Session settings for controlling plans and stats
+### Session settings for controlling plans and stats
 
 * These ones I have to google almost every time because I forget what each one does.
 
@@ -123,7 +123,7 @@ SET STATISTICS IO, TIME ON;
 
 ## PowerShell / CLI
 
-#### Rename a column when using Select-Object
+### Rename a column when using Select-Object
 
 * A fairly simple one, but I remember how long I went before learning this when I first started out in PowerShell, so including it here is a must.
 
@@ -131,7 +131,7 @@ SET STATISTICS IO, TIME ON;
 gci | select @{N='FileName'; E={$_.Name}}
 ```
 
-#### Convert all files to UTF-8
+### Convert all files to UTF-8
 
 * If you've ever dealt with storing your SQL files in git, you may have realized that UTF-8 isn't always the encoding of choice. Unfortunately, git doesn't like files encoded with things like UTF-16LE BOM.
 * This is a snippet I like to use to convert whole directories recursively to UTF-8. This makes it easier for viewing diffs with git.
@@ -140,7 +140,7 @@ gci | select @{N='FileName'; E={$_.Name}}
 gci -File -Recurse | ? Extension -In @('.sql') | % { $body = $_ | gc -Raw; $body | Set-Content -Encoding utf8 -NoNewline; }
 ```
 
-#### Clean out recursively empty directories
+### Clean out recursively empty directories
 
 * This is probably one of my most used PowerShell snippets when it comes to file cleanup.
 * The snippet will find all directories that contain no _files_ recursively. So if all you have is a chain of empty directories, it will remove it.
@@ -151,7 +151,7 @@ gci -File -Recurse | ? Extension -In @('.sql') | % { $body = $_ | gc -Raw; $body
 gci -Directory -Recurse | ? {-Not $_.GetFiles("*",1)} | rm -Recurse;
 ```
 
-#### First/Last N characters of a string
+### First/Last N characters of a string
 
 * Something I learned very quickly about PowerShell is that it's not nearly as forgiving as T-SQL when you are using the `LEFT()`, `RIGHT()` and `SUBSTRING()` functions. If you provide a length that is larger than the string length, PowerShell throws an error. This is a common practice in T-SQL, to provide a very large number to get "the rest" of the string from a certain point. But you can't do that in PowerShell.
 
@@ -168,7 +168,7 @@ $string[0..($n-1)] -join ''
 $string.Substring($string.Length - [System.Math]::Min($n, $string.Length))
 ```
 
-#### Monitor a log file with filtering
+### Monitor a log file with filtering
 
 * I often need to monitor an active log file to wait for a particular event to occur. Sometimes it can be difficult to catch if the file is extremely active.
 * There are tools out there specifically for parsing and monitoring log files, but sometimes you don't have them available, such as on an auto created EC2 instance
@@ -179,7 +179,7 @@ $string.Substring($string.Length - [System.Math]::Min($n, $string.Length))
 gc .\<filename>.log -Wait | ? { $_ -match '(error|warning)' } | ? { $_ -notmatch '(debug)' }
 ```
 
-#### Pseudo sudo
+### Pseudo sudo
 
 * Since windows doesn't yet support an alternative to the linux `sudo` command, I use this in my `$PROFILE` to make it easy to quickly spawn a shell window with admin privileges.
 
@@ -189,7 +189,7 @@ function sudo {
 };
 ```
 
-#### Set window title
+### Set window title
 
 * This is about as simple as it gets, but it's not as straight forward as I expected it to be in PowerShell. If you ever have something that auto-opens PowerShell windows, you might want to set the window title to something easily identifiable.
 * Keep in mind, this title can quickly get overwritten by whatever you are running under it.
@@ -198,7 +198,7 @@ function sudo {
 $host.ui.RawUI.WindowTitle = 'changed title';
 ```
 
-#### Run SQL Server from Docker
+### Run SQL Server from Docker
 
 * This is a straight copy-paste from the [SQL Server docker hub page](https://hub.docker.com/_/microsoft-mssql-server){:target="_blank"}. If you use Docker Desktop, this is an awesome way to quickly spin up a local instance of SQL Server, ready for all sorts of testing. I use this before every blog post to give me a clean working environment to test in, and then I can quickly and easily clean it up when I'm done by removing the container.
 
@@ -206,7 +206,7 @@ $host.ui.RawUI.WindowTitle = 'changed title';
 docker run -e 'ACCEPT_EULA=Y' -e "MSSQL_SA_PASSWORD=${pass}" -p 1433:1433 -d mcr.microsoft.com/mssql/server:2019-latest;
 ```
 
-#### Use ripgrep to search files
+### Use ripgrep to search files
 
 * I actually want to do a full length blog post just on this tool and other similar CLI workflows, but for now, I'm just putting this out there as a quick tip.
 * This is more of a public service announcement than anything...Please install, learn and use [ripgrep](https://github.com/BurntSushi/ripgrep){:target="_blank"}. It is one of the most useful tools I have added to my CLI toolbelt. You will not regret it, _especially_ if you are a Windows user because the built in alternatives such as `FIND` in cmd and `Select-String` in PowerShell are _sooo sloooooowwwww_ compared to this, and don't even compare when it comes to features.
@@ -215,7 +215,7 @@ docker run -e 'ACCEPT_EULA=Y' -e "MSSQL_SA_PASSWORD=${pass}" -p 1433:1433 -d mcr
 rg -i some_text_or_regex_to_search
 ```
 
-#### Notepad++ alias
+### Notepad++ alias
 
 * Do yourself a favor and add an alias for notepad++. This is assuming Notepad++ is in your `PATHS` variable, if it isn't for you, that's outside the scope of this tip. But for my default installation, it is. Typing `notepad++.exe` can be a bit annoying, so I like to alias it to `npp` for when I need to pipe a list of files to open.
 

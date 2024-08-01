@@ -28,7 +28,7 @@ If that doesn't make any sense...I don't blame you, it's a difficult thing to ex
 
 If you want to know how to set this up, you can [skip to that section](#setting-it-up), but I wanted to show you some demos on how to use it first. The last thing you want to do is accidentally run something you didn't mean to because some dudes blog showed you a new trick.
 
-### The simple use case:
+### The simple use case
 
 Let's say you assign the text: `EXEC sp_whoisactive;` to `Ctrl`+`3`.
 
@@ -40,9 +40,9 @@ I think that's pretty simple to understand, so we can probably just move on to t
 
 ----
 
-### The more complex use case:
+### The more complex use case
 
-Take this string `SELECT TOP(100) * FROM ` (make sure there's a space at the end) and let's say that you've assigned it to `Ctrl`+`7`...
+Take this string `SELECT TOP(100) * FROM` (make sure there's a space at the end) and let's say that you've assigned it to `Ctrl`+`7`...
 
 Type this query into a query window and only highlight `sys.columns`
 
