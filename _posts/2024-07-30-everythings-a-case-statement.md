@@ -154,7 +154,7 @@ For example, I've used `CHOOSE` in the past to act as a sort of "round-robin" pi
 
 ```tsql
 DECLARE @RandEventTypeID int;
-SELECT @RandEventTypeID = CHOOSE(ABS(CHECKSUM(NEWID())%5)+1, 3, 6, 7, 11, 21)
+SELECT @RandEventTypeID = CHOOSE(ABS(CHECKSUM(NEWID())%5)+1, 1, 2, 5, 7, 21)
 SELECT @RandEventTypeID
 ```
 
