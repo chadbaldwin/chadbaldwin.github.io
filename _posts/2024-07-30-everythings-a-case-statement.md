@@ -7,7 +7,7 @@ tags: T-SQL
 image: img/postbanners/2024-07-30-everythings-a-case-statement.png
 ---
 
-Well...not really, but a handful of functions in T-SQL are simply just syntactic sugar for plain ol' `CASE` statements and I thought it would be fun to talk about them for a bit because I remember being completely surprised when I learned this. I've also run into a couple weird scenario's directly because of this.
+Well...not really, but a handful of functions in T-SQL are simply just syntactic sugar for plain ol' `CASE` statements and I thought it would be fun to talk about them for a bit because I remember being completely surprised when I learned this. I've also run into a couple weird scenarios directly because of this.
 
 For those who don't know what the term "syntactic sugar" means...It's just a nerdy way to say that the language feature you're using is simply a shortcut for another typically longer and more complicated way of writing that same code and it's not unique to SQL.
 
@@ -113,7 +113,7 @@ This final function is probably the least used, but it's also one of my favorite
 
 A sample usage of `CHOOSE` is `CHOOSE(x.ColA,'Foo','Bar','Baz')`.
 
-For those who aren't famliar with using `CHOOSE`, basically this is saying...if `x.ColA` is 1 then return "Foo", if `x.ColA` is 2 then return "Bar", etc.
+For those who aren't familiar with using `CHOOSE`, basically this is saying...if `x.ColA` is 1 then return "Foo", if `x.ColA` is 2 then return "Bar", etc.
 
 If I were to ask you how this gets translated into a `CASE` statement...you might think it looks like this:
 
@@ -126,7 +126,7 @@ CASE x.ColA
 END
 ```
 
-And if that were that case (heh, pun intended)...I think that would be ideal...Unfortunatley, that's not what happens. Instead, this is what it looks like in the execution plan:
+And if that were that case (heh, pun intended)...I think that would be ideal...Unfortunately, that's not what happens. Instead, this is what it looks like in the execution plan:
 
 ```tsql
 CASE
@@ -158,7 +158,7 @@ SELECT @RandEventTypeID = CHOOSE(ABS(CHECKSUM(NEWID())%5)+1, 3, 6, 7, 11, 21)
 SELECT @RandEventTypeID
 ```
 
-`ABS(CHECKSUM(NEWID())%5)+1` will pick a random number from 1 to 5. So the expected behavior of the script above would be to return one of those `EventTypeID` values at random...But that's not what happens. Try running it yourself, and you'll see it occassionally return NULL.
+`ABS(CHECKSUM(NEWID())%5)+1` will pick a random number from 1 to 5. So the expected behavior of the script above would be to return one of those `EventTypeID` values at random...But that's not what happens. Try running it yourself, and you'll see it occasionally return NULL.
 
 Here's why:
 
