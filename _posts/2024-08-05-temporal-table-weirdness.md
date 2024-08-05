@@ -11,7 +11,7 @@ Oh wait...yes they are.
 
 Just a small disclaimer: this post is not intended to be a technical deep dive into how SQL Server handles temporal table data retention policies behind the scenes. The intent is to just tell a fun story and maybe, hopefully, help out a future internet traveler that has also run into this issue and give them a bit of relief/clarity as to what's happening.
 
-TL;DR / Spoiler: I couldn't figure out why my temporal history table kept reporting it had old rows. Turns out it was user error. Everything was working exactly as it should.
+TL;DR / Spoiler: I couldn't figure out why my temporal history table kept reporting it had old rows, despite having a data retention policy set up. Turns out it was user error. Everything was working exactly as it should.
 
 This isn't a recipe, click here if you want to skip the story: [Stats and findings](#stats-and-findings)
 
