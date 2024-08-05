@@ -7,6 +7,27 @@ tags: T-SQL
 image: img/postbanners/2024-07-30-everythings-a-case-statement.png
 ---
 
+Just a quick public service announcement:
+
+I've now received quite a few responses to this post saying nearly the same thing..."_Not to be pedantic, but it's a case expression, not a case statement_". It's like when people say "No offense, but" and then say something offensive.
+
+Yes...Thank you, you are correct, it is an "expression" not a "statement", here's your cookie 🍪.
+
+And no, I'm not fixing it. Why? Because it changes nothing about the information in this post, there is no confusion as to what I'm referring to. The vast majority of people refer to them as a "CASE _statement_" despite being inaccurate. When writing blog posts and tuning SEO, I'm going to go with the most common phrasing.
+
+Exhibit A:
+
+<script type="text/javascript" src="https://ssl.gstatic.com/trends_nrtr/3807_RC01/embed_loader.js"></script>
+<script type="text/javascript">
+    trends.embed.renderExploreWidget("TIMESERIES", {"comparisonItem":[{"keyword":"sql case statement","geo":"","time":"today 12-m"},{"keyword":"sql case expression","geo":"","time":"today 12-m"}],"category":0,"property":""}, {"exploreQuery":"q=sql%20case%20statement,sql%20case%20expression&hl=en&date=today 12-m,today 12-m","guestPath":"https://trends.google.com:443/trends/embed/"});
+</script>
+
+----
+
+## Back to the post
+
+Everything's a CASE statement!
+
 Well...not really, but a handful of functions in T-SQL are simply just syntactic sugar for plain ol' `CASE` statements and I thought it would be fun to talk about them for a bit because I remember being completely surprised when I learned this. I've also run into a couple weird scenarios directly because of this.
 
 For those who don't know what the term "syntactic sugar" means...It's just a nerdy way to say that the language feature you're using is simply a shortcut for another typically longer and more complicated way of writing that same code and it's not unique to SQL.
@@ -158,7 +179,7 @@ SELECT @RandEventTypeID = CHOOSE(ABS(CHECKSUM(NEWID())%5)+1, 1, 2, 5, 7, 21)
 SELECT @RandEventTypeID
 ```
 
-`ABS(CHECKSUM(NEWID())%5)+1` will pick a random number from 1 to 5. So the expected behavior of the script above would be to return one of those `EventTypeID` values at random...But that's not what happens. Try running it yourself, and you'll see it occasionally return NULL.
+`ABS(CHECKSUM(NEWID())%5)+1` will pick a random number from 1 to 5. So the expected behavior of the script above would be to return one of those `EventTypeID` values at random...But that's not what happens. Try running it yourself, and you'll see it occasionally returns `NULL`.
 
 Here's why:
 
