@@ -9,11 +9,13 @@ image: img/postbanners/2024-07-30-everythings-a-case-statement.png
 
 Just a quick public service announcement:
 
-I've now received quite a few responses to this post saying nearly the same thing..."_Not to be pedantic, but it's a case expression, not a case statement_". It's like when people say "No offense, but" and then say something offensive.
+Yes...I know it's a "CASE expression" and not a "CASE statement".
 
-Yes...Thank you, you are correct, it is an "expression" not a "statement", here's your cookie 🍪.
+I've now received quite a few responses to this post saying nearly the same thing..."_Not to be pedantic, but it's a case expression, not a case statement_".
 
-And no, I'm not fixing it. Why? Because it changes nothing about the information in this post, there is no confusion as to what I'm referring to. The vast majority of people refer to them as a "CASE _statement_" despite being inaccurate. When writing blog posts and tuning SEO, I'm going to go with the most common phrasing.
+Yes...Thank you, you are correct, it is an "expression" not a "statement".
+
+When I originally posted it, I considered fixing it. But in the end, it really doesn't matter, it doesn't change the information in the post. And as far as SEO goes...it appears most people don't search for "sql case expression" anyway. So, this PSA is my compromise.
 
 Exhibit A:
 
