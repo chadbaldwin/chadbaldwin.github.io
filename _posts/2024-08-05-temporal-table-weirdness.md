@@ -178,7 +178,7 @@ END;
 GO
 ```
 
-The basic idea here is...Grab the rowcount above and below a specific point in time. Since the table is insert only, this will tell us exactly how many records are inserted, vs cleaned up by the retention policy cleanup job.
+The basic idea here is...Grab the rowcount above and below a specific point in time. Since the table is insert only, this will tell us exactly how many rows are inserted, vs cleaned up by the retention policy cleanup job.
 
 I ran the above proc every 5 minutes for a few days and then I ran this analysis query to see what it looked like:
 
@@ -261,4 +261,4 @@ I thought it would be cool if I could inspect the actual contents of the columns
 
 Well...after about 5 hours of pulling my hair out...I discovered that `sys.column_store_segments` contains a `min_data_id` and a `max_data_id` value, but for columns of type `datetime2` it's just the raw value, rather than a pointer to some dictionary value or something...
 
-So my next blog post will likely be how I figured that out and my solution for it. I didn't want this post to be even longer than it already is 😂
+So my next blog post will be about how I figured that out and my solution for it. I didn't want this post to be even longer than it already is 😂
