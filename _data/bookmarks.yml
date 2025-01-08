@@ -39,6 +39,23 @@ sql:
     description: Database of SQL Server latch types
     link: https://www.sqlskills.com/help/latches
 
+please vote on my SQL Server feedback items:
+  - name: "Add new metadata function: INDEX_NAME()"
+    description: "SQL Server has OBJECT_NAME(), COL_NAME(), DB_NAME()...why no INDEX_NAME()?"
+    link: https://feedback.azure.com/d365community/idea/9e2f6f88-e579-ef11-a4e6-6045bdbe5235
+
+  - name: "Add a \"reset_time\" column to index stats DMVs"
+    description: "Ever queried sys.dm_index_usage_stats and wondered how old that stats data is? Too bad...There's really no way to know"
+    link: https://feedback.azure.com/d365community/idea/e9e84bf2-64c4-ee11-92bc-000d3a0fb290
+
+  - name: "Output warning message when altering an indexed view that all indexes (clustered and non-clustered) will be dropped"
+    description: "ALTER VIEW ... Oops! All the indexes are now gone, clustered and non-clustered and SQL Server didn't say a thing...Not even a warning."
+    link: https://feedback.azure.com/d365community/idea/0f1f2993-43b6-ee11-92bc-000d3a033659
+
+  - name: "Statement execution duration global variable - Similar to @@ROWCOUNT, but instead how long the previous statement took to run"
+    description: "Wouldn't it be nice if you could stop messing with datetime variables and datediff to figure out how long the previous statement took to run?"
+    link: https://feedback.azure.com/d365community/idea/884c86b1-9b85-ee11-a81c-000d3ae5ae95
+
 fiddlers:
   - name: .NET Fiddle
     description: C#, VB.NET, F#
