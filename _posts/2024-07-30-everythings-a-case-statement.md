@@ -19,10 +19,7 @@ When I originally posted it, I considered fixing it. But in the end, it really d
 
 Exhibit A:
 
-<script type="text/javascript" src="https://ssl.gstatic.com/trends_nrtr/3807_RC01/embed_loader.js"></script>
-<script type="text/javascript">
-    trends.embed.renderExploreWidget("TIMESERIES", {"comparisonItem":[{"keyword":"sql case statement","geo":"","time":"today 12-m"},{"keyword":"sql case expression","geo":"","time":"today 12-m"}],"category":0,"property":""}, {"exploreQuery":"q=sql%20case%20statement,sql%20case%20expression&hl=en&date=today 12-m,today 12-m","guestPath":"https://trends.google.com:443/trends/embed/"});
-</script>
+<script type="text/javascript" src="https://ssl.gstatic.com/trends_nrtr/3975_RC01/embed_loader.js"></script> <script type="text/javascript"> trends.embed.renderExploreWidget("TIMESERIES", {"comparisonItem":[{"keyword":"sql case expression","geo":"","time":"today 12-m"},{"keyword":"sql case statement","geo":"","time":"today 12-m"}],"category":0,"property":""}, {"exploreQuery":"q=sql%20case%20expression,sql%20case%20statement&hl=en&date=today 12-m,today 12-m","guestPath":"https://trends.google.com:443/trends/embed/"}); </script>
 
 ----
 
