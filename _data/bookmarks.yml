@@ -56,6 +56,10 @@ please vote on my SQL Server feedback items:
     description: "Wouldn't it be nice if you could stop messing with datetime variables and datediff to figure out how long the previous statement took to run?"
     link: https://feedback.azure.com/d365community/idea/884c86b1-9b85-ee11-a81c-000d3ae5ae95
 
+  - name: "Capture CONTEXT_INFO as part of SQL Server Audit records"
+    description: "Add CONTEXT_INFO as a field that is captured as part of SQL Server Audits"
+    link: https://feedback.azure.com/d365community/idea/f0cf990e-8303-f011-a4de-000d3a0e09b7
+
 fiddlers:
   - name: .NET Fiddle
     description: C#, VB.NET, F#
