@@ -145,7 +145,7 @@ SELECT REPLICATE(N'█', CONVERT(int,   FLOOR((1 - @pct) * @barwidth)))
 
 ## Use as a delimiter
 
-I'm pretty sure I stole this idea from Adam Bertrand, but I can't seem to find the post. The idea is to use a Unicode character that has a very unlikely chance of occurring in your data to use as a split point / delimiter.
+I stole [this one from Aaron Bertrand](https://www.mssqltips.com/sqlservertip/4940/dealing-with-the-singlecharacter-delimiter-in-sql-servers-stringsplit-function/){:target="_blank"}. The idea is to use a Unicode character that has a very unlikely chance of occurring in your data to use as a split point / delimiter.
 
 The article I stole it from uses `nchar(9999)`, which is just this `✏`, a pencil, so that's also what I happen to use now. You could pick from thousands of other characters as long as it's not going to show up in your (hopefully clean) data.
 
