@@ -70,8 +70,7 @@ plugins:
   - jekyll-sitemap
 
 google_analytics:
-  - UA-185058308-1 # Old GA Universal Analytics property
-  - G-RY6FRPMXHZ # New GA4 property
+  - ${JEKYLL_CONFIG_GOOGLE_ANALYICS}
 
 gravatar_hash: 2136e716a089f4a3794f4007328c7bfb
 code_block_max_height: 500px
