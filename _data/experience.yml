@@ -13,6 +13,7 @@
       - "Developed a system to monitor millions of SQL Server indexes, enabling the identification and removal of unused indexes to optimize database performance and resource allocation. Leading to a significant reduction in superfluous write activity by removing unnecessary indexes while ensuring no performance regression."
       - "Engineered an advanced analytics tool to evaluate physical index structures, successfully identifying and resolving issues with duplicate, overlapping, and mergeable indexes, which significantly enhanced query efficiency and storage utilization."
       - "Designed and implemented a robust system for synchronizing and consolidating system metadata from hundreds of SQL Server instances into a central repository. This tool aids in monitoring and managing schema and configuration drift, improving consistency and control across the database environment."
+      - "Optimized SQL Server performance through custom DMV queries and monitoring tools including DBADash, SolarWinds SQL Sentry, and Splunk; tuned stored procedures, resolved blocking and deadlock issues, and analyzed session wait statistics, resulting in improved application response times and database throughput."
 
 - company: "AutoAlert"
   summary: "A data mining company dedicated to identifying leads in automotive dealerships customer data with the goal of helping them increase customer retention and sales."
