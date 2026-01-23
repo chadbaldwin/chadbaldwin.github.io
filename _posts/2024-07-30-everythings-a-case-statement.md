@@ -9,13 +9,13 @@ image: img/postbanners/2024-07-30-everythings-a-case-statement.png
 
 Just a quick public service announcement:
 
-Yes...I know it's a "CASE expression" and not a "CASE statement".
+Yes...I know it's a "CASE _expression_" and not a "CASE _statement_".
 
 I've now received quite a few responses to this post saying nearly the same thing..."_Not to be pedantic, but it's a case expression, not a case statement_".
 
 Yes...Thank you, you are correct, it is an "expression" not a "statement".
 
-When I originally posted it, I considered fixing it. But in the end, it really doesn't matter, it doesn't change the information in the post. And as far as SEO goes...it appears most people don't search for "sql case expression" anyway. So, this PSA is my compromise.
+When I originally posted it, I considered fixing the title, but changing the title also changes the URL. So, this PSA is my compromise. And as far as SEO goes...it appears most people search for "sql case statement" anyway.
 
 Exhibit A:
 
@@ -28,9 +28,9 @@ trends.embed.renderExploreWidget("TIMESERIES", {"comparisonItem":[{"keyword":"sq
 
 ## Back to the post
 
-Everything's a CASE statement!
+Everything's a CASE _expression_!
 
-Well...not really, but a handful of functions in T-SQL are simply just syntactic sugar for plain ol' `CASE` statements and I thought it would be fun to talk about them for a bit because I remember being completely surprised when I learned this. I've also run into a couple weird scenarios directly because of this.
+Well...not really, but a handful of functions in T-SQL are simply just syntactic sugar for plain ol' `CASE` expressions and I thought it would be fun to talk about them for a bit because I remember being completely surprised when I learned this. I've also run into a couple weird scenarios directly because of this.
 
 For those who don't know what the term "syntactic sugar" means...It's just a nerdy way to say that the language feature you're using is simply a shortcut for another typically longer and more complicated way of writing that same code and it's not unique to SQL.
 
@@ -74,7 +74,7 @@ Nope...
 
 In the execution plan, it's still just `isnull([x].[ColA],[x].[ColB])`...well, unless `x.ColA` is `NOT NULL`, in which case it's smart enough to just ask for `x.ColA` since the `ISNULL` is unnecessary.
 
-Unfortunately, `COALESCE` does not seem to have this optimization, even when the first column supplied is `NOT NULL`, it still converts to a `CASE` statement...I would hope y'all aren't using `ISNULL`/`COALESCE` when the first column is `NOT NULL` anyway 😉.
+Unfortunately, `COALESCE` does not seem to have this optimization, even when the first column supplied is `NOT NULL`, it still converts to a `CASE` expression...I would hope y'all aren't using `ISNULL`/`COALESCE` when the first column is `NOT NULL` anyway 😉.
 
 So now that you know this about `COALESCE` and `ISNULL`...that might help explain why they handle data types differently. Where `ISNULL` always returns the datatype of the first expression (the check expression), whereas `COALESCE` returns the datatype of the highest type precedence among all the expressions, which is the same behavior as `CASE`.
 
@@ -108,7 +108,7 @@ CASE
 END
 ```
 
-You might notice that the check expression is copied twice in this `CASE` statement. This opens up a problem when you use non-deterministic functions. It's probably pretty rare to run into this situation with `NULLIF`, but here's an example:
+You might notice that the check expression is copied twice in this `CASE` expression. This opens up a problem when you use non-deterministic functions. It's probably pretty rare to run into this situation with `NULLIF`, but here's an example:
 
 ```tsql
 SELECT NULLIF(SIGN(CHECKSUM(NEWID())), 1);
@@ -132,13 +132,13 @@ So there are cases where it will return 1 when your expectation is it shouldn't.
 
 ## CHOOSE
 
-This final function is probably the least used, but it's also one of my favorites. Most of the time I use it, it's for a fun reason. `CHOOSE` also has the same issue you run into with `NULLIF` due to how it generates the `CASE` statement.
+This final function is probably the least used, but it's also one of my favorites. Most of the time I use it, it's for a fun reason. `CHOOSE` also has the same issue you run into with `NULLIF` due to how it generates the `CASE` expression.
 
 A sample usage of `CHOOSE` is `CHOOSE(x.ColA,'Foo','Bar','Baz')`.
 
 For those who aren't familiar with using `CHOOSE`, basically this is saying...if `x.ColA` is 1 then return "Foo", if `x.ColA` is 2 then return "Bar", etc.
 
-If I were to ask you how this gets translated into a `CASE` statement...you might think it looks like this:
+If I were to ask you how this gets translated into a `CASE` expression...you might think it looks like this:
 
 ```tsql
 CASE x.ColA
@@ -249,8 +249,8 @@ FROM #tmp x
 
 Then take a look at the execution plan, and view the properties for the operator (there should only be one or two if it's one of these test queries).
 
-![Screenshot of an execution plan in SQL Server Management Studio showing how the SQL function is converted into a CASE statement within the execution plan.](/img/everythingcase/20240730_132524.png)
+![Screenshot of an execution plan in SQL Server Management Studio showing how the SQL function is converted into a CASE expression within the execution plan.](/img/everythingcase/20240730_132524.png)
 
 This is the most consistent way to see it. I've found that depending on the query, you might also be able to see it in that query text preview under "Query 1:", as well as in the operator stats pop-up, like this:
 
-![Screenshot of an execution plan in SQL Server Management Studio showing the operator stats popup which shows the CASE statement that the SQL function was converted into](/img/everythingcase/20240730_132733.png)
+![Screenshot of an execution plan in SQL Server Management Studio showing the operator stats popup which shows the CASE expression that the SQL function was converted into](/img/everythingcase/20240730_132733.png)
