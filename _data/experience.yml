@@ -5,9 +5,13 @@
   url: "https://www.hchb.com/"
   positions:
 
-  - title: "Data Engineer III"
+  - title: "Senior Software Engineer"
+    startdate: 2026-04-01
+    #enddate:
+
+  - title: "Software Engineer III"
     startdate: 2022-05-23
-#   enddate:
+    enddate: 2026-04-01
     summary: "Specialized in research and development with a focus on performance tuning for SQL Server. Designed and implemented systems for identifying and solving complex database issues through innovative proof-of-concept systems and strategic process improvements. Demonstrated ability to deliver outside-the-box solutions that enhance data management and operational effectiveness."
     projects:
       - "Developed a system to monitor millions of SQL Server indexes, enabling the identification and removal of unused indexes to optimize database performance and resource allocation. Leading to a significant reduction in superfluous write activity by removing unnecessary indexes while ensuring no performance regression."
