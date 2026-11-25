@@ -10,6 +10,12 @@ Did you know you could do this in SSMS? Not sure what's happening here? Keep rea
 
 ![](/img/queryshortcuts/SSMS_1.gif){:data-gifffer="/img/queryshortcuts/SSMS_1.gif"}
 
+----
+
+**Update (Nov 2026):** If you're on SSMS 22.6 or newer, query shortcuts moved. The feature still works exactly the same, but where you set them and where they're stored has changed. [Skip to the SSMS 22 section](#update-for-ssms-22) if that's you.
+
+----
+
 Everyone has their favorite keyboard shortcuts, snippets, plugins, tools, UI settings, color schemes, etc.
 
 I want to share with you some of my favorite SSMS keyboard query shortcuts that I use to help me speed up my work throughout the day.
@@ -200,6 +206,92 @@ $xmlDoc.Save($ssmsUserSettingsFile);
 ```
 
 You can use this same script to make other settings changes to this file, but that's beyond the scope of this post.
+
+----
+
+## Update for SSMS 22
+
+Well…Microsoft moved things around on us.
+
+Starting with [SSMS 22.6.0](https://learn.microsoft.com/ssms/release-notes-22){:target="_blank"} (released May 12, 2026), the query shortcuts settings were migrated out of the old Tools > Options dialog and into the new "Unified Settings" experience that SSMS inherited from Visual Studio 2026. So if you've been on SSMS 22 for a while and the query shortcuts page suddenly looks different…that's why.
+
+Thanks to mattcargile for pointing this out in the comments!
+
+### Where to set them now
+
+It's still under Tools > Options, it just looks different. The easiest way to find it is to type "query shortcuts" into the search box at the top of the settings page.
+
+### Where they're stored now
+
+They're no longer in `UserSettings.xml`. Unified Settings saves anything you've changed from the defaults into a `settings.json` file, and you can open it straight from the settings page by clicking "Edit user settings as JSON".
+
+On my machine it lives here:
+
+```plaintext
+C:\Users\{your user folder}\AppData\Local\Microsoft\SSMS\22.{something}\settings.json
+```
+
+Notice it's under `Local` now, not `Roaming`.
+
+Here's what the query shortcuts look like in that file:
+
+```json
+/* Visual Studio Settings File */
+{
+  "environment.keyboard.queryShortcuts.shortcuts": [
+    { "key": "-2", "storedProcedure": "sp_help" },
+    { "key": "-1", "storedProcedure": "" },
+    { "key": "1",  "storedProcedure": "sp_who" },
+    { "key": "2",  "storedProcedure": "sp_lock" },
+    { "key": "3",  "storedProcedure": "EXEC sp_whoisactive;" },
+    ...
+  ]
+}
+```
+
+`-2` is `Alt`+`F1`, `-1` is `Ctrl`+`F1`, and the rest are `Ctrl`+`0` through `Ctrl`+`9`. And yes…it's called `storedProcedure` even though you can put *any* string you want in there, same as before.
+
+A couple things to know about this file:
+
+* That first line is a block comment, which technically isn't valid JSON. PowerShell 7's `ConvertFrom-Json` handles it just fine. Windows PowerShell 5.1 does not…it'll throw an error. So either use PowerShell 7, or skip the first line before you parse it.
+* The file only holds settings you've *changed* from the defaults. If you've never touched your query shortcuts, that key might not be in there at all.
+
+### Updated PowerShell script
+
+Same idea as the script above, just pointed at the new file. This one writes out the full list of shortcuts, so it works even if the key doesn't exist in the file yet.
+
+**Warning:** Same as before…back up your `settings.json` before running this. And close SSMS first.
+
+```powershell
+# Requires PowerShell 7+
+$ssmsSettingsFile = (Get-Item "${env:LOCALAPPDATA}\Microsoft\SSMS\22*\settings.json" | Select-Object -First 1).FullName
+$settings = Get-Content $ssmsSettingsFile -Raw | ConvertFrom-Json -AsHashtable
+
+$settings['environment.keyboard.queryShortcuts.shortcuts'] = @(
+    [ordered]@{ key = '-2'; storedProcedure = 'sp_help' } # Alt+F1 (can't be changed)
+    [ordered]@{ key = '-1'; storedProcedure = '' }        # Ctrl+F1
+    [ordered]@{ key = '1';  storedProcedure = 'sp_who' }  # Ctrl+1 (can't be changed)
+    [ordered]@{ key = '2';  storedProcedure = 'sp_lock' } # Ctrl+2 (can't be changed)
+    [ordered]@{ key = '3';  storedProcedure = '' }
+    [ordered]@{ key = '4';  storedProcedure = '' }
+    [ordered]@{ key = '5';  storedProcedure = 'USE ' }
+    [ordered]@{ key = '6';  storedProcedure = "SELECT FORMAT(COUNT(*),'N0') FROM " }
+    [ordered]@{ key = '7';  storedProcedure = 'SELECT TOP(100) * FROM ' }
+    [ordered]@{ key = '8';  storedProcedure = 'SELECT * FROM ' }
+    [ordered]@{ key = '9';  storedProcedure = 'SELECT ' }
+    [ordered]@{ key = '0';  storedProcedure = '' }
+)
+
+# ConvertTo-Json drops the header comment, so put it back
+$json = "/* Visual Studio Settings File */`n" + ($settings | ConvertTo-Json -Depth 10)
+Set-Content -Path $ssmsSettingsFile -Value $json
+```
+
+The basic idea here is…read the file in as a hashtable, swap out the whole query shortcuts list, then write it back out with the header comment stuck back on top.
+
+If you have more than one SSMS 22 install side by side, you'll have more than one `22*` folder, so double check which one `Get-Item` grabbed.
+
+If you're still on an older version of SSMS, everything above this section still applies.
 
 ----
 
